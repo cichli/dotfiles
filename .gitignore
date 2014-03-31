@@ -1,0 +1,17 @@
+.cask/
+auto-save-list/
+backups/
+eshell/
+request/
+
+#*#
+*~
+*.elc
+
+.cider-history
+.DS_Store
+.ido.last
+.recentf
+.smex-items
+session.*
+tramp
