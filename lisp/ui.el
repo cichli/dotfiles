@@ -30,6 +30,12 @@
 (setq-default indicate-empty-lines t
               truncate-lines t)
 
+(defadvice kill-buffer (around kill-buffer-around-advice activate)
+  (let ((buffer-to-kill (ad-get-arg 0)))
+    (if (equal buffer-to-kill "*scratch*")
+        (bury-buffer)
+      ad-do-it)))
+
 (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
