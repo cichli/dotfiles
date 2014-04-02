@@ -69,6 +69,7 @@
       global-auto-revert-non-file-buffers t)
 
 (require 'rainbow-mode)
+(diminish 'rainbow-mode)
 (dolist (hook '(clojure-mode-hook
                 css-mode-hook
                 emacs-lisp-mode-hook
