@@ -33,6 +33,7 @@
 (define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
 
 (global-set-key (kbd "C-x m") 'magit-status)
+(global-set-key (kbd "C-x l") 'magit-log)
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 
