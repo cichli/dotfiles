@@ -4,6 +4,7 @@
 
 ;; bookmark+
 (require 'bookmark+)
+(diminish 'back-button-mode)
 (setq bookmark-save-flag t
       bookmark-version-control t)
 
