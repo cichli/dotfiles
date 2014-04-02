@@ -61,13 +61,13 @@
 
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
-(setq-default transient-mark-mode t)
+(setq-default transient-mark-mode 1)
 
 (global-auto-revert-mode 1)
 (setq auto-revert-verbose nil
       global-auto-revert-non-file-buffers t)
 
 (require 'volatile-highlights)
-(volatile-highlights-mode t)
+(volatile-highlights-mode 1)
 (set-face-inverse-video-p 'vhl/default-face t)
 (diminish 'volatile-highlights-mode)

@@ -8,7 +8,7 @@
 (set-language-environment "UTF-8")
 (set-charset-priority 'unicode)
 
-(auto-compression-mode t)
+(auto-compression-mode 1)
 
 (setq backup-by-copying t
       backup-directory-alist '(("." . "~/.emacs.d/backups/"))
