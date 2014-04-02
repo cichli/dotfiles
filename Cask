@@ -48,6 +48,7 @@
 (depends-on "pkg-info")
 (depends-on "popup")
 (depends-on "rainbow-delimiters")
+(depends-on "rainbow-mode")
 (depends-on "request")
 (depends-on "s")
 (depends-on "smex")

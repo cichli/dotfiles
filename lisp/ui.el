@@ -68,6 +68,16 @@
 (setq auto-revert-verbose nil
       global-auto-revert-non-file-buffers t)
 
+(require 'rainbow-mode)
+(dolist (hook '(clojure-mode-hook
+                css-mode-hook
+                emacs-lisp-mode-hook
+                html-mode-hook
+                js-mode-hook
+                org-mode-hook
+                text-mode-hook))
+  (add-hook hook 'rainbow-mode))
+
 (require 'volatile-highlights)
 (volatile-highlights-mode 1)
 (set-face-inverse-video-p 'vhl/default-face t)
