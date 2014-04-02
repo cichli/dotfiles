@@ -1,8 +1,9 @@
 (setq-default fill-column 80
-              indent-tabs-mode nil
-              sentence-end-double-space nil
-              shift-select-mode nil
-              x-select-enable-clipboard t)
+              indent-tabs-mode nil)
+
+(setq sentence-end-double-space nil
+      shift-select-mode nil
+      x-select-enable-clipboard t)
 
 (dolist (x '(downcase-region
              erase-buffer
