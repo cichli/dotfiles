@@ -27,10 +27,6 @@
 ;; dired
 (setq dired-recursive-deletes 'top)
 
-;; discover
-(require 'discover)
-(global-discover-mode 1)
-
 ;; ediff
 (setq ediff-diff-options "-w"
       ediff-split-window-function 'split-window-horizontally

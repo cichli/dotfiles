@@ -22,7 +22,6 @@
 (depends-on "datomic-snippets")
 (depends-on "db")
 (depends-on "diminish")
-(depends-on "discover")
 (depends-on "elnode")
 (depends-on "epl")
 (depends-on "esxml")
