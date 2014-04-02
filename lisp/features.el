@@ -141,6 +141,7 @@
 
 ;; swoop
 (require 'swoop)
+(setq swoop-font-size-change: nil)
 
 ;; undo-tree
 (global-undo-tree-mode 1)
