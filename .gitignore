@@ -3,6 +3,7 @@ auto-save-list/
 backups/
 eshell/
 request/
+var/
 
 #*#
 *~
