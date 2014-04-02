@@ -34,6 +34,7 @@
 (depends-on "helm")
 (depends-on "ido-ubiquitous")
 (depends-on "imenu-anywhere")
+(depends-on "info+")
 (depends-on "kv")
 (depends-on "latest-clojure-libraries")
 (depends-on "magit")
