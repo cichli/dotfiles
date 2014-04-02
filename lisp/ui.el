@@ -18,10 +18,6 @@
 
 (setq frame-background-mode 'dark)
 
-(setq default-font "Inconsolata-dz-12")
-(set-font-to-default)
-(push 'set-font-to-default after-make-frame-functions)
-
 (mac-toggle-fullscreen)
 
 (winner-mode 1)

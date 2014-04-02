@@ -3,14 +3,14 @@
 (require 'pallet)
 (require 'use-package)
 
-(dolist (c '(misc
+(dolist (c '(custom
+             misc
              defuns
              ui
              editing
              features
              clojure
              elisp
-             custom
              keys))
   (load (concat user-emacs-directory "lisp/" (symbol-name c))))
 

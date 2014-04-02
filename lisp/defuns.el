@@ -1,9 +1,3 @@
-(defun set-font (font)
-  (set-frame-parameter (selected-frame) 'font font))
-
-(defun set-font-to-default ()
-  (set-font default-font))
-
 (defun mac-toggle-fullscreen ()
   (interactive)
   (if (not (eq (frame-parameter (selected-frame) 'fullscreen) 'fullboth))
