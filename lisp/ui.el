@@ -59,6 +59,7 @@
 
 (blink-cursor-mode -1)
 
+(transient-mark-mode 1)
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
 (setq-default transient-mark-mode 1)
