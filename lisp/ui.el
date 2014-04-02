@@ -5,7 +5,6 @@
   (funcall m -1))
 
 (load-theme 'solarized-dark t)
-;; (load-theme 'solarized-light t)
 (setq solarized-height-minus-1 1
       solarized-height-plus-1 1
       solarized-height-plus-2 1
@@ -15,8 +14,6 @@
 
 (set-face-attribute 'mode-line nil :underline nil)
 (set-face-attribute 'mode-line-inactive nil :underline nil)
-
-(setq frame-background-mode 'dark)
 
 (mac-toggle-fullscreen)
 
