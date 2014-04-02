@@ -2,7 +2,6 @@
               indent-tabs-mode nil)
 
 (setq kill-whole-line t
-      require-final-newline t
       sentence-end-double-space nil
       shift-select-mode nil
       x-select-enable-clipboard t)
