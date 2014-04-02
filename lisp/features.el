@@ -1,3 +1,7 @@
+;; back-button
+(require 'back-button)
+(back-button-mode 1)
+
 ;; bookmark+
 (require 'bookmark+)
 (setq bookmark-save-flag t
