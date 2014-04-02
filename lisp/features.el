@@ -68,6 +68,8 @@
 (require 'magit)
 (diminish 'magit-auto-revert-mode " Μ")
 
+(setq magit-diff-refine-hunk t)
+
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
   ad-do-it
