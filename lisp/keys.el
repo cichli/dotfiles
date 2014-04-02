@@ -45,6 +45,11 @@
 
 (global-set-key (kbd "C-c s") 'sr-speedbar-toggle)
 
+(global-set-key (kbd "C-c C-s") 'swoop)
+(global-set-key (kbd "C-c C-a") 'swoop-multi)
+(global-set-key (kbd "C-c C-M-s") 'swoop-pcre-regexp)
+(global-set-key (kbd "C-c C-S-s") 'swoop-back-to-last-position)
+
 (global-set-key (kbd "C-x g") 'webjump)
 
 (global-set-key (kbd "C-c n") 'whitespace-cleanup)

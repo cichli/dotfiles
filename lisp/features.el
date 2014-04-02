@@ -139,6 +139,9 @@
       sr-speedbar-width 30
       sr-speedbar-width-x 30)
 
+;; swoop
+(require 'swoop)
+
 ;; undo-tree
 (global-undo-tree-mode 1)
 (diminish 'undo-tree-mode " υ")

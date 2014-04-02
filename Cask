@@ -58,6 +58,7 @@
 (depends-on "sunrise-commander")
 (depends-on "sunrise-x-loop")
 (depends-on "sunrise-x-tree")
+(depends-on "swoop")
 (depends-on "unbound")
 (depends-on "undo-tree")
 (depends-on "use-package")
