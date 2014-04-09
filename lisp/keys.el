@@ -21,7 +21,7 @@
 
 (define-key company-mode-map (kbd "C-,") 'company-show-doc-buffer)
 
-(global-set-key (kbd "TAB") 'complete-or-indent)
+(global-set-key (kbd "<C-tab>") 'complete-or-indent)
 
 (global-set-key (kbd "C-;") 'er/expand-region)
 
