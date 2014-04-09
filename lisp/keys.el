@@ -17,6 +17,7 @@
 
 (define-key cider-mode-map (kbd "C-c C-b") 'cider-eval-buffer)
 (define-key cider-mode-map (kbd "C-c C-q") 'cider-quit)
+(define-key cider-mode-map (kbd "C-c M-q") 'cider-restart)
 
 (define-key company-mode-map (kbd "C-,") 'company-show-doc-buffer)
 
