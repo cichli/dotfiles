@@ -29,6 +29,7 @@
 (depends-on "fakir")
 (depends-on "fancy-narrow")
 (depends-on "fuzzy")
+(depends-on "gist")
 (depends-on "git-commit-mode")
 (depends-on "git-gutter+")
 (depends-on "git-rebase-mode")
