@@ -5,7 +5,6 @@
       cider-repl-popup-stacktraces t
       cider-repl-result-prefix ";; => "
       cider-repl-use-clojure-font-lock t
-      cider-repl-use-pretty-printing t
       cider-repl-wrap-history t
       nrepl-buffer-name-show-port t)
 
