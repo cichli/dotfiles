@@ -13,6 +13,13 @@
   (clj-refactor-mode 1)
   (cljr-add-keybindings-with-prefix "C-c C-m"))
 
+(defun cider-start-cljs-repl ()
+  (interactive)
+  (with-current-buffer (cider-current-repl-buffer)
+    (goto-char (point-max))
+    (insert "(cemerick.austin.repls/cljs-repl (cemerick.austin/exec-env))")
+    (cider-repl-return)))
+
 (dolist (hook '(cider-repl-mode-hook
                 clojure-mode-hook))
   (add-hook hook 'enable-clj-refactor-mode)
