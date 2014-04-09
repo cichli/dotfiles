@@ -28,6 +28,7 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "fakir")
+(depends-on "fancy-narrow")
 (depends-on "fuzzy")
 (depends-on "git-commit-mode")
 (depends-on "git-gutter+")

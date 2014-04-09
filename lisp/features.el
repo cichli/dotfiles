@@ -38,6 +38,9 @@
 (add-hook 'eshell-mode-hook '(lambda ()
                                (company-mode -1)))
 
+;; fancy-narrow
+(fancy-narrow-mode 1)
+
 ;; git-gutter
 (require 'git-gutter+)
 (global-git-gutter+-mode 1)
