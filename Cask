@@ -1,6 +1,5 @@
 (source gnu)
 (source melpa)
-(source org)
 (source SC)
 
 (depends-on "ace-jump-buffer")
@@ -42,8 +41,6 @@
 (depends-on "magit")
 (depends-on "multiple-cursors")
 (depends-on "noflet")
-(depends-on "org-plus-contrib")
-(depends-on "org-trello")
 (depends-on "pallet")
 (depends-on "paredit")
 (depends-on "pkg-info")
