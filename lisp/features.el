@@ -52,12 +52,13 @@
 ;; ido
 (setq ido-default-buffer-method 'selected-window
       ido-default-file-method 'selected-window
-      ido-enable-flex-matching t
       ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
 
 (ido-mode 1)
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
+
+(flx-ido-mode 1)
 
 (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
   `(eval-after-load ,package

@@ -27,6 +27,7 @@
 (depends-on "f")
 (depends-on "fakir")
 (depends-on "fancy-narrow")
+(depends-on "flx-ido")
 (depends-on "fuzzy")
 (depends-on "gist")
 (depends-on "git-commit-mode")
