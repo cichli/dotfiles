@@ -15,7 +15,6 @@
 (depends-on "clojure-snippets")
 (depends-on "clojure-test-mode")
 (depends-on "company")
-(depends-on "company-cider")
 (depends-on "creole")
 (depends-on "dash")
 (depends-on "datomic-snippets")
