@@ -19,6 +19,9 @@
 (define-key cider-mode-map (kbd "C-c C-q") 'cider-quit)
 (define-key cider-mode-map (kbd "C-c M-q") 'cider-restart)
 
+(define-key cider-repl-mode-map (kbd "C-c C-q") 'cider-quit)
+(define-key cider-repl-mode-map (kbd "C-c M-q") 'cider-restart)
+
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
 (global-set-key (kbd "<C-tab>") 'complete-or-indent)
