@@ -65,8 +65,8 @@
         (let ((ido-ubiquitous-enable-compatibility nil))
           ad-do-it))))
 
-(ido-ubiquitous-use-new-completing-read yas/expand 'yasnippet)
-(ido-ubiquitous-use-new-completing-read yas/visit-snippet-file 'yasnippet)
+(ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
+(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
 
 ;; magit
 (require 'magit)
@@ -180,8 +180,8 @@
 (yas-global-mode 1)
 (diminish 'yas-minor-mode " Υ")
 
-(setq yas/prompt-functions '(yas/ido-prompt
-                             yas/completing-prompt
-                             yas/x-prompt
-                             yas/dropdown-prompt
-                             yas/no-prompt))
+(setq yas-prompt-functions '(yas-ido-prompt
+                             yas-completing-prompt
+                             yas-x-prompt
+                             yas-dropdown-prompt
+                             yas-no-prompt))
