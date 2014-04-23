@@ -180,8 +180,4 @@
 (yas-global-mode 1)
 (diminish 'yas-minor-mode " Υ")
 
-(setq yas-prompt-functions '(yas-ido-prompt
-                             yas-completing-prompt
-                             yas-x-prompt
-                             yas-dropdown-prompt
-                             yas-no-prompt))
+(setq yas-prompt-functions '(yas-ido-prompt))
