@@ -44,6 +44,7 @@
 (depends-on "magit")
 (depends-on "multiple-cursors")
 (depends-on "noflet")
+(depends-on "page-break-lines")
 (depends-on "pallet")
 (depends-on "paredit")
 (depends-on "pkg-info")

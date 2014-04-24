@@ -105,6 +105,9 @@
 (require 'paredit)
 (diminish 'paredit-mode " Π")
 
+;; page-break-lines
+(global-page-break-lines-mode 1)
+
 ;; org
 (setq org-cycle-level-faces nil
       org-enforce-todo-dependencies t
