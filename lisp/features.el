@@ -107,6 +107,7 @@
 
 ;; page-break-lines
 (global-page-break-lines-mode 1)
+(diminish 'page-break-lines-mode)
 
 ;; projectile
 (projectile-global-mode 1)
