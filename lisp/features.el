@@ -108,6 +108,10 @@
 ;; page-break-lines
 (global-page-break-lines-mode 1)
 
+;; projectile
+(projectile-global-mode 1)
+(diminish 'projectile-mode " π")
+
 ;; org
 (setq org-cycle-level-faces nil
       org-enforce-todo-dependencies t

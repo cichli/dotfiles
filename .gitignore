@@ -14,5 +14,7 @@ var/
 .ido.last
 .recentf
 .smex-items
+projectile.cache
+projectile-bookmarks.eld
 session.*
 tramp
