@@ -12,6 +12,7 @@ var/
 .cider-history
 .DS_Store
 .ido.last
+.mc-lists.el
 .recentf
 .smex-items
 projectile.cache
