@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 (source SC)
+(source org)
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-jump-mode")
@@ -44,6 +45,7 @@
 (depends-on "magit")
 (depends-on "multiple-cursors")
 (depends-on "noflet")
+(depends-on "org-plus-contrib")
 (depends-on "page-break-lines")
 (depends-on "pallet")
 (depends-on "paredit")
