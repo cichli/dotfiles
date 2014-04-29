@@ -9,8 +9,8 @@
 (global-set-key (kbd "C-x C-k") 'delete-current-buffer-file)
 
 (global-set-key (kbd "C-c b") 'ace-jump-buffer)
-(global-set-key (kbd "C-c B") 'ace-jump-buffer-other-window)
-(global-set-key (kbd "C-c C-B") 'ace-jump-buffer-in-one-window)
+(global-set-key (kbd "C-c S-b") 'ace-jump-buffer-other-window)
+(global-set-key (kbd "C-c C-S-b") 'ace-jump-buffer-in-one-window)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
