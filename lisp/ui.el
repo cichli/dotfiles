@@ -5,12 +5,6 @@
   (funcall m -1))
 
 (load-theme 'solarized-dark t)
-(setq solarized-height-minus-1 1
-      solarized-height-plus-1 1
-      solarized-height-plus-2 1
-      solarized-height-plus-3 1
-      solarized-height-plus-4 1
-      solarized-use-variable-pitch nil)
 
 (set-face-attribute 'mode-line nil :underline nil)
 (set-face-attribute 'mode-line-inactive nil :underline nil)
