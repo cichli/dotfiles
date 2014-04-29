@@ -1,7 +1,6 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
-(require 'use-package)
 
 (dolist (c '(custom
              misc
