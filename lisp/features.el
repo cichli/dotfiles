@@ -57,17 +57,7 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
-
 (flx-ido-mode 1)
-
-(defmacro ido-ubiquitous-use-new-completing-read (cmd package)
-  `(eval-after-load ,package
-     '(defadvice ,cmd (around ido-ubiquitous-new activate)
-        (let ((ido-ubiquitous-enable-compatibility nil))
-          ad-do-it))))
-
-(ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
-(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
 
 ;; magit
 (require 'magit)
