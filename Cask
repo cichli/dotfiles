@@ -26,6 +26,7 @@
 (depends-on "git-rebase-mode")
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
+(depends-on "htmlize")
 (depends-on "ido-ubiquitous")
 (depends-on "imenu-anywhere")
 (depends-on "info+")
