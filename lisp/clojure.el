@@ -1,5 +1,6 @@
 (require 'cider)
-(setq cider-interactive-eval-result-prefix ";; => "
+(setq cider-auto-select-error-buffer t
+      cider-interactive-eval-result-prefix ";; => "
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
       cider-repl-popup-stacktraces t
