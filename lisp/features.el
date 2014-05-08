@@ -25,6 +25,9 @@
       company-tooltip-limit 16)
 (diminish 'company-mode " Κ")
 
+;; diff-hl
+(global-diff-hl-mode t)
+
 ;; dired
 (setq dired-recursive-deletes 'top)
 
@@ -40,11 +43,6 @@
 
 ;; fancy-narrow
 (fancy-narrow-mode 1)
-
-;; git-gutter
-(require 'git-gutter+)
-(global-git-gutter+-mode 1)
-(diminish 'git-gutter+-mode " Γ")
 
 ;; ibuffer
 (require 'ibuffer)
