@@ -49,8 +49,6 @@
 (global-set-key (kbd "C-c M-x") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(global-set-key (kbd "C-c s") 'sr-speedbar-toggle)
-
 (global-set-key (kbd "C-c C-s") 'swoop)
 (global-set-key (kbd "C-c C-a") 'swoop-multi)
 (global-set-key (kbd "C-c C-M-s") 'swoop-pcre-regexp)

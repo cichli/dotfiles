@@ -42,7 +42,6 @@
 (depends-on "smex")
 (depends-on "smooth-scrolling")
 (depends-on "solarized-theme")
-(depends-on "sr-speedbar")
 (depends-on "sunrise-commander")
 (depends-on "sunrise-x-loop")
 (depends-on "sunrise-x-tree")

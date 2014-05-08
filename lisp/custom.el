@@ -11,13 +11,7 @@
  '(git-gutter+-added ((t (:background "#002b36" :foreground "#859900" :weight bold))))
  '(git-gutter+-deleted ((t (:background "#002b36" :foreground "#dc322f" :weight bold))))
  '(git-gutter+-modified ((t (:background "#002b36" :foreground "#268bd2" :weight bold))))
- '(speedbar-button-face ((t (:inherit ## :foreground "#586e75"))) t)
- '(speedbar-directory-face ((t (:inherit ## :foreground "#268bd2"))) t)
- '(speedbar-file-face ((t (:inherit ## :foreground "#839496"))) t)
- '(speedbar-highlight-face ((t (:inherit ## :background "#073642"))) t)
- '(speedbar-selected-face ((t (:inherit ## :foreground "#b58900" :underline t))) t)
- '(speedbar-separator-face ((t (:inherit ## :background "#268bd2" :foreground "#002b36" :overline "#00736F"))) t)
- '(speedbar-tag-face ((t (:inherit ## :foreground "#859900"))) t))
+ )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

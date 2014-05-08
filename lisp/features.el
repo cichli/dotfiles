@@ -130,17 +130,6 @@
 ;; smex
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 
-;; speedbar
-(setq speedbar-directory-button-trim-method 'trim
-      speedbar-directory-unshown-regexp "^$"
-      speedbar-hide-button-brackets-flag t
-      speedbar-indentation-width 2
-      speedbar-show-unknown-files t
-      speedbar-use-images nil
-      sr-speedbar-right-side nil
-      sr-speedbar-width 30
-      sr-speedbar-width-x 30)
-
 ;; swoop
 (require 'swoop)
 (setq swoop-font-size-change: nil)
