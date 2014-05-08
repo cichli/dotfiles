@@ -6,6 +6,7 @@
       cider-repl-result-prefix ";; => "
       cider-repl-use-clojure-font-lock t
       cider-repl-wrap-history t
+      cider-stacktrace-default-filters nil
       nrepl-buffer-name-show-port t)
 
 (defun enable-clj-refactor-mode ()
