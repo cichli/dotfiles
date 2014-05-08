@@ -12,6 +12,7 @@ var/
 .DS_Store
 .ido.last
 .mc-lists.el
+.org-id-locations
 .recentf
 .smex-items
 projectile.cache

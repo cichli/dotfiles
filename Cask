@@ -32,6 +32,7 @@
 (depends-on "info+")
 (depends-on "latest-clojure-libraries")
 (depends-on "magit")
+(depends-on "org-drill-table")
 (depends-on "org-plus-contrib")
 (depends-on "page-break-lines")
 (depends-on "pallet")

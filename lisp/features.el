@@ -102,6 +102,8 @@
 (diminish 'projectile-mode " π")
 
 ;; org
+(require 'org-drill)
+
 (setq org-cycle-level-faces nil
       org-enforce-todo-dependencies t
       org-replace-disputed-keys t
