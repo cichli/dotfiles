@@ -34,6 +34,7 @@
 (depends-on "magit")
 (depends-on "org-drill-table")
 (depends-on "org-plus-contrib")
+(depends-on "ox-reveal")
 (depends-on "page-break-lines")
 (depends-on "pallet")
 (depends-on "paredit")

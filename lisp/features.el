@@ -103,6 +103,7 @@
 
 ;; org
 (require 'org-drill)
+(require 'ox-reveal)
 
 (setq org-cycle-level-faces nil
       org-enforce-todo-dependencies t
