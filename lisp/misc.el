@@ -10,8 +10,7 @@
 
 (auto-compression-mode 1)
 
-(setq auto-save-file-name-transforms '(("." "~/.emacs.d/backups/"))
-      backup-by-copying t
+(setq backup-by-copying t
       backup-directory-alist '(("." . "~/.emacs.d/backups/"))
       delete-by-moving-to-trash t
       delete-old-versions t
