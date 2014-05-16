@@ -89,18 +89,6 @@
   (setq magit-diff-options (remove "-w" magit-diff-options))
   (magit-refresh))
 
-;; paredit
-(require 'paredit)
-(diminish 'paredit-mode " Π")
-
-;; page-break-lines
-(global-page-break-lines-mode 1)
-(diminish 'page-break-lines-mode)
-
-;; projectile
-(projectile-global-mode 1)
-(diminish 'projectile-mode " π")
-
 ;; org
 (require 'org-drill)
 (require 'ox-reveal)
@@ -124,6 +112,18 @@
 
 (defadvice kill-whole-line (after fix-cookies activate)
   (myorg-update-parent-cookie))
+
+;; paredit
+(require 'paredit)
+(diminish 'paredit-mode " Π")
+
+;; page-break-lines
+(global-page-break-lines-mode 1)
+(diminish 'page-break-lines-mode)
+
+;; projectile
+(projectile-global-mode 1)
+(diminish 'projectile-mode " π")
 
 ;; re-builder
 (setq-default reb-re-syntax 'string)
