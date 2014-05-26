@@ -37,7 +37,8 @@
       ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; eshell
-(setq eshell-directory-name "~/.emacs.d/eshell/")
+(setq eshell-directory-name "~/.emacs.d/eshell/"
+      eshell-scroll-show-maximum-output nil)
 (add-hook 'eshell-mode-hook '(lambda ()
                                (company-mode -1)))
 
