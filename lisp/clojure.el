@@ -1,14 +1,14 @@
 (require 'cider)
+
 (setq cider-auto-select-error-buffer t
       cider-interactive-eval-result-prefix ";; => "
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
       cider-repl-popup-stacktraces t
       cider-repl-result-prefix ";; => "
-      cider-repl-use-clojure-font-lock t
       cider-repl-wrap-history t
-      cider-stacktrace-default-filters nil
-      nrepl-buffer-name-show-port t)
+      nrepl-buffer-name-show-port t
+      nrepl-log-events t)
 
 (defun enable-clj-refactor-mode ()
   (interactive)
