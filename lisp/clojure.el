@@ -8,7 +8,7 @@
       cider-repl-result-prefix ";; => "
       cider-repl-wrap-history t
       nrepl-buffer-name-show-port t
-      nrepl-log-events t)
+      nrepl-log-messages t)
 
 (defun enable-clj-refactor-mode ()
   (interactive)
