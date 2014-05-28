@@ -5,6 +5,7 @@
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-jump-mode")
+(depends-on "ace-window")
 (depends-on "back-button")
 (depends-on "bookmark+")
 (depends-on "browse-kill-ring")

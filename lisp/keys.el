@@ -15,6 +15,9 @@
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
 (define-key cider-mode-map (kbd "C-c C-b") 'cider-eval-buffer)
@@ -42,8 +45,6 @@
 (global-set-key (kbd "C-x l") 'magit-log)
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
-
-(global-set-key (kbd "M-o") 'other-window)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c M-x") 'smex-major-mode-commands)
