@@ -46,7 +46,7 @@
 (fancy-narrow-mode 1)
 
 ;; guide-key
-(guide-key-mode t)
+(guide-key-mode 1)
 (setq guide-key/guide-key-sequence '("C-c" "C-x")
       guide-key/idle-delay 0.5
       guide-key/popup-window-position 'bottom
