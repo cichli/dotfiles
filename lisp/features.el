@@ -120,6 +120,9 @@
 (global-page-break-lines-mode 1)
 (diminish 'page-break-lines-mode)
 
+;; popwin
+(popwin-mode t)
+
 ;; projectile
 (projectile-global-mode 1)
 (diminish 'projectile-mode " π")

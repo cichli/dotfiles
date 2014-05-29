@@ -39,6 +39,7 @@
 (depends-on "page-break-lines")
 (depends-on "pallet")
 (depends-on "paredit")
+(depends-on "popwin")
 (depends-on "projectile")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
