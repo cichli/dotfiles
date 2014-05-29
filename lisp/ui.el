@@ -22,6 +22,7 @@
       inhibit-startup-screen t)
 
 (setq-default indicate-empty-lines t
+              show-trailing-whitespace t
               truncate-lines t)
 
 (defadvice kill-buffer (around kill-buffer-around-advice activate)
