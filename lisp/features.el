@@ -45,6 +45,13 @@
 ;; fancy-narrow
 (fancy-narrow-mode 1)
 
+;; guide-key
+(guide-key-mode t)
+(setq guide-key/guide-key-sequence '("C-c" "C-x")
+      guide-key/idle-delay 0.5
+      guide-key/popup-window-position 'bottom
+      guide-key/recursive-key-sequence-flag t)
+
 ;; ibuffer
 (require 'ibuffer)
 
