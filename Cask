@@ -1,7 +1,7 @@
 (source gnu)
 (source melpa)
-(source SC)
 (source org)
+(source SC)
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-jump-mode")
