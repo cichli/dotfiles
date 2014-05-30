@@ -39,6 +39,7 @@
 (depends-on "ox-reveal")
 (depends-on "page-break-lines")
 (depends-on "pallet")
+(depends-on "paradox")
 (depends-on "paredit")
 (depends-on "popwin")
 (depends-on "projectile")
