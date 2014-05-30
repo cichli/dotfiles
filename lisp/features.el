@@ -18,6 +18,7 @@
 ;; company-mode
 (global-company-mode)
 (setq company-echo-delay 0
+      company-end-of-buffer-workaround nil
       company-idle-delay 0.1
       company-minimum-prefix-length 2
       company-show-numbers t
