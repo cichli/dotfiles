@@ -19,6 +19,7 @@
 (depends-on "datomic-snippets")
 (depends-on "diff-hl")
 (depends-on "diminish")
+(depends-on "elisp-slime-nav")
 (depends-on "expand-region")
 (depends-on "fancy-narrow")
 (depends-on "flx-ido")
