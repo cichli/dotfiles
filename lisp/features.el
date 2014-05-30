@@ -48,7 +48,7 @@
 
 ;; guide-key
 (guide-key-mode 1)
-(setq guide-key/guide-key-sequence '("C-c" "C-x")
+(setq guide-key/guide-key-sequence '("C-c" "C-x" "C-z")
       guide-key/idle-delay 0.5
       guide-key/popup-window-position 'bottom
       guide-key/recursive-key-sequence-flag t)
@@ -130,6 +130,7 @@
 
 ;; popwin
 (popwin-mode t)
+(global-set-key (kbd "C-z") popwin:keymap)
 
 ;; projectile
 (projectile-global-mode 1)
