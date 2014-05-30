@@ -28,6 +28,9 @@
   (add-hook hook 'enable-paredit-mode)
   (add-hook hook 'rainbow-delimiters-mode-enable))
 
+(add-hook 'cider-repl-mode-hook '(lambda ()
+                                   (setq show-trailing-whitespace nil)))
+
 (font-lock-add-keywords 'clojure-mode `(("(\\(fn\\)[\[[:space:]]"
                                          (0 (progn (compose-region (match-beginning 1)
                                                                    (match-end 1) "λ")
