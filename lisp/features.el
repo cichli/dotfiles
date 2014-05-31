@@ -72,6 +72,7 @@
 
 ;; magit
 (require 'magit)
+(setq magit-set-upstream-on-push t)
 (diminish 'magit-auto-revert-mode " Μ")
 
 (defadvice magit-status (around magit-fullscreen activate)
