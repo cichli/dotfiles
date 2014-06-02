@@ -16,6 +16,7 @@
 (depends-on "clojure-snippets")
 (depends-on "clojure-test-mode")
 (depends-on "company")
+(depends-on "dash")
 (depends-on "datomic-snippets")
 (depends-on "diff-hl")
 (depends-on "diminish")
