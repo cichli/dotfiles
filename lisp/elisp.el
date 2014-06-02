@@ -10,3 +10,4 @@
 
 (diminish-major 'emacs-lisp-mode-hook "el")
 (diminish 'eldoc-mode)
+(diminish 'elisp-slime-nav-mode)
