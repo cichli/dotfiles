@@ -53,6 +53,8 @@
       guide-key/idle-delay 0.5
       guide-key/popup-window-position 'bottom
       guide-key/recursive-key-sequence-flag t)
+(diminish 'guide-key-mode)
+
 (add-hook 'popwin:after-popup-hook '(lambda ()
                                       (with-current-buffer guide-key/guide-buffer-name
                                         (setq show-trailing-whitespace nil))))
