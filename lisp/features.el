@@ -144,6 +144,8 @@
 
 ;; projectile
 (projectile-global-mode 1)
+(setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
+      projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld"))
 (diminish 'projectile-mode " π")
 
 ;; re-builder
