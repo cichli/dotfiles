@@ -40,10 +40,6 @@
 
 (fringe-mode '(1 . nil))
 
-(setq display-time-format "%t%a %d %b %Y%t%H:%M%t"
-      display-time-default-load-average nil)
-(display-time-mode 1)
-
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
