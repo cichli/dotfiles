@@ -140,7 +140,6 @@
 
 ;; popwin
 (popwin-mode t)
-(global-set-key (kbd "C-z") popwin:keymap)
 
 ;; projectile
 (projectile-global-mode 1)
