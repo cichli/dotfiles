@@ -5,7 +5,10 @@
 ;; bookmark+
 (require 'bookmark+)
 (diminish 'back-button-mode)
-(setq bookmark-save-flag t
+(setq bmkp-bmenu-commands-file (concat user-emacs-directory "bookmarks/bmk-bmenu-commands.el")
+      bmkp-bmenu-state-file (concat user-emacs-directory "bookmarks/bmk-bmenu-state.el")
+      bookmark-default-file (concat user-emacs-directory "bookmarks/bookmarks")
+      bookmark-save-flag t
       bookmark-version-control t)
 
 ;; browse-kill-ring
