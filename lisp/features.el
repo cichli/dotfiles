@@ -27,7 +27,7 @@
       company-show-numbers t
       company-tooltip-align-annotations t
       company-tooltip-limit 16)
-(diminish 'company-mode " Κ")
+(diminish 'company-mode)
 
 ;; diff-hl
 (global-diff-hl-mode t)
@@ -49,6 +49,10 @@
 
 ;; fancy-narrow
 (fancy-narrow-mode 1)
+(diminish 'fancy-narrow-mode)
+
+;; flyspell
+(diminish 'flyspell-mode)
 
 ;; guide-key
 (guide-key-mode 1)
@@ -79,7 +83,7 @@
 ;; magit
 (require 'magit)
 (setq magit-set-upstream-on-push t)
-(diminish 'magit-auto-revert-mode " Μ")
+(diminish 'magit-auto-revert-mode)
 
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
@@ -133,7 +137,7 @@
 
 ;; paredit
 (require 'paredit)
-(diminish 'paredit-mode " Π")
+(diminish 'paredit-mode)
 
 ;; page-break-lines
 (global-page-break-lines-mode 1)
@@ -146,7 +150,7 @@
 (projectile-global-mode 1)
 (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
       projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld"))
-(diminish 'projectile-mode " π")
+(diminish 'projectile-mode)
 
 ;; re-builder
 (setq-default reb-re-syntax 'string)
@@ -160,7 +164,7 @@
 
 ;; undo-tree
 (global-undo-tree-mode 1)
-(diminish 'undo-tree-mode " υ")
+(diminish 'undo-tree-mode)
 
 (dolist (fn '(undo-tree-undo undo-tree-redo))
   (defadvice fn (around keep-region activate)
@@ -193,6 +197,6 @@
 
 ;; yasnippet
 (yas-global-mode 1)
-(diminish 'yas-minor-mode " Υ")
+(diminish 'yas-minor-mode)
 
 (setq yas-prompt-functions '(yas-ido-prompt))
