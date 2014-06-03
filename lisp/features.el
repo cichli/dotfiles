@@ -52,6 +52,7 @@
 (diminish 'fancy-narrow-mode)
 
 ;; flyspell
+(require 'flyspell)
 (diminish 'flyspell-mode)
 
 ;; guide-key
