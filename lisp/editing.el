@@ -11,9 +11,11 @@
              set-goal-column))
   (put x 'disabled nil))
 
-(delete-selection-mode 1)
-(electric-indent-mode 1)
-(global-subword-mode 1)
+(defadvice kill-region (before slick-cut activate compile)
+  (interactive
+   (if mark-active (list (region-beginning) (region-end))
+     (list (line-beginning-position)
+           (line-beginning-position 2)))))
 
 (defadvice kill-ring-save (before slick-copy activate compile)
   (interactive
@@ -22,8 +24,11 @@
      (list (line-beginning-position)
            (line-beginning-position 2)))))
 
-(defadvice kill-region (before slick-cut activate compile)
-  (interactive
-   (if mark-active (list (region-beginning) (region-end))
-     (list (line-beginning-position)
-           (line-beginning-position 2)))))
+;; delete-selection-mode
+(delete-selection-mode 1)
+
+;; electric-indent-mode
+(electric-indent-mode 1)
+
+;; global-subword-mode
+(global-subword-mode 1)
