@@ -42,9 +42,6 @@
 
 (fringe-mode '(1 . nil))
 
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
 (global-font-lock-mode 1)
 (global-hl-line-mode 1)
 (show-paren-mode 1)
@@ -59,19 +56,3 @@
 (global-auto-revert-mode 1)
 (setq auto-revert-verbose nil
       global-auto-revert-non-file-buffers t)
-
-(require 'rainbow-mode)
-(diminish 'rainbow-mode)
-(dolist (hook '(clojure-mode-hook
-                css-mode-hook
-                emacs-lisp-mode-hook
-                html-mode-hook
-                js-mode-hook
-                org-mode-hook
-                text-mode-hook))
-  (add-hook hook 'rainbow-mode))
-
-(require 'volatile-highlights)
-(volatile-highlights-mode 1)
-(set-face-inverse-video-p 'vhl/default-face t)
-(diminish 'volatile-highlights-mode)

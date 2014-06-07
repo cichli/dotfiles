@@ -153,6 +153,18 @@
       projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld"))
 (diminish 'projectile-mode)
 
+;; rainbow-mode
+(require 'rainbow-mode)
+(diminish 'rainbow-mode)
+(dolist (hook '(clojure-mode-hook
+                css-mode-hook
+                emacs-lisp-mode-hook
+                html-mode-hook
+                js-mode-hook
+                org-mode-hook
+                text-mode-hook))
+  (add-hook hook 'rainbow-mode))
+
 ;; re-builder
 (setq-default reb-re-syntax 'string)
 
@@ -178,6 +190,16 @@
           (set-marker p nil)
           (set-marker m nil))
       ad-do-it)))
+
+;; uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+;; volatile-highlights
+(require 'volatile-highlights)
+(volatile-highlights-mode 1)
+(set-face-inverse-video-p 'vhl/default-face t)
+(diminish 'volatile-highlights-mode)
 
 ;; webjump
 (setq webjump-sites '(("Google" .
