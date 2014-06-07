@@ -29,7 +29,7 @@
 
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
-(global-set-key (kbd "<C-tab>") 'complete-or-indent)
+(global-set-key (kbd "C-<tab>") 'company-complete)
 
 (global-set-key (kbd "C-;") 'er/expand-region)
 
