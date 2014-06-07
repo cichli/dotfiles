@@ -25,6 +25,8 @@
               show-trailing-whitespace t
               truncate-lines t)
 
+(add-hook 'help-mode-hook '(lambda () (setq show-trailing-whitespace nil)))
+
 (defadvice kill-buffer (around kill-buffer-around-advice activate)
   (let ((buffer-to-kill (ad-get-arg 0)))
     (if (equal buffer-to-kill "*scratch*")
