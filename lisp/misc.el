@@ -18,6 +18,8 @@
       kept-old-versions 2
       recentf-max-saved-items 100
       recentf-save-file "~/.emacs.d/.recentf"
+      user-full-name "Michael Griffiths"
+      user-mail-address "mikey@cich.li"
       version-control t)
 
 (recentf-mode 1)
