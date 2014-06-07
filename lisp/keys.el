@@ -24,6 +24,12 @@
 ;; browse-kill-ring
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
+;; buffer-move
+(global-set-key (kbd "C-' f") 'buf-move-right)
+(global-set-key (kbd "C-' b") 'buf-move-left)
+(global-set-key (kbd "C-' n") 'buf-move-down)
+(global-set-key (kbd "C-' p") 'buf-move-up)
+
 ;; CIDER
 (define-key cider-mode-map (kbd "C-c C-b") 'cider-eval-buffer)
 (define-key cider-mode-map (kbd "C-c C-q") 'cider-quit)

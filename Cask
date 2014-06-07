@@ -9,6 +9,7 @@
 (depends-on "back-button")
 (depends-on "bookmark+")
 (depends-on "browse-kill-ring")
+(depends-on "buffer-move")
 (depends-on "cider")
 (depends-on "clj-refactor")
 (depends-on "clojure-cheatsheet")
