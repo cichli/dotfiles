@@ -215,9 +215,6 @@
                       ("Youtube" .
                        [simple-query "youtube.com" "youtube.com/results?search_query=" ""])))
 
-;; which-function
-(which-function-mode 1)
-
 ;; yasnippet
 (yas-global-mode 1)
 (diminish 'yas-minor-mode)
