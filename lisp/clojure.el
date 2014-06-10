@@ -24,17 +24,4 @@
 (add-hook 'cider-repl-mode-hook '(lambda ()
                                    (setq show-trailing-whitespace nil)))
 
-(font-lock-add-keywords 'clojure-mode `(("(\\(fn\\)[\[[:space:]]"
-                                         (0 (progn (compose-region (match-beginning 1)
-                                                                   (match-end 1) "λ")
-                                                   nil)))))
-(font-lock-add-keywords 'clojure-mode `(("\\(#\\)("
-                                         (0 (progn (compose-region (match-beginning 1)
-                                                                   (match-end 1) "ƒ")
-                                                   nil)))))
-(font-lock-add-keywords 'clojure-mode `(("\\(#\\){"
-                                         (0 (progn (compose-region (match-beginning 1)
-                                                                   (match-end 1) "∈")
-                                                   nil)))))
-
 (diminish-major 'clojure-mode-hook "clj")
