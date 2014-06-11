@@ -2,9 +2,9 @@
 
 (setq cider-auto-select-error-buffer t
       cider-interactive-eval-result-prefix ";; => "
+      cider-show-error-buffer 'always
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
-      cider-repl-popup-stacktraces t
       cider-repl-result-prefix ";; => "
       cider-repl-wrap-history t
       nrepl-buffer-name-show-port t
