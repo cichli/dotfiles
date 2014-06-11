@@ -18,7 +18,6 @@
 (dolist (hook '(cider-repl-mode-hook
                 clojure-mode-hook))
   (add-hook hook 'enable-clj-refactor-mode)
-  (add-hook hook 'enable-paredit-mode)
   (add-hook hook 'rainbow-delimiters-mode-enable))
 
 (add-hook 'cider-repl-mode-hook '(lambda ()

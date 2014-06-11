@@ -136,10 +136,6 @@
 (defadvice kill-whole-line (after fix-cookies activate)
   (myorg-update-parent-cookie))
 
-;; paredit
-(require 'paredit)
-(diminish 'paredit-mode)
-
 ;; page-break-lines
 (global-page-break-lines-mode 1)
 (diminish 'page-break-lines-mode)

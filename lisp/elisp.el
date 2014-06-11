@@ -4,7 +4,6 @@
 
 (dolist (fn '(eldoc-mode
               elisp-slime-nav-mode
-              enable-paredit-mode
               rainbow-delimiters-mode))
   (add-hook 'emacs-lisp-mode-hook fn))
 
