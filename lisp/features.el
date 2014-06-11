@@ -164,6 +164,10 @@
 ;; re-builder
 (setq-default reb-re-syntax 'string)
 
+;; smartparens
+(smartparens-global-mode 1)
+(diminish 'smartparens-mode)
+
 ;; smex
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 

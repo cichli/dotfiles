@@ -47,6 +47,7 @@
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
 (depends-on "rotate")
+(depends-on "smartparens")
 (depends-on "smex")
 (depends-on "smooth-scrolling")
 (depends-on "solarized-theme")
