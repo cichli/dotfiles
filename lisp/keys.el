@@ -65,6 +65,10 @@
 ;; popwin
 (global-set-key (kbd "C-z") popwin:keymap)
 
+;; rotate
+(global-set-key (kbd "C-' l") 'rotate-layout)
+(global-set-key (kbd "C-' w") 'rotate-window)
+
 ;; smex
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c M-x") 'smex-major-mode-commands)
