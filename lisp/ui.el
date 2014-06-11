@@ -57,9 +57,6 @@
 ;; line-number-mode
 (line-number-mode 1)
 
-;; show-paren-mode
-(show-paren-mode 1)
-
 ;; transient-mark-mode
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
