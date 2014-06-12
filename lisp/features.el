@@ -81,6 +81,11 @@
 (ido-ubiquitous-mode 1)
 (flx-ido-mode 1)
 
+;; iflipb
+(require 'iflipb)
+(setq iflipb-include-more-buffers t
+      iflipb-wrap-around t)
+
 ;; magit
 (require 'magit)
 (setq magit-set-upstream-on-push t)
