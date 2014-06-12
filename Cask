@@ -32,6 +32,7 @@
 (depends-on "guide-key")
 (depends-on "htmlize")
 (depends-on "ido-ubiquitous")
+(depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "info+")
 (depends-on "latest-clojure-libraries")

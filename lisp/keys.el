@@ -50,6 +50,10 @@
 (define-key ibuffer-mode-map (kbd "M-o") nil)
 (define-key ibuffer-mode-map (kbd "C-M-o") 'ibuffer-visit-buffer-1-window)
 
+;; iflipb
+(global-set-key (kbd "M-[") 'iflipb-previous-buffer)
+(global-set-key (kbd "M-]") 'iflipb-next-buffer)
+
 ;; imenu
 (global-set-key (kbd "C-.") 'ido-imenu-anywhere)
 
