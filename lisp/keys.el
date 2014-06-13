@@ -60,6 +60,10 @@
 ;; isearch
 (define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
 
+;; jump-char
+(global-set-key (kbd "C-<") 'jump-char-backward)
+(global-set-key (kbd "C->") 'jump-char-forward)
+
 ;; magit
 (global-set-key (kbd "C-x m") 'magit-status)
 (global-set-key (kbd "C-x l") 'magit-log)

@@ -35,6 +35,7 @@
 (depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "info+")
+(depends-on "jump-char")
 (depends-on "latest-clojure-libraries")
 (depends-on "magit")
 (depends-on "org-drill-table")
