@@ -171,6 +171,7 @@
 
 ;; smartparens
 (smartparens-global-mode 1)
+(smartparens-global-strict-mode 1)
 (show-smartparens-global-mode 1)
 (diminish 'smartparens-mode)
 
