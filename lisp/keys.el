@@ -40,6 +40,7 @@
 
 ;; company-mode
 (global-set-key (kbd "C-<tab>") 'company-complete)
+
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
 ;; expand-region
@@ -47,6 +48,7 @@
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (define-key ibuffer-mode-map (kbd "M-o") nil)
 (define-key ibuffer-mode-map (kbd "C-M-o") 'ibuffer-visit-buffer-1-window)
 
@@ -67,6 +69,7 @@
 ;; magit
 (global-set-key (kbd "C-x m") 'magit-status)
 (global-set-key (kbd "C-x l") 'magit-log)
+
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 
@@ -79,6 +82,7 @@
 
 ;; smartparens
 (sp-use-paredit-bindings)
+
 (define-key sp-keymap (kbd "C-S-a") 'sp-beginning-of-sexp)
 (define-key sp-keymap (kbd "C-S-d") 'sp-end-of-sexp)
 (define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp)
@@ -108,6 +112,7 @@
 (define-key winner-mode-map (kbd "C-c ]") 'winner-redo)
 
 ;; yasnippet
+(global-set-key (kbd "<backtab>") 'yas-insert-snippet)
+
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
-(global-set-key (kbd "<backtab>") 'yas-insert-snippet)
