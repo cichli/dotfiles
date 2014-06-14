@@ -7,6 +7,8 @@
               rainbow-delimiters-mode))
   (add-hook 'emacs-lisp-mode-hook fn))
 
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+
 (diminish-major 'emacs-lisp-mode-hook "el")
 (diminish 'eldoc-mode)
 (diminish 'elisp-slime-nav-mode)

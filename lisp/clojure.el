@@ -23,4 +23,7 @@
 (add-hook 'cider-repl-mode-hook '(lambda ()
                                    (setq show-trailing-whitespace nil)))
 
+(sp-local-pair 'clojure-mode "'" nil :actions nil)
+(sp-local-pair 'cider-repl-mode "'" nil :actions nil)
+
 (diminish-major 'clojure-mode-hook "clj")
