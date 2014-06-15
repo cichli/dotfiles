@@ -42,9 +42,7 @@
 ;; eshell
 (setq eshell-directory-name "~/.emacs.d/eshell/"
       eshell-scroll-show-maximum-output nil)
-(add-hook 'eshell-mode-hook '(lambda ()
-                               (company-mode -1)
-                               (hide-trailing-whitespace)))
+(add-hook 'eshell-mode-hook 'hide-trailing-whitespace)
 
 ;; fancy-narrow
 (fancy-narrow-mode 1)
