@@ -40,3 +40,9 @@
         (delete-file filename)
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
+
+(defun hide-trailing-whitespace ()
+  (setq show-trailing-whitespace nil))
+
+(defun show-trailing-whitespace ()
+  (setq show-trailing-whitespace t))
