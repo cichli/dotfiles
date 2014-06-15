@@ -49,7 +49,7 @@
 (fringe-mode '(1 . nil))
 
 ;; help-mode
-(add-hook 'help-mode-hook '(lambda () (setq show-trailing-whitespace nil)))
+(add-hook 'help-mode-hook 'hide-trailing-whitespace)
 
 ;; hl-line-mode
 (global-hl-line-mode 1)

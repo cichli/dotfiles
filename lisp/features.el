@@ -44,7 +44,7 @@
       eshell-scroll-show-maximum-output nil)
 (add-hook 'eshell-mode-hook '(lambda ()
                                (company-mode -1)
-                               (setq show-trailing-whitespace nil)))
+                               (hide-trailing-whitespace)))
 
 ;; fancy-narrow
 (fancy-narrow-mode 1)
@@ -65,7 +65,7 @@
 (add-hook 'popwin:after-popup-hook '(lambda ()
                                       (-when-let (buffer (get-buffer guide-key/guide-buffer-name))
                                         (with-current-buffer buffer
-                                          (setq show-trailing-whitespace nil)))))
+                                          (hide-trailing-whitespace)))))
 
 ;; ibuffer
 (require 'ibuffer)
