@@ -39,6 +39,9 @@
       ediff-split-window-function 'split-window-horizontally
       ediff-window-setup-function 'ediff-setup-windows-plain)
 
+;; eldoc
+(require 'eldoc)
+
 ;; eshell
 (setq eshell-directory-name "~/.emacs.d/eshell/"
       eshell-scroll-show-maximum-output nil)
