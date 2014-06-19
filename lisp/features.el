@@ -148,6 +148,30 @@
 ;; popwin
 (popwin-mode t)
 
+;; powerline
+(setq-default mode-line-format
+              '("%e" (:eval
+                      (let* ((lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
+                                          (powerline-raw (format " [%s / %s] " backend (vc-workfile-version buffer-file-name backend))))
+                                        (when (buffer-modified-p) (powerline-raw "[+] "))
+                                        (when buffer-read-only (powerline-raw "[RO] "))))
+                             (center (list (powerline-buffer-id)
+                                           (powerline-raw " [")
+                                           (powerline-major-mode)
+                                           (powerline-process)
+                                           (powerline-raw "] ")
+                                           (when (not (string= "" (powerline-minor-modes)))
+                                             (concat (powerline-raw "[")
+                                                     (powerline-minor-modes)
+                                                     (powerline-raw "] ")))
+                                           (powerline-raw smartrep-mode-line-string)))
+                             (rhs (list (powerline-raw " %l,%c "))))
+                        (concat (powerline-render lhs)
+                                (powerline-fill-center nil (/ (powerline-width center) 2.0))
+                                (powerline-render center)
+                                (powerline-fill nil (powerline-width rhs))
+                                (powerline-render rhs))))))
+
 ;; projectile
 (projectile-global-mode 1)
 (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")

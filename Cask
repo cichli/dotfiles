@@ -46,6 +46,7 @@
 (depends-on "paradox")
 (depends-on "phi-search")
 (depends-on "popwin")
+(depends-on "powerline")
 (depends-on "projectile")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
