@@ -198,6 +198,9 @@
 (show-smartparens-global-mode 1)
 (diminish 'smartparens-mode)
 
+;; smartrep
+(setq smartrep-mode-line-string-activated "[SMARTREP]")
+
 ;; smex
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 
