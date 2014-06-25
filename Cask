@@ -32,6 +32,7 @@
 (depends-on "guide-key")
 (depends-on "htmlize")
 (depends-on "ido-ubiquitous")
+(depends-on "iedit")
 (depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "info+")

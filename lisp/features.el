@@ -81,6 +81,9 @@
 (ido-ubiquitous-mode 1)
 (flx-ido-mode 1)
 
+;; iedit
+(require 'iedit)
+
 ;; iflipb
 (require 'iflipb)
 (setq iflipb-include-more-buffers t

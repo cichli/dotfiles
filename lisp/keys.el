@@ -52,6 +52,13 @@
 (define-key ibuffer-mode-map (kbd "M-o") nil)
 (define-key ibuffer-mode-map (kbd "C-M-o") 'ibuffer-visit-buffer-1-window)
 
+;; iedit
+(global-unset-key (kbd "C-'"))
+(global-set-key (kbd "C-M-;") 'iedit-mode)
+
+(define-key iedit-mode-keymap (kbd "C-'") nil)
+(define-key iedit-mode-keymap (kbd "C-M-'") 'iedit-toggle-unmatched-lines-visible)
+
 ;; iflipb
 (global-set-key (kbd "M-[") 'iflipb-previous-buffer)
 (global-set-key (kbd "M-]") 'iflipb-next-buffer)
