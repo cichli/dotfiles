@@ -148,6 +148,9 @@
 (global-page-break-lines-mode 1)
 (diminish 'page-break-lines-mode)
 
+;; paradox
+(add-hook 'paradox-menu-mode-hook 'hide-trailing-whitespace)
+
 ;; popwin
 (popwin-mode t)
 
