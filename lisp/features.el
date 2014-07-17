@@ -42,6 +42,28 @@
 ;; eldoc
 (require 'eldoc)
 
+;; erc
+(require 'erc)
+(setq erc-email-userid "mikey@cich.li"
+      erc-nick "cichli"
+      erc-user-full-name "Michael Griffiths")
+
+(setq erc-autojoin-channels-alist
+      '(("freenode.net" "#emacs" "#clojurescript" "#clojure")))
+
+(setq erc-hide-list '("JOIN" "NICK" "PART" "QUIT")
+      erc-interpret-mirc-color t
+      erc-kill-buffer-on-part t
+      erc-kill-queries-on-quit t
+      erc-kill-server-buffer-on-quit t
+      erc-server-reconnect-attempts 5
+      erc-server-reconnect-timeout 5)
+
+(add-hook 'erc-mode-hook (lambda ()
+                           (erc-truncate-mode 1)
+                           (hide-trailing-whitespace)
+                           (set (make-local-variable 'scroll-conservatively) 100)))
+
 ;; eshell
 (setq eshell-directory-name "~/.emacs.d/eshell/"
       eshell-scroll-show-maximum-output nil)

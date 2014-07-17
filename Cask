@@ -21,6 +21,7 @@
 (depends-on "diff-hl")
 (depends-on "diminish")
 (depends-on "elisp-slime-nav")
+(depends-on "erc-hl-nicks")
 (depends-on "expand-region")
 (depends-on "fancy-narrow")
 (depends-on "flx-ido")
