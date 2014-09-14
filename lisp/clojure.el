@@ -6,6 +6,7 @@
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
       cider-repl-result-prefix ";; => "
+      cider-repl-use-clojure-font-lock t
       cider-repl-wrap-history t
       nrepl-buffer-name-show-port t
       nrepl-log-messages t)
