@@ -64,4 +64,3 @@
 (depends-on "undo-tree")
 (depends-on "volatile-highlights")
 (depends-on "yaml-mode")
-(depends-on "yasnippet")

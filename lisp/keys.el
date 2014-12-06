@@ -122,9 +122,3 @@
 ;; winner
 (define-key winner-mode-map (kbd "C-c [") 'winner-undo)
 (define-key winner-mode-map (kbd "C-c ]") 'winner-redo)
-
-;; yasnippet
-(global-set-key (kbd "<backtab>") 'yas-insert-snippet)
-
-(define-key yas-minor-mode-map [(tab)] nil)
-(define-key yas-minor-mode-map (kbd "TAB") nil)

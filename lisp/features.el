@@ -275,9 +275,3 @@
                        [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])
                       ("Youtube" .
                        [simple-query "youtube.com" "youtube.com/results?search_query=" ""])))
-
-;; yasnippet
-(yas-global-mode 1)
-(diminish 'yas-minor-mode)
-
-(setq yas-prompt-functions '(yas-ido-prompt))
