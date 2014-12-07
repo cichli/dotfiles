@@ -258,6 +258,9 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+;; visual-line
+(diminish 'visual-line-mode)
+
 ;; volatile-highlights
 (require 'volatile-highlights)
 (volatile-highlights-mode 1)
