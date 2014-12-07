@@ -16,6 +16,7 @@ var/
 .org-id-locations
 .recentf
 .smex-items
+async-bytecomp.log
 projectile.cache
 projectile-bookmarks.eld
 session.*
