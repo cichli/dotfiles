@@ -27,8 +27,5 @@
 ;; delete-selection-mode
 (delete-selection-mode 1)
 
-;; electric-indent-mode
-(electric-indent-mode 1)
-
 ;; global-subword-mode
 (global-subword-mode 1)
