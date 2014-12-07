@@ -179,7 +179,8 @@
 ;; powerline
 (setq-default mode-line-format
               '("%e" (:eval
-                      (let* ((lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
+                      (let* ((minor-modes (replace-regexp-in-string "\s?," "" (powerline-minor-modes)))
+                             (lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
                                           (powerline-raw (format " [%s / %s] " backend (vc-workfile-version buffer-file-name backend))))
                                         (when (buffer-modified-p) (powerline-raw "[+] "))
                                         (when buffer-read-only (powerline-raw "[RO] "))))
@@ -188,9 +189,9 @@
                                            (powerline-major-mode)
                                            (powerline-process)
                                            (powerline-raw "] ")
-                                           (when (not (string= "" (powerline-minor-modes)))
+                                           (when (not (string= "" minor-modes))
                                              (concat (powerline-raw "[")
-                                                     (powerline-minor-modes)
+                                                     minor-modes
                                                      (powerline-raw "] ")))
                                            (powerline-raw smartrep-mode-line-string)))
                              (rhs (list (powerline-raw " %l,%c "))))
