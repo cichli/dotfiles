@@ -36,6 +36,7 @@
 (depends-on "jump-char")
 (depends-on "latest-clojure-libraries")
 (depends-on "magit" :git "https://github.com/magit/magit.git" :branch "next")
+(depends-on "markdown-mode")
 (depends-on "org-drill-table")
 (depends-on "org-plus-contrib")
 (depends-on "ox-reveal")
