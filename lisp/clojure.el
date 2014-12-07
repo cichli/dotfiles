@@ -20,6 +20,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode-enable)
 
 (add-hook 'cider-repl-mode-hook 'hide-trailing-whitespace)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode-enable)
 
 (sp-local-pair 'clojure-mode "'" nil :actions nil)
 (sp-local-pair 'cider-repl-mode "'" nil :actions nil)
