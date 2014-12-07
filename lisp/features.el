@@ -115,6 +115,7 @@
 (require 'magit)
 (setq magit-set-upstream-on-push t)
 (diminish 'magit-auto-revert-mode)
+(diminish 'magit-backup-mode)
 
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
