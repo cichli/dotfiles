@@ -1,3 +1,6 @@
+;; auto-fill
+(diminish 'auto-fill-function)
+
 ;; back-button
 (require 'back-button)
 (back-button-mode 1)
