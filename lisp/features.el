@@ -26,7 +26,6 @@
 (setq company-echo-delay 0
       company-idle-delay 0.1
       company-minimum-prefix-length 2
-      company-show-numbers t
       company-tooltip-align-annotations t
       company-tooltip-limit 16)
 (diminish 'company-mode)
