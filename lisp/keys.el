@@ -43,6 +43,10 @@
 
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
+;; electric-indent
+(global-set-key (kbd "C-j") 'newline-and-indent)
+(global-set-key (kbd "C-m") 'electric-indent-just-newline)
+
 ;; expand-region
 (global-set-key (kbd "C-;") 'er/expand-region)
 
