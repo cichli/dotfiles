@@ -21,6 +21,9 @@
 (global-set-key (kbd "M-o") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
+;; aggressive-indent
+(define-key aggressive-indent-mode-map (kbd "C-c C-q") nil)
+
 ;; browse-kill-ring
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
