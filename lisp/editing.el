@@ -1,7 +1,9 @@
 (setq-default fill-column 80
               indent-tabs-mode nil)
 
-(setq sentence-end-double-space nil
+(setq mode-require-final-newline 'visit-save
+      require-final-newline 'visit-save
+      sentence-end-double-space nil
       shift-select-mode nil
       x-select-enable-clipboard t)
 
