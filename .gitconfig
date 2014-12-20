@@ -1,0 +1,12 @@
+[user]
+	name = Michael Griffiths
+	email = mikey@cich.li
+[credential]
+	helper = osxkeychain
+[github]
+	user = cichli
+	oauth-token = !cat ~/.github.oauth-token
+[core]
+	autocrlf = input
+[diff "clojure"]
+	xfuncname = (^\\(.*|\\s*\\(defn.*)
