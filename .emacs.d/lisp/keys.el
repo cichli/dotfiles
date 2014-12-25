@@ -43,6 +43,9 @@
 
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
+;; diff-mode
+(define-key diff-mode-map (kbd "M-o") nil)
+
 ;; electric-indent
 (global-set-key (kbd "C-j") 'newline-and-indent)
 (global-set-key (kbd "C-m") 'electric-indent-just-newline)
