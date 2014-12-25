@@ -1,7 +1,3 @@
-;; aggressive-indent
-(global-aggressive-indent-mode 1)
-(diminish 'aggressive-indent-mode)
-
 ;; auto-fill
 (diminish 'auto-fill-function)
 
