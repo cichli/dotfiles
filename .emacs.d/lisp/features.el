@@ -33,6 +33,16 @@
 ;; diff-hl
 (global-diff-hl-mode t)
 
+;; diff-mode
+(add-hook 'diff-mode-hook '(lambda ()
+                             (setq-local whitespace-style '(face indentation
+                                                            tabs tab-mark
+                                                            spaces space-mark
+                                                            newline newline-mark
+                                                            space-before-tab space-after-tab))
+                             (whitespace-mode 1)
+                             (hide-trailing-whitespace)))
+
 ;; dired
 (setq dired-recursive-deletes 'top)
 
