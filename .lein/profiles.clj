@@ -2,7 +2,7 @@
         :dependencies [[criterium "0.4.3"]
                        [pjstadig/humane-test-output "0.6.0"]]
         :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
-                  [com.cemerick/austin "0.1.5"]
+                  [com.cemerick/austin "0.1.6"]
                   [com.jakemccrary/lein-test-refresh "0.5.0"]
                   [jonase/eastwood "0.1.4"]
                   [lein-ancient "0.5.5"]
