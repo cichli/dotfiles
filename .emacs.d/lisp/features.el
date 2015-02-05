@@ -28,7 +28,8 @@
       company-selection-wrap-around t
       company-tooltip-align-annotations t
       company-tooltip-flip-when-above t
-      company-tooltip-limit 16)
+      company-tooltip-limit 16
+      completion-styles '(emacs22 basic partial-completion substring initials))
 (diminish 'company-mode)
 
 ;; diff-hl
