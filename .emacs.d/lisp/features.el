@@ -37,7 +37,8 @@
 
 ;; diff-mode
 (add-hook 'diff-mode-hook '(lambda ()
-                             (setq-local whitespace-style '(face indentation
+                             (setq-local whitespace-style '(face
+                                                            indentation
                                                             tabs tab-mark
                                                             spaces space-mark
                                                             newline newline-mark
@@ -174,7 +175,7 @@
       org-startup-indented t)
 
 (dolist (face '(org-level-1 org-level-2 org-level-3 org-level-4))
-        (set-face-attribute face nil :height 1))
+  (set-face-attribute face nil :height 1))
 
 (defun myorg-update-parent-cookie ()
   (when (equal major-mode 'org-mode)
