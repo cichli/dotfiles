@@ -23,10 +23,11 @@
 
 ;; company-mode
 (global-company-mode)
-(setq company-echo-delay 0
-      company-idle-delay 0.1
+(setq company-idle-delay 0
       company-minimum-prefix-length 2
+      company-selection-wrap-around t
       company-tooltip-align-annotations t
+      company-tooltip-flip-when-above t
       company-tooltip-limit 16)
 (diminish 'company-mode)
 
