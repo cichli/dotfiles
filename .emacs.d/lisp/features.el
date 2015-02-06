@@ -198,7 +198,7 @@
 (add-hook 'paradox-menu-mode-hook 'hide-trailing-whitespace)
 
 ;; popwin
-(popwin-mode t)
+(popwin-mode 1)
 
 ;; powerline
 (setq-default mode-line-format
