@@ -19,7 +19,7 @@
 (setq browse-kill-ring-quit-action 'save-and-restore)
 
 ;; comint
-(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+(add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)
 
 ;; company-mode
 (global-company-mode)
@@ -36,15 +36,15 @@
 (global-diff-hl-mode t)
 
 ;; diff-mode
-(add-hook 'diff-mode-hook '(lambda ()
-                             (setq-local whitespace-style '(face
-                                                            indentation
-                                                            tabs tab-mark
-                                                            spaces space-mark
-                                                            newline newline-mark
-                                                            space-before-tab space-after-tab))
-                             (whitespace-mode 1)
-                             (hide-trailing-whitespace)))
+(add-hook 'diff-mode-hook #'(lambda ()
+                              (setq-local whitespace-style '(face
+                                                             indentation
+                                                             tabs tab-mark
+                                                             spaces space-mark
+                                                             newline newline-mark
+                                                             space-before-tab space-after-tab))
+                              (whitespace-mode 1)
+                              (hide-trailing-whitespace)))
 
 ;; dired
 (setq dired-recursive-deletes 'top)
@@ -74,15 +74,15 @@
       erc-server-reconnect-attempts 5
       erc-server-reconnect-timeout 5)
 
-(add-hook 'erc-mode-hook (lambda ()
-                           (erc-truncate-mode 1)
-                           (hide-trailing-whitespace)
-                           (set (make-local-variable 'scroll-conservatively) 100)))
+(add-hook 'erc-mode-hook #'(lambda ()
+                             (erc-truncate-mode 1)
+                             (hide-trailing-whitespace)
+                             (set (make-local-variable 'scroll-conservatively) 100)))
 
 ;; eshell
 (setq eshell-directory-name "~/.emacs.d/eshell/"
       eshell-scroll-show-maximum-output nil)
-(add-hook 'eshell-mode-hook 'hide-trailing-whitespace)
+(add-hook 'eshell-mode-hook #'hide-trailing-whitespace)
 
 ;; fancy-narrow
 (fancy-narrow-mode 1)
@@ -100,10 +100,10 @@
       guide-key/recursive-key-sequence-flag t)
 (diminish 'guide-key-mode)
 
-(add-hook 'popwin:after-popup-hook '(lambda ()
-                                      (-when-let (buffer (get-buffer guide-key/guide-buffer-name))
-                                        (with-current-buffer buffer
-                                          (hide-trailing-whitespace)))))
+(add-hook 'popwin:after-popup-hook #'(lambda ()
+                                       (-when-let (buffer (get-buffer guide-key/guide-buffer-name))
+                                         (with-current-buffer buffer
+                                           (hide-trailing-whitespace)))))
 
 ;; ibuffer
 (require 'ibuffer)
@@ -133,8 +133,8 @@
 (diminish 'magit-backup-mode)
 
 (magit-add-section-hook 'magit-status-sections-hook
-                        'magit-insert-recent-commits
-                        'magit-insert-unpushed-commits
+                        #'magit-insert-recent-commits
+                        #'magit-insert-unpushed-commits
                         t)
 
 (defadvice magit-status (around magit-fullscreen activate)
@@ -241,7 +241,7 @@
                 js-mode-hook
                 org-mode-hook
                 text-mode-hook))
-  (add-hook hook 'rainbow-mode))
+  (add-hook hook #'rainbow-mode))
 
 ;; re-builder
 (setq-default reb-re-syntax 'string)
