@@ -14,6 +14,7 @@
 (defun enable-clj-refactor-mode ()
   (interactive)
   (clj-refactor-mode 1)
+  (diminish 'clj-refactor-mode)
   (cljr-add-keybindings-with-prefix "C-c r"))
 
 (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
