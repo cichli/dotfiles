@@ -5,7 +5,6 @@
                   [com.jakemccrary/lein-test-refresh "0.5.0"]
                   [jonase/eastwood "0.1.4"]
                   [lein-ancient "0.6.2"]
-                  [lein-annotations "0.1.0"]
                   [lein-bikeshed "0.1.7"]
                   [lein-kibit "0.0.8"]
                   [refactor-nrepl "0.2.2"]]
