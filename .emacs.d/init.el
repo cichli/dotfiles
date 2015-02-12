@@ -5,11 +5,11 @@
 (dolist (c '(custom
              misc
              defuns
-             ui
              editing
              features
              clojure
              elisp
+             ui
              keys))
   (load (concat user-emacs-directory "lisp/" (symbol-name c))))
 

@@ -15,6 +15,7 @@
 (depends-on "clojure-cheatsheet")
 (depends-on "clojure-mode")
 (depends-on "company")
+(depends-on "company-quickhelp")
 (depends-on "dash")
 (depends-on "diff-hl")
 (depends-on "diminish")
