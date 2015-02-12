@@ -129,3 +129,9 @@
 ;; winner
 (define-key winner-mode-map (kbd "C-c [") 'winner-undo)
 (define-key winner-mode-map (kbd "C-c ]") 'winner-redo)
+
+;; zoom-frm
+(global-set-key (kbd "C-x C-0") 'zoom-frm-unzoom)
+(global-set-key (kbd "C-x C--") 'zoom-frm-out)
+(global-set-key (kbd "C-x C-=") 'zoom-frm-in)
+(global-set-key (kbd "C-x C-+") 'zoom-frm-in)
