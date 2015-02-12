@@ -5,7 +5,6 @@
   (funcall m -1))
 
 (load-theme 'solarized-dark t)
-(mac-toggle-fullscreen)
 
 (set-face-attribute 'default nil :font "Inconsolata")
 (set-frame-font "Inconsolata" nil t)
