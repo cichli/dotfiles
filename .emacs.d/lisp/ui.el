@@ -7,6 +7,8 @@
 (load-theme 'solarized-dark t)
 
 (set-face-attribute 'default nil :font "Inconsolata")
+(set-face-attribute 'fixed-pitch nil :font "Inconsolata")
+(set-face-attribute 'variable-pitch nil :font "Inconsolata")
 (set-frame-font "Inconsolata" nil t)
 
 (set-face-attribute 'mode-line nil :underline nil)
