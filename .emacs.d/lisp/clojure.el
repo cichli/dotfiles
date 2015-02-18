@@ -7,6 +7,7 @@
       cider-repl-history-size 1000
       cider-repl-result-prefix ";; => "
       cider-repl-use-clojure-font-lock t
+      cider-repl-use-pretty-printing t
       cider-repl-wrap-history t
       nrepl-buffer-name-show-port t
       nrepl-log-messages t)
