@@ -1,8 +1,6 @@
-(dolist (m '(menu-bar-mode
-             scroll-bar-mode
-             tool-bar-mode
-             tooltip-mode))
-  (funcall m -1))
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
 
 (load-theme 'solarized-dark t)
 
