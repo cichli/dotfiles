@@ -21,6 +21,8 @@
 (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 
+(add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
+
 (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace)
 (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
 
