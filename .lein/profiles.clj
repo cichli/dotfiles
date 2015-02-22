@@ -6,6 +6,7 @@
                   [jonase/eastwood "0.2.1"]
                   [lein-ancient "0.6.3"]
                   [lein-bikeshed "0.2.0"]
+                  [lein-cljfmt "0.1.10"]
                   [lein-kibit "0.0.8"]
                   [refactor-nrepl "0.3.0-SNAPSHOT"]]
         :injections [(require 'pjstadig.humane-test-output)
