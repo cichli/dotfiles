@@ -2,6 +2,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
+(setq solarized-use-more-italic t)
 (load-theme 'solarized-dark t)
 
 (set-face-attribute 'default nil :font "Inconsolata")
