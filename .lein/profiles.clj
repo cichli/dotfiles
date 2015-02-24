@@ -1,4 +1,4 @@
-{:user {:jvm-opts ["-Dapple.awt.UIElement=true"]
+{:user {:jvm-opts ["-Dapple.awt.UIElement=true" "-XX:-OmitStackTraceInFastThrow"]
         :dependencies [[criterium "0.4.3"]
                        [pjstadig/humane-test-output "0.7.0"]]
         :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
