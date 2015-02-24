@@ -1,6 +1,6 @@
 {:user {:jvm-opts ["-Dapple.awt.UIElement=true"]
         :dependencies [[criterium "0.4.3"]
-                       [pjstadig/humane-test-output "0.6.0"]]
+                       [pjstadig/humane-test-output "0.7.0"]]
         :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.7.0"]
                   [jonase/eastwood "0.2.1"]
