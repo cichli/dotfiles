@@ -8,6 +8,6 @@
                   [lein-bikeshed "0.2.0"]
                   [lein-cljfmt "0.1.10"]
                   [lein-kibit "0.0.8"]
-                  [refactor-nrepl "0.3.0-SNAPSHOT"]]
+                  [refactor-nrepl "0.2.2"]]
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]}}
