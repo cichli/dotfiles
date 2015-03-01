@@ -2,6 +2,7 @@
 
 (setq cider-auto-select-error-buffer t
       cider-interactive-eval-result-prefix ";; => "
+      cider-mode-line nil
       cider-show-error-buffer 'always
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
