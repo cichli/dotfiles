@@ -1,3 +1,7 @@
+;; ace-window
+(require 'ace-window)
+(setq aw-background nil)
+
 ;; auto-fill
 (diminish 'auto-fill-function)
 
