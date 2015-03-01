@@ -1,9 +1,3 @@
-(defun mac-toggle-fullscreen ()
-  (interactive)
-  (if (not (eq (frame-parameter (selected-frame) 'fullscreen) 'fullboth))
-      (set-frame-parameter (selected-frame) 'fullscreen 'fullboth)
-    (set-frame-parameter (selected-frame) 'fullscreen nil)))
-
 (defun diminish-major (hook alias)
   (add-hook hook `(lambda () (setq mode-name ,alias))))
 

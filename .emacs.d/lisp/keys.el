@@ -1,8 +1,6 @@
 (provide 'keybindings)
 
 ;; defuns
-(global-set-key (kbd "C-c f") 'mac-toggle-fullscreen)
-
 (global-set-key (kbd "C-M-'") 'indent-buffer)
 
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
