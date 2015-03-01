@@ -39,6 +39,7 @@
 
 ;; diff-hl
 (global-diff-hl-mode t)
+(setq diff-hl-draw-borders nil)
 
 ;; diff-mode
 (add-hook 'diff-mode-hook #'(lambda ()
