@@ -249,6 +249,8 @@
                 text-mode-hook))
   (add-hook hook #'rainbow-mode))
 
+(add-hook 'git-commit-mode-hook '(lambda () (rainbow-mode -1)))
+
 ;; re-builder
 (setq-default reb-re-syntax 'string)
 
