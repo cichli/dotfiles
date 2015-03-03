@@ -31,3 +31,4 @@
 (sp-local-pair 'cider-repl-mode "'" nil :actions nil)
 
 (diminish-major 'clojure-mode-hook "clj")
+(diminish-major 'nrepl-messages-mode-hook nil)
