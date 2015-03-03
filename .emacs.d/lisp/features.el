@@ -209,20 +209,19 @@
 ;; powerline
 (setq-default mode-line-format
               '("%e" (:eval
-                      (let* ((minor-modes (replace-regexp-in-string "\s?," "" (powerline-minor-modes)))
+                      (let* ((render (lambda (s)
+                                       (when s
+                                         (let ((s (replace-regexp-in-string "\s?," "" s)))
+                                           (when (not (string= "" s))
+                                             (concat (powerline-raw " [") s (powerline-raw "]")))))))
                              (lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
                                           (powerline-raw (format " [%s / %s] " backend (vc-workfile-version buffer-file-name backend))))
                                         (when (buffer-modified-p) (powerline-raw "[+] "))
                                         (when buffer-read-only (powerline-raw "[RO] "))))
                              (center (list (powerline-buffer-id)
-                                           (powerline-raw " [")
-                                           (powerline-major-mode)
-                                           (powerline-process)
-                                           (powerline-raw "] ")
-                                           (when (not (string= "" minor-modes))
-                                             (concat (powerline-raw "[")
-                                                     minor-modes
-                                                     (powerline-raw "] ")))
+                                           (funcall render (powerline-major-mode))
+                                           (funcall render (powerline-process))
+                                           (funcall render (powerline-minor-modes))
                                            (powerline-raw smartrep-mode-line-string)))
                              (rhs (list (powerline-raw " %l,%c "))))
                         (concat (powerline-render lhs)
