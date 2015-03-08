@@ -4,7 +4,7 @@
         :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.7.0"]
                   [jonase/eastwood "0.2.1"]
-                  [lein-ancient "0.6.3"]
+                  [lein-ancient "0.6.4"]
                   [lein-bikeshed "0.2.0"]
                   [lein-cljfmt "0.1.10"]
                   [lein-kibit "0.0.8"]
