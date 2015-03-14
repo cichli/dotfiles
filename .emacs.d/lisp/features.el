@@ -213,7 +213,7 @@
                                        (when s
                                          (let ((s (replace-regexp-in-string "\s?," "" s)))
                                            (when (not (string= "" s))
-                                             (concat (powerline-raw " [") s (powerline-raw "]")))))))
+                                             (concat (powerline-raw " [") (s-trim s) (powerline-raw "]")))))))
                              (lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
                                           (powerline-raw (format " [%s / %s] " backend (vc-workfile-version buffer-file-name backend))))
                                         (when (buffer-modified-p) (powerline-raw "[+] "))
