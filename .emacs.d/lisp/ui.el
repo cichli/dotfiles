@@ -2,12 +2,12 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(setq solarized-use-more-italic t)
+(setq solarized-scale-org-headlines nil
+      solarized-use-more-italic t
+      solarized-use-variable-pitch nil)
 (load-theme 'solarized-dark t)
 
 (set-face-attribute 'default nil :font "Inconsolata")
-(set-face-attribute 'fixed-pitch nil :font "Inconsolata")
-(set-face-attribute 'variable-pitch nil :font "Inconsolata")
 (set-frame-font "Inconsolata" nil t)
 
 (set-face-attribute 'mode-line nil :underline nil)
