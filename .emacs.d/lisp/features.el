@@ -235,20 +235,6 @@
       projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld"))
 (diminish 'projectile-mode)
 
-;; rainbow-mode
-(require 'rainbow-mode)
-(diminish 'rainbow-mode)
-(dolist (hook '(clojure-mode-hook
-                css-mode-hook
-                emacs-lisp-mode-hook
-                html-mode-hook
-                js-mode-hook
-                org-mode-hook
-                text-mode-hook))
-  (add-hook hook #'rainbow-mode))
-
-(add-hook 'git-commit-mode-hook '(lambda () (rainbow-mode -1)))
-
 ;; re-builder
 (setq-default reb-re-syntax 'string)
 
