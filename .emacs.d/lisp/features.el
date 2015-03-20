@@ -97,6 +97,9 @@
 (require 'flyspell)
 (diminish 'flyspell-mode)
 
+;; github markdown
+(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+
 ;; guide-key
 (guide-key-mode 1)
 (setq guide-key/guide-key-sequence '("C-c" "C-x" "C-z")
