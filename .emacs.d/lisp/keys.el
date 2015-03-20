@@ -85,11 +85,6 @@
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 
-;; phi-search
-(global-set-key (kbd "C-s") 'phi-search)
-(global-set-key (kbd "C-r") 'phi-search-backward)
-(global-set-key (kbd "M-%") 'phi-replace-query)
-
 ;; popwin
 (global-set-key (kbd "C-z") popwin:keymap)
 
