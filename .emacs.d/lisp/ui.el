@@ -54,9 +54,6 @@
 ;; help-mode
 (add-hook 'help-mode-hook #'hide-trailing-whitespace)
 
-;; hl-line-mode
-(global-hl-line-mode 1)
-
 ;; line-number-mode
 (line-number-mode 1)
 
