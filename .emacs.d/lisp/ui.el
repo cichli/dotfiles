@@ -10,8 +10,8 @@
 (set-face-attribute 'default nil :font "Inconsolata")
 (set-frame-font "Inconsolata" nil t)
 
-(set-face-attribute 'mode-line nil :underline nil)
-(set-face-attribute 'mode-line-inactive nil :underline nil)
+(set-face-attribute 'mode-line nil :overline nil :underline nil)
+(set-face-attribute 'mode-line-inactive nil :overline nil :underline nil)
 
 (setq-default indicate-empty-lines t
               show-trailing-whitespace t
