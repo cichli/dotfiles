@@ -136,6 +136,7 @@
 
 ;; magit
 (require 'magit)
+(setq magit-completing-read-function 'magit-ido-completing-read)
 (diminish 'magit-auto-revert-mode)
 (diminish 'magit-backup-mode)
 
