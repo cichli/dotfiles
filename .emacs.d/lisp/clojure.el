@@ -26,7 +26,6 @@
 (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
 
 (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace)
-(add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
 
 (sp-local-pair 'clojure-mode "'" nil :actions nil)
 (sp-local-pair 'cider-repl-mode "'" nil :actions nil)
