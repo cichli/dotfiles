@@ -119,7 +119,8 @@
 ;; ido
 (setq ido-default-buffer-method 'selected-window
       ido-default-file-method 'selected-window
-      ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
+      ido-save-directory-list-file (concat user-emacs-directory ".ido.last")
+      ido-ubiquitous-enable-old-style-default nil)
 
 (ido-mode 1)
 (ido-everywhere 1)
