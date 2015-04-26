@@ -137,7 +137,8 @@
 
 ;; magit
 (require 'magit)
-(setq magit-completing-read-function 'magit-ido-completing-read)
+(setq magit-completing-read-function 'magit-ido-completing-read
+      magit-last-seen-setup-instructions "1.4.0")
 (diminish 'magit-auto-revert-mode)
 
 (magit-add-section-hook 'magit-status-sections-hook
