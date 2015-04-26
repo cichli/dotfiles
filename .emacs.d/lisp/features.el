@@ -138,7 +138,6 @@
 (require 'magit)
 (setq magit-completing-read-function 'magit-ido-completing-read)
 (diminish 'magit-auto-revert-mode)
-(diminish 'magit-backup-mode)
 
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-recent-commits
