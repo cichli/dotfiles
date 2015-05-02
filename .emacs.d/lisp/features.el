@@ -143,6 +143,8 @@
 (diminish-major 'magit-popup-mode-hook nil)
 (diminish 'magit-auto-revert-mode)
 
+(add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
+
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-recent-commits
                         #'magit-insert-unpushed-commits
