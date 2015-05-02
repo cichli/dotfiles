@@ -140,6 +140,7 @@
 (setq magit-completing-read-function 'magit-ido-completing-read
       magit-last-seen-setup-instructions "1.4.0")
 (diminish-major 'magit-mode-hook nil)
+(diminish-major 'magit-popup-mode-hook nil)
 (diminish 'magit-auto-revert-mode)
 
 (magit-add-section-hook 'magit-status-sections-hook
