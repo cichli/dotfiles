@@ -10,3 +10,5 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   fi
 
 archey -c
+
+eval "$(ssh-agent -s)"
