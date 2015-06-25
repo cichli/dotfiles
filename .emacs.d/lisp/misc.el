@@ -23,19 +23,3 @@
       version-control t)
 
 (recentf-mode 1)
-
-;; Yeah, about those TPS reports...
-(let* ((l '(";; So I was sitting in my cubicle today, and I realized, ever since I started"
-            ";; working, every single day of my life has been worse than the day before it."
-            ";; So that means that every single day that you see me, that's on the worst day"
-            ";; of my life."
-            ";;"
-            ";; What about today? Is today the worst day of your life?"
-            ";;"
-            ";; Yeah."
-            ";;"
-            ";; Wow, that's messed up."
-            ""
-            ""))
-       (s (mapconcat 'identity l "\n")))
-  (setq initial-scratch-message s))
