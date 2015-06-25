@@ -141,7 +141,6 @@
       magit-last-seen-setup-instructions "1.4.0")
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
-(diminish 'magit-auto-revert-mode)
 
 (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
 
