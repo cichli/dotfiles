@@ -90,6 +90,8 @@
 ;; rotate
 (global-set-key (kbd "C-' l") 'rotate-layout)
 (global-set-key (kbd "C-' w") 'rotate-window)
+(global-set-key (kbd "C-' C-l") 'rotate-layout)
+(global-set-key (kbd "C-' C-w") 'rotate-window)
 
 ;; smartparens
 (sp-use-paredit-bindings)
