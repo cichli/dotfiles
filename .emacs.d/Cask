@@ -36,7 +36,7 @@
 (depends-on "info+")
 (depends-on "jump-char")
 (depends-on "latest-clojure-libraries")
-(depends-on "magit" :git "https://github.com/magit/magit.git" :branch "next")
+(depends-on "magit" :git "https://github.com/magit/magit.git" :branch "next" :files ("lisp/*"))
 (depends-on "markdown-mode")
 (depends-on "noflet")
 (depends-on "org-drill-table")
