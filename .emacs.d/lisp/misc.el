@@ -10,6 +10,8 @@
 
 (auto-compression-mode 1)
 
+(setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
+
 (setq backup-by-copying t
       backup-directory-alist '(("." . "~/.emacs.d/backups/"))
       delete-by-moving-to-trash t
