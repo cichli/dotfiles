@@ -12,6 +12,8 @@
       nrepl-buffer-name-show-port t
       nrepl-log-messages t)
 
+(setq cljr-sort-comparator 'cljr--semantic-comparator)
+
 (defun enable-clj-refactor-mode ()
   (interactive)
   (clj-refactor-mode 1)
