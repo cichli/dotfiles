@@ -2,16 +2,14 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(setq solarized-scale-org-headlines nil
+(setq solarized-high-contrast-mode-line t
+      solarized-scale-org-headlines nil
       solarized-use-more-italic t
       solarized-use-variable-pitch nil)
 (load-theme 'solarized-dark t)
 
 (set-face-attribute 'default nil :font "Inconsolata")
 (set-frame-font "Inconsolata" nil t)
-
-(set-face-attribute 'mode-line nil :background nil :box nil :overline nil :underline nil)
-(set-face-attribute 'mode-line-inactive nil :background nil :box nil :overline nil :underline nil)
 
 (setq-default indicate-empty-lines t
               show-trailing-whitespace t
