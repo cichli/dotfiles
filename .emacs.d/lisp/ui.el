@@ -20,6 +20,8 @@
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
       redisplay-dont-pause t
+      split-height-threshold nil
+      split-width-threshold 80
       visible-bell t)
 
 (defadvice kill-buffer (around kill-buffer-around-advice activate)
