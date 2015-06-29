@@ -61,6 +61,7 @@
 
 ;; eldoc
 (require 'eldoc)
+(setq eldoc-idle-delay 0)
 
 ;; erc
 (require 'erc)
