@@ -21,7 +21,7 @@
       inhibit-startup-screen t
       redisplay-dont-pause t
       split-height-threshold nil
-      split-width-threshold 80
+      split-width-threshold 160
       visible-bell t)
 
 (defadvice kill-buffer (around kill-buffer-around-advice activate)
