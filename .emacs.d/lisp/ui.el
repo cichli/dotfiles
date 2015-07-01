@@ -3,6 +3,7 @@
 (tooltip-mode -1)
 
 (setq solarized-high-contrast-mode-line t
+      solarized-distinct-doc-face t
       solarized-scale-org-headlines nil
       solarized-use-more-italic t
       solarized-use-variable-pitch nil)
