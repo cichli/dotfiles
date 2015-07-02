@@ -1,6 +1,5 @@
 ;; ace-window
 (require 'ace-window)
-(setq aw-background nil)
 (set-face-attribute 'aw-leading-char-face nil :height 3.0)
 
 ;; auto-fill
