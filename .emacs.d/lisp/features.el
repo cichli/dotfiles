@@ -138,7 +138,8 @@
 
 ;; magit
 (require 'magit)
-(setq magit-completing-read-function 'magit-ido-completing-read)
+(setq magit-completing-read-function 'magit-ido-completing-read
+      magit-revert-buffers 'silent)
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
 
