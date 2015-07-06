@@ -138,8 +138,7 @@
 
 ;; magit
 (require 'magit)
-(setq magit-completing-read-function 'magit-ido-completing-read
-      magit-last-seen-setup-instructions "1.4.0")
+(setq magit-completing-read-function 'magit-ido-completing-read)
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
 
