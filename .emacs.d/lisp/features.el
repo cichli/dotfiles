@@ -1,5 +1,6 @@
 ;; ace-window
 (require 'ace-window)
+(setq aw-scope 'frame)
 (set-face-attribute 'aw-leading-char-face nil :height 3.0)
 
 ;; auto-fill
