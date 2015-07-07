@@ -243,6 +243,30 @@
 ;; smex
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 
+;; sql
+(setq sql-connection-alist '(("social-dev"
+                              (sql-product 'postgres)
+                              (sql-server "localhost")
+                              (sql-port 5432)
+                              (sql-database "social")
+                              (sql-user "social"))
+                             ("social-qa"
+                              (sql-product 'postgres)
+                              (sql-server "localhost")
+                              (sql-port 5434)
+                              (sql-database "social")
+                              (sql-user "social"))
+                             ("social-live"
+                              (sql-product 'postgres)
+                              (sql-server "localhost")
+                              (sql-port 5435)
+                              (sql-database "social")
+                              (sql-user "social")))
+      sql-product 'postgres
+      sql-send-terminator t)
+
+(add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace)
+
 ;; swoop
 (require 'swoop)
 (setq swoop-font-size-change: nil)
