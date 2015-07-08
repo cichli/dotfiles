@@ -94,15 +94,6 @@
 (global-set-key (kbd "C-' C-l") 'rotate-layout)
 (global-set-key (kbd "C-' C-w") 'rotate-window)
 
-;; smartparens
-(sp-use-paredit-bindings)
-
-(define-key sp-keymap (kbd "C-S-a") 'sp-beginning-of-sexp)
-(define-key sp-keymap (kbd "C-S-d") 'sp-end-of-sexp)
-(define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp)
-(define-key sp-keymap (kbd "C-M-w") 'sp-copy-sexp)
-(define-key sp-keymap (kbd "C-M-t") 'sp-transpose-sexp)
-
 ;; smex
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c M-x") 'smex-major-mode-commands)

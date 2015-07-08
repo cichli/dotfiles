@@ -21,14 +21,13 @@
   (cljr-add-keybindings-with-prefix "C-c r"))
 
 (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
+(add-hook 'clojure-mode-hook #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 
 (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
 
+(add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
 (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace)
-
-(sp-local-pair 'clojure-mode "'" nil :actions nil)
-(sp-local-pair 'cider-repl-mode "'" nil :actions nil)
 
 (diminish-major 'clojure-mode-hook "clj")
 (diminish-major 'cider-repl-mode-hook nil)

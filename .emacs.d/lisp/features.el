@@ -197,6 +197,10 @@
 ;; paradox
 (add-hook 'paradox-menu-mode-hook 'hide-trailing-whitespace)
 
+;; paredit
+(require 'paredit)
+(diminish 'paredit-mode)
+
 ;; popwin
 (popwin-mode 1)
 
@@ -231,11 +235,6 @@
 
 ;; re-builder
 (setq-default reb-re-syntax 'string)
-
-;; smartparens
-(smartparens-global-strict-mode 1)
-(show-smartparens-global-mode 1)
-(diminish 'smartparens-mode)
 
 ;; smartrep
 (setq smartrep-mode-line-string-activated "[SMARTREP]")
