@@ -83,8 +83,6 @@
 (global-set-key (kbd "C-x m") 'magit-status)
 (global-set-key (kbd "C-x l") 'magit-log-popup)
 
-(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
-
 ;; popwin
 (global-set-key (kbd "C-z") popwin:keymap)
 
