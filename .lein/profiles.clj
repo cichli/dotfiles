@@ -10,7 +10,7 @@
                   [lein-cljfmt "0.2.0"]
                   [lein-kibit "0.1.2"]
                   [refactor-nrepl "1.1.0"]
-                  [venantius/yagni "0.1.1"]]
+                  [venantius/yagni "0.1.2"]]
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
         :test-refresh {:quiet true}}}
