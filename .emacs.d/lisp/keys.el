@@ -52,6 +52,7 @@
 
 ;; expand-region
 (global-set-key (kbd "C-;") 'er/expand-region)
+(global-set-key (kbd "C-M-;") 'mark-sexp)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
