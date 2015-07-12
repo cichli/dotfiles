@@ -31,7 +31,7 @@
 
 ;; company-mode
 (global-company-mode)
-(setq company-idle-delay 0.2
+(setq company-idle-delay nil
       company-minimum-prefix-length 0
       company-selection-wrap-around t
       company-tooltip-align-annotations t
