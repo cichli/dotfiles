@@ -190,6 +190,7 @@
 (diminish 'page-break-lines-mode)
 
 ;; paradox
+(setq paradox-github-token t)
 (add-hook 'paradox-menu-mode-hook 'hide-trailing-whitespace)
 
 ;; paredit
