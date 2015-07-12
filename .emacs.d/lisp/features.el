@@ -142,6 +142,9 @@
 ;; magit
 (require 'magit)
 (setq magit-completing-read-function 'magit-ido-completing-read
+      magit-log-arguments '("--graph" "--color" "--decorate")
+      magit-merge-arguments '("--no-ff")
+      magit-rebase-arguments '("--preserve-merges" "--autostash")
       magit-revert-buffers 'silent)
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
