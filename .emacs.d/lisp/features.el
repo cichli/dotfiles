@@ -154,6 +154,10 @@
                         #'magit-insert-unpushed-commits
                         t)
 
+(magit-define-popup-switch 'magit-log-popup ?f
+  "Follow only the first parent commit of merge commits"
+  "--first-parent")
+
 ;; org
 (require 'org-drill)
 (require 'ox-reveal)
