@@ -22,8 +22,7 @@
       inhibit-startup-screen t
       redisplay-dont-pause t
       split-height-threshold nil
-      split-width-threshold 160
-      visible-bell t)
+      split-width-threshold 160)
 
 (defadvice kill-buffer (around kill-buffer-around-advice activate)
   (let ((buffer-to-kill (ad-get-arg 0)))
