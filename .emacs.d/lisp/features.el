@@ -231,6 +231,9 @@
 ;; re-builder
 (setq-default reb-re-syntax 'string)
 
+;; show-paren-mode
+(show-paren-mode 1)
+
 ;; smartrep
 (setq smartrep-mode-line-string-activated "[SMARTREP]")
 
