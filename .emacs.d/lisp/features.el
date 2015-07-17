@@ -35,7 +35,6 @@
       company-minimum-prefix-length 0
       company-selection-wrap-around t
       company-tooltip-align-annotations t
-      company-tooltip-flip-when-above t
       company-tooltip-limit 16)
 (diminish 'company-mode)
 
