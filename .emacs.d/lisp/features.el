@@ -140,7 +140,8 @@
 
 ;; magit
 (require 'magit)
-(setq magit-completing-read-function 'magit-ido-completing-read
+(setq magit-branch-read-upstream-first t
+      magit-completing-read-function 'magit-ido-completing-read
       magit-fetch-arguments '("--prune")
       magit-log-arguments '("--graph" "--color" "--decorate")
       magit-merge-arguments '("--no-ff")
