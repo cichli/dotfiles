@@ -263,8 +263,7 @@
                               (sql-port 5435)
                               (sql-database "social")
                               (sql-user "social")))
-      sql-product 'postgres
-      sql-send-terminator t)
+      sql-product 'postgres)
 
 (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace)
 
