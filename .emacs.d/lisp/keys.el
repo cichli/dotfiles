@@ -23,6 +23,10 @@
 (global-set-key (kbd "C-c C-SPC") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "C-c M-g") 'avy-goto-line)
 
+;; avy-zap
+(global-set-key (kbd "M-z") 'avy-zap-to-char-dwim)
+(global-set-key (kbd "M-Z") 'avy-zap-up-to-char-dwim)
+
 ;; browse-kill-ring
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
