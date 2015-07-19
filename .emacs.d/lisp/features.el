@@ -125,6 +125,8 @@
 (ido-ubiquitous-mode 1)
 (flx-ido-mode 1)
 
+(push '(disable exact "sql-connect") ido-ubiquitous-command-overrides)
+
 ;; iedit
 (require 'iedit)
 
