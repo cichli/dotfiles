@@ -87,9 +87,6 @@
 (global-set-key (kbd "C-x m") 'magit-status)
 (global-set-key (kbd "C-x l") 'magit-log-popup)
 
-;; popwin
-(global-set-key (kbd "C-z") popwin:keymap)
-
 ;; rotate
 (global-set-key (kbd "C-' l") 'rotate-layout)
 (global-set-key (kbd "C-' w") 'rotate-window)

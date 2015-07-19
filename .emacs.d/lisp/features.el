@@ -111,11 +111,6 @@
       guide-key/recursive-key-sequence-flag t)
 (diminish 'guide-key-mode)
 
-(add-hook 'popwin:after-popup-hook #'(lambda ()
-                                       (-when-let (buffer (get-buffer guide-key/guide-buffer-name))
-                                         (with-current-buffer buffer
-                                           (hide-trailing-whitespace)))))
-
 ;; ibuffer
 (require 'ibuffer)
 
@@ -200,9 +195,6 @@
 ;; paredit
 (require 'paredit)
 (diminish 'paredit-mode)
-
-;; popwin
-(popwin-mode 1)
 
 ;; powerline
 (setq-default mode-line-format
