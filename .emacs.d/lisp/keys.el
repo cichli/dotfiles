@@ -18,6 +18,11 @@
 (global-set-key (kbd "M-o") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
+;; avy
+(global-set-key (kbd "C-c SPC") 'avy-goto-char)
+(global-set-key (kbd "C-c C-SPC") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "C-c M-g") 'avy-goto-line)
+
 ;; browse-kill-ring
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
