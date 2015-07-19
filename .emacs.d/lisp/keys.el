@@ -14,11 +14,6 @@
 (global-set-key (kbd "C-c B") 'ace-jump-buffer-other-window)
 (global-set-key (kbd "C-c C-S-b") 'ace-jump-buffer-in-one-window)
 
-;; ace-jump-mode
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
-(global-set-key (kbd "C-c C-SPC") 'ace-jump-mode)
-(global-set-key (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-
 ;; ace-window
 (global-set-key (kbd "M-o") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))

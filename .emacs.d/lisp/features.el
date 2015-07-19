@@ -1,6 +1,3 @@
-;; ace-jump
-(setq ace-jump-mode-scope 'frame)
-
 ;; ace-window
 (require 'ace-window)
 (setq aw-scope 'frame)
