@@ -139,6 +139,7 @@
       magit-fetch-arguments '("--prune")
       magit-log-arguments '("--graph" "--color" "--decorate")
       magit-merge-arguments '("--no-ff")
+      magit-push-always-verify nil
       magit-rebase-arguments '("--preserve-merges" "--autostash")
       magit-revert-buffers 'silent)
 (diminish-major 'magit-mode-hook nil)
