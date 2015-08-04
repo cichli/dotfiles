@@ -46,6 +46,9 @@
 (define-key cider-repl-mode-map (kbd "C-c C-q") 'cider-quit)
 (define-key cider-repl-mode-map (kbd "C-c M-q") 'cider-restart)
 
+;; comint-mode
+(define-key comint-mode-map (kbd "C-c SPC") nil)
+
 ;; company-mode
 (global-set-key (kbd "C-<tab>") 'company-complete)
 
