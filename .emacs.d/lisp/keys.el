@@ -1,5 +1,7 @@
 (provide 'keybindings)
 
+(global-set-key (kbd "M-ƒ") 'toggle-frame-fullscreen)
+
 ;; defuns
 (global-set-key (kbd "C-M-'") 'indent-buffer)
 (global-set-key (kbd "C-M-\"") 'indent-region)
