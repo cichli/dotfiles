@@ -10,3 +10,5 @@
 	autocrlf = input
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
+[rerere]
+	enabled = true
