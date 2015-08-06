@@ -98,6 +98,7 @@
 ;; magit
 (global-set-key (kbd "C-x m") 'magit-status)
 (global-set-key (kbd "C-x l") 'magit-log-popup)
+(global-set-key (kbd "<backtab>") (kbd "<s-tab>"))
 
 ;; rotate
 (global-set-key (kbd "C-' l") 'rotate-layout)
