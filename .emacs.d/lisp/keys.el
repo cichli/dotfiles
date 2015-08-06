@@ -61,6 +61,9 @@
 (global-set-key (kbd "C-j") 'newline-and-indent)
 (global-set-key (kbd "C-m") 'electric-indent-just-newline)
 
+;; eshell
+(add-hook 'eshell-mode-hook '(lambda () (define-key eshell-mode-map (kbd "C-c SPC") nil)))
+
 ;; expand-region
 (global-set-key (kbd "C-;") 'er/expand-region)
 (global-set-key (kbd "C-M-;") 'mark-sexp)
