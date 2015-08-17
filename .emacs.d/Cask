@@ -36,7 +36,6 @@
 (depends-on "imenu-anywhere")
 (depends-on "info+")
 (depends-on "jump-char")
-(depends-on "latest-clojure-libraries")
 (depends-on "less-css-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")
