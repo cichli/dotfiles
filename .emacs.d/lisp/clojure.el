@@ -3,12 +3,12 @@
 (setq cider-auto-select-error-buffer t
       cider-mode-line nil
       cider-prompt-for-symbol nil
-      cider-show-error-buffer 'always
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
       cider-repl-use-clojure-font-lock t
       cider-repl-use-pretty-printing t
       cider-repl-wrap-history t
+      cider-show-error-buffer 'always
       nrepl-buffer-name-show-port t
       nrepl-log-messages t)
 
