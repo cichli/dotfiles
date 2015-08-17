@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+rm -rf .cask/
+cask upgrade
+cask
+cask link cider ~/elisp/cider
