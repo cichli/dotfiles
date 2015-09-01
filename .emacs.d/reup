@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+pushd ~/elisp/cider
+make clean
+popd
+
 rm -rf .cask/
 cask upgrade
 cask
