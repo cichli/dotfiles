@@ -141,7 +141,7 @@
       magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature")
       magit-merge-arguments '("--no-ff")
       magit-push-always-verify nil
-      magit-rebase-arguments '("--preserve-merges" "--autostash" "--gpg-sign=Michael Griffiths <mikey@cich.li>")
+      magit-rebase-arguments '("--preserve-merges" "--autostash")
       magit-revert-buffers 'silent)
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
