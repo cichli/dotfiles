@@ -142,7 +142,8 @@
       magit-merge-arguments '("--no-ff")
       magit-push-always-verify nil
       magit-rebase-arguments '("--preserve-merges" "--autostash")
-      magit-revert-buffers 'silent)
+      magit-revert-buffers 'silent
+      magit-tag-arguments '("--annotate" "--sign"))
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
 
