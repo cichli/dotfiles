@@ -27,6 +27,7 @@
 
 (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
 
+(add-hook 'cider-repl-mode-hook #'enable-clj-refactor-mode)
 (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
 (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace)
 
