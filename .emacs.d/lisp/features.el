@@ -300,6 +300,8 @@
                        [simple-query "google.com" "google.com/search?q=" ""])
                       ("Stack Overflow" .
                        [simple-query "stackoverflow.com" "stackoverflow.com/search?q=" ""])
+                      ("MDN" .
+                       [simple-query "developer.mozilla.org" "developer.mozilla.org/en-US/search?q=" ""])
                       ("Wikipedia" .
                        [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""])
                       ("Google Groups" .
