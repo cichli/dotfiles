@@ -252,10 +252,10 @@
                               (sql-port 5434)
                               (sql-database "social")
                               (sql-user "social"))
-                             ("social-live"
+                             ("social-v1"
                               (sql-product 'postgres)
                               (sql-server "localhost")
-                              (sql-port 5435)
+                              (sql-port 5436)
                               (sql-database "social")
                               (sql-user "social")))
       sql-product 'postgres)
