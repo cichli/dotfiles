@@ -55,6 +55,7 @@
 (define-key company-mode-map (kbd "C-q") 'company-show-doc-buffer)
 
 ;; conf-mode
+(require 'conf-mode)
 (define-key conf-mode-map (kbd "C-c SPC") nil)
 
 ;; diff-mode
