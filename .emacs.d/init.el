@@ -1,5 +1,6 @@
 (require 'cask)
 (cask-initialize)
+
 (pallet-mode t)
 
 (dolist (c '(custom
