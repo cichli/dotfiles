@@ -9,6 +9,7 @@
                   [lein-cljfmt "0.3.0"]
                   [lein-kibit "0.1.2"]
                   [lein-pdo "0.1.1"]
+                  [lein-pprint "1.1.2"]
                   [refactor-nrepl "1.2.0-SNAPSHOT"]
                   [venantius/yagni "0.1.2"]]
         :injections [(require 'pjstadig.humane-test-output)
