@@ -35,3 +35,5 @@
 (diminish-major 'cider-repl-mode-hook nil)
 (diminish-major 'cider-stacktrace-mode-hook nil)
 (diminish-major 'nrepl-messages-mode-hook nil)
+
+(set-register ?f "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))")
