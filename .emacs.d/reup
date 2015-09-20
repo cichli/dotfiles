@@ -2,7 +2,8 @@
 set -e
 
 pushd ~/elisp/cider
-make clean
+make elpaclean
+make elpa
 popd
 
 pushd ~/.emacs.d
