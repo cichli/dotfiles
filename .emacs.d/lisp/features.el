@@ -135,7 +135,6 @@
 ;; magit
 (require 'magit)
 (setq magit-branch-read-upstream-first t
-      magit-commit-arguments '("--gpg-sign=Michael Griffiths <mikey@cich.li>")
       magit-completing-read-function 'magit-ido-completing-read
       magit-fetch-arguments '("--prune")
       magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
