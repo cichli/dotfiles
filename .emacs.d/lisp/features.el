@@ -138,7 +138,7 @@
       magit-commit-arguments '("--gpg-sign=Michael Griffiths <mikey@cich.li>")
       magit-completing-read-function 'magit-ido-completing-read
       magit-fetch-arguments '("--prune")
-      magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature")
+      magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
       magit-merge-arguments '("--no-ff")
       magit-push-always-verify nil
       magit-rebase-arguments '("--preserve-merges" "--autostash")
