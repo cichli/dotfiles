@@ -24,6 +24,9 @@
 (setq browse-kill-ring-quit-action 'save-and-restore)
 
 ;; comint
+(ansi-color-for-comint-mode-on)
+(add-hook 'comint-output-filter-functions #'ansi-color-process-output)
+
 (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)
 
 ;; company-mode
