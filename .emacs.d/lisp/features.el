@@ -248,6 +248,14 @@
                               (sql-port 5432)
                               (sql-database "social")
                               (sql-user "social"))
+
+                             ("social-beta1"
+                              (sql-product 'postgres)
+                              (sql-server "localhost")
+                              (sql-port 5437)
+                              (sql-database "social")
+                              (sql-user "social"))
+
                              ("social-qa"
                               (sql-product 'postgres)
                               (sql-server "localhost")
