@@ -62,6 +62,9 @@
 (require 'eldoc)
 (setq eldoc-idle-delay 0)
 
+;; epa
+(setq epa-armor t)
+
 ;; erc
 (require 'erc)
 (setq erc-email-userid "mikey@cich.li"
