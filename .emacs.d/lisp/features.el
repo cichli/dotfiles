@@ -153,7 +153,6 @@
 (diminish-major 'magit-popup-mode-hook nil)
 
 (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
-(add-hook 'magit-status-mode-hook #'delete-other-windows)
 
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-recent-commits
