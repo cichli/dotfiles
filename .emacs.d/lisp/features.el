@@ -142,6 +142,14 @@
 (require 'magit)
 (setq magit-branch-read-upstream-first t
       magit-completing-read-function 'magit-ido-completing-read
+      magit-display-buffer-function (lambda (buffer)
+                                      (if magit-display-buffer-noselect
+                                          (magit-display-buffer-traditional buffer)
+                                        (progn
+                                          (delete-other-windows)
+                                          (set-window-dedicated-p nil nil)
+                                          (set-window-buffer nil buffer)
+                                          (get-buffer-window buffer))))
       magit-fetch-arguments '("--prune")
       magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
       magit-merge-arguments '("--no-ff")
