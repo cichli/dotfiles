@@ -217,7 +217,8 @@
 ;; projectile
 (projectile-global-mode 1)
 (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
-      projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld"))
+      projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
+      projectile-use-git-grep t)
 (diminish 'projectile-mode)
 
 ;; re-builder
