@@ -210,6 +210,9 @@
 (require 'paredit)
 (diminish 'paredit-mode)
 
+;; popwin
+(add-hook 'popwin:after-popup-hook #'hide-trailing-whitespace)
+
 ;; powerline
 (setq-default mode-line-format
               '("%e" (:eval
