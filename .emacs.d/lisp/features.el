@@ -43,15 +43,15 @@
 (setq diff-hl-draw-borders nil)
 
 ;; diff-mode
-(add-hook 'diff-mode-hook #'(lambda ()
-                              (setq-local whitespace-style '(face
-                                                             indentation
-                                                             tabs tab-mark
-                                                             spaces space-mark
-                                                             newline newline-mark
-                                                             space-before-tab space-after-tab))
-                              (whitespace-mode 1)
-                              (hide-trailing-whitespace)))
+(add-hook 'diff-mode-hook '(lambda ()
+                             (setq-local whitespace-style '(face
+                                                            indentation
+                                                            tabs tab-mark
+                                                            spaces space-mark
+                                                            newline newline-mark
+                                                            space-before-tab space-after-tab))
+                             (whitespace-mode 1)
+                             (hide-trailing-whitespace)))
 
 ;; dired
 (setq dired-recursive-deletes 'top)
@@ -182,7 +182,7 @@
 
 ;; paradox
 (setq paradox-github-token t)
-(add-hook 'paradox-menu-mode-hook 'hide-trailing-whitespace)
+(add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace)
 
 ;; paredit
 (require 'paredit)
