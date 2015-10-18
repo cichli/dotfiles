@@ -303,11 +303,13 @@
                        [simple-query "stackoverflow.com" "stackoverflow.com/search?q=" ""])
                       ("MDN" .
                        [simple-query "developer.mozilla.org" "developer.mozilla.org/en-US/search?q=" ""])
+                      ("Clojars" .
+                       [simple-query "clojars.org" "clojars.org/search?q=" ""])
+                      ("Maven Central" .
+                       [simple-query "maven.org" "maven.org/#search|ga|1|" ""])
                       ("Wikipedia" .
                        [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""])
                       ("Google Groups" .
                        [simple-query "groups.google.com" "groups.google.com/groups?q=" ""])
                       ("Emacs Wiki" .
-                       [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])
-                      ("Youtube" .
-                       [simple-query "youtube.com" "youtube.com/results?search_query=" ""])))
+                       [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])))
