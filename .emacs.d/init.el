@@ -3,6 +3,8 @@
 
 (pallet-mode t)
 
+(setq custom-file "~/.emacs.d/lisp/custom.el")
+
 (dolist (c '(custom
              misc
              defuns
