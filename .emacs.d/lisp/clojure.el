@@ -37,3 +37,4 @@
 (diminish-major 'nrepl-messages-mode-hook nil)
 
 (set-register ?f "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))")
+(set-register ?r "(user/cljs-repl user/foo-system)")
