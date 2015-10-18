@@ -13,4 +13,6 @@
                   [refactor-nrepl "2.0.0-SNAPSHOT"]]
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
-        :test-refresh {:quiet true}}}
+        :test-refresh {:quiet true}}
+
+ :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder"]}}
