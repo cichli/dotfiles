@@ -17,6 +17,7 @@
 /.smex-items
 /async-bytecomp.log
 /history
+/lisp/custom.el
 /projectile.cache
 /projectile-bookmarks.eld
 /session.*
