@@ -40,11 +40,11 @@
 
 ;; CIDER
 (define-key cider-mode-map (kbd "C-c C-b") 'cider-eval-buffer)
-(define-key cider-mode-map (kbd "C-c C-q") 'cider-quit)
-(define-key cider-mode-map (kbd "C-c M-q") 'cider-restart)
 
-(define-key cider-repl-mode-map (kbd "C-c C-q") 'cider-quit)
-(define-key cider-repl-mode-map (kbd "C-c M-q") 'cider-restart)
+(dolist (keymap (list cider-mode-map cider-repl-mode-map))
+  (define-key keymap (kbd "C-c C-q") 'cider-quit)
+  (define-key keymap (kbd "C-c M-q") 'cider-restart)
+  (define-key keymap (kbd "C-c C-j") 'cider-create-sibling-cljs-repl))
 
 ;; comint-mode
 (define-key comint-mode-map (kbd "C-c SPC") nil)
