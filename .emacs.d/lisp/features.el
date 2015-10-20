@@ -317,3 +317,6 @@
                        [simple-query "groups.google.com" "groups.google.com/groups?q=" ""])
                       ("Emacs Wiki" .
                        [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])))
+
+;; wgrep
+(require 'wgrep)
