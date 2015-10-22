@@ -1,5 +1,7 @@
 alias ls='ls -al'
 
+export EDITOR=emacsclient
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_TOOLS_JAR='/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/lib/tools.jar'
 
