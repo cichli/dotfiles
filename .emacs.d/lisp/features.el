@@ -141,6 +141,7 @@
       magit-rebase-arguments '("--autostash")
       magit-revert-buffers 'silent
       magit-tag-arguments '("--annotate" "--sign"))
+
 (diminish-major 'magit-mode-hook nil)
 (diminish-major 'magit-popup-mode-hook nil)
 
