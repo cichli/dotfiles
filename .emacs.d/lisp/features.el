@@ -12,6 +12,7 @@
 
 ;; beacon
 (beacon-mode 1)
+(diminish 'beacon-mode)
 
 ;; bookmark+
 (require 'bookmark+)
