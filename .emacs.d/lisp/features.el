@@ -10,6 +10,9 @@
 (require 'back-button)
 (back-button-mode 1)
 
+;; beacon
+(beacon-mode 1)
+
 ;; bookmark+
 (require 'bookmark+)
 (diminish 'back-button-mode)

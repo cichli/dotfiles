@@ -8,6 +8,7 @@
 (depends-on "avy")
 (depends-on "avy-zap")
 (depends-on "back-button")
+(depends-on "beacon")
 (depends-on "bookmark+")
 (depends-on "browse-kill-ring")
 (depends-on "buffer-move")
