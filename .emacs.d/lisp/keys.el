@@ -41,6 +41,9 @@
 ;; CIDER
 (define-key cider-mode-map (kbd "C-c C-b") 'cider-eval-buffer)
 
+(define-key cider-repl-mode-map "{" #'paredit-open-curly)
+(define-key cider-repl-mode-map "}" #'paredit-close-curly)
+
 (dolist (keymap (list cider-mode-map cider-repl-mode-map))
   (define-key keymap (kbd "C-c C-q") 'cider-quit)
   (define-key keymap (kbd "C-c M-q") 'cider-restart)
