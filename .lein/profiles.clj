@@ -1,7 +1,7 @@
 {:user {:jvm-opts ["-Dapple.awt.UIElement=true" "-XX:-OmitStackTraceInFastThrow"]
 
         :dependencies [[criterium "0.4.3"]
-                       [org.clojure/tools.nrepl "0.2.11"]
+                       [org.clojure/tools.nrepl "0.2.12"]
                        [pjstadig/humane-test-output "0.7.0"]]
 
         :plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
