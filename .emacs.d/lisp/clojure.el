@@ -2,7 +2,6 @@
 
 (setq cider-auto-select-error-buffer t
       cider-mode-line nil
-      cider-prompt-for-project-on-connect nil
       cider-prompt-for-symbol nil
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
