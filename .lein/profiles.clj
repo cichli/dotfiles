@@ -20,4 +20,4 @@
 
         :test-refresh {:quiet true}}
 
- :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder"]}}
+ :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder" "-XX:FlightRecorderOptions=stackdepth=1024"]}}
