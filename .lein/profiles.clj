@@ -18,6 +18,10 @@
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
 
-        :test-refresh {:quiet true}}
+        :test-refresh {:quiet true}
+
+        :aliases {"go" ["do"
+                        ["clean"]
+                        ["with-profiles" "+flight-recorder" "dev"]]}}
 
  :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder" "-XX:FlightRecorderOptions=stackdepth=1024"]}}
