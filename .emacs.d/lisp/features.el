@@ -139,7 +139,7 @@
       magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
       magit-merge-arguments '("--no-ff")
       magit-push-always-verify nil
-      magit-rebase-arguments '("--autostash")
+      magit-rebase-arguments '("--autostash" "--preserve-merges")
       magit-revert-buffers 'silent
       magit-tag-arguments '("--annotate" "--sign"))
 
