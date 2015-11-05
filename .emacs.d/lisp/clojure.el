@@ -12,8 +12,17 @@
       nrepl-buffer-name-show-port t
       nrepl-log-messages t)
 
-(setq cljr-sort-comparator 'cljr--semantic-comparator
-      cljr-eagerly-build-asts-on-startup nil)
+(setq cljr-eagerly-build-asts-on-startup nil
+      cljr-sort-comparator (lambda (s1 s2)
+                             (cl-flet* ((extract-segments (s) (s-split "\\." s))
+                                        (shared-segments (s) (->> (extract-segments (cljr--extract-sexp-content s))
+                                                                  (mapcar* #'string= (extract-segments (clojure-find-ns)))
+                                                                  (seq-take-while #'identity))))
+                               (let ((shared-length-s1 (length (shared-segments s1)))
+                                     (shared-length-s2 (length (shared-segments s2))))
+                                 (if (/= shared-length-s1 shared-length-s2)
+                                     (> shared-length-s1 shared-length-s2)
+                                   (cljr--string-natural-comparator s1 s2))))))
 
 (defun enable-clj-refactor-mode ()
   (interactive)
