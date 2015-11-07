@@ -288,6 +288,8 @@
 (global-undo-tree-mode 1)
 (diminish 'undo-tree-mode)
 
+(diminish-major 'undo-tree-visualizer-mode-hook nil)
+
 (dolist (fn '(undo-tree-undo undo-tree-redo))
   (defadvice fn (around keep-region activate)
     (if (use-region-p)
