@@ -289,6 +289,7 @@
 (diminish 'undo-tree-mode)
 
 (diminish-major 'undo-tree-visualizer-mode-hook nil)
+(add-hook 'undo-tree-visualizer-mode-hook #'hide-trailing-whitespace)
 
 (dolist (fn '(undo-tree-undo undo-tree-redo))
   (defadvice fn (around keep-region activate)
