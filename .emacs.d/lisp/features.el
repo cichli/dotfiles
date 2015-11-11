@@ -326,7 +326,7 @@
                       ("Clojars" .
                        [simple-query "clojars.org" "clojars.org/search?q=" ""])
                       ("Maven Central" .
-                       [simple-query "maven.org" "maven.org/#search|ga|1|" ""])
+                       [simple-query "search.maven.org" "search.maven.org/#search%7Cga%7C1%7C" ""])
                       ("Wikipedia" .
                        [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""])
                       ("Google Groups" .
