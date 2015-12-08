@@ -6,6 +6,9 @@
 [github]
 	user = cichli
 	oauth-token = !cat ~/.github.oauth-token
+[branch]
+	autoSetupMerge = always
+	autoSetupRebase = always
 [core]
 	autocrlf = input
 [diff "clojure"]
