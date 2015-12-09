@@ -9,8 +9,8 @@
       solarized-use-variable-pitch nil)
 (load-theme 'solarized-dark t)
 
-(set-face-attribute 'default nil :font "Inconsolata")
-(set-frame-font "Inconsolata" nil t)
+(set-face-attribute 'default nil :font "Monaco 10")
+(set-frame-font "Monaco 10" nil t)
 
 (setq-default indicate-empty-lines t
               show-trailing-whitespace t
