@@ -1,6 +1,7 @@
 (require 'cider)
 
 (setq cider-auto-select-error-buffer t
+      cider-repl-pop-to-buffer-on-connect nil
       cider-mode-line nil
       cider-prompt-for-symbol nil
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
