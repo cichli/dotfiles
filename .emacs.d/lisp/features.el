@@ -137,7 +137,7 @@
                                           (set-window-buffer nil buffer)
                                           (get-buffer-window buffer))))
       magit-fetch-arguments '("--prune")
-      magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
+      magit-log-arguments '("--color" "--decorate" "--graph" "-n256" "--show-signature")
       magit-merge-arguments '("--no-ff")
       magit-rebase-arguments '("--autostash" "--preserve-merges")
       magit-revert-buffers 'silent
