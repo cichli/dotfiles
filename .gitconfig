@@ -1,17 +1,23 @@
 [user]
 	name = Michael Griffiths
 	email = mikey@cich.li
+
 [credential]
 	helper = osxkeychain
 [github]
 	user = cichli
 	oauth-token = !cat ~/.github.oauth-token
+
 [branch]
 	autoSetupMerge = always
 	autoSetupRebase = always
+[remote]
+	pushDefault = origin
+
 [core]
 	autocrlf = input
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
+
 [rerere]
 	enabled = true
