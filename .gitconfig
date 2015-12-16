@@ -16,6 +16,7 @@
 
 [core]
 	autocrlf = input
+	excludesfile = ~/.gitignore_global
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
 
