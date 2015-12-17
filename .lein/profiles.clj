@@ -27,4 +27,4 @@
 
  :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures"
                               "-XX:+FlightRecorder"
-                              "-XX:FlightRecorderOptions=stackdepth=1024,defaultrecording=true,disk=true,repository=/tmp,dumponexit=true,dumponexitpath=./.flight-recording.jfr,maxage=2h,settings=profile"]}}
+                              "-XX:FlightRecorderOptions=stackdepth=1024,defaultrecording=true,disk=true,repository=/tmp,dumponexit=true,dumponexitpath=./.flight-recording.jfr,maxage=2h,settings=jfr"]}}

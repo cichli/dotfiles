@@ -1,3 +1,4 @@
 *
 !.gitignore
+!jfr.jfc
 !profiles.clj
