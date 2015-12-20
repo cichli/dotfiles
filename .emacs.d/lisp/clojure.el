@@ -50,3 +50,7 @@
 
 (set-register ?f "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))")
 (set-register ?r "(user/cljs-repl user/foo-system)")
+
+(define-clojure-indent
+  (for-all 1)
+  (quick-check 1))
