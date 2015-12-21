@@ -9,8 +9,10 @@
       solarized-use-variable-pitch nil)
 (load-theme 'solarized-dark t)
 
-(set-face-attribute 'default nil :font "Monaco 10")
-(set-frame-font "Monaco 10" nil t)
+(mac-auto-operator-composition-mode 1)
+
+(set-face-attribute 'default nil :font "Fira Code Retina 10")
+(set-frame-font "Fira Code Retina 10" nil t)
 
 (setq-default indicate-empty-lines t
               show-trailing-whitespace t
