@@ -2,6 +2,7 @@
 set -e
 
 pushd ~/elisp/cider
+rm -rf cider-pkg.el
 make elpaclean
 make elpa
 popd
