@@ -21,10 +21,19 @@
 
         :test-refresh {:quiet true}
 
-        :aliases {"go" ["do"
+        :aliases {"fr" ["do"
+                        ["clean"]
+                        ["with-profiles" "+flight-recorder" "repl" ":headless"]]
+
+                  "fd" ["do"
                         ["clean"]
                         ["with-profiles" "+flight-recorder" "dev"]]
-                  "yo" ["do"
+
+                  "yr" ["do"
+                        ["clean"]
+                        ["with-profiles" "+yourkit" "repl" ":headless"]]
+
+                  "yd" ["do"
                         ["clean"]
                         ["with-profiles" "+yourkit" "dev"]]}}
 
