@@ -53,4 +53,6 @@
 
 (define-clojure-indent
   (for-all 1)
-  (quick-check 1))
+  (quick-check 1)
+
+  (lazy-loop 1))
