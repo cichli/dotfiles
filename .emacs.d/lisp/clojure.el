@@ -1,6 +1,7 @@
 (require 'cider)
 
 (setq cider-auto-select-error-buffer t
+      cider-macroexpansion-print-metadata t
       cider-mode-line nil
       cider-pprint-fn 'puget
       cider-prompt-for-symbol nil
