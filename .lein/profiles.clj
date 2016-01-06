@@ -23,10 +23,14 @@
 
         :aliases {"go" ["do"
                         ["clean"]
-                        ["with-profiles" "+flight-recorder" "dev"]]}}
+                        ["with-profiles" "+flight-recorder" "dev"]]
+                  "yo" ["do"
+                        ["clean"]
+                        ["with-profiles" "+yourkit" "dev"]]}}
 
  :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures"
                               "-XX:+FlightRecorder"
                               "-XX:FlightRecorderOptions=stackdepth=1024,defaultrecording=true,disk=true,repository=/tmp,dumponexit=true,dumponexitpath=./.flight-recording.jfr,maxage=2h,settings=jfr"]}
 
- :yourkit {:jvm-opts ["-agentpath:/Users/griffithsm/libyjpagent.jnilib"]}}
+ :yourkit {:jvm-opts ["-agentpath:/Users/griffithsm/libyjpagent.jnilib"]
+           :resource-paths ["/Users/griffithsm/yjp-controller-api-redist.jar"]}}
