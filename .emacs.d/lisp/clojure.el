@@ -1,12 +1,12 @@
 (require 'cider)
 
 (setq cider-auto-select-error-buffer t
-      cider-repl-pop-to-buffer-on-connect nil
       cider-mode-line nil
       cider-pprint-fn 'puget
       cider-prompt-for-symbol nil
       cider-repl-history-file (concat user-emacs-directory ".cider-history")
       cider-repl-history-size 1000
+      cider-repl-pop-to-buffer-on-connect nil
       cider-repl-use-clojure-font-lock t
       cider-repl-use-pretty-printing t
       cider-repl-wrap-history t
