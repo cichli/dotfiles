@@ -13,7 +13,8 @@
       cider-repl-wrap-history t
       cider-show-error-buffer 'always
       nrepl-buffer-name-show-port t
-      nrepl-log-messages t)
+      nrepl-log-messages t
+      nrepl-message-buffer-max-size 100000000)
 
 (setq cljr-eagerly-build-asts-on-startup nil
       cljr-favor-prefix-notation nil
