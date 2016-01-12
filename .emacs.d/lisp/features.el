@@ -39,7 +39,8 @@
       company-minimum-prefix-length 0
       company-selection-wrap-around t
       company-tooltip-align-annotations t
-      company-tooltip-limit 16)
+      company-tooltip-limit 16
+      company-require-match nil)
 (diminish 'company-mode)
 
 ;; diff-hl
