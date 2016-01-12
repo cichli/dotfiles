@@ -17,6 +17,7 @@
 
 (setq cljr-eagerly-build-asts-on-startup nil
       cljr-favor-prefix-notation nil
+      cljr-magic-requires nil
       cljr-sort-comparator (lambda (s1 s2)
                              (cl-flet* ((extract-segments (s) (s-split "\\." s))
                                         (shared-segments (s) (->> (extract-segments (cljr--extract-sexp-content s))
