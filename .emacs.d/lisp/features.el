@@ -44,7 +44,7 @@
 (diminish 'company-mode)
 
 ;; diff-hl
-(global-diff-hl-mode t)
+(global-diff-hl-mode 1)
 (setq diff-hl-draw-borders nil)
 
 ;; diff-mode
