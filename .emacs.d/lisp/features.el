@@ -100,6 +100,11 @@
       guide-key/recursive-key-sequence-flag t)
 (diminish 'guide-key-mode)
 
+;; help+ & friends
+(require 'help+)
+(require 'help-fns+)
+(require 'help-mode+)
+
 ;; ibuffer
 (require 'ibuffer)
 
