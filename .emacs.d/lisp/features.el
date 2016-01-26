@@ -91,7 +91,6 @@
 
 ;; grep
 (add-hook 'grep-mode-hook #'hide-trailing-whitespace)
-(add-hook 'grep-mode-hook #'rename-uniquely)
 
 ;; guide-key
 (guide-key-mode 1)
