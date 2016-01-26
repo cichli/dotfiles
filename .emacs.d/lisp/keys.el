@@ -58,7 +58,7 @@
 ;; company-mode
 (global-set-key (kbd "C-<tab>") #'company-complete)
 
-(define-key company-mode-map (kbd "C-q") #'company-show-doc-buffer)
+(define-key company-active-map (kbd "C-q") #'company-show-doc-buffer)
 
 ;; conf-mode
 (require 'conf-mode)
