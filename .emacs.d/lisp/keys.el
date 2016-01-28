@@ -54,6 +54,7 @@
 
 ;; comint-mode
 (define-key comint-mode-map (kbd "C-c SPC") nil)
+(define-key comint-mode-map (kbd "C-c C-o") #'comint-clear-output)
 
 ;; company-mode
 (global-set-key (kbd "C-<tab>") #'company-complete)

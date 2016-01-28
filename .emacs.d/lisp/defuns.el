@@ -43,6 +43,16 @@
   (interactive)
   (setq show-trailing-whitespace t))
 
+(defun comint-clear-output (&optional arg)
+  (interactive "P")
+  (if arg
+      (progn
+        (goto-char (point-max))
+        (forward-line 0)
+        (comint-kill-region (point-min) (point))
+        (goto-char (point-max)))
+    (comint-delete-output)))
+
 (defun eshell-clear-output (&optional arg)
   (interactive "P")
   (if arg
