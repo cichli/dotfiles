@@ -42,3 +42,10 @@
 (defun show-trailing-whitespace ()
   (interactive)
   (setq show-trailing-whitespace t))
+
+(defun eshell-clear-output (&optional arg)
+  (interactive "P")
+  (if arg
+      (let ((eshell-buffer-maximum-lines 0))
+        (eshell-truncate-buffer))
+    (eshell-kill-output)))

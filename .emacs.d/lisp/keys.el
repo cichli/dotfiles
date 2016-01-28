@@ -72,7 +72,9 @@
 (global-set-key (kbd "C-m") #'electric-indent-just-newline)
 
 ;; eshell
-(add-hook 'eshell-mode-hook '(lambda () (define-key eshell-mode-map (kbd "C-c SPC") nil)))
+(add-hook 'eshell-mode-hook '(lambda ()
+                               (define-key eshell-mode-map (kbd "C-c SPC") nil)
+                               (define-key eshell-mode-map (kbd "C-c C-o") #'eshell-clear-output)))
 
 ;; expand-region
 (global-set-key (kbd "C-;") #'er/expand-region)
