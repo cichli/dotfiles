@@ -36,7 +36,9 @@
         (message "File '%s' successfully removed" filename)))))
 
 (defun hide-trailing-whitespace ()
+  (interactive)
   (setq show-trailing-whitespace nil))
 
 (defun show-trailing-whitespace ()
+  (interactive)
   (setq show-trailing-whitespace t))
