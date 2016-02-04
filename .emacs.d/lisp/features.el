@@ -315,7 +315,7 @@
 ;; volatile-highlights
 (require 'volatile-highlights)
 (volatile-highlights-mode 1)
-(set-face-inverse-video-p 'vhl/default-face t)
+(set-face-inverse-video 'vhl/default-face t)
 (diminish 'volatile-highlights-mode)
 
 ;; webjump
