@@ -131,6 +131,9 @@
 
 ;; magit
 (require 'magit)
+
+(magit-auto-revert-mode 1)
+
 (setq magit-branch-read-upstream-first t
       magit-completing-read-function 'magit-ido-completing-read
       magit-diff-arguments '("-C" "-M" "--no-ext-diff" "--stat")
@@ -146,7 +149,6 @@
       magit-log-arguments '("--color" "--decorate" "--graph" "-n256" "--show-signature")
       magit-merge-arguments '("--no-ff")
       magit-rebase-arguments '("--autostash" "--preserve-merges")
-      magit-revert-buffers 'silent
       magit-tag-arguments '("--annotate" "--sign"))
 
 (diminish-major 'magit-mode-hook nil)
