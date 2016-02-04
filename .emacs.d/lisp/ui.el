@@ -22,7 +22,6 @@
       frame-title-format '(buffer-file-name "%f" ("%b"))
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
-      redisplay-dont-pause t
       split-height-threshold nil
       split-width-threshold 160)
 
