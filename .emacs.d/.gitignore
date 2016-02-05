@@ -16,8 +16,8 @@
 /.recentf
 /.smex-items
 /async-bytecomp.log
+/custom.el
 /history
-/lisp/custom.el
 /projectile.cache
 /projectile-bookmarks.eld
 /session.*
