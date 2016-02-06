@@ -498,6 +498,12 @@
   :bind
   (("C-." . ido-imenu-anywhere)))
 
+(use-package js2-mode
+  :mode "\\.js\\'"
+  :interpreter "node"
+  :config
+  (diminish-major 'js2-mode-hook "js"))
+
 (use-package jump-char
   :bind
   (("C-<" . jump-char-backward)
