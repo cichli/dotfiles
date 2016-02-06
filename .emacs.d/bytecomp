@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+pushd ~/.emacs.d
+! cask exec emacs --batch --eval="(byte-recompile-directory user-emacs-directory 0 t)"
+find . -name "*.elc" -not -path "./.cask/*" | xargs rm
+popd
