@@ -50,6 +50,17 @@
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
 
+(defun region-or-whole-line ()
+  (if mark-active
+      (list (region-beginning) (region-end))
+    (list (line-beginning-position) (line-beginning-position 2))))
+
+(defadvice kill-region (before slick-cut activate compile)
+  (interactive (region-or-whole-line)))
+
+(defadvice kill-ring-save (before slick-copy activate compile)
+  (interactive (region-or-whole-line)))
+
 (delete-selection-mode 1)
 (global-subword-mode 1)
 
@@ -70,19 +81,6 @@
              narrow-to-region
              set-goal-column))
   (put x 'disabled nil))
-
-(defadvice kill-region (before slick-cut activate compile)
-  (interactive
-   (if mark-active (list (region-beginning) (region-end))
-     (list (line-beginning-position)
-           (line-beginning-position 2)))))
-
-(defadvice kill-ring-save (before slick-copy activate compile)
-  (interactive
-   (if mark-active (list (region-beginning) (region-end))
-     (message "Copied line")
-     (list (line-beginning-position)
-           (line-beginning-position 2)))))
 
 (bind-key "C-M-'" #'indent-buffer)
 (bind-key "C-M-\"" #'indent-region)
