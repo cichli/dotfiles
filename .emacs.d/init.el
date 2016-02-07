@@ -54,6 +54,7 @@
 (global-subword-mode 1)
 
 (diminish 'auto-fill-function)
+(diminish 'subword-mode)
 
 (setq-default fill-column 80
               indent-tabs-mode nil)
