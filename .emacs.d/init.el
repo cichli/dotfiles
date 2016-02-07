@@ -748,6 +748,10 @@
   (("C-c [" . winner-undo)
    ("C-c ]" . winner-redo)))
 
+(use-package with-editor
+  :config
+  (diminish 'with-editor-mode))
+
 (use-package zoom-frm
   :bind
   (("C-x C-0" . zoom-frm-unzoom)
