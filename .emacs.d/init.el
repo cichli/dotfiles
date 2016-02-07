@@ -543,8 +543,8 @@
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
   (magit-add-section-hook 'magit-status-sections-hook #'magit-insert-recent-commits nil t)
   (magit-define-popup-switch 'magit-log-popup ?f
-                             "Follow only the first parent commit of merge commits"
-                             "--first-parent")
+    "Follow only the first parent commit of merge commits"
+    "--first-parent")
   :bind
   (("C-x m" . magit-status)
    ("C-x l" . magit-log-popup)))
