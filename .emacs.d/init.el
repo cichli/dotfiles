@@ -395,6 +395,11 @@
   (diminish 'eldoc-mode)
   (setq eldoc-idle-delay 0))
 
+(use-package electric
+  :bind
+  (("C-j" . newline-and-indent)
+   ("C-m" . electric-indent-just-newline)))
+
 (use-package elisp-slime-nav
   :config
   (diminish 'elisp-slime-nav-mode))
@@ -417,11 +422,6 @@
                                  (hide-trailing-whitespace)
                                  (bind-key "C-c SPC" nil eshell-mode-map)
                                  (bind-key "C-c C-o" #'eshell-clear-output eshell-mode-map))))
-
-(use-package electric
-  :bind
-  (("C-j" . newline-and-indent)
-   ("C-m" . electric-indent-just-newline)))
 
 (use-package expand-region
   :bind
@@ -453,17 +453,17 @@
         guide-key/popup-window-position 'bottom
         guide-key/recursive-key-sequence-flag t))
 
-(use-package help-mode
-  :config
-  (add-hook 'help-mode-hook #'hide-trailing-whitespace))
-
-(use-package help+)
-
 (use-package help-fns+
   :config
   (setq help-cross-reference-manuals nil))
 
+(use-package help-mode
+  :config
+  (add-hook 'help-mode-hook #'hide-trailing-whitespace))
+
 (use-package help-mode+)
+
+(use-package help+)
 
 (use-package ibuffer
   :config
@@ -572,6 +572,12 @@
   :config
   (pallet-mode 1))
 
+(use-package paradox
+  :defer t
+  :config
+  (setq paradox-github-token t)
+  (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
+
 (use-package paredit
   :config
   (diminish 'paredit-mode))
@@ -580,19 +586,9 @@
   :config
   (show-paren-mode 1))
 
-(use-package paradox
-  :defer t
-  :config
-  (setq paradox-github-token t)
-  (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
-
 (use-package popwin
   :config
   (add-hook 'popwin:after-popup-hook #'hide-trailing-whitespace))
-
-(use-package smart-mode-line
-  :config
-  (sml/setup))
 
 (use-package projectile
   :config
@@ -625,6 +621,10 @@
 (use-package server
   :config
   (server-start))
+
+(use-package smart-mode-line
+  :config
+  (sml/setup))
 
 (use-package smartrep
   :config
