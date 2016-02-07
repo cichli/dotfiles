@@ -669,6 +669,7 @@
   (global-undo-tree-mode 1)
   (diminish 'undo-tree-mode)
   (diminish-major 'undo-tree-visualizer-mode nil)
+  (setq undo-tree-visualizer-timestamps t)
   (add-hook 'undo-tree-visualizer-mode-hook #'hide-trailing-whitespace))
 
 (use-package uniquify
