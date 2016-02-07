@@ -129,8 +129,9 @@
 ;;,-----------------------------------------------------------------------------
 ;;| ui
 ;;`-----------------------------------------------------------------------------
-(defun diminish-major (hook alias)
-  (add-hook hook `(lambda () (setq mode-name ,alias))))
+(defun diminish-major (mode alias)
+  (add-hook (intern (concat (symbol-name mode) "-hook"))
+            `(lambda () (setq mode-name ,alias))))
 
 (defun hide-trailing-whitespace ()
   (interactive)
@@ -259,9 +260,9 @@
 (use-package cider
   :defer t
   :config
-  (diminish-major 'cider-repl-mode-hook nil)
-  (diminish-major 'cider-stacktrace-mode-hook nil)
-  (diminish-major 'nrepl-messages-mode-hook nil)
+  (diminish-major 'cider-repl-mode nil)
+  (diminish-major 'cider-stacktrace-mode nil)
+  (diminish-major 'nrepl-messages-mode nil)
 
   (setq cider-auto-select-error-buffer t
         cider-macroexpansion-print-metadata t
@@ -309,7 +310,7 @@
 
 (use-package clojure-mode
   :config
-  (diminish-major 'clojure-mode-hook "clj")
+  (diminish-major 'clojure-mode "clj")
   (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
   (add-hook 'clojure-mode-hook #'enable-paredit-mode)
   (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
@@ -498,7 +499,7 @@
   :mode "\\.js\\'"
   :interpreter "node"
   :config
-  (diminish-major 'js2-mode-hook "js"))
+  (diminish-major 'js2-mode "js"))
 
 (use-package jump-char
   :bind
@@ -507,7 +508,7 @@
 
 (use-package lisp-mode
   :config
-  (diminish-major 'emacs-lisp-mode-hook "el")
+  (diminish-major 'emacs-lisp-mode "el")
   (setq initial-major-mode 'emacs-lisp-mode)
   (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
   (add-hook 'emacs-lisp-mode-hook #'elisp-slime-nav-mode)
@@ -517,8 +518,8 @@
 (use-package magit
   :config
   (magit-auto-revert-mode 1)
-  (diminish-major 'magit-mode-hook nil)
-  (diminish-major 'magit-popup-mode-hook nil)
+  (diminish-major 'magit-mode nil)
+  (diminish-major 'magit-popup-mode nil)
   (setq magit-branch-read-upstream-first t
         magit-completing-read-function 'magit-ido-completing-read
         magit-diff-arguments '("-C" "-M" "--no-ext-diff" "--stat")
@@ -667,7 +668,7 @@
   :config
   (global-undo-tree-mode 1)
   (diminish 'undo-tree-mode)
-  (diminish-major 'undo-tree-visualizer-mode-hook nil)
+  (diminish-major 'undo-tree-visualizer-mode nil)
   (add-hook 'undo-tree-visualizer-mode-hook #'hide-trailing-whitespace))
 
 (use-package uniquify
