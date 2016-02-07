@@ -167,7 +167,8 @@
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
       split-height-threshold nil
-      split-width-threshold 160)
+      split-width-threshold 160
+      x-underline-at-descent-line t)
 
 (set-face-attribute 'default nil :font "Fira Code Retina 10")
 (set-frame-font "Fira Code Retina 10" nil t)
@@ -194,8 +195,7 @@
 
 (use-package solarized
   :config
-  (setq solarized-high-contrast-mode-line t
-        solarized-distinct-doc-face t
+  (setq solarized-distinct-doc-face t
         solarized-scale-org-headlines nil
         solarized-use-more-italic t
         solarized-use-variable-pitch nil)
