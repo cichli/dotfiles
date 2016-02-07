@@ -188,6 +188,7 @@
 (use-package autorevert
   :config
   (global-auto-revert-mode 1)
+  (diminish 'auto-revert-mode)
   (setq auto-revert-verbose nil
         global-auto-revert-non-file-buffers t))
 
