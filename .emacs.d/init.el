@@ -590,29 +590,9 @@
   :config
   (add-hook 'popwin:after-popup-hook #'hide-trailing-whitespace))
 
-(use-package powerline
+(use-package smart-mode-line
   :config
-  (setq-default mode-line-format
-                '("%e" (:eval
-                        (let* ((render (lambda (s)
-                                         (when s
-                                           (let ((s (replace-regexp-in-string "\s?," "" s)))
-                                             (when (not (string= "" s))
-                                               (concat (powerline-raw " [") (s-trim s) (powerline-raw "]")))))))
-                               (lhs (list (-when-let (backend (and vc-mode buffer-file-name (vc-backend buffer-file-name)))
-                                            (powerline-raw (format " [%s / %s] " backend (vc-workfile-version buffer-file-name backend))))
-                                          (when (buffer-modified-p) (powerline-raw "[+] "))
-                                          (when buffer-read-only (powerline-raw "[RO] "))))
-                               (center (list (powerline-buffer-id)
-                                             (funcall render (powerline-major-mode))
-                                             (funcall render (powerline-process))
-                                             (funcall render (powerline-minor-modes))))
-                               (rhs (list (powerline-raw " %l,%c "))))
-                          (concat (powerline-render lhs)
-                                  (powerline-fill-center nil (/ (powerline-width center) 2.0))
-                                  (powerline-render center)
-                                  (powerline-fill nil (powerline-width rhs))
-                                  (powerline-render rhs)))))))
+  (sml/setup))
 
 (use-package projectile
   :config
