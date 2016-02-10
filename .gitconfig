@@ -17,6 +17,9 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
+
+[diff]
+	algorithm = histogram
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
 

@@ -522,7 +522,7 @@
   (diminish-major 'magit-popup-mode nil)
   (setq magit-branch-read-upstream-first t
         magit-completing-read-function 'magit-ido-completing-read
-        magit-diff-arguments '("-C" "-M" "--no-ext-diff" "--stat")
+        magit-diff-arguments '("-C" "-M" "--diff-algorithm=histogram" "--no-ext-diff" "--stat")
         magit-display-buffer-function (lambda (buffer)
                                         (if magit-display-buffer-noselect
                                             (magit-display-buffer-traditional buffer)
