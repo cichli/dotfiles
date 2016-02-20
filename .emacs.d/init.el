@@ -534,7 +534,7 @@
                                             (set-window-buffer nil buffer)
                                             (get-buffer-window buffer))))
         magit-fetch-arguments '("--prune")
-        magit-log-arguments '("--color" "--decorate" "--graph" "-n256" "--show-signature")
+        magit-log-arguments '("--color" "--decorate" "--graph" "-n1024" "--show-signature")
         magit-merge-arguments '("--no-ff")
         magit-tag-arguments '("--annotate" "--sign"))
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
