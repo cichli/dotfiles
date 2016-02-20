@@ -662,7 +662,7 @@
                                 (sql-port 5439)
                                 (sql-database "social")
                                 (sql-user "social"))
-                               ("social-v1"
+                               ("social-live"
                                 (sql-product 'postgres)
                                 (sql-server "localhost")
                                 (sql-port 5436)
