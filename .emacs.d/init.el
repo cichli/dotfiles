@@ -500,7 +500,8 @@
   :mode "\\.js\\'"
   :interpreter "node"
   :config
-  (diminish-major 'js2-mode "js"))
+  (diminish-major 'js2-mode "js")
+  (add-hook 'js2-mode-hook #'enable-paredit-mode))
 
 (use-package jump-char
   :bind
