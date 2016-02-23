@@ -405,15 +405,26 @@
   (setq epa-armor t))
 
 (use-package eshell
+  :commands
+  eshell!
+  :bind
+  (("C-!" . eshell!))
   :config
   (setq eshell-directory-name "~/.emacs.d/eshell/"
         eshell-scroll-show-maximum-output nil)
+
+  (defun eshell! (name)
+    (interactive "sNew eshell buffer name: ")
+    (with-current-buffer (eshell t)
+      (rename-buffer (format "*eshell <%s>*" name))))
+
   (defun eshell-clear-output (&optional arg)
     (interactive "P")
     (if arg
         (let ((eshell-buffer-maximum-lines 0))
           (eshell-truncate-buffer))
       (eshell-kill-output)))
+
   (add-hook 'eshell-mode-hook '(lambda ()
                                  (hide-trailing-whitespace)
                                  (bind-key "C-c SPC" nil eshell-mode-map)
