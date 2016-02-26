@@ -420,7 +420,7 @@
   (defun eshell! (name)
     (interactive "sNew eshell buffer name: ")
     (with-current-buffer (eshell t)
-      (rename-buffer (format "*eshell <%s>*" name))))
+      (rename-buffer (format "*eshell: %s" name))))
 
   (defun eshell-clear-output (&optional arg)
     (interactive "P")
