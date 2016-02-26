@@ -321,6 +321,9 @@
     (lazy-loop 1))
   (bind-key "C-c SPC" nil clojure-mode-map))
 
+(use-package coffee-mode
+  :mode "\\.coffee\\'")
+
 (use-package comint
   :config
   (ansi-color-for-comint-mode-on)
