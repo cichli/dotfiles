@@ -4,9 +4,6 @@
 
 [credential]
 	helper = osxkeychain
-[github]
-	user = cichli
-	oauth-token = !cat ~/.github.oauth-token
 
 [branch]
 	autoSetupMerge = always
