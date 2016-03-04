@@ -302,6 +302,7 @@
   enable-clj-refactor-mode
   :config
   (setq cljr-eagerly-build-asts-on-startup nil
+        cljr-eagerly-cache-macro-occurrences-on-startup nil
         cljr-favor-prefix-notation nil
         cljr-magic-requires nil)
   (defun enable-clj-refactor-mode ()
