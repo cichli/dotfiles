@@ -29,3 +29,5 @@ export JAVA_TOOLS_JAR=$(/usr/libexec/java_home)'/lib/tools.jar'
 if [ -f ~/.lein/jfr.jfc ]; then
     cp -f ~/.lein/jfr.jfc $JAVA_HOME'/jre/lib/jfr/'
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
