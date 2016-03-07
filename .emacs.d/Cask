@@ -27,6 +27,7 @@
 (depends-on "gist")
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
+(depends-on "groovy-mode")
 (depends-on "guide-key")
 (depends-on "help+")
 (depends-on "help-fns+")

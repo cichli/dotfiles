@@ -456,6 +456,10 @@
   :config
   (add-hook 'grep-mode-hook #'hide-trailing-whitespace))
 
+(use-package groovy-mode
+  :config
+  (add-to-list 'auto-mode-alist '("Jenkinsfile\\'" . groovy-mode)))
+
 (use-package guide-key
   :config
   (guide-key-mode 1)
