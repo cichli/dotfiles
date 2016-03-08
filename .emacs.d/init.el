@@ -204,6 +204,10 @@
 ;;,-----------------------------------------------------------------------------
 ;;| packages
 ;;`-----------------------------------------------------------------------------
+(use-package abbrev
+  :config
+  (diminish 'abbrev-mode))
+
 (use-package ace-jump-buffer
   :bind
   (("C-c b" . ace-jump-buffer)
