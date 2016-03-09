@@ -645,6 +645,11 @@
   :config
   (server-start))
 
+(use-package simple
+  :config
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-eldoc-mode)
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode))
+
 (use-package smart-mode-line
   :config
   (sml/setup))
