@@ -31,3 +31,7 @@ if [ -f ~/.lein/jfr.jfc ]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+################################################################################
+
+export SSH_USER=michael
