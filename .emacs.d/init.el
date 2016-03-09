@@ -549,14 +549,6 @@
   (setq magit-branch-read-upstream-first t
         magit-completing-read-function 'magit-ido-completing-read
         magit-diff-arguments '("-C" "-M" "--diff-algorithm=histogram" "--no-ext-diff" "--stat")
-        magit-display-buffer-function (lambda (buffer)
-                                        (if magit-display-buffer-noselect
-                                            (magit-display-buffer-traditional buffer)
-                                          (progn
-                                            (delete-other-windows)
-                                            (set-window-dedicated-p nil nil)
-                                            (set-window-buffer nil buffer)
-                                            (get-buffer-window buffer))))
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024" "--show-signature")
         magit-merge-arguments '("--no-ff")
