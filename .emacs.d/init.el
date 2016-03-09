@@ -396,9 +396,15 @@
         ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package eldoc
+  :commands
+  enable-eldoc-mode
   :config
   (diminish 'eldoc-mode)
-  (setq eldoc-idle-delay 0))
+  (setq eldoc-idle-delay 0)
+
+  (defun enable-eldoc-mode ()
+    (interactive)
+    (eldoc-mode 1)))
 
 (use-package electric
   :bind
