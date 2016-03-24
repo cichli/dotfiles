@@ -346,6 +346,7 @@
           (goto-char (point-max))
           (forward-line 0)
           (comint-kill-region (point-min) (point))
+          (setq kill-ring (cdr kill-ring))
           (goto-char (point-max)))
       (comint-delete-output)))
   (bind-key "C-c SPC" nil comint-mode-map)
