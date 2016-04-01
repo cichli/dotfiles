@@ -14,7 +14,7 @@
                   [lein-kibit "0.1.2"]
                   [lein-pdo "0.1.1"]
                   [lein-pprint "1.1.2"]
-                  [refactor-nrepl "2.2.0-SNAPSHOT"]]
+                  [refactor-nrepl "2.3.0-SNAPSHOT"]]
 
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
