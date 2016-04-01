@@ -394,6 +394,8 @@
   :config
   (setq dired-recursive-deletes 'top))
 
+(use-package dockerfile-mode)
+
 (use-package ediff
   :config
   (setq ediff-diff-options "-w"

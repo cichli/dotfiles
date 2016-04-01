@@ -19,6 +19,7 @@
 (depends-on "dash")
 (depends-on "diff-hl")
 (depends-on "diminish")
+(depends-on "dockerfile-mode")
 (depends-on "elisp-slime-nav")
 (depends-on "esup")
 (depends-on "expand-region")
