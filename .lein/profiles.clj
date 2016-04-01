@@ -10,7 +10,7 @@
                   [jonase/eastwood "0.2.3"]
                   [lein-ancient "0.6.9"]
                   [lein-bikeshed "0.3.0"]
-                  [lein-cljfmt "0.3.0"]
+                  [lein-cljfmt "0.5.0"]
                   [lein-kibit "0.1.2"]
                   [lein-pdo "0.1.1"]
                   [lein-pprint "1.1.2"]
