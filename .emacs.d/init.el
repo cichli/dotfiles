@@ -89,11 +89,16 @@
 ;;,-----------------------------------------------------------------------------
 ;;| locale
 ;;`-----------------------------------------------------------------------------
-(setq locale-coding-system 'utf-8)
 
 (set-charset-priority 'unicode)
-(set-keyboard-coding-system 'utf-8)
+(set-coding-system-priority 'utf-8)
 (set-language-environment "UTF-8")
+
+(setq locale-coding-system 'utf-8)
+
+(set-clipboard-coding-system 'utf-8)
+(set-file-name-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 
