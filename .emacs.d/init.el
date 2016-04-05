@@ -154,7 +154,8 @@
 (mac-auto-operator-composition-mode 1)
 (winner-mode 1)
 
-(setq-default indicate-empty-lines t
+(setq-default cursor-in-non-selected-windows nil
+              indicate-empty-lines t
               show-trailing-whitespace t
               truncate-lines t)
 
