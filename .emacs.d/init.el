@@ -608,7 +608,8 @@
 (use-package paradox
   :defer t
   :config
-  (setq paradox-github-token t)
+  (setq paradox-execute-asynchronously nil
+        paradox-github-token t)
   (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
 
 (use-package paredit
