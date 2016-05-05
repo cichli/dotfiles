@@ -36,3 +36,8 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 ################################################################################
 
 export SSH_USER=michael
+
+ov() {
+    cd ~/clojure/social-superstore/infrastructure/
+    ENV=$1 ./deploy/overview
+}
