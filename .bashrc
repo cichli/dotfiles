@@ -41,3 +41,8 @@ ov() {
     cd ~/clojure/social-superstore/infrastructure/
     ENV=$1 ./deploy/overview
 }
+
+wov() {
+    cd ~/clojure/social-superstore/infrastructure/
+    watch ENV=$1 ./deploy/overview
+}
