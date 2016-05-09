@@ -506,6 +506,7 @@
 
 (use-package ibuffer
   :config
+  (setq ibuffer-default-sorting-mode 'alphabetic)
   (bind-key "M-o" nil ibuffer-mode-map)
   (bind-key "C-M-o" #'ibuffer-visit-buffer-1-window ibuffer-mode-map)
   :bind
