@@ -573,6 +573,7 @@
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024" "--show-signature")
         magit-merge-arguments '("--no-ff")
         magit-rebase-arguments '("--preserve-merges")
+        magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
   (magit-add-section-hook 'magit-status-sections-hook #'magit-insert-recent-commits nil t)
