@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+brew update
+brew upgrade
+
 pushd ~/elisp/cider
 rm -rf cider-pkg.el
 make elpaclean
