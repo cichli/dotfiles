@@ -7,6 +7,10 @@ export EDITOR=emacsclient
 export PATH='/usr/local/bin':$PATH
 export TERM=xterm-256color
 
+################################################################################
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
@@ -15,6 +19,8 @@ LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
 if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
     . $LUNCHY_DIR/lunchy-completion.bash
 fi
+
+################################################################################
 
 archey -c
 
@@ -30,8 +36,6 @@ if [ ! -f $JAVA_HOME'/jre/lib/jfr/jfr.jfc' ] && [ -f ~/.lein/jfr.jfc ]; then
     echo "Copying custom flight recorder profile to $JAVA_HOME..."
     sudo cp -f ~/.lein/jfr.jfc $JAVA_HOME'/jre/lib/jfr/'
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 ################################################################################
 
