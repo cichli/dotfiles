@@ -26,6 +26,8 @@ archey -c
 
 eval "$(ssh-agent -s)"
 
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+
 ################################################################################
 
 export JAVA_HOME=$(/usr/libexec/java_home)
