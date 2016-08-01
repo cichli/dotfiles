@@ -312,6 +312,14 @@
     (bind-key "C-c M-q" #'cider-restart keymap)
     (bind-key "C-c C-j" #'cider-create-sibling-cljs-repl keymap)))
 
+(use-package cider-interaction
+  :defer t
+  :config
+  (add-hook 'cider-clojure-interaction-mode-hook
+            (lambda ()
+              (unbind-key "C-j" cider-clojure-interaction-mode-map)
+              (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))))
+
 (use-package clj-refactor
   :defer t
   :commands
