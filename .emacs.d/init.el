@@ -493,6 +493,8 @@
   :config
   (diminish 'flyspell-mode))
 
+(use-package git-timemachine)
+
 (use-package grep
   :config
   (add-hook 'grep-mode-hook #'hide-trailing-whitespace))

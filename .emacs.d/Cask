@@ -28,6 +28,7 @@
 (depends-on "fancy-narrow")
 (depends-on "flx-ido")
 (depends-on "gist")
+(depends-on "git-timemachine")
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
 (depends-on "groovy-mode")
