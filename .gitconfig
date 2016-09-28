@@ -21,6 +21,7 @@
 
 [diff]
 	algorithm = histogram
+	renames = copies
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
 
