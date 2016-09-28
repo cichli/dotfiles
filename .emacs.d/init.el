@@ -294,6 +294,9 @@
         nrepl-log-messages t
         nrepl-message-buffer-max-size 100000000)
 
+  ;; TODO https://github.com/bbatsov/solarized-emacs/issues/231
+  (set-face-attribute 'cider-deprecated-face nil :background nil :underline "light goldenrod")
+
   (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
 
   (add-hook 'cider-mode-hook #'enable-eldoc-mode)
