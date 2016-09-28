@@ -6,6 +6,9 @@
 [credential]
 	helper = osxkeychain
 
+[commit]
+	gpgsign = true
+
 [branch]
 	autoSetupMerge = always
 	autoSetupRebase = always
