@@ -1,6 +1,7 @@
 [user]
 	name = Michael Griffiths
 	email = mikey@cich.li
+	signingkey = 9241C7C0
 
 [credential]
 	helper = osxkeychain
