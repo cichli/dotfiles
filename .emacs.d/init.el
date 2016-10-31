@@ -192,7 +192,8 @@
   :config
   (global-auto-revert-mode 1)
   (diminish 'auto-revert-mode)
-  (setq auto-revert-verbose nil
+  (setq auto-revert-use-notify t
+        auto-revert-verbose nil
         global-auto-revert-non-file-buffers t))
 
 (use-package solarized
