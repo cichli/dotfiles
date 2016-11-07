@@ -562,12 +562,10 @@
   :bind
   (("C-." . ido-imenu-anywhere)))
 
-(use-package js2-mode
-  :mode "\\.js\\'"
-  :interpreter "node"
+(use-package js
   :config
-  (diminish-major 'js2-mode "js")
-  (add-hook 'js2-mode-hook #'enable-paredit-mode))
+  (diminish-major 'js-mode "js")
+  (add-hook 'js-mode-hook #'enable-paredit-mode))
 
 (use-package jump-char
   :bind
