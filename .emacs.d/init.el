@@ -563,7 +563,9 @@
 (use-package js
   :config
   (diminish-major 'js-mode "js")
-  (add-hook 'js-mode-hook #'enable-paredit-mode))
+  (add-hook 'js-mode-hook #'enable-paredit-mode)
+  (bind-key "{" #'paredit-open-curly js-mode-map)
+  (bind-key "}" #'paredit-close-curly js-mode-map))
 
 (use-package jump-char
   :bind
