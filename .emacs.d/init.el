@@ -589,6 +589,7 @@
   (setq magit-branch-read-upstream-first t
         magit-completing-read-function 'magit-ido-completing-read
         magit-diff-arguments '("-C" "-M" "--compaction-heuristic" "--diff-algorithm=histogram" "--no-ext-diff" "--stat")
+        magit-diff-refine-hunk 'all
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024" "--show-signature")
         magit-merge-arguments '("--no-ff")
