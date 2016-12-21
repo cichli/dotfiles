@@ -20,21 +20,8 @@
 
         :test-refresh {:quiet true}
 
-        :aliases {"fr" ["do"
-                        ["clean"]
-                        ["with-profiles" "+flight-recorder" "repl" ":headless"]]
-
-                  "fd" ["do"
-                        ["clean"]
-                        ["with-profiles" "+flight-recorder" "dev"]]
-
-                  "yr" ["do"
-                        ["clean"]
-                        ["with-profiles" "+yourkit" "repl" ":headless"]]
-
-                  "yd" ["do"
-                        ["clean"]
-                        ["with-profiles" "+yourkit" "dev"]]}}
+        :aliases {"fr" ["with-profiles" "+flight-recorder"]
+                  "yk" ["with-profiles" "+yourkit"]}}
 
  :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures"
                               "-XX:+FlightRecorder"
