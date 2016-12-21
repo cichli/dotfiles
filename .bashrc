@@ -25,6 +25,7 @@ fi
 archey -c
 
 eval "$(ssh-agent -s)"
+ssh-add -K 2>/dev/null
 
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
