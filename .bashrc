@@ -22,7 +22,7 @@ fi
 
 ################################################################################
 
-archey --color --offline
+archey --color --offline --packager
 
 eval "$(ssh-agent -s)"
 ssh-add -K 2>/dev/null
