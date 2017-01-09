@@ -591,7 +591,7 @@
         magit-diff-arguments '("-C" "-M" "--compaction-heuristic" "--diff-algorithm=histogram" "--no-ext-diff" "--stat")
         magit-diff-refine-hunk 'all
         magit-fetch-arguments '("--prune")
-        magit-log-arguments '("--color" "--decorate" "--graph" "-n1024" "--show-signature")
+        magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
         magit-rebase-arguments '("--preserve-merges")
         magit-stash-arguments '("--include-untracked")
