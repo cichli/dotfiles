@@ -228,7 +228,7 @@
 
 (use-package ace-window
   :config
-  (setq aw-scope 'frame)
+  (setq aw-scope 'visible)
   (set-face-attribute 'aw-leading-char-face nil :height 3.0)
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   :bind
