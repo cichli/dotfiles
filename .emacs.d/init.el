@@ -183,7 +183,14 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(bind-key "M-ƒ" #'toggle-frame-fullscreen)
+(defun mac-toggle-frame-fullscreen ()
+  (interactive)
+  (let* ((frame (selected-frame))
+         (param (unless (frame-parameter frame 'fullscreen)
+                  'fullscreen)))
+    (set-frame-parameter frame 'fullscreen param)))
+
+(bind-key "M-ƒ" #'mac-toggle-frame-fullscreen)
 (bind-key "C-o" #'isearch-occur isearch-mode-map)
 
 (use-package autorevert
