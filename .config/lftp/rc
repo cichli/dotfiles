@@ -1,0 +1,9 @@
+set prompt "\[\e[0;32m\]┌┼───┤\[\e[1;33m\] [lftp] \[\e[0;36m\]\u\[\e[0;33m\]\@\[\e[0;36m\]\h \[\e[0;32m\]├───┤\[\e[0;33m\]\w\[\e[0;32m\]├───\n└┼─\[\e[1;33m\]$\[\e[0;32m\]─┤► :\[\e[0m\] "
+
+alias hls command ls
+alias ls echo "please be explicit - c(lient)ls or h(ost)ls?"
+
+set cmd:cls-default -aFhhliI
+set cmd:default-protocol sftp
+set cmd:long-running 0
+set cmd:stifle-rl-history 65536
