@@ -2,7 +2,6 @@ shopt -s globstar promptvars
 
 export PS1='$(printf "%$((COLUMNS-1))s\r")\[\033[36m\][\D{%F %T}] \[\033[32m\][\u@\h \W]\n\[\033[m\]\$ '
 
-alias ls='ls -al'
 
 export EDITOR=emacsclient
 export PATH='/usr/local/bin:/usr/local/sbin:'$PATH
