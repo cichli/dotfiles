@@ -120,8 +120,10 @@
       delete-old-versions t
       kept-new-versions 6
       kept-old-versions 2
+      make-backup-files t
       user-full-name "Michael Griffiths"
       user-mail-address "mikey@cich.li"
+      vc-make-backup-files t
       version-control t)
 
 (use-package recentf
