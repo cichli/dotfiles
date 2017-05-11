@@ -12,7 +12,6 @@
 
 (require 'cask)
 (cask-initialize)
-(add-to-list 'auto-mode-alist '("Cask\\'" . emacs-lisp-mode))
 
 (eval-when-compile
   (require 'use-package))
