@@ -24,8 +24,7 @@ fi
 
 archey --color --offline --packager
 
-eval "$(ssh-agent -s)"
-ssh-add -K 2>/dev/null
+eval `keychain --eval --agents ssh --inherit any id_rsa`
 
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
