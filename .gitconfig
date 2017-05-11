@@ -3,9 +3,6 @@
 	email = mikey@cich.li
 	signingkey = 9241C7C0
 
-[credential]
-	helper = osxkeychain
-
 [commit]
 	gpgsign = true
 
