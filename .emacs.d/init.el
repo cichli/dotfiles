@@ -541,6 +541,19 @@
   :bind
   (("C-." . ido-imenu-anywhere)))
 
+(use-package jka-compr
+  :config
+  (add-to-list 'jka-compr-compression-info-list
+               ["\\.plist$"
+                "converting text XML to binary plist"
+                "plutil"
+                ("-convert" "binary1" "-o" "-" "-")
+                "converting binary plist to text XML"
+                "plutil"
+                ("-convert" "xml1" "-o" "-" "-")
+                nil nil "bplist"])
+  (jka-compr-update))
+
 (use-package js
   :config
   (diminish-major 'js-mode "js")
