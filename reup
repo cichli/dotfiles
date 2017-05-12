@@ -27,7 +27,6 @@ popd
 
 pushd ~/.emacs.d
 rm -rf .cask/
-cask upgrade
 cask
 cask link cider ~/elisp/cider
 popd
