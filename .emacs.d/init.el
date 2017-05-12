@@ -548,11 +548,6 @@
   (bind-key "{" #'paredit-open-curly js-mode-map)
   (bind-key "}" #'paredit-close-curly js-mode-map))
 
-(use-package jump-char
-  :bind
-  (("C-<" . jump-char-backward)
-   ("C->" . jump-char-forward)))
-
 (use-package lisp-mode
   :config
   (diminish-major 'emacs-lisp-mode "el")
