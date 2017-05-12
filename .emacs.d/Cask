@@ -60,7 +60,6 @@
 (depends-on "rotate")
 (depends-on "smart-mode-line")
 (depends-on "smex")
-(depends-on "smooth-scrolling")
 (depends-on "solarized-theme")
 (depends-on "sunrise-commander")
 (depends-on "sunrise-x-loop")

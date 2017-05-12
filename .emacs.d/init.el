@@ -682,8 +682,6 @@
    ("C-c M-x" . smex-major-mode-commands)
    ("C-c C-c M-x" . execute-extended-command)))
 
-(use-package smooth-scrolling)
-
 (use-package sql
   :config
   (setq sql-connection-alist '(("social-dev"
