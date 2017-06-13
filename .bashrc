@@ -37,3 +37,20 @@ if [ ! -f $JAVA_HOME'/jre/lib/jfr/jfr.jfc' ] && [ -f ~/.lein/jfr.jfc ]; then
 fi
 
 ################################################################################
+
+export SSH_USER=michael
+
+ov() {
+    cd ~/clojure/social-superstore/infrastructure/
+    ENV=$1 ./deploy/overview
+}
+
+wov() {
+    cd ~/clojure/social-superstore/infrastructure/
+    watch ENV=$1 ./deploy/overview
+}
+
+neo() {
+    cd ~/clojure/social-superstore/infrastructure/
+    ./k8s/cluster/create-tunnel-all
+}
