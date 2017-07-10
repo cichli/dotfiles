@@ -521,11 +521,10 @@
         ido-default-file-method 'selected-window
         ido-save-directory-list-file (concat user-emacs-directory ".ido.last")))
 
-(use-package ido-ubiquitous
+(use-package ido-completing-read+
   :config
   (ido-ubiquitous-mode 1)
-  (setq ido-ubiquitous-default-state 'enable-old)
-  (push '(disable exact "sql-connect") ido-ubiquitous-command-overrides))
+  (push 'sql-connect ido-cr+-function-blacklist))
 
 (use-package iflipb
   :config

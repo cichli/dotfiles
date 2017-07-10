@@ -38,7 +38,7 @@
 (depends-on "help-fns+")
 (depends-on "help-mode+")
 (depends-on "htmlize")
-(depends-on "ido-ubiquitous")
+(depends-on "ido-completing-read+")
 (depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "info+")
