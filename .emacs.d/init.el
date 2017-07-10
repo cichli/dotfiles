@@ -658,7 +658,7 @@
 
 (use-package rebox
   :config
-  (setq rebox-min-fill-column 80)
+  (setq rebox-style-loop '(21 25 27))
   :bind
   (("C-M-;" . rebox-dwim)
    ("C-M-:" . rebox-cycle)))
