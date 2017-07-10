@@ -235,7 +235,7 @@
 (use-package ace-window
   :config
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)
-        aw-scope 'visible)
+        aw-scope 'frame)
   (set-face-attribute 'aw-leading-char-face nil :height 3.0)
   :bind
   (("M-o" . ace-window)))
