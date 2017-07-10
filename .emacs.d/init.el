@@ -166,6 +166,11 @@
       frame-title-format '(buffer-file-name "%f" ("%b"))
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
+      mac-mouse-wheel-smooth-scroll nil
+      mouse-wheel-follow-mouse t
+      mouse-wheel-progressive-speed nil
+      mouse-wheel-scroll-amount '(2 ((shift) . 8))
+      scroll-conservatively 101
       split-height-threshold nil
       split-width-threshold 160
       x-underline-at-descent-line t)
