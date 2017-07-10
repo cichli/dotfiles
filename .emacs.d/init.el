@@ -663,6 +663,12 @@
   (("C-M-;" . rebox-dwim)
    ("C-M-:" . rebox-cycle)))
 
+(use-package rg
+  :bind
+  (("C-c p s r" . rg-project)
+   ("C-c r" . rg-dwim)
+   ("C-c R" . rg)))
+
 (use-package rotate
   :bind
   (("C-' l" . rotate-layout)
