@@ -175,8 +175,9 @@
       split-width-threshold 160
       x-underline-at-descent-line t)
 
-(set-face-attribute 'default nil :font "Fira Code Retina 10")
-(set-frame-font "Fira Code Retina 10" nil t)
+(let ((font-name "Fira Code Retina 10"))
+  (set-face-attribute 'default nil :font font-name)
+  (set-frame-font font-name nil t))
 
 (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
 
