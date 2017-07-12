@@ -629,8 +629,12 @@
 (use-package paradox
   :defer t
   :config
-  (setq paradox-execute-asynchronously nil
-        paradox-github-token t)
+  (setq paradox-column-width-package 28
+        paradox-column-width-version 14
+        paradox-display-download-count t
+        paradox-execute-asynchronously nil
+        paradox-github-token t
+        paradox-use-homepage-buttons nil)
   (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
 
 (use-package paredit
