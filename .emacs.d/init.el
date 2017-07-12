@@ -240,6 +240,10 @@
   :bind
   (("M-o" . ace-window)))
 
+(use-package advice
+  :config
+  (setq ad-redefinition-action 'accept))
+
 (use-package avy
   :bind
   (("C-c SPC" . avy-goto-char)
