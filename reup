@@ -8,6 +8,12 @@ set -e
 brew update
 brew upgrade
 
+# TODO this is deprecated; move to casks
+brew linkapps
+
+brew cleanup
+brew cask cleanup
+
 ###########
 ## emacs ##
 ###########
