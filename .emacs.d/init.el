@@ -61,7 +61,6 @@
 (delete-selection-mode 1)
 (global-subword-mode 1)
 
-(diminish 'auto-fill-function)
 (diminish 'subword-mode)
 
 (setq-default fill-column 80
