@@ -671,6 +671,10 @@
    ("C-M-:" . rebox-cycle)))
 
 (use-package rg
+  :config
+  (setq rg-custom-type-aliases '()
+        rg-group-result t
+        rg-show-columns t)
   :bind
   (("C-c p s r" . rg-project)
    ("C-c r" . rg-dwim)
