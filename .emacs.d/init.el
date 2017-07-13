@@ -585,7 +585,7 @@
   (diminish-major 'magit-popup-mode nil)
   (setq magit-branch-read-upstream-first t
         magit-completing-read-function 'magit-ido-completing-read
-        magit-diff-arguments '("-C" "-M" "--compaction-heuristic" "--diff-algorithm=histogram" "--no-ext-diff" "--stat")
+        magit-diff-arguments '("-C" "-M" "--stat" "--no-ext-diff")
         magit-diff-refine-hunk 'all
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
