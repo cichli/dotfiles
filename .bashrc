@@ -41,16 +41,16 @@ fi
 export SSH_USER=michael
 
 ov() {
-    cd ~/clojure/social-superstore/infrastructure/
+    cd ~/clojure/we-shop/infrastructure/
     ENV=$1 ./deploy/overview
 }
 
 wov() {
-    cd ~/clojure/social-superstore/infrastructure/
+    cd ~/clojure/we-shop/infrastructure/
     watch ENV=$1 ./deploy/overview
 }
 
 neo() {
-    cd ~/clojure/social-superstore/infrastructure/
+    cd ~/clojure/we-shop/infrastructure/
     ./k8s/cluster/create-tunnel-all
 }
