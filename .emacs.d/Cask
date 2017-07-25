@@ -5,6 +5,7 @@
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-window")
+(depends-on "autodisass-java-bytecode")
 (depends-on "avy")
 (depends-on "avy-zap")
 (depends-on "back-button")
