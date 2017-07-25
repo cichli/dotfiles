@@ -734,14 +734,14 @@
                                ("social-beta2"
                                 (sql-product 'postgres)
                                 (sql-server "localhost")
-                                (sql-port 5438)
-                                (sql-database "social")
+                                (sql-port 5437)
+                                (sql-database "social_beta2")
                                 (sql-user "social"))
                                ("social-beta3"
                                 (sql-product 'postgres)
                                 (sql-server "localhost")
-                                (sql-port 5439)
-                                (sql-database "social")
+                                (sql-port 5437)
+                                (sql-database "social_beta3")
                                 (sql-user "social"))
                                ("social-live"
                                 (sql-product 'postgres)
