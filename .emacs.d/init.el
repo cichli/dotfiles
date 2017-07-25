@@ -749,6 +749,8 @@
                                 (sql-port 5436)
                                 (sql-database "social")
                                 (sql-user "social"))))
+  (sql-set-product-feature 'postgres :prompt-regexp "^[_[:alnum:]]*[=][#>] ")
+  (sql-set-product-feature 'postgres :prompt-cont-regexp "^[_[:alnum:]]*[-('\"][#>] ")
   (sql-set-product 'postgres)
   (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
 
