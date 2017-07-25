@@ -53,6 +53,7 @@
 (depends-on "pallet")
 (depends-on "paradox")
 (depends-on "paredit")
+(depends-on "pcre2el")
 (depends-on "popwin")
 (depends-on "projectile")
 (depends-on "rainbow-delimiters")

@@ -648,6 +648,8 @@
   :config
   (show-paren-mode 1))
 
+(use-package pcre2el)
+
 (use-package popwin
   :config
   (add-hook 'popwin:after-popup-hook #'hide-trailing-whitespace))
