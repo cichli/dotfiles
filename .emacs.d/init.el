@@ -748,8 +748,8 @@
                                 (sql-server "localhost")
                                 (sql-port 5436)
                                 (sql-database "social")
-                                (sql-user "social")))
-        sql-product 'postgres)
+                                (sql-user "social"))))
+  (sql-set-product 'postgres)
   (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
 
 (use-package sunrise-commander
