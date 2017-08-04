@@ -771,6 +771,8 @@
   :config
   (setq uniquify-buffer-name-style 'forward))
 
+(use-package urlenc)
+
 (use-package volatile-highlights
   :config
   (volatile-highlights-mode 1)
