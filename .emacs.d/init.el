@@ -245,7 +245,6 @@
 
 (use-package autodisass-java-bytecode)
 
-
 (use-package avy
   :bind
   (("C-c SPC" . avy-goto-char)
