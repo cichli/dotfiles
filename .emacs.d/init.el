@@ -677,6 +677,7 @@
 (use-package rg
   :config
   (setq rg-custom-type-aliases '()
+        rg-command-line-flags '("--max-columns 160")
         rg-group-result t
         rg-show-columns t)
   :bind
