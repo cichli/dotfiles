@@ -13,7 +13,7 @@
                   [lein-cljfmt "0.5.6"]
                   [lein-kibit "0.1.3"]
                   [lein-pprint "1.1.2"]
-                  [refactor-nrepl "2.3.0-SNAPSHOT"]]
+                  [refactor-nrepl "2.4.0-SNAPSHOT"]]
 
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
