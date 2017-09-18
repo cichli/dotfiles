@@ -791,6 +791,8 @@
                          [simple-query "clojars.org" "clojars.org/search?q=" ""])
                         ("Maven Central" .
                          [simple-query "search.maven.org" "search.maven.org/#search%7Cga%7C1%7C" ""])
+                        ("NPM" .
+                         [simple-query "npmjs.com" "npmjs.com/search?q=" ""])
                         ("Wikipedia" .
                          [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""])
                         ("Google Groups" .
