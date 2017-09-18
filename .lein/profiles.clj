@@ -5,7 +5,7 @@
                        [org.clojure/tools.nrepl "0.2.13"]
                        [pjstadig/humane-test-output "0.8.3"]]
 
-        :plugins [[cider/cider-nrepl "0.14.0-SNAPSHOT"]
+        :plugins [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.18.0"]
                   [jonase/eastwood "0.2.3"]
                   [lein-ancient "0.6.10"]
