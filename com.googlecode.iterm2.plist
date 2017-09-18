@@ -154,12 +154,17 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 110 445 103 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1611 481 796 473 -1920 0 1920 1057 </string>
+	<string>-1611 442 937 512 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>722 7 717 867 0 0 1440 877 </string>
+	<string>2 2 1431 873 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_CAF010D2-5EA1-416F-BA3B-D31B3F98225F</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_CAF010D2-5EA1-416F-BA3B-D31B3F98225F_selection</key>
@@ -901,8 +906,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-25T08:15:16Z</date>
+	<date>2017-08-15T12:13:52Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10057592147435898</real>
