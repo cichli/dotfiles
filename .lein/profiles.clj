@@ -6,7 +6,7 @@
                        [pjstadig/humane-test-output "0.8.3"]]
 
         :plugins [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
-                  [com.jakemccrary/lein-test-refresh "0.18.0"]
+                  [com.jakemccrary/lein-test-refresh "0.21.1"]
                   [jonase/eastwood "0.2.3"]
                   [lein-ancient "0.6.10"]
                   [lein-bikeshed "0.4.1"]
