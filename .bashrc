@@ -31,9 +31,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_TOOLS_JAR=$(/usr/libexec/java_home)'/lib/tools.jar'
 
 # Because all Flight Recorder profiles need to live inside JAVA_HOME. Apparently.
-if [ ! -f $JAVA_HOME'/jre/lib/jfr/jfr.jfc' ] && [ -f ~/.lein/jfr.jfc ]; then
+if [ ! -f $JAVA_HOME'/lib/jfr/jfr.jfc' ] && [ -f ~/.lein/jfr.jfc ]; then
     echo "Copying custom flight recorder profile to $JAVA_HOME..."
-    sudo cp -f ~/.lein/jfr.jfc $JAVA_HOME'/jre/lib/jfr/'
+    sudo cp -f ~/.lein/jfr.jfc $JAVA_HOME'/lib/jfr/'
 fi
 
 ################################################################################
