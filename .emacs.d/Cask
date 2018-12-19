@@ -1,7 +1,6 @@
 (source gnu)
 (source melpa)
 (source org)
-(source SC)
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-window")
@@ -63,8 +62,6 @@
 (depends-on "smart-mode-line")
 (depends-on "smex")
 (depends-on "solarized-theme")
-(depends-on "sunrise-commander")
-(depends-on "sunrise-x-loop")
 (depends-on "unbound")
 (depends-on "undo-tree")
 (depends-on "urlenc")

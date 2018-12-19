@@ -19,7 +19,6 @@ brew cask cleanup
 curl -I https://elpa.gnu.org/
 curl -I https://melpa.org/
 curl -I http://orgmode.org/elpa/
-curl -I http://joseito.republika.pl/sunrise-commander/
 
 pushd ~/elisp/cider
 git fetch --prune --all

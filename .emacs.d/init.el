@@ -754,11 +754,6 @@
   (sql-set-product 'postgres)
   (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
 
-(use-package sunrise-commander
-  :config
-  (unbind-key "M-o" sr-mode-map)
-  (bind-key "M-r" #'sr-synchronize-panes sr-mode-map))
-
 (use-package undo-tree
   :config
   (global-undo-tree-mode 1)
