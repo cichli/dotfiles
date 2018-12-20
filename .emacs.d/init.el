@@ -407,6 +407,10 @@
   :config
   (bind-key "C-c SPC" nil conf-mode-map))
 
+(use-package default-text-scale
+  :config
+  (setq default-text-scale-mode 1))
+
 (use-package diff-hl
   :config
   (global-diff-hl-mode 1)
