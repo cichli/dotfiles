@@ -19,6 +19,7 @@
 [diff]
 	algorithm = histogram
 	renames = copies
+	renameLimit = 2000
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
 
