@@ -196,7 +196,6 @@
     (set-frame-parameter frame 'fullscreen param)))
 
 (bind-key "M-ƒ" #'mac-toggle-frame-fullscreen)
-(bind-key "C-o" #'isearch-occur isearch-mode-map)
 
 (use-package autorevert
   :config
@@ -550,6 +549,10 @@
 (use-package imenu-anywhere
   :bind
   (("C-." . ido-imenu-anywhere)))
+
+(use-package isearch
+  :config
+  (bind-key "C-o" #'isearch-occur isearch-mode-map))
 
 (use-package jka-compr
   :config
