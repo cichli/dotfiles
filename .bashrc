@@ -34,22 +34,3 @@ if [ ! -f $JAVA_HOME'/lib/jfr/jfr.jfc' ] && [ -f ~/.lein/jfr.jfc ]; then
     echo "Copying custom flight recorder profile to $JAVA_HOME..."
     sudo cp -f ~/.lein/jfr.jfc $JAVA_HOME'/lib/jfr/'
 fi
-
-################################################################################
-
-export SSH_USER=michael
-
-ov() {
-    cd ~/clojure/we-shop/infrastructure/
-    ENV=$1 ./deploy/overview
-}
-
-wov() {
-    cd ~/clojure/we-shop/infrastructure/
-    watch ENV=$1 ./deploy/overview
-}
-
-neo() {
-    cd ~/clojure/we-shop/infrastructure/
-    ./k8s/cluster/create-tunnel-all
-}

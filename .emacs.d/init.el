@@ -724,38 +724,11 @@
 
 (use-package sql
   :config
-  (setq sql-connection-alist '(("social-dev"
+  (setq sql-connection-alist '(("switch"
                                 (sql-product 'postgres)
                                 (sql-server "localhost")
                                 (sql-port 5432)
-                                (sql-database "social")
-                                (sql-user "social"))
-                               ("social-beta1"
-                                (sql-product 'postgres)
-                                (sql-server "localhost")
-                                (sql-port 5437)
-                                (sql-database "social")
-                                (sql-user "social"))
-                               ("social-beta2"
-                                (sql-product 'postgres)
-                                (sql-server "localhost")
-                                (sql-port 5437)
-                                (sql-database "social_beta2")
-                                (sql-user "social"))
-                               ("social-beta3"
-                                (sql-product 'postgres)
-                                (sql-server "localhost")
-                                (sql-port 5437)
-                                (sql-database "social_beta3")
-                                (sql-user "social"))
-                               ("social-live"
-                                (sql-product 'postgres)
-                                (sql-server "localhost")
-                                (sql-port 5436)
-                                (sql-database "social")
-                                (sql-user "social"))))
-  (sql-set-product-feature 'postgres :prompt-regexp "^[_[:alnum:]]*[=][#>] ")
-  (sql-set-product-feature 'postgres :prompt-cont-regexp "^[_[:alnum:]]*[-('\"][#>] ")
+                                (sql-database "switch"))))
   (sql-set-product 'postgres)
   (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
 
