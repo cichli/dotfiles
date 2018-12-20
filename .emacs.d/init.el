@@ -284,6 +284,10 @@
    ("C-' n" . buf-move-down)
    ("C-' p" . buf-move-up)))
 
+(use-package cask
+  :config
+  (add-hook 'cask-mode-hook #'enable-paredit-mode))
+
 (use-package cider
   :defer t
   :config
