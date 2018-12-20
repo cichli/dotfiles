@@ -174,7 +174,7 @@
       split-width-threshold 160
       x-underline-at-descent-line t)
 
-(let ((font-name "Fira Code Retina 10"))
+(let ((font-name "Fira Code Retina 12"))
   (set-face-attribute 'default nil :font font-name)
   (set-frame-font font-name nil t))
 
