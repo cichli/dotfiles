@@ -511,17 +511,9 @@
         guide-key/popup-window-position 'bottom
         guide-key/recursive-key-sequence-flag t))
 
-(use-package help-fns+
-  :config
-  (setq help-cross-reference-manuals nil))
-
 (use-package help-mode
   :config
   (add-hook 'help-mode-hook #'hide-trailing-whitespace))
-
-(use-package help-mode+)
-
-(use-package help+)
 
 (use-package ibuffer
   :config
@@ -823,10 +815,3 @@
 (use-package with-editor
   :config
   (diminish 'with-editor-mode))
-
-(use-package zoom-frm
-  :bind
-  (("C-x C-0" . zoom-frm-unzoom)
-   ("C-x C--" . zoom-frm-out)
-   ("C-x C-=" . zoom-frm-in)
-   ("C-x C-+" . zoom-frm-in)))
