@@ -6,7 +6,7 @@ alias dfc='dfc -adiTw -q type'
 alias hnettop='nettop -d -P -j type,cell_bytes_in,cell_bytes_out,wifi_bytes_in,wifi_bytes_out,wired_bytes_in,wired_bytes_out -k rx_dupe,rx_ooo,re-tx,rtt_avg,rcvsize,tx_win,tc_class,tc_mgt,cc_algo,P,C,R,W'
 
 export EDITOR=emacsclient
-export PATH='/usr/local/bin:/usr/local/sbin:'$PATH
+export PATH='/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:'$PATH
 export TERM=xterm-256color
 
 ################################################################################
