@@ -108,7 +108,9 @@
 ;;`-----------------------------------------------------------------------------
 (auto-compression-mode 1)
 
-(setq gc-cons-threshold 67108864)
+(setq directory-free-space-program "gdf"
+      gc-cons-threshold 67108864
+      insert-directory-program "gls")
 
 ;;,-----------------------------------------------------------------------------
 ;;| backup / recentf
