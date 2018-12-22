@@ -23,9 +23,8 @@
         :aliases {"fr" ["with-profiles" "+flight-recorder"]
                   "yk" ["with-profiles" "+yourkit"]}}
 
- :flight-recorder {:jvm-opts ["-XX:+UnlockCommercialFeatures"
-                              "-XX:+FlightRecorder"
-                              "-XX:FlightRecorderOptions=stackdepth=1024,defaultrecording=true,disk=true,repository=/tmp,dumponexit=true,dumponexitpath=./.flight-recording.jfr,maxage=2h,settings=jfr"]}
+ :flight-recorder {:jvm-opts ["-XX:FlightRecorderOptions=stackdepth=1024"
+                              "-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
 
  :yourkit {:jvm-opts ["-agentpath:/Users/griffithsm/libyjpagent.jnilib"]
            :resource-paths ["/Users/griffithsm/yjp-controller-api-redist.jar"]}}
