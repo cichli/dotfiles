@@ -392,6 +392,10 @@
   :bind
   (("C-<tab>" . company-complete)))
 
+(use-package compile
+  :config
+  (setq compile-command "gmake -k "))
+
 (use-package conf-mode
   :config
   (bind-key "C-c SPC" nil conf-mode-map))
