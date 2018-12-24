@@ -58,9 +58,9 @@
 
 (setq mode-require-final-newline 'visit-save
       require-final-newline 'visit-save
+      select-enable-clipboard t
       sentence-end-double-space nil
-      shift-select-mode nil
-      x-select-enable-clipboard t)
+      shift-select-mode nil)
 
 (dolist (x '(downcase-region
              erase-buffer
