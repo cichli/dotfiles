@@ -21,8 +21,7 @@ git fetch --prune --all
 git rebase upstream/master
 
 rm -rf cider-pkg.el
-make elpaclean
-make elpa
+make elpaclean elpa autoloads
 popd
 
 pushd ~/.emacs.d
