@@ -326,10 +326,8 @@
 (use-package cider-scratch
   :defer t
   :config
-  (add-hook 'cider-clojure-interaction-mode-hook
-            (lambda ()
-              (unbind-key "C-j" cider-clojure-interaction-mode-map)
-              (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))))
+  (unbind-key "C-j" cider-clojure-interaction-mode-map)
+  (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))
 
 (use-package clj-refactor
   :defer t
