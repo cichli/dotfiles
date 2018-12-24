@@ -596,7 +596,8 @@
     "--first-parent")
   :bind
   (("C-x m" . magit-status)
-   ("C-x l" . magit-log-popup)))
+   ("C-x C-m" . magit-file-popup)
+   ("C-x M-m" . magit-dispatch-popup)))
 
 (use-package markdown-mode
   :config
