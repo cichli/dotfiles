@@ -48,17 +48,6 @@
       (kill-buffer (current-buffer))
       (message "File '%s' successfully removed" old-name))))
 
-(defun region-or-whole-line ()
-  (if mark-active
-      (list (region-beginning) (region-end))
-    (list (line-beginning-position) (line-beginning-position 2))))
-
-(defadvice kill-region (before slick-cut activate compile)
-  (interactive (region-or-whole-line)))
-
-(defadvice kill-ring-save (before slick-copy activate compile)
-  (interactive (region-or-whole-line)))
-
 (delete-selection-mode 1)
 (global-subword-mode 1)
 
@@ -768,6 +757,11 @@
   :bind
   (("C-c n" . whitespace-cleanup)
    ("C-c w" . whitespace-mode)))
+
+(use-package whole-line-or-region
+  :config
+  (whole-line-or-region-global-mode 1)
+  (diminish 'whole-line-or-region-local-mode))
 
 (use-package winner
   :bind

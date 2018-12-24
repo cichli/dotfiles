@@ -63,4 +63,5 @@
 (depends-on "use-package")
 (depends-on "volatile-highlights")
 (depends-on "wgrep")
+(depends-on "whole-line-or-region")
 (depends-on "yaml-mode")
