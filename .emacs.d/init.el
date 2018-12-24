@@ -1,3 +1,4 @@
+
 ;;,-----------------------------------------------------------------------------
 ;;| custom-file
 ;;`-----------------------------------------------------------------------------
@@ -7,8 +8,7 @@
 ;;,-----------------------------------------------------------------------------
 ;;| packages
 ;;`-----------------------------------------------------------------------------
-(require 'package)
-(package-initialize)
+;; (package-initialize)
 
 (require 'cask)
 (cask-initialize)
@@ -297,8 +297,7 @@
   (diminish-major 'cider-stacktrace-mode nil)
   (diminish-major 'nrepl-messages-mode nil)
 
-  (setq cider-auto-select-error-buffer t
-        cider-macroexpansion-print-metadata t
+  (setq cider-macroexpansion-print-metadata t
         cider-mode-line nil
         cider-pprint-fn 'puget
         cider-prompt-for-symbol nil
@@ -306,11 +305,8 @@
         cider-repl-history-file (concat user-emacs-directory ".cider-history")
         cider-repl-history-size 1000
         cider-repl-pop-to-buffer-on-connect nil
-        cider-repl-use-clojure-font-lock t
         cider-repl-use-pretty-printing t
         cider-repl-wrap-history t
-        cider-show-error-buffer 'always
-        nrepl-buffer-name-show-port t
         nrepl-log-messages t
         nrepl-message-buffer-max-size 100000000)
 
@@ -324,16 +320,7 @@
   (add-hook 'cider-repl-mode-hook #'enable-eldoc-mode)
   (add-hook 'cider-repl-mode-hook #'enable-clj-refactor-mode)
   (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
-  (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace)
-
-  (bind-key "C-c C-b" #'cider-eval-buffer cider-mode-map)
-  (bind-key "{" #'paredit-open-curly cider-repl-mode-map)
-  (bind-key "}" #'paredit-close-curly cider-repl-mode-map)
-
-  (dolist (keymap (list cider-mode-map cider-repl-mode-map))
-    (bind-key "C-c C-q" #'cider-quit keymap)
-    (bind-key "C-c M-q" #'cider-restart keymap)
-    (bind-key "C-c C-j" #'cider-create-sibling-cljs-repl keymap)))
+  (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace))
 
 (use-package cider-interaction
   :defer t
