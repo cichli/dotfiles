@@ -24,7 +24,6 @@
 (depends-on "dockerfile-mode")
 (depends-on "elisp-slime-nav")
 (depends-on "emoji-cheat-sheet-plus")
-(depends-on "emojify")
 (depends-on "esup")
 (depends-on "expand-region")
 (depends-on "fancy-narrow")

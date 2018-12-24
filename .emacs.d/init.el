@@ -460,10 +460,6 @@
   :bind
   (("C-' <SPC>" . emoji-cheat-sheet-plus-insert)))
 
-(use-package emojify
-  :config
-  (global-emojify-mode))
-
 (use-package epa
   :config
   (setq epa-armor t))
