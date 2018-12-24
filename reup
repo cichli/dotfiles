@@ -5,9 +5,8 @@ set -e
 ## homebrew ##
 ##############
 brew update
-brew upgrade
-
-brew cleanup
+brew bundle install --global
+brew bundle cleanup --global --force
 
 ###########
 ## emacs ##

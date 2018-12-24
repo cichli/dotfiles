@@ -689,6 +689,9 @@
    ("C-' C-l" . rotate-layout)
    ("C-' C-w" . rotate-window)))
 
+(use-package ruby-mode
+  :mode ".Brewfile")
+
 (use-package server
   :config
   (server-start))
