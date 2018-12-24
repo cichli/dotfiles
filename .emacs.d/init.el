@@ -1,3 +1,4 @@
+(setq gc-cons-threshold 67108864)
 
 ;;,-----------------------------------------------------------------------------
 ;;| custom-file
@@ -109,7 +110,6 @@
 (auto-compression-mode 1)
 
 (setq directory-free-space-program "gdf"
-      gc-cons-threshold 67108864
       insert-directory-program "gls")
 
 ;;,-----------------------------------------------------------------------------
