@@ -596,8 +596,9 @@
    ("C-x M-m" . magit-dispatch-popup)))
 
 (use-package markdown-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)))
 
 (use-package moody
   :config
