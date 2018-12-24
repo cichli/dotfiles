@@ -199,7 +199,6 @@
   :config
   (setq solarized-distinct-doc-face t
         solarized-scale-org-headlines nil
-        solarized-use-more-italic t
         solarized-use-variable-pitch nil
         x-underline-at-descent-line t)
 
