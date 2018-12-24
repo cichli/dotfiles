@@ -323,7 +323,7 @@
   (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
   (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace))
 
-(use-package cider-interaction
+(use-package cider-scratch
   :defer t
   :config
   (add-hook 'cider-clojure-interaction-mode-hook
