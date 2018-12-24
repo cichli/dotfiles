@@ -27,6 +27,7 @@ brew "keychain"
 brew "leiningen"
 brew "less"
 brew "make"
+brew "markdown"
 brew "maven"
 brew "mosh"
 brew "mpv", args: ["with-bundle", "with-vapoursynth"]
