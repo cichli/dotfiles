@@ -162,8 +162,7 @@
       mouse-wheel-scroll-amount '(2 ((shift) . 8))
       scroll-conservatively 101
       split-height-threshold nil
-      split-width-threshold 160
-      x-underline-at-descent-line t)
+      split-width-threshold 160)
 
 (let ((font-name "Fira Code Retina 12"))
   (set-face-attribute 'default nil :font font-name)
@@ -201,8 +200,22 @@
   (setq solarized-distinct-doc-face t
         solarized-scale-org-headlines nil
         solarized-use-more-italic t
-        solarized-use-variable-pitch nil)
-  (load-theme 'solarized-dark t))
+        solarized-use-variable-pitch nil
+        x-underline-at-descent-line t)
+
+  (load-theme 'solarized-dark t)
+
+  ;; https://github.com/bbatsov/solarized-emacs/issues/220
+  (solarized-with-color-variables 'dark
+    (set-face-attribute 'mode-line nil
+                        :box nil
+                        :overline s-line
+                        :underline s-line)
+    (set-face-attribute 'mode-line-inactive nil
+                        :box nil
+                        :overline s-line
+                        :underline s-line)))
+
 
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
@@ -590,6 +603,11 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
 
+(use-package moody
+  :config
+  (moody-replace-mode-line-buffer-identification)
+  (moody-replace-vc-mode))
+
 (use-package org
   :defer t
   :config
@@ -681,10 +699,6 @@
   :config
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-eldoc-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode))
-
-(use-package smart-mode-line
-  :config
-  (sml/setup))
 
 (use-package smartrep
   :config
