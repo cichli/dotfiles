@@ -141,7 +141,6 @@
 (tooltip-mode -1)
 
 (column-number-mode 1)
-(fringe-mode '(1 . nil))
 (global-font-lock-mode 1)
 (line-number-mode 1)
 (mac-auto-operator-composition-mode 1)
@@ -486,6 +485,10 @@
   :config
   (setq window-divider-default-right-width 1)
   (window-divider-mode 1))
+
+(use-package fringe
+  :config
+  (fringe-mode '(4 . nil)))
 
 (use-package git-timemachine)
 
