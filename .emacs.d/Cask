@@ -18,6 +18,7 @@
 (depends-on "clojure-mode")
 (depends-on "coffee-mode")
 (depends-on "company")
+(depends-on "company-auctex")
 (depends-on "dash")
 (depends-on "default-text-scale")
 (depends-on "diff-hl")

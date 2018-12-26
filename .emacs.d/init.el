@@ -396,6 +396,11 @@
   :bind
   (("C-<tab>" . company-complete)))
 
+(use-package company-auctex
+  :after company
+  :config
+  (company-auctex-init))
+
 (use-package compile
   :config
   (setq compile-command "gmake -k "))
