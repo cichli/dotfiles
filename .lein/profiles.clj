@@ -3,7 +3,7 @@
         :dependencies [[criterium "0.4.4"]
                        [nrepl "0.5.3"]
                        [org.clojure/tools.logging "0.4.1"]
-                       [pjstadig/humane-test-output "0.8.3"]]
+                       [pjstadig/humane-test-output "0.9.0"]]
 
         :plugins [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.21.1"]
