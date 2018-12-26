@@ -25,5 +25,3 @@
 
 [rerere]
 	enabled = true
-[magit]
-	hideCampaign = true
