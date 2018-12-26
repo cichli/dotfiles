@@ -406,6 +406,7 @@
 
 (use-package diff-hl
   :config
+  (add-hook 'magit-post-refresh-hook #'diff-hl-magit-post-refresh)
   (global-diff-hl-mode 1))
 
 (use-package diff-mode
