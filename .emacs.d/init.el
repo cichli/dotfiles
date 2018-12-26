@@ -406,8 +406,7 @@
 
 (use-package diff-hl
   :config
-  (global-diff-hl-mode 1)
-  (setq diff-hl-draw-borders nil))
+  (global-diff-hl-mode 1))
 
 (use-package diff-mode
   :config
