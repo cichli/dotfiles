@@ -10,7 +10,7 @@
                   [jonase/eastwood "0.3.4"]
                   [lein-ancient "0.6.15"]
                   [lein-bikeshed "0.5.1"]
-                  [lein-cljfmt "0.5.7"]
+                  [lein-cljfmt "0.6.3"]
                   [lein-kibit "0.1.5"]
                   [lein-pprint "1.1.2"]
                   [refactor-nrepl "2.4.0-SNAPSHOT"]]
