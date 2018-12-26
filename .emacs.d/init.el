@@ -544,7 +544,7 @@
 
 (use-package imenu-anywhere
   :bind
-  (("C-." . ido-imenu-anywhere)))
+  (("C-c i" . ido-imenu-anywhere)))
 
 (use-package isearch
   :config
@@ -795,3 +795,7 @@
 (use-package with-editor
   :config
   (diminish 'with-editor-mode))
+
+(use-package xref
+  :bind
+  (("C-." . xref-find-references)))
