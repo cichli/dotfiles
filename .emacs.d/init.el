@@ -359,7 +359,7 @@
     (for-all 1)
     (quick-check 1)
     (lazy-loop 1))
-  (bind-key "C-c SPC" nil clojure-mode-map))
+  (unbind-key "C-c SPC" clojure-mode-map))
 
 (use-package coffee-mode
   :mode "\\.coffee\\'")
@@ -369,7 +369,7 @@
   (ansi-color-for-comint-mode-on)
   (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
   (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)
-  (bind-key "C-c SPC" nil comint-mode-map))
+  (unbind-key "C-c SPC" comint-mode-map))
 
 (use-package company
   :config
@@ -396,7 +396,7 @@
 
 (use-package conf-mode
   :config
-  (bind-key "C-c SPC" nil conf-mode-map))
+  (unbind-key "C-c SPC" conf-mode-map))
 
 (use-package default-text-scale
   :config
@@ -418,7 +418,7 @@
                                                               space-before-tab space-after-tab))
                                (whitespace-mode 1)
                                (hide-trailing-whitespace)))
-  (bind-key "M-o" nil diff-mode-map))
+  (unbind-key "M-o" diff-mode-map))
 
 (use-package diminish)
 
@@ -503,7 +503,7 @@
 (use-package ibuffer
   :config
   (setq ibuffer-default-sorting-mode 'alphabetic)
-  (bind-key "M-o" nil ibuffer-mode-map)
+  (unbind-key "M-o" ibuffer-mode-map)
   (bind-key "C-M-o" #'ibuffer-visit-buffer-1-window ibuffer-mode-map)
   :bind
   (("C-x C-b" . ibuffer)))
