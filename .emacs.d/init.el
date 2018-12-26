@@ -797,5 +797,7 @@
   (diminish 'with-editor-mode))
 
 (use-package xref
+  :config
+  (setq xref-prompt-for-identifier nil)
   :bind
   (("C-." . xref-find-references)))
