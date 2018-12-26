@@ -213,8 +213,11 @@
     (set-face-attribute 'mode-line-inactive nil
                         :box nil
                         :overline s-line
-                        :underline s-line)))
+                        :underline s-line)
 
+    ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
+    (set-face-attribute 'window-divider nil
+                        :foreground s-line)))
 
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
@@ -478,6 +481,11 @@
 (use-package flyspell
   :config
   (diminish 'flyspell-mode))
+
+(use-package frame
+  :config
+  (setq window-divider-default-right-width 1)
+  (window-divider-mode 1))
 
 (use-package git-timemachine)
 
