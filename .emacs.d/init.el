@@ -592,6 +592,7 @@
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
         magit-refresh-verbose t
+        magit-section-visibility-indicator nil
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
