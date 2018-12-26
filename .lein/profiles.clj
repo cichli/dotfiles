@@ -2,7 +2,7 @@
 
         :dependencies [[criterium "0.4.4"]
                        [nrepl "0.5.3"]
-                       [org.clojure/tools.logging "0.4.0"]
+                       [org.clojure/tools.logging "0.4.1"]
                        [pjstadig/humane-test-output "0.8.3"]]
 
         :plugins [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
