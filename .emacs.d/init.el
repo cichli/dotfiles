@@ -369,18 +369,7 @@
   (ansi-color-for-comint-mode-on)
   (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
   (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)
-  (defun comint-clear-output (&optional arg)
-    (interactive "P")
-    (if arg
-        (progn
-          (goto-char (point-max))
-          (forward-line 0)
-          (comint-kill-region (point-min) (point))
-          (setq kill-ring (cdr kill-ring))
-          (goto-char (point-max)))
-      (comint-delete-output)))
-  (bind-key "C-c SPC" nil comint-mode-map)
-  (bind-key "C-c C-o" #'comint-clear-output comint-mode-map))
+  (bind-key "C-c SPC" nil comint-mode-map))
 
 (use-package company
   :config
