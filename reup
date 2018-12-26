@@ -5,6 +5,7 @@ set -e
 ## homebrew ##
 ##############
 brew update
+brew bundle dump --global --force
 brew bundle install --global
 brew bundle cleanup --global --force
 
