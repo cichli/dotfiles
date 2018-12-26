@@ -245,6 +245,11 @@
   :config
   (setq ad-redefinition-action 'accept))
 
+(use-package auctex
+  :mode ("\\.tex\\'" . TeX-latex-mode)
+  :config
+  (TeX-global-PDF-mode 1))
+
 (use-package autodisass-java-bytecode)
 
 (use-package avy
