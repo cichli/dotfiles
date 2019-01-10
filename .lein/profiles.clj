@@ -26,5 +26,5 @@
  :flight-recorder {:jvm-opts ["-XX:FlightRecorderOptions=stackdepth=1024"
                               "-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
 
- :yourkit {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.04.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]
-           :resource-paths ["/Applications/YourKit-Java-Profiler-2018.04.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}}
+ :yourkit {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]
+           :resource-paths ["/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}}
