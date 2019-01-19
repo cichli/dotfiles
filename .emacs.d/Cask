@@ -43,6 +43,7 @@
 (depends-on "less-css-mode")
 (depends-on "magit")
 (depends-on "magit-imerge")
+(depends-on "magit-todos")
 (depends-on "markdown-mode")
 (depends-on "moody")
 (depends-on "noflet")

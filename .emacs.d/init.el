@@ -601,6 +601,10 @@
 
 (use-package magit-imerge)
 
+(use-package magit-todos
+  :config
+  (magit-todos-mode 1))
+
 (use-package markdown-mode
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
