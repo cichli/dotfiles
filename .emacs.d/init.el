@@ -576,7 +576,7 @@
   (diminish-major 'magit-mode nil)
   (diminish-major 'magit-popup-mode nil)
   (setq magit-completing-read-function 'magit-ido-completing-read
-        magit-diff-refine-hunk 'all
+        magit-diff-refine-hunk t
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
