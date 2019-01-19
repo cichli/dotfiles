@@ -18,6 +18,7 @@
 /.smex-items
 /async-bytecomp.log
 /custom.el
+/forge-database.sqlite
 /history
 /projectile.cache
 /projectile-bookmarks.eld

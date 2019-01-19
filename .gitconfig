@@ -3,6 +3,9 @@
 	email = mikey@cich.li
 	signingkey = 92BE8E65AB9248EFF68B75792EDA1D9FDE98B3BF
 
+[github]
+	user = cichli
+
 [commit]
 	gpgsign = true
 
@@ -12,6 +15,9 @@
 
 [remote]
 	pushDefault = origin
+
+[forge]
+	remote = upstream
 
 [core]
 	autocrlf = input

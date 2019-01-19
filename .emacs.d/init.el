@@ -485,6 +485,8 @@
   :config
   (diminish 'flyspell-mode))
 
+(use-package forge)
+
 (use-package frame
   :config
   (setq window-divider-default-right-width 1)
