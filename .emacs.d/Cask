@@ -41,6 +41,7 @@
 (depends-on "imenu-anywhere")
 (depends-on "less-css-mode")
 (depends-on "magit")
+(depends-on "magit-imerge")
 (depends-on "markdown-mode")
 (depends-on "moody")
 (depends-on "noflet")
