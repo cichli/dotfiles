@@ -70,7 +70,6 @@
 
 (bind-key "C-M-'" #'indent-buffer)
 (bind-key "C-M-\"" #'indent-region)
-(bind-key "M-'" #'just-one-space)
 
 (bind-key "C-x C-r" #'rename-current-buffer-file)
 (bind-key "C-x C-k" #'delete-current-buffer-file)
@@ -387,9 +386,10 @@
         company-tooltip-align-annotations t
         company-tooltip-limit 16
         company-require-match nil)
-  (bind-key "C-q" #'company-show-doc-buffer company-active-map)
   :bind
-  (("C-<tab>" . company-complete)))
+  (("C-<tab>" . company-complete)
+   :map company-active-map
+   ("C-q" . company-show-doc-buffer)))
 
 (use-package company-auctex
   :after company
@@ -446,7 +446,6 @@
   :config
   (diminish 'eldoc-mode)
   (setq eldoc-idle-delay 0)
-
   (defun enable-eldoc-mode ()
     (interactive)
     (eldoc-mode 1)))
@@ -512,9 +511,10 @@
   :config
   (setq ibuffer-default-sorting-mode 'alphabetic)
   (unbind-key "M-o" ibuffer-mode-map)
-  (bind-key "C-M-o" #'ibuffer-visit-buffer-1-window ibuffer-mode-map)
   :bind
-  (("C-x C-b" . ibuffer)))
+  (("C-x C-b" . ibuffer)
+   :map ibuffer-mode-map
+   ("C-M-o" . ibuffer-visit-buffer-1-window)))
 
 (use-package ido
   :config
@@ -544,8 +544,9 @@
   (("C-c i" . ido-imenu-anywhere)))
 
 (use-package isearch
-  :config
-  (bind-key "C-o" #'isearch-occur isearch-mode-map))
+  :bind
+  (:map isearch-mode-map
+        ("C-o" . isearch-occur)))
 
 (use-package jka-compr
   :config
@@ -564,8 +565,10 @@
   :config
   (diminish-major 'js-mode "js")
   (add-hook 'js-mode-hook #'enable-paredit-mode)
-  (bind-key "{" #'paredit-open-curly js-mode-map)
-  (bind-key "}" #'paredit-close-curly js-mode-map))
+  :bind
+  (:map js-mode-map
+        ("{" . paredit-open-curly)
+        ("}" . paredit-close-curly)))
 
 (use-package lisp-mode
   :config
@@ -710,7 +713,9 @@
 (use-package simple
   :config
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-eldoc-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode))
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+  :bind
+  ("M-'" . just-one-space))
 
 (use-package smartrep
   :config
