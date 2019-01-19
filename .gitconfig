@@ -1,7 +1,7 @@
 [user]
 	name = Michael Griffiths
 	email = mikey@cich.li
-	signingkey = DE98B3BF
+	signingkey = 92BE8E65AB9248EFF68B75792EDA1D9FDE98B3BF
 
 [commit]
 	gpgsign = true
