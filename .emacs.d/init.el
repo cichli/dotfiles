@@ -498,15 +498,6 @@
 
 (use-package groovy-mode)
 
-(use-package guide-key
-  :config
-  (guide-key-mode 1)
-  (diminish 'guide-key-mode)
-  (setq guide-key/guide-key-sequence '("C-c" "C-x" "C-z")
-        guide-key/idle-delay 0.5
-        guide-key/popup-window-position 'bottom
-        guide-key/recursive-key-sequence-flag t))
-
 (use-package help-mode
   :config
   (add-hook 'help-mode-hook #'hide-trailing-whitespace))

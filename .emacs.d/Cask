@@ -35,7 +35,6 @@
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
 (depends-on "groovy-mode")
-(depends-on "guide-key")
 (depends-on "htmlize")
 (depends-on "ido-completing-read+")
 (depends-on "iflipb")
