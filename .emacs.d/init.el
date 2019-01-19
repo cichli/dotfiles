@@ -768,6 +768,11 @@
 
 (use-package wgrep)
 
+(use-package which-key
+  :config
+  (which-key-mode 1)
+  (diminish 'which-key-mode))
+
 (use-package whitespace
   :bind
   (("C-c n" . whitespace-cleanup)
