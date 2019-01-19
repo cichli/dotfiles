@@ -252,6 +252,10 @@
   :config
   (TeX-global-PDF-mode 1))
 
+(use-package auth-source
+  :config
+  (setq auth-sources '("~/.authinfo.gpg")))
+
 (use-package autodisass-java-bytecode)
 
 (use-package avy
