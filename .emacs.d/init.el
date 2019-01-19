@@ -764,7 +764,7 @@
                         ("Emacs Wiki" .
                          [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])))
   :bind
-  (("C-x g" . webjump)))
+  (("C-x j" . webjump)))
 
 (use-package wgrep)
 
