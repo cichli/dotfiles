@@ -578,6 +578,7 @@
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-diff-refine-hunk t
         magit-fetch-arguments '("--prune")
+        magit-file-mode nil
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
         magit-section-visibility-indicator nil
