@@ -20,10 +20,6 @@
 ;;,-----------------------------------------------------------------------------
 ;;| editing
 ;;`-----------------------------------------------------------------------------
-(defun indent-buffer ()
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
 (defun rename-current-buffer-file ()
   (interactive)
   (let* ((old-name (buffer-file-name))
@@ -53,8 +49,7 @@
 
 (diminish 'subword-mode)
 
-(setq-default fill-column 80
-              indent-tabs-mode nil)
+(setq-default fill-column 80)
 
 (setq mode-require-final-newline 'visit-save
       require-final-newline 'visit-save
@@ -67,9 +62,6 @@
              narrow-to-region
              set-goal-column))
   (put x 'disabled nil))
-
-(bind-key "C-M-'" #'indent-buffer)
-(bind-key "C-M-\"" #'indent-region)
 
 (bind-key "C-x C-r" #'rename-current-buffer-file)
 (bind-key "C-x C-k" #'delete-current-buffer-file)
@@ -542,6 +534,16 @@
 (use-package imenu-anywhere
   :bind
   (("C-c i" . ido-imenu-anywhere)))
+
+(use-package indent
+  :init
+  (setq-default indent-tabs-mode nil)
+  (defun indent-buffer ()
+    (interactive)
+    (indent-region (point-min) (point-max)))
+  :bind
+  (("C-M-'" . indent-buffer)
+   ("C-M-\"" . indent-region)))
 
 (use-package isearch
   :bind
