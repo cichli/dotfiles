@@ -597,7 +597,9 @@
   :bind
   (("C-x m" . magit-status)
    ("C-x C-m" . magit-file-popup)
-   ("C-x M-m" . magit-dispatch-popup)))
+   ("C-x M-m" . magit-dispatch-popup)
+   :map magit-mode-map
+   ("C-S-<tab>" . magit-section-cycle-diffs)))
 
 (use-package magit-imerge)
 
