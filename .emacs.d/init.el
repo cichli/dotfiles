@@ -575,19 +575,15 @@
   (magit-auto-revert-mode 1)
   (diminish-major 'magit-mode nil)
   (diminish-major 'magit-popup-mode nil)
-  (setq magit-branch-read-upstream-first t
-        magit-completing-read-function 'magit-ido-completing-read
-        magit-diff-arguments '("-C" "-M" "--stat" "--no-ext-diff")
+  (setq magit-completing-read-function 'magit-ido-completing-read
         magit-diff-refine-hunk 'all
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
-        magit-refresh-verbose t
         magit-section-visibility-indicator nil
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
-  (magit-add-section-hook 'magit-status-sections-hook #'magit-insert-recent-commits nil t)
   (magit-define-popup-switch 'magit-log-popup ?f
     "Follow only the first parent commit of merge commits"
     "--first-parent")
