@@ -1,4 +1,5 @@
 *
 !.gitignore
+!credentials.clj.gpg
 !jfr.jfc
 !profiles.clj
