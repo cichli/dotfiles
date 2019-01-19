@@ -1,4 +1,6 @@
-{:user {:jvm-opts ["-Dapple.awt.UIElement=true" "-XX:-OmitStackTraceInFastThrow"]
+{:user {:signing {:gpg-key "92BE8E65AB9248EFF68B75792EDA1D9FDE98B3BF"}
+
+        :jvm-opts ["-Dapple.awt.UIElement=true" "-XX:-OmitStackTraceInFastThrow"]
 
         :dependencies [[criterium "0.4.4"]
                        [nrepl "0.5.3"]
