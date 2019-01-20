@@ -10,6 +10,7 @@
 (depends-on "avy-zap")
 (depends-on "back-button")
 (depends-on "beacon")
+(depends-on "benchmark-init")
 (depends-on "browse-kill-ring")
 (depends-on "buffer-move")
 (depends-on "cask-mode")

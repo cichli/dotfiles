@@ -15,6 +15,10 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package benchmark-init
+  :config
+  (add-hook 'after-init-hook #'benchmark-init/deactivate))
+
 ;;,-----------------------------------------------------------------------------
 ;;| editing
 ;;`-----------------------------------------------------------------------------
