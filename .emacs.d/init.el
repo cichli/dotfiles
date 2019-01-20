@@ -644,7 +644,14 @@
 
 (use-package smartrep
   :config
-  (setq smartrep-mode-line-string-activated "[SMARTREP]"))
+  (unbind-key "C-q")
+  (smartrep-define-key global-map "C-q"
+    '(("n" . (scroll-other-window 1))
+      ("p" . (scroll-other-window -1))
+      ("N" . 'scroll-other-window)
+      ("P" . (scroll-other-window '-))
+      ("a" . (beginning-of-buffer-other-window 0))
+      ("e" . (end-of-buffer-other-window 0)))))
 
 (use-package smex
   :config
