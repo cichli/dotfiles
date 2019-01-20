@@ -110,10 +110,10 @@
         solarized-use-variable-pitch nil
         x-underline-at-descent-line t)
 
-  (load-theme 'solarized-dark t)
+  (load-theme 'solarized-light t)
 
   ;; https://github.com/bbatsov/solarized-emacs/issues/220
-  (solarized-with-color-variables 'dark
+  (solarized-with-color-variables 'light
     (set-face-attribute 'mode-line nil
                         :box nil
                         :overline s-line
