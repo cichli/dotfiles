@@ -76,7 +76,6 @@
 (use-package autorevert
   :config
   (global-auto-revert-mode 1)
-  (diminish 'auto-revert-mode)
   (setq auto-revert-verbose nil
         global-auto-revert-non-file-buffers t))
 
@@ -94,13 +93,11 @@
 (use-package back-button
   :defer 1
   :config
-  (back-button-mode 1)
-  (diminish 'back-button-mode))
+  (back-button-mode 1))
 
 (use-package beacon
   :config
-  (beacon-mode 1)
-  (diminish 'beacon-mode))
+  (beacon-mode 1))
 
 (use-package bind-key)
 
@@ -127,10 +124,6 @@
          (cider-repl-mode . enable-paredit-mode)
          (cider-repl-mode . hide-trailing-whitespace))
   :config
-  (diminish-major 'cider-repl-mode nil)
-  (diminish-major 'cider-stacktrace-mode nil)
-  (diminish-major 'nrepl-messages-mode nil)
-
   (setq cider-macroexpansion-print-metadata t
         cider-mode-line nil
         cider-pprint-fn 'puget
@@ -159,7 +152,6 @@
   (defun enable-clj-refactor-mode ()
     (interactive)
     (clj-refactor-mode 1)
-    (diminish 'clj-refactor-mode)
     (cljr-add-keybindings-with-prefix "C-c r"))
   :config
   (setq cljr-eagerly-build-asts-on-startup nil
@@ -171,7 +163,6 @@
   :hook ((clojure-mode . enable-clj-refactor-mode)
          (clojure-mode . enable-paredit-mode))
   :config
-  (diminish-major 'clojure-mode "clj")
   (define-clojure-indent
     (quick-check 1))
   (unbind-key "C-c SPC" clojure-mode-map))
@@ -194,7 +185,6 @@
    ("C-q" . company-show-doc-buffer))
   :config
   (global-company-mode 1)
-  (diminish 'company-mode)
   (setq company-idle-delay nil
         company-minimum-prefix-length 0
         company-selection-wrap-around t
@@ -267,13 +257,6 @@
                                (hide-trailing-whitespace)))
   (unbind-key "M-o" diff-mode-map))
 
-(use-package diminish
-  :defer t
-  :init
-  (defun diminish-major (mode alias)
-    (add-hook (intern (concat (symbol-name mode) "-hook"))
-              `(lambda () (setq mode-name ,alias)))))
-
 (use-package dired
   :defer t
   :config
@@ -291,7 +274,6 @@
 
 (use-package eldoc
   :config
-  (diminish 'eldoc-mode)
   (setq eldoc-idle-delay 0.1)
   (global-eldoc-mode 1))
 
@@ -301,9 +283,7 @@
    ("C-m" . electric-indent-just-newline)))
 
 (use-package elisp-slime-nav
-  :defer t
-  :config
-  (diminish 'elisp-slime-nav-mode))
+  :defer t)
 
 (use-package epa
   :defer t
@@ -316,8 +296,7 @@
 
 (use-package fancy-narrow
   :config
-  (fancy-narrow-mode 1)
-  (diminish 'fancy-narrow-mode))
+  (fancy-narrow-mode 1))
 
 (use-package files
   :config
@@ -335,9 +314,7 @@
   :config
   (flx-ido-mode 1))
 
-(use-package flyspell
-  :config
-  (diminish 'flyspell-mode))
+(use-package flyspell)
 
 (use-package forge
   :after magit)
@@ -433,15 +410,12 @@
   (:map js-mode-map
         ("{" . paredit-open-curly)
         ("}" . paredit-close-curly))
-  :hook ((js-mode . enable-paredit-mode))
-  :config
-  (diminish-major 'js-mode "js"))
+  :hook ((js-mode . enable-paredit-mode)))
 
 (use-package lisp-mode
   :hook ((emacs-lisp-mode . elisp-slime-nav-mode)
          (emacs-lisp-mode . enable-paredit-mode))
   :config
-  (diminish-major 'emacs-lisp-mode "el")
   (setq initial-major-mode 'emacs-lisp-mode))
 
 (use-package locate
@@ -473,8 +447,6 @@
   :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
-  (diminish-major 'magit-mode nil)
-  (diminish-major 'magit-popup-mode nil)
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-diff-refine-hunk t
         magit-fetch-arguments '("--prune")
@@ -516,8 +488,7 @@
 
 (use-package page-break-lines
   :config
-  (global-page-break-lines-mode 1)
-  (diminish 'page-break-lines-mode))
+  (global-page-break-lines-mode 1))
 
 (use-package pallet
   :defer 1
@@ -536,9 +507,7 @@
         paradox-use-homepage-buttons nil))
 
 (use-package paredit
-  :defer t
-  :config
-  (diminish 'paredit-mode))
+  :defer t)
 
 (use-package paren
   :config
@@ -552,7 +521,6 @@
   :defer 1
   :config
   (projectile-global-mode 1)
-  (diminish 'projectile-mode)
   (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
         projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
         projectile-use-git-grep t))
@@ -663,8 +631,7 @@
 
 (use-package subword
   :config
-  (global-subword-mode 1)
-  (diminish 'subword-mode))
+  (global-subword-mode 1))
 
 (use-package tool-bar
   :config
@@ -679,8 +646,6 @@
   :hook ((undo-tree-visualizer-mode . hide-trailing-whitespace))
   :config
   (global-undo-tree-mode 1)
-  (diminish 'undo-tree-mode)
-  (diminish-major 'undo-tree-visualizer-mode nil)
   (setq undo-tree-visualizer-timestamps t))
 
 (use-package uniquify
@@ -698,7 +663,6 @@
 (use-package volatile-highlights
   :config
   (volatile-highlights-mode 1)
-  (diminish 'volatile-highlights-mode)
   (set-face-inverse-video 'vhl/default-face t))
 
 (use-package webjump
@@ -729,8 +693,7 @@
 
 (use-package which-key
   :config
-  (which-key-mode 1)
-  (diminish 'which-key-mode))
+  (which-key-mode 1))
 
 (use-package whitespace
   :init
@@ -746,8 +709,7 @@
 
 (use-package whole-line-or-region
   :config
-  (whole-line-or-region-global-mode 1)
-  (diminish 'whole-line-or-region-local-mode))
+  (whole-line-or-region-global-mode 1))
 
 (use-package winner
   :demand t
@@ -758,9 +720,7 @@
   (winner-mode 1))
 
 (use-package with-editor
-  :defer t
-  :config
-  (diminish 'with-editor-mode))
+  :defer t)
 
 (use-package xref
   :bind
