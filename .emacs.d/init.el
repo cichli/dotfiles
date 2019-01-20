@@ -46,14 +46,6 @@
   (add-hook (intern (concat (symbol-name mode) "-hook"))
             `(lambda () (setq mode-name ,alias))))
 
-(defun hide-trailing-whitespace ()
-  (interactive)
-  (setq show-trailing-whitespace nil))
-
-(defun show-trailing-whitespace ()
-  (interactive)
-  (setq show-trailing-whitespace t))
-
 (blink-cursor-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -215,17 +207,17 @@
 
 (use-package clj-refactor
   :defer t
-  :commands enable-clj-refactor-mode
-  :config
-  (setq cljr-eagerly-build-asts-on-startup nil
-        cljr-eagerly-cache-macro-occurrences-on-startup nil
-        cljr-favor-prefix-notation nil
-        cljr-magic-requires nil)
+  :init
   (defun enable-clj-refactor-mode ()
     (interactive)
     (clj-refactor-mode 1)
     (diminish 'clj-refactor-mode)
-    (cljr-add-keybindings-with-prefix "C-c r")))
+    (cljr-add-keybindings-with-prefix "C-c r"))
+  :config
+  (setq cljr-eagerly-build-asts-on-startup nil
+        cljr-eagerly-cache-macro-occurrences-on-startup nil
+        cljr-favor-prefix-notation nil
+        cljr-magic-requires nil))
 
 (use-package clojure-mode
   :defer t
@@ -508,15 +500,16 @@
   (setq locate-command "mdfind"))
 
 (use-package mac-win
-  :config
-  (setq mac-mouse-wheel-smooth-scroll nil)
-  (mac-auto-operator-composition-mode 1)
+  :init
   (defun mac-toggle-frame-fullscreen ()
     (interactive)
     (let* ((frame (selected-frame))
            (param (unless (frame-parameter frame 'fullscreen)
                     'fullscreen)))
       (set-frame-parameter frame 'fullscreen param)))
+  :config
+  (setq mac-mouse-wheel-smooth-scroll nil)
+  (mac-auto-operator-composition-mode 1)
   :bind
   (("M-ƒ" . mac-toggle-frame-fullscreen)))
 
@@ -753,6 +746,14 @@
   (diminish 'which-key-mode))
 
 (use-package whitespace
+  :init
+  (defun hide-trailing-whitespace ()
+    (interactive)
+    (setq show-trailing-whitespace nil))
+
+  (defun show-trailing-whitespace ()
+    (interactive)
+    (setq show-trailing-whitespace t))
   :bind
   (("C-c w" . whitespace-mode)))
 
