@@ -54,12 +54,12 @@
    ("C-c C-S-b" . ace-jump-buffer-in-one-window)))
 
 (use-package ace-window
+  :bind
+  (("M-o" . ace-window))
   :config
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)
         aw-scope 'frame)
-  (set-face-attribute 'aw-leading-char-face nil :height 3.0)
-  :bind
-  (("M-o" . ace-window)))
+  (set-face-attribute 'aw-leading-char-face nil :height 3.0))
 
 (use-package auctex
   :mode ("\\.tex\\'" . TeX-latex-mode)
@@ -105,10 +105,10 @@
 (use-package bind-key)
 
 (use-package browse-kill-ring
-  :config
-  (browse-kill-ring-default-keybindings)
   :bind
-  (("C-c C-b" . browse-kill-ring)))
+  (("C-c C-b" . browse-kill-ring))
+  :config
+  (browse-kill-ring-default-keybindings))
 
 (use-package buffer-move
   :bind
@@ -192,6 +192,10 @@
   (unbind-key "C-c SPC" comint-mode-map))
 
 (use-package company
+  :bind
+  (("C-<tab>" . company-complete)
+   :map company-active-map
+   ("C-q" . company-show-doc-buffer))
   :config
   (global-company-mode 1)
   (diminish 'company-mode)
@@ -200,11 +204,7 @@
         company-selection-wrap-around t
         company-tooltip-align-annotations t
         company-tooltip-limit 16
-        company-require-match nil)
-  :bind
-  (("C-<tab>" . company-complete)
-   :map company-active-map
-   ("C-q" . company-show-doc-buffer)))
+        company-require-match nil))
 
 (use-package company-auctex
   :after company
@@ -376,13 +376,13 @@
   (setq htmlize-html-major-mode #'html-mode))
 
 (use-package ibuffer
-  :config
-  (setq ibuffer-default-sorting-mode 'alphabetic)
-  (unbind-key "M-o" ibuffer-mode-map)
   :bind
   (("C-x C-b" . ibuffer)
    :map ibuffer-mode-map
-   ("C-M-o" . ibuffer-visit-buffer-1-window)))
+   ("C-M-o" . ibuffer-visit-buffer-1-window))
+  :config
+  (setq ibuffer-default-sorting-mode 'alphabetic)
+  (unbind-key "M-o" ibuffer-mode-map))
 
 (use-package ido
   :config
@@ -399,12 +399,12 @@
   (push 'sql-connect ido-cr+-function-blacklist))
 
 (use-package iflipb
-  :config
-  (setq iflipb-include-more-buffers t
-        iflipb-wrap-around t)
   :bind
   (("M-[" . iflipb-previous-buffer)
-   ("M-]" . iflipb-next-buffer)))
+   ("M-]" . iflipb-next-buffer))
+  :config
+  (setq iflipb-include-more-buffers t
+        iflipb-wrap-around t))
 
 (use-package imenu
   :defer t)
@@ -433,16 +433,15 @@
   (jka-compr-update))
 
 (use-package js
-  :hook ((js-mode . enable-paredit-mode))
-  :config
-  (diminish-major 'js-mode "js")
   :bind
   (:map js-mode-map
         ("{" . paredit-open-curly)
-        ("}" . paredit-close-curly)))
+        ("}" . paredit-close-curly))
+  :hook ((js-mode . enable-paredit-mode))
+  :config
+  (diminish-major 'js-mode "js"))
 
 (use-package lisp-mode
-  :defer t
   :hook ((emacs-lisp-mode . elisp-slime-nav-mode)
          (emacs-lisp-mode . enable-paredit-mode))
   :config
@@ -462,13 +461,19 @@
            (param (unless (frame-parameter frame 'fullscreen)
                     'fullscreen)))
       (set-frame-parameter frame 'fullscreen param)))
+  :bind
+  (("M-ƒ" . mac-toggle-frame-fullscreen))
   :config
   (setq mac-mouse-wheel-smooth-scroll nil)
-  (mac-auto-operator-composition-mode 1)
-  :bind
-  (("M-ƒ" . mac-toggle-frame-fullscreen)))
+  (mac-auto-operator-composition-mode 1))
 
 (use-package magit
+  :bind
+  (("C-x m" . magit-status)
+   ("C-x C-m" . magit-file-popup)
+   ("C-x M-m" . magit-dispatch-popup)
+   :map magit-mode-map
+   ("C-S-<tab>" . magit-section-cycle-diffs))
   :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
@@ -485,13 +490,7 @@
   (global-magit-file-mode -1)
   (magit-define-popup-switch 'magit-log-popup ?f
     "Follow only the first parent commit of merge commits"
-    "--first-parent")
-  :bind
-  (("C-x m" . magit-status)
-   ("C-x C-m" . magit-file-popup)
-   ("C-x M-m" . magit-dispatch-popup)
-   :map magit-mode-map
-   ("C-S-<tab>" . magit-section-cycle-diffs)))
+    "--first-parent"))
 
 (use-package magit-imerge
   :after magit)
@@ -574,15 +573,15 @@
         recentf-save-file "~/.emacs.d/.recentf"))
 
 (use-package rg
+  :bind
+  (("C-c p s r" . rg-project)
+   ("C-c r" . rg-dwim)
+   ("C-c R" . rg))
   :config
   (setq rg-custom-type-aliases '()
         rg-command-line-flags '("--max-columns 160" "--smart-case" )
         rg-group-result t
-        rg-show-columns t)
-  :bind
-  (("C-c p s r" . rg-project)
-   ("C-c r" . rg-dwim)
-   ("C-c R" . rg)))
+        rg-show-columns t))
 
 (use-package rotate
   :bind
@@ -603,14 +602,14 @@
   (server-start))
 
 (use-package simple
+  :bind
+  ("M-'" . just-one-space)
   :config
   (put #'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
   (setq shift-select-mode nil)
   (column-number-mode 1)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  :bind
-  ("M-'" . just-one-space))
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode))
 
 (use-package smartrep
   :config
@@ -624,12 +623,12 @@
       ("e" . (end-of-buffer-other-window 0)))))
 
 (use-package smex
-  :config
-  (setq smex-save-file (concat user-emacs-directory ".smex-items"))
   :bind
   (("M-x" . smex)
    ("C-c M-x" . smex-major-mode-commands)
-   ("C-c C-c M-x" . execute-extended-command)))
+   ("C-c C-c M-x" . execute-extended-command))
+  :config
+  (setq smex-save-file (concat user-emacs-directory ".smex-items")))
 
 (use-package solarized
   :config
@@ -707,6 +706,8 @@
   (set-face-inverse-video 'vhl/default-face t))
 
 (use-package webjump
+  :bind
+  (("C-x j" . webjump))
   :config
   (setq webjump-sites '(("Google" .
                          [simple-query "google.com" "google.com/search?q=" ""])
@@ -725,9 +726,7 @@
                         ("Google Groups" .
                          [simple-query "groups.google.com" "groups.google.com/groups?q=" ""])
                         ("Emacs Wiki" .
-                         [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""])))
-  :bind
-  (("C-x j" . webjump)))
+                         [simple-query "emacswiki.org" "emacswiki.org/cgi-bin/wiki/" ""]))))
 
 (use-package wgrep
   :defer t)
@@ -756,11 +755,11 @@
 
 (use-package winner
   :demand t
-  :config
-  (winner-mode 1)
   :bind
   (("C-c [" . winner-undo)
-   ("C-c ]" . winner-redo)))
+   ("C-c ]" . winner-redo))
+  :config
+  (winner-mode 1))
 
 (use-package with-editor
   :defer t
@@ -768,7 +767,7 @@
   (diminish 'with-editor-mode))
 
 (use-package xref
-  :config
-  (setq xref-prompt-for-identifier nil)
   :bind
-  (("C-." . xref-find-references)))
+  (("C-." . xref-find-references))
+  :config
+  (setq xref-prompt-for-identifier nil))
