@@ -351,7 +351,7 @@
 (use-package eldoc
   :config
   (diminish 'eldoc-mode)
-  (setq eldoc-idle-delay 0)
+  (setq eldoc-idle-delay 0.1)
   (global-eldoc-mode 1))
 
 (use-package electric
