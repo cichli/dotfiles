@@ -183,9 +183,7 @@
   :defer t
   :hook ((cider-inspector-mode . hide-trailing-whitespace)
          (cider-mode . cider-company-enable-fuzzy-completion)
-         (cider-mode . enable-eldoc-mode)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
-         (cider-repl-mode . enable-eldoc-mode)
          (cider-repl-mode . enable-paredit-mode)
          (cider-repl-mode . hide-trailing-whitespace))
   :config
@@ -351,13 +349,10 @@
         ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package eldoc
-  :commands enable-eldoc-mode
   :config
   (diminish 'eldoc-mode)
   (setq eldoc-idle-delay 0)
-  (defun enable-eldoc-mode ()
-    (interactive)
-    (eldoc-mode 1)))
+  (global-eldoc-mode 1))
 
 (use-package electric
   :bind
@@ -502,8 +497,7 @@
 (use-package lisp-mode
   :defer t
   :hook ((emacs-lisp-mode . elisp-slime-nav-mode)
-         (emacs-lisp-mode . enable-paredit-mode)
-         (emacs-lisp-mode . enable-eldoc-mode))
+         (emacs-lisp-mode . enable-paredit-mode))
   :config
   (diminish-major 'emacs-lisp-mode "el")
   (setq initial-major-mode 'emacs-lisp-mode))
@@ -661,7 +655,6 @@
   (setq shift-select-mode nil)
   (put #'set-goal-column 'disabled nil)
   (column-number-mode 1)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-eldoc-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
   :bind
   ("M-'" . just-one-space))
