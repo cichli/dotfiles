@@ -154,6 +154,7 @@
   (TeX-global-PDF-mode 1))
 
 (use-package auth-source
+  :defer t
   :config
   (setq auth-sources '("~/.authinfo.gpg")))
 
@@ -260,6 +261,7 @@
     (cljr-add-keybindings-with-prefix "C-c r")))
 
 (use-package clojure-mode
+  :defer t
   :config
   (diminish-major 'clojure-mode "clj")
   (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
@@ -274,6 +276,7 @@
   :mode "\\.coffee\\'")
 
 (use-package comint
+  :defer t
   :config
   (ansi-color-for-comint-mode-on)
   (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
@@ -301,10 +304,12 @@
   (company-auctex-init))
 
 (use-package compile
+  :defer t
   :config
   (setq compile-command "gmake -k "))
 
 (use-package conf-mode
+  :defer t
   :config
   (unbind-key "C-c SPC" conf-mode-map))
 
@@ -317,11 +322,13 @@
   (delete-selection-mode 1))
 
 (use-package diff-hl
+  :defer 1
   :config
   (add-hook 'magit-post-refresh-hook #'diff-hl-magit-post-refresh)
   (global-diff-hl-mode 1))
 
 (use-package diff-mode
+  :defer t
   :config
   (add-hook 'diff-mode-hook '(lambda ()
                                (setq-local whitespace-style '(face
@@ -334,15 +341,19 @@
                                (hide-trailing-whitespace)))
   (unbind-key "M-o" diff-mode-map))
 
-(use-package diminish)
+(use-package diminish
+  :defer t)
 
 (use-package dired
+  :defer t
   :config
   (setq dired-recursive-deletes 'top))
 
-(use-package dockerfile-mode)
+(use-package dockerfile-mode
+  :defer t)
 
 (use-package ediff
+  :defer t
   :config
   (setq ediff-diff-options "-w"
         ediff-split-window-function 'split-window-horizontally
@@ -363,10 +374,12 @@
    ("C-m" . electric-indent-just-newline)))
 
 (use-package elisp-slime-nav
+  :defer t
   :config
   (diminish 'elisp-slime-nav-mode))
 
 (use-package epa
+  :defer t
   :config
   (setq epa-armor t))
 
@@ -399,7 +412,8 @@
   :config
   (diminish 'flyspell-mode))
 
-(use-package forge)
+(use-package forge
+  :after magit)
 
 (use-package frame
   :config
@@ -410,13 +424,16 @@
   :config
   (fringe-mode '(4 . nil)))
 
-(use-package git-timemachine)
+(use-package git-timemachine
+  :defer t)
 
 (use-package grep
+  :defer t
   :config
   (add-hook 'grep-mode-hook #'hide-trailing-whitespace))
 
 (use-package help-mode
+  :defer t
   :config
   (add-hook 'help-mode-hook #'hide-trailing-whitespace))
 
@@ -438,6 +455,7 @@
         ido-save-directory-list-file (concat user-emacs-directory ".ido.last")))
 
 (use-package ido-completing-read+
+  :defer 1
   :config
   (ido-ubiquitous-mode 1)
   (push 'sql-connect ido-cr+-function-blacklist))
@@ -450,7 +468,8 @@
   (("M-[" . iflipb-previous-buffer)
    ("M-]" . iflipb-next-buffer)))
 
-(use-package imenu)
+(use-package imenu
+  :defer t)
 
 (use-package imenu-anywhere
   :bind
@@ -472,6 +491,7 @@
         ("C-o" . isearch-occur)))
 
 (use-package jka-compr
+  :defer t
   :config
   (add-to-list 'jka-compr-compression-info-list
                ["\\.plist$"
@@ -494,6 +514,7 @@
         ("}" . paredit-close-curly)))
 
 (use-package lisp-mode
+  :defer t
   :config
   (diminish-major 'emacs-lisp-mode "el")
   (setq initial-major-mode 'emacs-lisp-mode)
@@ -539,9 +560,11 @@
    :map magit-mode-map
    ("C-S-<tab>" . magit-section-cycle-diffs)))
 
-(use-package magit-imerge)
+(use-package magit-imerge
+  :after magit)
 
 (use-package magit-todos
+  :after magit
   :config
   (magit-todos-mode 1))
 
@@ -561,7 +584,7 @@
   (setq org-enforce-todo-dependencies t))
 
 (use-package ox-reveal
-  :defer t)
+  :after org)
 
 (use-package page-break-lines
   :config
@@ -569,6 +592,7 @@
   (diminish 'page-break-lines-mode))
 
 (use-package pallet
+  :defer 1
   :config
   (pallet-mode 1))
 
@@ -584,6 +608,7 @@
   (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
 
 (use-package paredit
+  :defer t
   :config
   (diminish 'paredit-mode))
 
@@ -596,6 +621,7 @@
   (rxt-global-mode 1))
 
 (use-package projectile
+  :defer 1
   :config
   (projectile-global-mode 1)
   (diminish 'projectile-mode)
@@ -604,6 +630,7 @@
         projectile-use-git-grep t))
 
 (use-package re-builder
+  :defer t
   :config
   (setq reb-re-syntax 'string))
 
@@ -668,6 +695,7 @@
    ("C-c C-c M-x" . execute-extended-command)))
 
 (use-package sql
+  :defer t
   :config
   (setq sql-connection-alist '(("switch"
                                 (sql-product 'postgres)
@@ -694,9 +722,11 @@
   :config
   (setq uniquify-buffer-name-style 'forward))
 
-(use-package urlenc)
+(use-package urlenc
+  :defer t)
 
 (use-package vc-hooks
+  :defer t
   :config
   (setq vc-make-backup-files t))
 
@@ -729,7 +759,8 @@
   :bind
   (("C-x j" . webjump)))
 
-(use-package wgrep)
+(use-package wgrep
+  :defer t)
 
 (use-package which-key
   :config
@@ -755,6 +786,7 @@
    ("C-c ]" . winner-redo)))
 
 (use-package with-editor
+  :defer t
   :config
   (diminish 'with-editor-mode))
 
