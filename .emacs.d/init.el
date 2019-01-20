@@ -233,8 +233,10 @@
 
   (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
 
+  (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
   (add-hook 'cider-mode-hook #'enable-eldoc-mode)
 
+  (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
   (add-hook 'cider-repl-mode-hook #'enable-eldoc-mode)
   (add-hook 'cider-repl-mode-hook #'enable-clj-refactor-mode)
   (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
