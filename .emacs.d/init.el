@@ -529,6 +529,11 @@
   (add-hook 'emacs-lisp-mode-hook #'elisp-slime-nav-mode)
   (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode))
 
+(use-package locate
+  :defer t
+  :config
+  (setq locate-command "mdfind"))
+
 (use-package mac-win
   :config
   (setq mac-mouse-wheel-smooth-scroll nil)
