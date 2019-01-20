@@ -473,6 +473,11 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package minions
+  :config
+  (setq minions-mode-line-lighter "...")
+  (minions-mode 1))
+
 (use-package moody
   :config
   (moody-replace-mode-line-buffer-identification)
