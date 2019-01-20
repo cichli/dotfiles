@@ -439,6 +439,11 @@
   :config
   (add-hook 'help-mode-hook #'hide-trailing-whitespace))
 
+(use-package htmlize
+  :defer t
+  :config
+  (setq htmlize-html-major-mode #'html-mode))
+
 (use-package ibuffer
   :config
   (setq ibuffer-default-sorting-mode 'alphabetic)
