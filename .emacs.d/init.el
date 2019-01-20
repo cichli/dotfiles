@@ -44,24 +44,14 @@
       (kill-buffer (current-buffer))
       (message "File '%s' successfully removed" old-name))))
 
-(delete-selection-mode 1)
-(global-subword-mode 1)
-
-(diminish 'subword-mode)
-
 (setq-default fill-column 80)
-
-(setq mode-require-final-newline 'visit-save
-      require-final-newline 'visit-save
-      select-enable-clipboard t
-      sentence-end-double-space nil
-      shift-select-mode nil)
 
 (dolist (x '(downcase-region
              erase-buffer
-             narrow-to-region
-             set-goal-column))
+             narrow-to-region))
   (put x 'disabled nil))
+
+(setq sentence-end-double-space nil)
 
 (bind-key "C-x C-r" #'rename-current-buffer-file)
 (bind-key "C-x C-k" #'delete-current-buffer-file)
@@ -84,32 +74,13 @@
 
 (prefer-coding-system 'utf-8)
 
-;;,-----------------------------------------------------------------------------
-;;| misc
-;;`-----------------------------------------------------------------------------
-(auto-compression-mode 1)
-
-(setq directory-free-space-program "gdf"
-      insert-directory-program "gls")
 
 ;;,-----------------------------------------------------------------------------
 ;;| backup / recentf
 ;;`-----------------------------------------------------------------------------
-(setq backup-by-copying t
-      backup-directory-alist '(("." . "~/.emacs.d/backups/"))
-      delete-by-moving-to-trash t
-      delete-old-versions t
-      make-backup-files t
+(setq delete-by-moving-to-trash t
       user-full-name "Michael Griffiths"
-      user-mail-address "mikey@cich.li"
-      vc-make-backup-files t
-      version-control t)
-
-(use-package recentf
-  :config
-  (recentf-mode 1)
-  (setq recentf-max-saved-items 100
-        recentf-save-file "~/.emacs.d/.recentf"))
+      user-mail-address "mikey@cich.li")
 
 ;;,-----------------------------------------------------------------------------
 ;;| ui
@@ -131,11 +102,8 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(column-number-mode 1)
 (global-font-lock-mode 1)
 (line-number-mode 1)
-(mac-auto-operator-composition-mode 1)
-(winner-mode 1)
 
 (setq-default cursor-in-non-selected-windows nil
               indicate-empty-lines t
@@ -146,10 +114,6 @@
       frame-title-format '(buffer-file-name "%f" ("%b"))
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
-      mac-mouse-wheel-smooth-scroll nil
-      mouse-wheel-follow-mouse t
-      mouse-wheel-progressive-speed nil
-      mouse-wheel-scroll-amount '(2 ((shift) . 8))
       scroll-conservatively 101
       split-height-threshold nil
       split-width-threshold 160)
@@ -167,23 +131,6 @@
       ad-do-it)))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-(defun mac-toggle-frame-fullscreen ()
-  (interactive)
-  (let* ((frame (selected-frame))
-         (param (unless (frame-parameter frame 'fullscreen)
-                  'fullscreen)))
-    (set-frame-parameter frame 'fullscreen param)))
-
-(bind-key "M-ƒ" #'mac-toggle-frame-fullscreen)
-
-(use-package autorevert
-  :config
-  (global-auto-revert-mode 1)
-  (diminish 'auto-revert-mode)
-  (setq auto-revert-use-notify t
-        auto-revert-verbose nil
-        global-auto-revert-non-file-buffers t))
 
 (use-package solarized
   :config
@@ -248,6 +195,14 @@
   (setq auth-sources '("~/.authinfo.gpg")))
 
 (use-package autodisass-java-bytecode)
+
+(use-package autorevert
+  :config
+  (global-auto-revert-mode 1)
+  (diminish 'auto-revert-mode)
+  (setq auto-revert-use-notify t
+        auto-revert-verbose nil
+        global-auto-revert-non-file-buffers t))
 
 (use-package avy
   :bind
@@ -400,6 +355,10 @@
   :config
   (setq default-text-scale-mode 1))
 
+(use-package delsel
+  :config
+  (delete-selection-mode 1))
+
 (use-package diff-hl
   :config
   (add-hook 'magit-post-refresh-hook #'diff-hl-magit-post-refresh)
@@ -467,6 +426,18 @@
   :config
   (fancy-narrow-mode 1)
   (diminish 'fancy-narrow-mode))
+
+(use-package files
+  :config
+  (setq backup-by-copying t
+        backup-directory-alist '(("." . "~/.emacs.d/backups/"))
+        delete-old-versions t
+        directory-free-space-program "gdf"
+        insert-directory-program "gls"
+        make-backup-files t
+        mode-require-final-newline 'visit-save
+        require-final-newline 'visit-save
+        version-control t))
 
 (use-package flx-ido
   :config
@@ -581,6 +552,19 @@
   (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
   (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode))
 
+(use-package mac-win
+  :config
+  (setq mac-mouse-wheel-smooth-scroll nil)
+  (mac-auto-operator-composition-mode 1)
+  (defun mac-toggle-frame-fullscreen ()
+    (interactive)
+    (let* ((frame (selected-frame))
+           (param (unless (frame-parameter frame 'fullscreen)
+                    'fullscreen)))
+      (set-frame-parameter frame 'fullscreen param)))
+  :bind
+  (("M-ƒ" . mac-toggle-frame-fullscreen)))
+
 (use-package magit
   :config
   (magit-auto-revert-mode 1)
@@ -621,6 +605,12 @@
   :config
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode))
+
+(use-package mwheel
+  :config
+  (setq mouse-wheel-follow-mouse t
+        mouse-wheel-progressive-speed nil
+        mouse-wheel-scroll-amount '(2 ((shift) . 8))))
 
 (use-package org
   :defer t
@@ -687,6 +677,12 @@
   (("C-M-;" . rebox-dwim)
    ("C-M-:" . rebox-cycle)))
 
+(use-package recentf
+  :config
+  (recentf-mode 1)
+  (setq recentf-max-saved-items 100
+        recentf-save-file "~/.emacs.d/.recentf"))
+
 (use-package rg
   :config
   (setq rg-custom-type-aliases '()
@@ -708,12 +704,19 @@
 (use-package ruby-mode
   :mode ".Brewfile")
 
+(use-package select
+  :config
+  (setq select-enable-clipboard t))
+
 (use-package server
   :config
   (server-start))
 
 (use-package simple
   :config
+  (setq shift-select-mode nil)
+  (put #'set-goal-column 'disabled nil)
+  (column-number-mode 1)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-eldoc-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
   :bind
@@ -741,6 +744,11 @@
   (sql-set-product 'postgres)
   (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
 
+(use-package subword
+  :config
+  (global-subword-mode 1)
+  (diminish 'subword-mode))
+
 (use-package undo-tree
   :config
   (global-undo-tree-mode 1)
@@ -754,6 +762,10 @@
   (setq uniquify-buffer-name-style 'forward))
 
 (use-package urlenc)
+
+(use-package vc-hooks
+  :config
+  (setq vc-make-backup-files t))
 
 (use-package volatile-highlights
   :config
@@ -802,6 +814,9 @@
   (diminish 'whole-line-or-region-local-mode))
 
 (use-package winner
+  :demand t
+  :config
+  (winner-mode 1)
   :bind
   (("C-c [" . winner-undo)
    ("C-c ]" . winner-redo)))
