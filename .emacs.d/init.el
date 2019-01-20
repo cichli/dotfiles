@@ -177,11 +177,17 @@
    ("C-' p" . buf-move-up)))
 
 (use-package cask
-  :config
-  (add-hook 'cask-mode-hook #'enable-paredit-mode))
+  :hook ((cask-mode . enable-paredit-mode)))
 
 (use-package cider
   :defer t
+  :hook ((cider-inspector-mode . hide-trailing-whitespace)
+         (cider-mode . cider-company-enable-fuzzy-completion)
+         (cider-mode . enable-eldoc-mode)
+         (cider-repl-mode . cider-company-enable-fuzzy-completion)
+         (cider-repl-mode . enable-eldoc-mode)
+         (cider-repl-mode . enable-paredit-mode)
+         (cider-repl-mode . hide-trailing-whitespace))
   :config
   (diminish-major 'cider-repl-mode nil)
   (diminish-major 'cider-stacktrace-mode nil)
@@ -201,18 +207,7 @@
         nrepl-message-buffer-max-size 100000000)
 
   ;; TODO https://github.com/bbatsov/solarized-emacs/issues/231
-  (set-face-attribute 'cider-deprecated-face nil :background nil :underline "light goldenrod")
-
-  (add-hook 'cider-inspector-mode-hook #'hide-trailing-whitespace)
-
-  (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
-  (add-hook 'cider-mode-hook #'enable-eldoc-mode)
-
-  (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
-  (add-hook 'cider-repl-mode-hook #'enable-eldoc-mode)
-  (add-hook 'cider-repl-mode-hook #'enable-clj-refactor-mode)
-  (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
-  (add-hook 'cider-repl-mode-hook #'hide-trailing-whitespace))
+  (set-face-attribute 'cider-deprecated-face nil :background nil :underline "light goldenrod"))
 
 (use-package cider-scratch
   :defer t
@@ -236,10 +231,10 @@
 
 (use-package clojure-mode
   :defer t
+  :hook ((clojure-mode . enable-clj-refactor-mode)
+         (clojure-mode . enable-paredit-mode))
   :config
   (diminish-major 'clojure-mode "clj")
-  (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
-  (add-hook 'clojure-mode-hook #'enable-paredit-mode)
   (define-clojure-indent
     (for-all 1)
     (quick-check 1)
@@ -496,9 +491,9 @@
   (jka-compr-update))
 
 (use-package js
+  :hook ((js-mode . enable-paredit-mode))
   :config
   (diminish-major 'js-mode "js")
-  (add-hook 'js-mode-hook #'enable-paredit-mode)
   :bind
   (:map js-mode-map
         ("{" . paredit-open-curly)
@@ -506,12 +501,12 @@
 
 (use-package lisp-mode
   :defer t
+  :hook ((emacs-lisp-mode . elisp-slime-nav-mode)
+         (emacs-lisp-mode . enable-paredit-mode)
+         (emacs-lisp-mode . enable-eldoc-mode))
   :config
   (diminish-major 'emacs-lisp-mode "el")
-  (setq initial-major-mode 'emacs-lisp-mode)
-  (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
-  (add-hook 'emacs-lisp-mode-hook #'elisp-slime-nav-mode)
-  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode))
+  (setq initial-major-mode 'emacs-lisp-mode))
 
 (use-package locate
   :defer t
@@ -532,6 +527,7 @@
   (("M-ƒ" . mac-toggle-frame-fullscreen)))
 
 (use-package magit
+  :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
   (diminish-major 'magit-mode nil)
@@ -545,7 +541,6 @@
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
   (global-magit-file-mode -1)
-  (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
   (magit-define-popup-switch 'magit-log-popup ?f
     "Follow only the first parent commit of merge commits"
     "--first-parent")
@@ -594,14 +589,14 @@
 
 (use-package paradox
   :defer t
+  :hook ((paradox-menu-mode . hide-trailing-whitespace))
   :config
   (setq paradox-column-width-package 28
         paradox-column-width-version 14
         paradox-display-download-count t
         paradox-execute-asynchronously nil
         paradox-github-token t
-        paradox-use-homepage-buttons nil)
-  (add-hook 'paradox-menu-mode-hook #'hide-trailing-whitespace))
+        paradox-use-homepage-buttons nil))
 
 (use-package paredit
   :defer t
@@ -692,14 +687,14 @@
 
 (use-package sql
   :defer t
+  :hook ((sql-interactive-mode . hide-trailing-whitespace))
   :config
   (setq sql-connection-alist '(("switch"
                                 (sql-product 'postgres)
                                 (sql-server "localhost")
                                 (sql-port 5432)
                                 (sql-database "switch"))))
-  (sql-set-product 'postgres)
-  (add-hook 'sql-interactive-mode-hook #'hide-trailing-whitespace))
+  (sql-set-product 'postgres))
 
 (use-package subword
   :config
@@ -707,12 +702,13 @@
   (diminish 'subword-mode))
 
 (use-package undo-tree
+  :demand t
+  :hook ((undo-tree-visualizer-mode . hide-trailing-whitespace))
   :config
   (global-undo-tree-mode 1)
   (diminish 'undo-tree-mode)
   (diminish-major 'undo-tree-visualizer-mode nil)
-  (setq undo-tree-visualizer-timestamps t)
-  (add-hook 'undo-tree-visualizer-mode-hook #'hide-trailing-whitespace))
+  (setq undo-tree-visualizer-timestamps t))
 
 (use-package uniquify
   :config
