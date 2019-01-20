@@ -22,31 +22,8 @@
 ;;,-----------------------------------------------------------------------------
 ;;| editing
 ;;`-----------------------------------------------------------------------------
-(defun rename-current-buffer-file ()
-  (interactive)
-  (let* ((old-name (buffer-file-name))
-         (_ (unless (and old-name (file-exists-p old-name))
-              (error "Buffer '%s' is not visiting a file" (buffer-name))))
-         (new-name (read-file-name "New name: " old-name)))
-    (when (get-buffer new-name)
-      (error "A buffer named '%s' already exists" new-name))
-    (rename-file old-name new-name 1)
-    (rename-buffer new-name)
-    (set-visited-file-name new-name)
-    (set-buffer-modified-p nil)
-    (message "File '%s' successfully renamed to '%s'" old-name (file-name-nondirectory new-name))))
-
-(defun delete-current-buffer-file ()
-  (interactive)
-  (let* ((old-name (buffer-file-name)))
-    (unless (and old-name (file-exists-p old-name))
-      (error "Buffer '%s' is not visiting a file" (buffer-name)))
-    (when (yes-or-no-p "Are you sure you want to remove this file? ")
-      (delete-file (buffer-file-name))
-      (kill-buffer (current-buffer))
-      (message "File '%s' successfully removed" old-name))))
-
-(setq-default fill-column 80)
+(setq-default fill-column 80
+              indent-tabs-mode nil)
 
 (dolist (x '(downcase-region
              erase-buffer
@@ -54,9 +31,6 @@
   (put x 'disabled nil))
 
 (setq sentence-end-double-space nil)
-
-(bind-key "C-x C-r" #'rename-current-buffer-file)
-(bind-key "C-x C-k" #'delete-current-buffer-file)
 
 ;;,-----------------------------------------------------------------------------
 ;;| backup / recentf
@@ -102,8 +76,6 @@
   (set-frame-font font-name nil t))
 
 (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
-
-(bind-key "C-c k" #'bury-buffer)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -195,7 +167,7 @@
   :config
   (browse-kill-ring-default-keybindings)
   :bind
-  (("C-c C-k" . browse-kill-ring)))
+  (("C-c C-b" . browse-kill-ring)))
 
 (use-package buffer-move
   :bind
@@ -314,6 +286,28 @@
   :defer t
   :config
   (unbind-key "C-c SPC" conf-mode-map))
+
+(use-package crux
+  :bind
+  (("C-<return>" . crux-smart-open-line-above)
+   ("S-<return>" . crux-smart-open-line)
+   ("C-^" . crux-top-join-line)
+   ("C-S-<backspace>" . crux-kill-whole-line)
+   ("C-M-z" . crux-indent-defun)
+   ("C-c <tab>" . crux-indent-rigidly-and-copy-to-clipboard)
+   ("C-x C-u" . crux-upcase-region)
+   ("C-x C-l" . crux-downcase-region)
+   ("C-x M-c" . crux-capitalize-region)
+   ("C-c n" . crux-cleanup-buffer-or-region)
+   ("C-c k" . bury-buffer)
+   ("C-c C-k" . crux-delete-file-and-buffer)
+   ("C-c r" . crux-rename-file-and-buffer)
+   ("C-c c" . crux-copy-file-preserve-attributes)
+   ("C-c f" . crux-recentf-find-file)
+   ("C-c I" . crux-find-user-init-file)
+   ("C-c ," . crux-find-user-custom-file)
+   ("C-c S" . crux-find-shell-init-file)
+   ("C-c C-e" . crux-eval-and-replace)))
 
 (use-package default-text-scale
   :config
@@ -481,16 +475,6 @@
 (use-package imenu-anywhere
   :bind
   (("C-c i" . ido-imenu-anywhere)))
-
-(use-package indent
-  :init
-  (setq-default indent-tabs-mode nil)
-  (defun indent-buffer ()
-    (interactive)
-    (indent-region (point-min) (point-max)))
-  :bind
-  (("C-M-'" . indent-buffer)
-   ("C-M-\"" . indent-region)))
 
 (use-package isearch
   :bind
@@ -781,8 +765,7 @@
 
 (use-package whitespace
   :bind
-  (("C-c n" . whitespace-cleanup)
-   ("C-c w" . whitespace-mode)))
+  (("C-c w" . whitespace-mode)))
 
 (use-package whole-line-or-region
   :config
