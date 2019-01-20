@@ -310,7 +310,8 @@
         require-final-newline 'visit-save
         version-control t))
 
-(use-package flyspell)
+(use-package flx
+  :defer t)
 
 (use-package forge
   :after magit)
@@ -372,6 +373,17 @@
   :bind
   (:map isearch-mode-map
         ("C-o" . isearch-occur)))
+
+(use-package ivy
+  :bind
+  (("C-c r" . ivy-resume))
+  :config
+  (setq ivy-count-format "(%d/%d) "
+        ivy-format-function 'ivy-format-function-arrow
+        ivy-height 20
+        ivy-initial-inputs-alist nil
+        ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+  (ivy-mode 1))
 
 (use-package jka-compr
   :defer t
