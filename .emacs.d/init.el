@@ -1,5 +1,3 @@
-(setq gc-cons-threshold 67108864)
-
 ;;,-----------------------------------------------------------------------------
 ;;| custom-file
 ;;`-----------------------------------------------------------------------------
@@ -57,25 +55,6 @@
 (bind-key "C-x C-k" #'delete-current-buffer-file)
 
 ;;,-----------------------------------------------------------------------------
-;;| locale
-;;`-----------------------------------------------------------------------------
-
-(set-charset-priority 'unicode)
-(set-coding-system-priority 'utf-8)
-(set-language-environment "UTF-8")
-
-(setq locale-coding-system 'utf-8)
-
-(set-clipboard-coding-system 'utf-8)
-(set-file-name-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-
-(prefer-coding-system 'utf-8)
-
-
-;;,-----------------------------------------------------------------------------
 ;;| backup / recentf
 ;;`-----------------------------------------------------------------------------
 (setq delete-by-moving-to-trash t
@@ -102,11 +81,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(global-font-lock-mode 1)
-(line-number-mode 1)
-
-(setq-default cursor-in-non-selected-windows nil
-              indicate-empty-lines t
+(setq-default indicate-empty-lines t
               show-trailing-whitespace t
               truncate-lines t)
 
@@ -124,11 +99,7 @@
 
 (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
 
-(defadvice kill-buffer (around kill-buffer-around-advice activate)
-  (let ((buffer-to-kill (ad-get-arg 0)))
-    (if (equal buffer-to-kill "*scratch*")
-        (bury-buffer)
-      ad-do-it)))
+(bind-key "C-c k" #'bury-buffer)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -156,17 +127,9 @@
     (set-face-attribute 'window-divider nil
                         :foreground s-line)))
 
-(make-variable-buffer-local 'transient-mark-mode)
-(put 'transient-mark-mode 'permanent-local t)
-(setq-default transient-mark-mode t)
-
 ;;,-----------------------------------------------------------------------------
 ;;| packages
 ;;`-----------------------------------------------------------------------------
-(use-package abbrev
-  :config
-  (diminish 'abbrev-mode))
-
 (use-package ace-jump-buffer
   :bind
   (("C-c b" . ace-jump-buffer)
@@ -180,10 +143,6 @@
   (set-face-attribute 'aw-leading-char-face nil :height 3.0)
   :bind
   (("M-o" . ace-window)))
-
-(use-package advice
-  :config
-  (setq ad-redefinition-action 'accept))
 
 (use-package auctex
   :mode ("\\.tex\\'" . TeX-latex-mode)
@@ -200,16 +159,14 @@
   :config
   (global-auto-revert-mode 1)
   (diminish 'auto-revert-mode)
-  (setq auto-revert-use-notify t
-        auto-revert-verbose nil
+  (setq auto-revert-verbose nil
         global-auto-revert-non-file-buffers t))
 
 (use-package avy
   :bind
   (("C-c SPC" . avy-goto-char)
    ("C-c C-SPC" . avy-goto-word-or-subword-1)
-   ("C-c g" . avy-goto-line)
-   ("C-c M-g" . avy-goto-line)))
+   ("C-c g" . avy-goto-line)))
 
 (use-package avy-zap
   :bind
@@ -218,8 +175,6 @@
 
 (use-package back-button
   :defer 1
-  :commands
-  back-button-mode
   :config
   (back-button-mode 1)
   (diminish 'back-button-mode))
@@ -235,7 +190,7 @@
   :config
   (browse-kill-ring-default-keybindings)
   :bind
-  (("C-c k" . browse-kill-ring)))
+  (("C-c C-k" . browse-kill-ring)))
 
 (use-package buffer-move
   :bind
@@ -288,8 +243,7 @@
 
 (use-package clj-refactor
   :defer t
-  :commands
-  enable-clj-refactor-mode
+  :commands enable-clj-refactor-mode
   :config
   (setq cljr-eagerly-build-asts-on-startup nil
         cljr-eagerly-cache-macro-occurrences-on-startup nil
@@ -306,7 +260,6 @@
   (diminish-major 'clojure-mode "clj")
   (add-hook 'clojure-mode-hook #'enable-clj-refactor-mode)
   (add-hook 'clojure-mode-hook #'enable-paredit-mode)
-  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
   (define-clojure-indent
     (for-all 1)
     (quick-check 1)
@@ -353,7 +306,7 @@
 
 (use-package default-text-scale
   :config
-  (setq default-text-scale-mode 1))
+  (default-text-scale-mode 1))
 
 (use-package delsel
   :config
@@ -392,8 +345,7 @@
         ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package eldoc
-  :commands
-  enable-eldoc-mode
+  :commands enable-eldoc-mode
   :config
   (diminish 'eldoc-mode)
   (setq eldoc-idle-delay 0)
@@ -409,10 +361,6 @@
 (use-package elisp-slime-nav
   :config
   (diminish 'elisp-slime-nav-mode))
-
-(use-package emoji-cheat-sheet-plus
-  :bind
-  (("C-' <SPC>" . emoji-cheat-sheet-plus-insert)))
 
 (use-package epa
   :config
@@ -463,8 +411,6 @@
 (use-package grep
   :config
   (add-hook 'grep-mode-hook #'hide-trailing-whitespace))
-
-(use-package groovy-mode)
 
 (use-package help-mode
   :config
@@ -549,8 +495,7 @@
   (setq initial-major-mode 'emacs-lisp-mode)
   (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
   (add-hook 'emacs-lisp-mode-hook #'elisp-slime-nav-mode)
-  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode))
+  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode))
 
 (use-package mac-win
   :config
@@ -573,12 +518,12 @@
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-diff-refine-hunk t
         magit-fetch-arguments '("--prune")
-        magit-file-mode nil
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
         magit-section-visibility-indicator nil
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
+  (global-magit-file-mode -1)
   (add-hook 'magit-popup-mode-hook #'hide-trailing-whitespace)
   (magit-define-popup-switch 'magit-log-popup ?f
     "Follow only the first parent commit of merge commits"
@@ -606,18 +551,10 @@
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode))
 
-(use-package mwheel
-  :config
-  (setq mouse-wheel-follow-mouse t
-        mouse-wheel-progressive-speed nil
-        mouse-wheel-scroll-amount '(2 ((shift) . 8))))
-
 (use-package org
   :defer t
   :config
-  (setq org-enforce-todo-dependencies t
-        org-src-fontify-natively t
-        org-startup-indented nil))
+  (setq org-enforce-todo-dependencies t))
 
 (use-package ox-reveal
   :defer t)
@@ -652,10 +589,6 @@
 
 (use-package pcre2el)
 
-(use-package popwin
-  :config
-  (add-hook 'popwin:after-popup-hook #'hide-trailing-whitespace))
-
 (use-package projectile
   :config
   (projectile-global-mode 1)
@@ -664,18 +597,9 @@
         projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
         projectile-use-git-grep t))
 
-(use-package rainbow-delimiters)
-
 (use-package re-builder
   :config
   (setq reb-re-syntax 'string))
-
-(use-package rebox
-  :config
-  (setq rebox-style-loop '(21 25 27))
-  :bind
-  (("C-M-;" . rebox-dwim)
-   ("C-M-:" . rebox-cycle)))
 
 (use-package recentf
   :config
@@ -703,10 +627,6 @@
 
 (use-package ruby-mode
   :mode ".Brewfile")
-
-(use-package select
-  :config
-  (setq select-enable-clipboard t))
 
 (use-package server
   :config
