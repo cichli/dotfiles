@@ -587,7 +587,9 @@
   :config
   (show-paren-mode 1))
 
-(use-package pcre2el)
+(use-package pcre2el
+  :config
+  (rxt-global-mode 1))
 
 (use-package projectile
   :config
