@@ -1,12 +1,9 @@
 ;;,-----------------------------------------------------------------------------
-;;| custom-file
+;;| init
 ;;`-----------------------------------------------------------------------------
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file)
 
-;;,-----------------------------------------------------------------------------
-;;| packages
-;;`-----------------------------------------------------------------------------
 ;; (package-initialize)
 
 (require 'cask)
@@ -20,80 +17,32 @@
   (add-hook 'after-init-hook #'benchmark-init/deactivate))
 
 ;;,-----------------------------------------------------------------------------
-;;| editing
+;;| built-ins
 ;;`-----------------------------------------------------------------------------
 (setq-default fill-column 80
-              indent-tabs-mode nil)
+              indent-tabs-mode nil
+              indicate-empty-lines t
+              show-trailing-whitespace t
+              truncate-lines t)
 
 (dolist (x '(downcase-region
              erase-buffer
              narrow-to-region))
   (put x 'disabled nil))
 
-(setq sentence-end-double-space nil)
-
-;;,-----------------------------------------------------------------------------
-;;| backup / recentf
-;;`-----------------------------------------------------------------------------
 (setq delete-by-moving-to-trash t
-      user-full-name "Michael Griffiths"
-      user-mail-address "mikey@cich.li")
-
-;;,-----------------------------------------------------------------------------
-;;| ui
-;;`-----------------------------------------------------------------------------
-(defun diminish-major (mode alias)
-  (add-hook (intern (concat (symbol-name mode) "-hook"))
-            `(lambda () (setq mode-name ,alias))))
-
-(blink-cursor-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
-
-(setq-default indicate-empty-lines t
-              show-trailing-whitespace t
-              truncate-lines t)
-
-(setq echo-keystrokes 0.1
+      echo-keystrokes 0.1
       frame-title-format '(buffer-file-name "%f" ("%b"))
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
       scroll-conservatively 101
+      sentence-end-double-space nil
       split-height-threshold nil
-      split-width-threshold 160)
-
-(let ((font-name "Fira Code Retina 12"))
-  (set-face-attribute 'default nil :font font-name)
-  (set-frame-font font-name nil t))
-
-(plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
+      split-width-threshold 160
+      user-full-name "Michael Griffiths"
+      user-mail-address "mikey@cich.li")
 
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-(use-package solarized
-  :config
-  (setq solarized-distinct-doc-face t
-        solarized-scale-org-headlines nil
-        solarized-use-variable-pitch nil
-        x-underline-at-descent-line t)
-
-  (load-theme 'solarized-light t)
-
-  ;; https://github.com/bbatsov/solarized-emacs/issues/220
-  (solarized-with-color-variables 'light
-    (set-face-attribute 'mode-line nil
-                        :box nil
-                        :overline s-line
-                        :underline s-line)
-    (set-face-attribute 'mode-line-inactive nil
-                        :box nil
-                        :overline s-line
-                        :underline s-line)
-
-    ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
-    (set-face-attribute 'window-divider nil
-                        :foreground s-line)))
 
 ;;,-----------------------------------------------------------------------------
 ;;| packages
@@ -323,7 +272,11 @@
   (unbind-key "M-o" diff-mode-map))
 
 (use-package diminish
-  :defer t)
+  :defer t
+  :init
+  (defun diminish-major (mode alias)
+    (add-hook (intern (concat (symbol-name mode) "-hook"))
+              `(lambda () (setq mode-name ,alias)))))
 
 (use-package dired
   :defer t
@@ -395,6 +348,8 @@
 
 (use-package frame
   :config
+  (set-frame-font "Fira Code Retina 12" t t)
+  (blink-cursor-mode -1)
   (setq window-divider-default-right-width 1)
   (window-divider-mode 1))
 
@@ -639,14 +594,19 @@
 (use-package ruby-mode
   :mode ".Brewfile")
 
+(use-package scroll-bar
+  :config
+  (scroll-bar-mode -1))
+
 (use-package server
   :config
   (server-start))
 
 (use-package simple
   :config
-  (setq shift-select-mode nil)
   (put #'set-goal-column 'disabled nil)
+  (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
+  (setq shift-select-mode nil)
   (column-number-mode 1)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
   :bind
@@ -671,6 +631,30 @@
    ("C-c M-x" . smex-major-mode-commands)
    ("C-c C-c M-x" . execute-extended-command)))
 
+(use-package solarized
+  :config
+  (setq solarized-distinct-doc-face t
+        solarized-scale-org-headlines nil
+        solarized-use-variable-pitch nil
+        x-underline-at-descent-line t)
+
+  (load-theme 'solarized-light t)
+
+  ;; https://github.com/bbatsov/solarized-emacs/issues/220
+  (solarized-with-color-variables 'light
+    (set-face-attribute 'mode-line nil
+                        :box nil
+                        :overline s-line
+                        :underline s-line)
+    (set-face-attribute 'mode-line-inactive nil
+                        :box nil
+                        :overline s-line
+                        :underline s-line)
+
+    ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
+    (set-face-attribute 'window-divider nil
+                        :foreground s-line)))
+
 (use-package sql
   :defer t
   :hook ((sql-interactive-mode . hide-trailing-whitespace))
@@ -686,6 +670,14 @@
   :config
   (global-subword-mode 1)
   (diminish 'subword-mode))
+
+(use-package tool-bar
+  :config
+  (tool-bar-mode -1))
+
+(use-package tooltip
+  :config
+  (tooltip-mode -1))
 
 (use-package undo-tree
   :demand t
