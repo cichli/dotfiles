@@ -310,10 +310,6 @@
         require-final-newline 'visit-save
         version-control t))
 
-(use-package flx-ido
-  :config
-  (flx-ido-mode 1))
-
 (use-package flyspell)
 
 (use-package forge
@@ -357,20 +353,6 @@
   (setq ibuffer-default-sorting-mode 'alphabetic)
   (unbind-key "M-o" ibuffer-mode-map))
 
-(use-package ido
-  :config
-  (ido-mode 1)
-  (ido-everywhere 1)
-  (setq ido-default-buffer-method 'selected-window
-        ido-default-file-method 'selected-window
-        ido-save-directory-list-file (concat user-emacs-directory ".ido.last")))
-
-(use-package ido-completing-read+
-  :defer 1
-  :config
-  (ido-ubiquitous-mode 1)
-  (push 'sql-connect ido-cr+-function-blacklist))
-
 (use-package iflipb
   :bind
   (("M-[" . iflipb-previous-buffer)
@@ -384,7 +366,7 @@
 
 (use-package imenu-anywhere
   :bind
-  (("C-c i" . ido-imenu-anywhere)))
+  (("C-c i" . imenu-anywhere)))
 
 (use-package isearch
   :bind
@@ -447,8 +429,7 @@
   :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
-  (setq magit-completing-read-function 'magit-ido-completing-read
-        magit-diff-refine-hunk t
+  (setq magit-diff-refine-hunk t
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
