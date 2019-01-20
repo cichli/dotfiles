@@ -121,7 +121,6 @@
   :hook ((cask-mode . enable-paredit-mode)))
 
 (use-package cider
-  :defer t
   :hook ((cider-inspector-mode . hide-trailing-whitespace)
          (cider-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
@@ -169,15 +168,12 @@
         cljr-magic-requires nil))
 
 (use-package clojure-mode
-  :defer t
   :hook ((clojure-mode . enable-clj-refactor-mode)
          (clojure-mode . enable-paredit-mode))
   :config
   (diminish-major 'clojure-mode "clj")
   (define-clojure-indent
-    (for-all 1)
-    (quick-check 1)
-    (lazy-loop 1))
+    (quick-check 1))
   (unbind-key "C-c SPC" clojure-mode-map))
 
 (use-package coffee-mode
