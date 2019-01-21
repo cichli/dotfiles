@@ -60,7 +60,6 @@
 (depends-on "paredit")
 (depends-on "pcre2el")
 (depends-on "projectile")
-(depends-on "rg")
 (depends-on "rotate")
 (depends-on "solarized-theme")
 (depends-on "undo-tree")

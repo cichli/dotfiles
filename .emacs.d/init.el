@@ -216,7 +216,19 @@
   (unbind-key "C-c SPC" conf-mode-map))
 
 (use-package counsel
+  :bind
+  (:map counsel-mode-map
+        ("C-c C-r" . counsel-rg))
   :config
+  (setq counsel-rg-base-command (string-join '("rg -S"
+                                               "--color never"
+                                               "--hidden"
+                                               "--line-number"
+                                               "--max-columns 160"
+                                               "--no-heading"
+                                               "--smart-case"
+                                               "%s .")
+                                             " "))
   (counsel-mode 1))
 
 (use-package crux
@@ -554,17 +566,6 @@
   (recentf-mode 1)
   (setq recentf-max-saved-items 100
         recentf-save-file "~/.emacs.d/.recentf"))
-
-(use-package rg
-  :bind
-  (("C-c p s r" . rg-project)
-   ("C-c r" . rg-dwim)
-   ("C-c R" . rg))
-  :config
-  (setq rg-custom-type-aliases '()
-        rg-command-line-flags '("--max-columns 160" "--smart-case" )
-        rg-group-result t
-        rg-show-columns t))
 
 (use-package rotate
   :bind
