@@ -200,6 +200,11 @@
   :config
   (company-auctex-init))
 
+(use-package company-flx
+  :after company
+  :config
+  (company-flx-mode 1))
+
 (use-package compile
   :defer t
   :config

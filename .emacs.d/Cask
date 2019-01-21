@@ -21,6 +21,7 @@
 (depends-on "coffee-mode")
 (depends-on "company")
 (depends-on "company-auctex")
+(depends-on "company-flx")
 (depends-on "counsel")
 (depends-on "crux")
 (depends-on "dash")
