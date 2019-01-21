@@ -388,7 +388,7 @@
 
 (use-package ivy
   :bind
-  (("C-c r" . ivy-resume))
+  (("C-c R" . ivy-resume))
   :config
   (setq ivy-count-format "(%d/%d) "
         ivy-format-function 'ivy-format-function-arrow
