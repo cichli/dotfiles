@@ -478,6 +478,10 @@
   (setq minions-mode-line-lighter "...")
   (minions-mode 1))
 
+(use-package mode-line-bell
+  :config
+  (mode-line-bell-mode 1))
+
 (use-package moody
   :config
   (moody-replace-mode-line-buffer-identification)

@@ -47,6 +47,7 @@
 (depends-on "magit-todos")
 (depends-on "markdown-mode")
 (depends-on "minions")
+(depends-on "mode-line-bell")
 (depends-on "moody")
 (depends-on "noflet")
 (depends-on "org-plus-contrib")
