@@ -457,6 +457,7 @@
         magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
+        magit-section-initial-visibility-alist nil
         magit-section-visibility-indicator '("..." . true)
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
