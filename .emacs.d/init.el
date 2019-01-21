@@ -231,6 +231,11 @@
                                              " "))
   (counsel-mode 1))
 
+(use-package counsel-projectile
+  :after (counsel projectile)
+  :config
+  (counsel-projectile-mode 1))
+
 (use-package crux
   :bind
   (("C-<return>" . crux-smart-open-line-above)
