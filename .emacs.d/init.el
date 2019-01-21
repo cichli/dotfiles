@@ -518,8 +518,7 @@
         paradox-column-width-version 14
         paradox-display-download-count t
         paradox-execute-asynchronously t
-        paradox-github-token t
-        paradox-use-homepage-buttons nil))
+        paradox-github-token t))
 
 (use-package paredit
   :defer t)
