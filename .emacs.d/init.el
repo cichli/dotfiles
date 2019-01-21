@@ -398,6 +398,7 @@
   (ivy-mode 1))
 
 (use-package ivy-xref
+  :after ivy
   :config
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
