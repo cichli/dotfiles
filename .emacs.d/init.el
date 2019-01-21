@@ -541,6 +541,8 @@
 
 (use-package projectile
   :defer 1
+  :bind (:map projectile-mode-map
+              ("C-c p" . projectile-command-map))
   :config
   (projectile-mode 1)
   (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
