@@ -338,7 +338,7 @@
 
 (use-package frame
   :config
-  (set-frame-font "Fira Code Retina 12" t t)
+  (set-frame-font "Menlo 12" t t)
   (blink-cursor-mode -1)
   (setq window-divider-default-right-width 1)
   (window-divider-mode 1))
