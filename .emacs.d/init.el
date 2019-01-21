@@ -414,6 +414,11 @@
         ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
+(use-package ivy-explorer
+  :after ivy
+  :config
+  (ivy-explorer-mode 1))
+
 (use-package ivy-xref
   :after ivy
   :config
