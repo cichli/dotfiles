@@ -209,6 +209,8 @@
   (unbind-key "C-c SPC" conf-mode-map))
 
 (use-package counsel
+  :demand t
+  :after subr-x
   :bind (:map counsel-mode-map
               ("C-c C-r" . counsel-rg))
   :config
@@ -389,6 +391,7 @@
               ("C-o" . isearch-occur)))
 
 (use-package ivy
+  :demand t
   :bind (("C-c R" . ivy-resume))
   :config
   (setq ivy-count-format "(%d/%d) "
