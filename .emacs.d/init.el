@@ -106,7 +106,7 @@
 
 (use-package browse-kill-ring
   :bind
-  (("C-c C-b" . browse-kill-ring))
+  (("C-c C-M-k" . browse-kill-ring))
   :config
   (browse-kill-ring-default-keybindings))
 
