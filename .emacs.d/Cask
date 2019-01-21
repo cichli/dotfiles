@@ -42,6 +42,7 @@
 (depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "ivy")
+(depends-on "ivy-xref")
 (depends-on "less-css-mode")
 (depends-on "magit")
 (depends-on "magit-imerge")

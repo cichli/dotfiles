@@ -397,6 +397,10 @@
         ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
+(use-package ivy-xref
+  :config
+  (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
+
 (use-package jka-compr
   :defer t
   :config
