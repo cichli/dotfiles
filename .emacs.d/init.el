@@ -48,14 +48,12 @@
 ;;| packages
 ;;`-----------------------------------------------------------------------------
 (use-package ace-jump-buffer
-  :bind
-  (("C-c b" . ace-jump-buffer)
-   ("C-c B" . ace-jump-buffer-other-window)
-   ("C-c C-S-b" . ace-jump-buffer-in-one-window)))
+  :bind (("C-c b" . ace-jump-buffer)
+         ("C-c B" . ace-jump-buffer-other-window)
+         ("C-c C-S-b" . ace-jump-buffer-in-one-window)))
 
 (use-package ace-window
-  :bind
-  (("M-o" . ace-window))
+  :bind (("M-o" . ace-window))
   :config
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)
         aw-scope 'frame)
@@ -83,15 +81,13 @@
         global-auto-revert-non-file-buffers t))
 
 (use-package avy
-  :bind
-  (("C-c SPC" . avy-goto-char)
-   ("C-c C-SPC" . avy-goto-word-or-subword-1)
-   ("C-c g" . avy-goto-line)))
+  :bind (("C-c SPC" . avy-goto-char)
+         ("C-c C-SPC" . avy-goto-word-or-subword-1)
+         ("C-c g" . avy-goto-line)))
 
 (use-package avy-zap
-  :bind
-  (("M-z" . avy-zap-to-char-dwim)
-   ("M-Z" . avy-zap-up-to-char-dwim)))
+  :bind (("M-z" . avy-zap-to-char-dwim)
+         ("M-Z" . avy-zap-up-to-char-dwim)))
 
 (use-package back-button
   :defer 1
@@ -105,17 +101,15 @@
 (use-package bind-key)
 
 (use-package browse-kill-ring
-  :bind
-  (("C-c C-M-k" . browse-kill-ring))
+  :bind (("C-c C-M-k" . browse-kill-ring))
   :config
   (browse-kill-ring-default-keybindings))
 
 (use-package buffer-move
-  :bind
-  (("C-' f" . buf-move-right)
-   ("C-' b" . buf-move-left)
-   ("C-' n" . buf-move-down)
-   ("C-' p" . buf-move-up)))
+  :bind (("C-' f" . buf-move-right)
+         ("C-' b" . buf-move-left)
+         ("C-' n" . buf-move-down)
+         ("C-' p" . buf-move-up)))
 
 (use-package cask
   :hook ((cask-mode . enable-paredit-mode)))
@@ -182,10 +176,9 @@
   (unbind-key "C-c SPC" comint-mode-map))
 
 (use-package company
-  :bind
-  (("C-<tab>" . company-complete)
-   :map company-active-map
-   ("C-q" . company-show-doc-buffer))
+  :bind (("C-<tab>" . company-complete)
+         :map company-active-map
+         ("C-q" . company-show-doc-buffer))
   :config
   (global-company-mode 1)
   (setq company-idle-delay nil
@@ -216,9 +209,8 @@
   (unbind-key "C-c SPC" conf-mode-map))
 
 (use-package counsel
-  :bind
-  (:map counsel-mode-map
-        ("C-c C-r" . counsel-rg))
+  :bind (:map counsel-mode-map
+              ("C-c C-r" . counsel-rg))
   :config
   (setq counsel-rg-base-command (string-join '("rg -S"
                                                "--color never"
@@ -237,26 +229,25 @@
   (counsel-projectile-mode 1))
 
 (use-package crux
-  :bind
-  (("C-<return>" . crux-smart-open-line-above)
-   ("S-<return>" . crux-smart-open-line)
-   ("C-^" . crux-top-join-line)
-   ("C-S-<backspace>" . crux-kill-whole-line)
-   ("C-M-z" . crux-indent-defun)
-   ("C-c <tab>" . crux-indent-rigidly-and-copy-to-clipboard)
-   ("C-x C-u" . crux-upcase-region)
-   ("C-x C-l" . crux-downcase-region)
-   ("C-x M-c" . crux-capitalize-region)
-   ("C-c n" . crux-cleanup-buffer-or-region)
-   ("C-c k" . bury-buffer)
-   ("C-c C-k" . crux-delete-file-and-buffer)
-   ("C-c r" . crux-rename-file-and-buffer)
-   ("C-c c" . crux-copy-file-preserve-attributes)
-   ("C-c f" . crux-recentf-find-file)
-   ("C-c I" . crux-find-user-init-file)
-   ("C-c ," . crux-find-user-custom-file)
-   ("C-c S" . crux-find-shell-init-file)
-   ("C-c C-e" . crux-eval-and-replace)))
+  :bind (("C-<return>" . crux-smart-open-line-above)
+         ("S-<return>" . crux-smart-open-line)
+         ("C-^" . crux-top-join-line)
+         ("C-S-<backspace>" . crux-kill-whole-line)
+         ("C-M-z" . crux-indent-defun)
+         ("C-c <tab>" . crux-indent-rigidly-and-copy-to-clipboard)
+         ("C-x C-u" . crux-upcase-region)
+         ("C-x C-l" . crux-downcase-region)
+         ("C-x M-c" . crux-capitalize-region)
+         ("C-c n" . crux-cleanup-buffer-or-region)
+         ("C-c k" . bury-buffer)
+         ("C-c C-k" . crux-delete-file-and-buffer)
+         ("C-c r" . crux-rename-file-and-buffer)
+         ("C-c c" . crux-copy-file-preserve-attributes)
+         ("C-c f" . crux-recentf-find-file)
+         ("C-c I" . crux-find-user-init-file)
+         ("C-c ," . crux-find-user-custom-file)
+         ("C-c S" . crux-find-shell-init-file)
+         ("C-c C-e" . crux-eval-and-replace)))
 
 (use-package default-text-scale
   :config
@@ -307,9 +298,8 @@
   (global-eldoc-mode 1))
 
 (use-package electric
-  :bind
-  (("C-j" . newline-and-indent)
-   ("C-m" . electric-indent-just-newline)))
+  :bind (("C-j" . newline-and-indent)
+         ("C-m" . electric-indent-just-newline)))
 
 (use-package elisp-slime-nav
   :defer t)
@@ -320,8 +310,7 @@
   (setq epa-armor t))
 
 (use-package expand-region
-  :bind
-  (("C-;" . er/expand-region)))
+  :bind (("C-;" . er/expand-region)))
 
 (use-package fancy-narrow
   :config
@@ -375,18 +364,16 @@
   (setq htmlize-html-major-mode #'html-mode))
 
 (use-package ibuffer
-  :bind
-  (("C-x C-b" . ibuffer)
-   :map ibuffer-mode-map
-   ("C-M-o" . ibuffer-visit-buffer-1-window))
+  :bind (("C-x C-b" . ibuffer)
+         :map ibuffer-mode-map
+         ("C-M-o" . ibuffer-visit-buffer-1-window))
   :config
   (setq ibuffer-default-sorting-mode 'alphabetic)
   (unbind-key "M-o" ibuffer-mode-map))
 
 (use-package iflipb
-  :bind
-  (("M-[" . iflipb-previous-buffer)
-   ("M-]" . iflipb-next-buffer))
+  :bind (("M-[" . iflipb-previous-buffer)
+         ("M-]" . iflipb-next-buffer))
   :config
   (setq iflipb-include-more-buffers t
         iflipb-wrap-around t))
@@ -395,17 +382,14 @@
   :defer t)
 
 (use-package imenu-anywhere
-  :bind
-  (("C-c i" . imenu-anywhere)))
+  :bind (("C-c i" . imenu-anywhere)))
 
 (use-package isearch
-  :bind
-  (:map isearch-mode-map
-        ("C-o" . isearch-occur)))
+  :bind (:map isearch-mode-map
+              ("C-o" . isearch-occur)))
 
 (use-package ivy
-  :bind
-  (("C-c R" . ivy-resume))
+  :bind (("C-c R" . ivy-resume))
   :config
   (setq ivy-count-format "(%d/%d) "
         ivy-format-function 'ivy-format-function-arrow
@@ -439,10 +423,9 @@
   (jka-compr-update))
 
 (use-package js
-  :bind
-  (:map js-mode-map
-        ("{" . paredit-open-curly)
-        ("}" . paredit-close-curly))
+  :bind (:map js-mode-map
+              ("{" . paredit-open-curly)
+              ("}" . paredit-close-curly))
   :hook ((js-mode . enable-paredit-mode)))
 
 (use-package lisp-mode
@@ -464,19 +447,17 @@
            (param (unless (frame-parameter frame 'fullscreen)
                     'fullscreen)))
       (set-frame-parameter frame 'fullscreen param)))
-  :bind
-  (("M-ƒ" . mac-toggle-frame-fullscreen))
+  :bind (("M-ƒ" . mac-toggle-frame-fullscreen))
   :config
   (setq mac-mouse-wheel-smooth-scroll nil)
   (mac-auto-operator-composition-mode 1))
 
 (use-package magit
-  :bind
-  (("C-x m" . magit-status)
-   ("C-x C-m" . magit-file-popup)
-   ("C-x M-m" . magit-dispatch-popup)
-   :map magit-mode-map
-   ("C-S-<tab>" . magit-section-cycle-diffs))
+  :bind (("C-x m" . magit-status)
+         ("C-x C-m" . magit-file-popup)
+         ("C-x M-m" . magit-dispatch-popup)
+         :map magit-mode-map
+         ("C-S-<tab>" . magit-section-cycle-diffs))
   :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
@@ -578,11 +559,10 @@
         recentf-save-file "~/.emacs.d/.recentf"))
 
 (use-package rotate
-  :bind
-  (("C-' l" . rotate-layout)
-   ("C-' w" . rotate-window)
-   ("C-' C-l" . rotate-layout)
-   ("C-' C-w" . rotate-window)))
+  :bind (("C-' l" . rotate-layout)
+         ("C-' w" . rotate-window)
+         ("C-' C-l" . rotate-layout)
+         ("C-' C-w" . rotate-window)))
 
 (use-package ruby-mode
   :mode ".Brewfile")
@@ -596,8 +576,7 @@
   (server-start))
 
 (use-package simple
-  :bind
-  ("M-'" . just-one-space)
+  :bind ("M-'" . just-one-space)
   :config
   (put #'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
@@ -688,8 +667,7 @@
   (set-face-inverse-video 'vhl/default-face t))
 
 (use-package webjump
-  :bind
-  (("C-x j" . webjump))
+  :bind (("C-x j" . webjump))
   :config
   (setq webjump-sites '(("Google" .
                          [simple-query "google.com" "google.com/search?q=" ""])
@@ -726,8 +704,7 @@
   (defun show-trailing-whitespace ()
     (interactive)
     (setq show-trailing-whitespace t))
-  :bind
-  (("C-c w" . whitespace-mode)))
+  :bind (("C-c w" . whitespace-mode)))
 
 (use-package whole-line-or-region
   :config
@@ -735,9 +712,8 @@
 
 (use-package winner
   :demand t
-  :bind
-  (("C-c [" . winner-undo)
-   ("C-c ]" . winner-redo))
+  :bind (("C-c [" . winner-undo)
+         ("C-c ]" . winner-redo))
   :config
   (winner-mode 1))
 
@@ -745,7 +721,6 @@
   :defer t)
 
 (use-package xref
-  :bind
-  (("C-." . xref-find-references))
+  :bind (("C-." . xref-find-references))
   :config
   (setq xref-prompt-for-identifier nil))
