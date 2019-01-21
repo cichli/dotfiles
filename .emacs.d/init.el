@@ -517,7 +517,7 @@
   (setq paradox-column-width-package 28
         paradox-column-width-version 14
         paradox-display-download-count t
-        paradox-execute-asynchronously nil
+        paradox-execute-asynchronously t
         paradox-github-token t
         paradox-use-homepage-buttons nil))
 
