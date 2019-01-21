@@ -542,7 +542,7 @@
 (use-package projectile
   :defer 1
   :config
-  (projectile-global-mode 1)
+  (projectile-mode 1)
   (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
         projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
         projectile-use-git-grep t))
