@@ -401,6 +401,13 @@
         ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
+(use-package ivy-hydra
+  :after ivy
+  :init
+  (unbind-key "M-o" ivy-minibuffer-map)
+  :bind (:map ivy-minibuffer-map
+              ("M-O" . ivy-dispatching-done-hydra)))
+
 (use-package ivy-xref
   :after ivy
   :config

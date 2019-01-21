@@ -43,6 +43,7 @@
 (depends-on "iflipb")
 (depends-on "imenu-anywhere")
 (depends-on "ivy")
+(depends-on "ivy-hydra")
 (depends-on "ivy-xref")
 (depends-on "less-css-mode")
 (depends-on "magit")
