@@ -4,6 +4,7 @@
 
 (depends-on "ace-jump-buffer")
 (depends-on "ace-window")
+(depends-on "amx")
 (depends-on "auctex")
 (depends-on "autodisass-java-bytecode")
 (depends-on "avy")
@@ -20,6 +21,7 @@
 (depends-on "coffee-mode")
 (depends-on "company")
 (depends-on "company-auctex")
+(depends-on "counsel")
 (depends-on "crux")
 (depends-on "dash")
 (depends-on "default-text-scale")
@@ -57,7 +59,6 @@
 (depends-on "projectile")
 (depends-on "rg")
 (depends-on "rotate")
-(depends-on "smex")
 (depends-on "solarized-theme")
 (depends-on "undo-tree")
 (depends-on "urlenc")

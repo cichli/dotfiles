@@ -14,7 +14,7 @@
 /.mc-lists.el
 /.org-id-locations
 /.recentf
-/.smex-items
+/amx-items
 /async-bytecomp.log
 /custom.el
 /forge-database.sqlite

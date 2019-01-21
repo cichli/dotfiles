@@ -61,6 +61,9 @@
         aw-scope 'frame)
   (set-face-attribute 'aw-leading-char-face nil :height 3.0))
 
+(use-package amx
+  :defer t)
+
 (use-package auctex
   :mode ("\\.tex\\'" . TeX-latex-mode)
   :config
@@ -206,6 +209,10 @@
   :defer t
   :config
   (unbind-key "C-c SPC" conf-mode-map))
+
+(use-package counsel
+  :config
+  (counsel-mode 1))
 
 (use-package crux
   :bind
@@ -583,14 +590,6 @@
       ("P" . (scroll-other-window '-))
       ("a" . (beginning-of-buffer-other-window 0))
       ("e" . (end-of-buffer-other-window 0)))))
-
-(use-package smex
-  :bind
-  (("M-x" . smex)
-   ("C-c M-x" . smex-major-mode-commands)
-   ("C-c C-c M-x" . execute-extended-command))
-  :config
-  (setq smex-save-file (concat user-emacs-directory ".smex-items")))
 
 (use-package solarized
   :config
