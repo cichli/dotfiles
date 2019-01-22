@@ -222,7 +222,8 @@
          ("C-\\ r" . counsel-rg)
          ("C-\\ u" . counsel-unicode-char))
   :config
-  (setq counsel-rg-base-command (string-join '("rg -S"
+  (setq counsel-locate-cmd #'counsel-locate-cmd-mdfind
+        counsel-rg-base-command (string-join '("rg"
                                                "--color never"
                                                "--hidden"
                                                "--line-number"
