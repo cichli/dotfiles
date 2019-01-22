@@ -400,7 +400,7 @@
 
 (use-package ivy
   :demand t
-  :bind (("C-c R" . ivy-resume))
+  :bind (("C-c C-r" . ivy-resume))
   :config
   (setq ivy-count-format "(%d/%d) "
         ivy-format-function 'ivy-format-function-arrow
@@ -652,7 +652,6 @@
 
 (use-package swiper
   :bind (("C-s" . swiper)
-         ("C-r" . swiper)
          ("C-S-s" . swiper-all))
   :config (setq swiper-action-recenter t
                 swiper-goto-start-of-match t))
