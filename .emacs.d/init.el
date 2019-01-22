@@ -415,6 +415,7 @@
         ivy-height 20
         ivy-initial-inputs-alist nil
         ivy-re-builders-alist '((swiper . ivy--regex)
+                                (counsel-ag . ivy--regex)
                                 (t . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
