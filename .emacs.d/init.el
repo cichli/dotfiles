@@ -223,6 +223,7 @@
          ("C-\\ u" . counsel-unicode-char))
   :config
   (setq counsel-locate-cmd #'counsel-locate-cmd-mdfind
+        counsel-grep-post-action-hook '(recenter)
         counsel-rg-base-command (string-join '("rg"
                                                "--color never"
                                                "--hidden"
