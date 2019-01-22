@@ -220,9 +220,13 @@
          ("C-\\ j" . counsel-bookmark)
          ("C-\\ l" . counsel-locate)
          ("C-\\ r" . counsel-rg)
-         ("C-\\ u" . counsel-unicode-char))
+         ("C-\\ u" . counsel-unicode-char)
+         ("C-h f" . counsel-describe-function)
+         ("C-h v" . counsel-describe-variable))
   :config
-  (setq counsel-locate-cmd #'counsel-locate-cmd-mdfind
+  (setq counsel-describe-function-function #'helpful-callable
+        counsel-describe-variable-function #'helpful-variable
+        counsel-locate-cmd #'counsel-locate-cmd-mdfind
         counsel-grep-post-action-hook '(recenter)
         counsel-rg-base-command (string-join '("rg"
                                                "--color never"
@@ -378,10 +382,8 @@
 
 (use-package helpful
   :bind (("C-h C" . helpful-command)
-         ("C-h f" . helpful-callable)
          ("C-h F" . helpful-function)
-         ("C-h k" . helpful-key)
-         ("C-h v" . helpful-variable)))
+         ("C-h k" . helpful-key)))
 
 (use-package htmlize
   :defer t
@@ -432,6 +434,11 @@
   (unbind-key "M-o" ivy-minibuffer-map)
   :bind (:map ivy-minibuffer-map
               ("M-O" . ivy-dispatching-done-hydra)))
+
+(use-package ivy-rich
+  :after ivy
+  :config
+  (ivy-rich-mode 1))
 
 (use-package ivy-xref
   :after ivy
@@ -604,12 +611,13 @@
 
 (use-package simple
   :bind ("M-'" . just-one-space)
+  :hook ((eval-expression-minibuffer-setup . enable-paredit-mode)
+         (minibuffer-setup . hide-trailing-whitespace))
   :config
   (put #'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
   (setq shift-select-mode nil)
-  (column-number-mode 1)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode))
+  (column-number-mode 1))
 
 (use-package smartrep
   :config
