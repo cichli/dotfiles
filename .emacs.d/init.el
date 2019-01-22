@@ -406,7 +406,8 @@
         ivy-format-function 'ivy-format-function-arrow
         ivy-height 20
         ivy-initial-inputs-alist nil
-        ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+        ivy-re-builders-alist '((swiper . ivy--regex)
+                                (t . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
 (use-package ivy-hydra
@@ -648,6 +649,13 @@
 (use-package subword
   :config
   (global-subword-mode 1))
+
+(use-package swiper
+  :bind (("C-s" . swiper)
+         ("C-r" . swiper)
+         ("C-S-s" . swiper-all))
+  :config (setq swiper-action-recenter t
+                swiper-goto-start-of-match t))
 
 (use-package tool-bar
   :config

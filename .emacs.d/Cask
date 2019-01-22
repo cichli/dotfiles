@@ -65,6 +65,7 @@
 (depends-on "projectile")
 (depends-on "rotate")
 (depends-on "solarized-theme")
+(depends-on "swiper")
 (depends-on "undo-tree")
 (depends-on "urlenc")
 (depends-on "use-package")
