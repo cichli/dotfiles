@@ -24,6 +24,7 @@
 (depends-on "company-flx")
 (depends-on "counsel")
 (depends-on "counsel-projectile")
+(depends-on "counsel-tramp")
 (depends-on "crux")
 (depends-on "dash")
 (depends-on "default-text-scale")

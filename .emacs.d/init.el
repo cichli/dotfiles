@@ -30,7 +30,8 @@
              narrow-to-region))
   (put x 'disabled nil))
 
-(setq delete-by-moving-to-trash t
+(setq create-lockfiles nil
+      delete-by-moving-to-trash t
       echo-keystrokes 0.1
       frame-title-format '(buffer-file-name "%f" ("%b"))
       inhibit-startup-echo-area-message t
@@ -229,6 +230,13 @@
   :after (counsel projectile)
   :config
   (counsel-projectile-mode 1))
+
+(use-package counsel-tramp
+  :bind (("C-c s" . counsel-tramp))
+  :hook ((counsel-tramp-pre-command . (lambda ()
+                                        (projectile-mode -1)))
+         (counsel-tramp-quit-hook . (lambda ()
+                                      (projectile-mode +1)))))
 
 (use-package crux
   :bind (("C-<return>" . crux-smart-open-line-above)
@@ -648,6 +656,12 @@
 (use-package tooltip
   :config
   (tooltip-mode -1))
+
+(use-package tramp
+  :defer t
+  :config
+  (setq tramp-default-method "ssh")
+  (add-to-list 'backup-directory-alist (cons tramp-file-name-regexp nil)))
 
 (use-package undo-tree
   :demand t
