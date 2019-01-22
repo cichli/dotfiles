@@ -464,11 +464,6 @@
   :config
   (setq initial-major-mode 'emacs-lisp-mode))
 
-(use-package locate
-  :defer t
-  :config
-  (setq locate-command "mdfind"))
-
 (use-package mac-win
   :init
   (defun mac-toggle-frame-fullscreen ()
