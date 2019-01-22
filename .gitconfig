@@ -11,6 +11,7 @@
 
 [branch]
 	autoSetupMerge = always
+	autoSetupRebase = always
 
 [remote]
 	pushDefault = origin
