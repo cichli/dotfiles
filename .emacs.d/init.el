@@ -210,10 +210,17 @@
   (unbind-key "C-c SPC" conf-mode-map))
 
 (use-package counsel
-  :demand t
   :after subr-x
-  :bind (:map counsel-mode-map
-              ("C-c C-r" . counsel-rg))
+  :init
+  (unbind-key "C-\\")
+  :bind (("C-\\ f" . counsel-find-library)
+         ("C-\\ g" . counsel-git-grep)
+         ("C-\\ G" . counsel-git-log)
+         ("C-\\ i" . counsel-imenu)
+         ("C-\\ j" . counsel-bookmark)
+         ("C-\\ l" . counsel-locate)
+         ("C-\\ r" . counsel-rg)
+         ("C-\\ u" . counsel-unicode-char))
   :config
   (setq counsel-rg-base-command (string-join '("rg -S"
                                                "--color never"
@@ -646,12 +653,14 @@
                                 (sql-database "switch"))))
   (sql-set-product 'postgres))
 
+(use-package subr-x)
+
 (use-package subword
   :config
   (global-subword-mode 1))
 
 (use-package swiper
-  :bind (("C-s" . swiper)
+  :bind (("C-s" . counsel-grep-or-swiper)
          ("C-S-s" . swiper-all))
   :config (setq swiper-action-recenter t
                 swiper-goto-start-of-match t))
