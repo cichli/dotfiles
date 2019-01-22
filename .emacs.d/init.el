@@ -251,7 +251,6 @@
          ("S-<return>" . crux-smart-open-line)
          ("C-^" . crux-top-join-line)
          ("C-S-<backspace>" . crux-kill-whole-line)
-         ("C-M-z" . crux-indent-defun)
          ("C-c <tab>" . crux-indent-rigidly-and-copy-to-clipboard)
          ("C-x C-u" . crux-upcase-region)
          ("C-x C-l" . crux-downcase-region)
