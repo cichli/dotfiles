@@ -376,6 +376,13 @@
   :config
   (add-hook 'help-mode-hook #'hide-trailing-whitespace))
 
+(use-package helpful
+  :bind (("C-h C" . helpful-command)
+         ("C-h f" . helpful-callable)
+         ("C-h F" . helpful-function)
+         ("C-h k" . helpful-key)
+         ("C-h v" . helpful-variable)))
+
 (use-package htmlize
   :defer t
   :config
