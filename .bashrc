@@ -11,7 +11,10 @@ alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 archey --color --offline --packager
 
-eval `keychain --eval --agents ssh --inherit any id_rsa`
+################################################################################
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 ################################################################################
 
