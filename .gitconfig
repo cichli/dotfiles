@@ -9,6 +9,9 @@
 [commit]
 	gpgsign = true
 
+[tag]
+	forceSignAnnotated = true
+
 [branch]
 	autoSetupMerge = always
 	autoSetupRebase = always
