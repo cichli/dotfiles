@@ -36,6 +36,7 @@ brew "pinentry-mac"
 brew "postgresql", restart_service: true
 brew "ripgrep"
 brew "speedtest-cli"
+brew "ssh-copy-id"
 brew "wget"
 brew "railwaycat/emacsmacport/emacs-mac", args: ["with-modern-icon"]
 cask "adguard"
