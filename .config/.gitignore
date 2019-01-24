@@ -2,3 +2,5 @@
 !htop/
 !lftp/
 !.gitignore
+!liquidprompt.ps1
+!liquidpromptrc
