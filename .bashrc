@@ -20,6 +20,8 @@ if [ -f /usr/local/share/bash-completion/bash_completion ]; then
     . /usr/local/share/bash-completion/bash_completion
 fi
 
-archey --color --offline --packager
-
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+[ -f /Users/griffithsm/.travis/travis.sh ] && source /Users/griffithsm/.travis/travis.sh
+
+archey --color --offline --packager
