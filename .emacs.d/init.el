@@ -588,6 +588,7 @@
   (server-start))
 
 (use-package simple
+  :demand t
   :bind ("M-'" . just-one-space)
   :hook ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config
