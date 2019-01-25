@@ -742,7 +742,7 @@
   (defun show-trailing-whitespace ()
     (interactive)
     (setq show-trailing-whitespace t))
-  :bind (("C-c w" . whitespace-mode)))
+  :bind (("C-c w" . global-whitespace-mode)))
 
 (use-package whole-line-or-region
   :config
