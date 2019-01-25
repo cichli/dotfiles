@@ -477,7 +477,6 @@
   :config
   (magit-auto-revert-mode 1)
   (setq magit-diff-refine-hunk t
-        magit-fetch-arguments '("--prune")
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
         magit-section-initial-visibility-alist nil
