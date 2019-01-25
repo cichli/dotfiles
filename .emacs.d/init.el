@@ -414,7 +414,9 @@
         ivy-initial-inputs-alist nil
         ivy-re-builders-alist '((swiper . ivy--regex)
                                 (counsel-ag . ivy--regex)
-                                (t . ivy--regex-fuzzy)))
+                                (t . ivy--regex-fuzzy))
+        ivy-use-virtual-buffers t
+        ivy-virtual-abbreviate 'abbrev)
   (ivy-mode 1))
 
 (use-package ivy-hydra
