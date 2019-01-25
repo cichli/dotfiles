@@ -15,6 +15,7 @@ brew "brew-cask-completion"
 brew "cask", args: ["HEAD"]
 brew "cloc"
 brew "coreutils"
+brew "diffutils"
 brew "findutils"
 brew "gcc"
 brew "git"
