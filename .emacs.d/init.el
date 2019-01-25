@@ -416,7 +416,8 @@
                                 (counsel-ag . ivy--regex)
                                 (t . ivy--regex-fuzzy))
         ivy-use-virtual-buffers t
-        ivy-virtual-abbreviate 'abbrev)
+        ivy-virtual-abbreviate 'abbrev
+        ivy-wrap t)
   (ivy-mode 1))
 
 (use-package ivy-hydra
