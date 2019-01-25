@@ -49,9 +49,7 @@
 ;;| packages
 ;;`-----------------------------------------------------------------------------
 (use-package ace-window
-  :bind (("M-o" . ace-window))
-  :config
-  (set-face-attribute 'aw-leading-char-face nil :height 3.0))
+  :bind (("M-o" . ace-window)))
 
 (use-package amx
   :defer t)
