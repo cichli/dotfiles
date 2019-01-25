@@ -2,7 +2,6 @@
 (source melpa)
 (source org)
 
-(depends-on "ace-jump-buffer")
 (depends-on "ace-window")
 (depends-on "amx")
 (depends-on "auctex")

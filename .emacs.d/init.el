@@ -48,11 +48,6 @@
 ;;,-----------------------------------------------------------------------------
 ;;| packages
 ;;`-----------------------------------------------------------------------------
-(use-package ace-jump-buffer
-  :bind (("C-c b" . ace-jump-buffer)
-         ("C-c B" . ace-jump-buffer-other-window)
-         ("C-c C-S-b" . ace-jump-buffer-in-one-window)))
-
 (use-package ace-window
   :bind (("M-o" . ace-window))
   :config
