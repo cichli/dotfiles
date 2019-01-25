@@ -13,8 +13,8 @@
   (require 'use-package))
 
 (use-package benchmark-init
-  :config
-  (add-hook 'after-init-hook #'benchmark-init/deactivate))
+  :demand t
+  :hook ((after-init . benchmark-init/deactivate)))
 
 ;;,-----------------------------------------------------------------------------
 ;;| built-ins
@@ -280,23 +280,14 @@
   (delete-selection-mode 1))
 
 (use-package diff-hl
-  :defer 1
+  :hook ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config
-  (add-hook 'magit-post-refresh-hook #'diff-hl-magit-post-refresh)
   (global-diff-hl-mode 1))
 
 (use-package diff-mode
   :defer t
+  :hook ((diff-mode . hide-trailing-whitespace))
   :config
-  (add-hook 'diff-mode-hook '(lambda ()
-                               (setq-local whitespace-style '(face
-                                                              indentation
-                                                              tabs tab-mark
-                                                              spaces space-mark
-                                                              newline newline-mark
-                                                              space-before-tab space-after-tab))
-                               (whitespace-mode 1)
-                               (hide-trailing-whitespace)))
   (unbind-key "M-o" diff-mode-map))
 
 (use-package dired
@@ -372,13 +363,11 @@
 
 (use-package grep
   :defer t
-  :config
-  (add-hook 'grep-mode-hook #'hide-trailing-whitespace))
+  :hook ((grep-mode . hide-trailing-whitespace)))
 
 (use-package help-mode
   :defer t
-  :config
-  (add-hook 'help-mode-hook #'hide-trailing-whitespace))
+  :hook ((help-mode . hide-trailing-whitespace)))
 
 (use-package helpful
   :bind (("C-h C" . helpful-command)
