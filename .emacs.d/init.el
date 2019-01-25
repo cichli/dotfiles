@@ -22,7 +22,6 @@
 (setq-default fill-column 80
               indent-tabs-mode nil
               indicate-empty-lines t
-              show-trailing-whitespace t
               truncate-lines t)
 
 (dolist (x '(downcase-region
@@ -107,11 +106,9 @@
   :hook ((cask-mode . enable-paredit-mode)))
 
 (use-package cider
-  :hook ((cider-inspector-mode . hide-trailing-whitespace)
-         (cider-mode . cider-company-enable-fuzzy-completion)
+  :hook ((cider-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
-         (cider-repl-mode . enable-paredit-mode)
-         (cider-repl-mode . hide-trailing-whitespace))
+         (cider-repl-mode . enable-paredit-mode))
   :config
   (setq cider-macroexpansion-print-metadata t
         cider-mode-line nil
@@ -277,7 +274,6 @@
 
 (use-package diff-mode
   :defer t
-  :hook ((diff-mode . hide-trailing-whitespace))
   :config
   (unbind-key "M-o" diff-mode-map))
 
@@ -353,12 +349,10 @@
   :defer t)
 
 (use-package grep
-  :defer t
-  :hook ((grep-mode . hide-trailing-whitespace)))
+  :defer t)
 
 (use-package help-mode
-  :defer t
-  :hook ((help-mode . hide-trailing-whitespace)))
+  :defer t)
 
 (use-package helpful
   :bind (("C-h C" . helpful-command)
@@ -473,7 +467,6 @@
          ("C-x M-m" . magit-dispatch-popup)
          :map magit-mode-map
          ("C-S-<tab>" . magit-section-cycle-diffs))
-  :hook ((magit-popup-mode . hide-trailing-whitespace))
   :config
   (magit-auto-revert-mode 1)
   (setq magit-diff-refine-hunk t
@@ -534,7 +527,6 @@
 
 (use-package paradox
   :defer t
-  :hook ((paradox-menu-mode . hide-trailing-whitespace))
   :config
   (setq paradox-column-width-package 28
         paradox-column-width-version 14
@@ -552,6 +544,10 @@
 (use-package pcre2el
   :config
   (rxt-global-mode 1))
+
+(use-package prog-mode
+  :hook ((prog-mode . (lambda ()
+                        (setq show-trailing-whitespace t)))))
 
 (use-package projectile
   :defer 1
@@ -593,8 +589,7 @@
 
 (use-package simple
   :bind ("M-'" . just-one-space)
-  :hook ((eval-expression-minibuffer-setup . enable-paredit-mode)
-         (minibuffer-setup . hide-trailing-whitespace))
+  :hook ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config
   (put #'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
@@ -638,7 +633,6 @@
 
 (use-package sql
   :defer t
-  :hook ((sql-interactive-mode . hide-trailing-whitespace))
   :config
   (setq sql-connection-alist '(("switch"
                                 (sql-product 'postgres)
@@ -675,7 +669,6 @@
 
 (use-package undo-tree
   :demand t
-  :hook ((undo-tree-visualizer-mode . hide-trailing-whitespace))
   :config
   (global-undo-tree-mode 1)
   (setq undo-tree-visualizer-timestamps t))
@@ -728,13 +721,6 @@
 
 (use-package whitespace
   :init
-  (defun hide-trailing-whitespace ()
-    (interactive)
-    (setq show-trailing-whitespace nil))
-
-  (defun show-trailing-whitespace ()
-    (interactive)
-    (setq show-trailing-whitespace t))
   :bind (("C-c w" . global-whitespace-mode)))
 
 (use-package whole-line-or-region
