@@ -72,9 +72,12 @@
         global-auto-revert-non-file-buffers t))
 
 (use-package avy
-  :bind (("C-c SPC" . avy-goto-char)
-         ("C-c C-SPC" . avy-goto-word-or-subword-1)
-         ("C-c g" . avy-goto-line)))
+  :bind (("C-' a" . avy-goto-char)
+         ("C-' s" . avy-goto-char-2)
+         ("C-' d" . avy-goto-char-timer)
+         ("C-' f" . avy-goto-word-or-subword-1)
+         ("C-' g" . avy-goto-line)
+         ("C-' r" . avy-resume)))
 
 (use-package avy-zap
   :bind (("M-z" . avy-zap-to-char-dwim)
@@ -144,8 +147,7 @@
          (clojure-mode . enable-paredit-mode))
   :config
   (define-clojure-indent
-    (quick-check 1))
-  (unbind-key "C-c SPC" clojure-mode-map))
+    (quick-check 1)))
 
 (use-package coffee-mode
   :mode "\\.coffee\\'")
@@ -206,6 +208,10 @@
          ("C-h f" . counsel-describe-function)
          ("C-h v" . counsel-describe-variable))
   :config
+  (unbind-key "C-'" counsel-ag-map)
+  (unbind-key "C-'" counsel-grep-map)
+  (bind-key "C-' '" #'swiper-avy counsel-ag-map)
+  (bind-key "C-' '" #'swiper-avy counsel-grep-map)
   (setq counsel-describe-function-function #'helpful-callable
         counsel-describe-variable-function #'helpful-variable
         counsel-locate-cmd #'counsel-locate-cmd-mdfind
@@ -387,6 +393,8 @@
   :demand t
   :bind (("C-c C-r" . ivy-resume))
   :config
+  (unbind-key "C-'" ivy-minibuffer-map)
+  (bind-key "C-' '" #'ivy-avy ivy-minibuffer-map)
   (setq ivy-count-format "(%d/%d) "
         ivy-format-function 'ivy-format-function-arrow
         ivy-height 20
@@ -643,8 +651,11 @@
 (use-package swiper
   :bind (("C-s" . counsel-grep-or-swiper)
          ("C-S-s" . swiper-all))
-  :config (setq swiper-action-recenter t
-                swiper-goto-start-of-match t))
+  :config
+  (unbind-key "C-'" swiper-map)
+  (bind-key "C-' '" #'swiper-avy swiper-map)
+  (setq swiper-action-recenter t
+        swiper-goto-start-of-match t))
 
 (use-package tool-bar
   :config
