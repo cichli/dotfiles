@@ -31,7 +31,7 @@
 
 (setq create-lockfiles nil
       delete-by-moving-to-trash t
-      echo-keystrokes 0.1
+      echo-keystrokes 0.01
       frame-title-format '(:eval (if (buffer-file-name)
                                      (abbreviate-file-name (buffer-file-name))
                                    "%b"))
