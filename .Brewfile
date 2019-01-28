@@ -42,6 +42,7 @@ brew "ripgrep"
 brew "speedtest-cli"
 brew "ssh-copy-id"
 brew "travis"
+brew "watch"
 brew "wget"
 brew "railwaycat/emacsmacport/emacs-mac", args: ["with-modern-icon"]
 cask "adguard"
