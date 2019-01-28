@@ -566,9 +566,7 @@
 
 (use-package rotate
   :bind (("C-' l" . rotate-layout)
-         ("C-' w" . rotate-window)
-         ("C-' C-l" . rotate-layout)
-         ("C-' C-w" . rotate-window)))
+         ("C-' w" . rotate-window)))
 
 (use-package ruby-mode
   :mode ".Brewfile")
