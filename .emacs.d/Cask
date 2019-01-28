@@ -31,6 +31,7 @@
 (depends-on "elisp-slime-nav")
 (depends-on "esup")
 (depends-on "expand-region")
+(depends-on "eyebrowse")
 (depends-on "fancy-narrow")
 (depends-on "flx")
 (depends-on "forge")

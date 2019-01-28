@@ -314,6 +314,10 @@
 (use-package expand-region
   :bind (("C-;" . er/expand-region)))
 
+(use-package eyebrowse
+  :config
+  (eyebrowse-mode 1))
+
 (use-package fancy-narrow
   :config
   (fancy-narrow-mode 1))
