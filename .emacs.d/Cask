@@ -12,7 +12,6 @@
 (depends-on "beacon")
 (depends-on "benchmark-init")
 (depends-on "browse-kill-ring")
-(depends-on "buffer-move")
 (depends-on "cask-mode")
 (depends-on "cider")
 (depends-on "clj-refactor")

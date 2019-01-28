@@ -96,12 +96,6 @@
   :config
   (browse-kill-ring-default-keybindings))
 
-(use-package buffer-move
-  :bind (("C-' f" . buf-move-right)
-         ("C-' b" . buf-move-left)
-         ("C-' n" . buf-move-down)
-         ("C-' p" . buf-move-up)))
-
 (use-package cask
   :hook ((cask-mode . enable-paredit-mode)))
 
