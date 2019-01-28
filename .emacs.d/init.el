@@ -32,7 +32,9 @@
 (setq create-lockfiles nil
       delete-by-moving-to-trash t
       echo-keystrokes 0.1
-      frame-title-format '(buffer-file-name "%f" ("%b"))
+      frame-title-format '(:eval (if (buffer-file-name)
+                                     (abbreviate-file-name (buffer-file-name))
+                                   "%b"))
       inhibit-startup-echo-area-message t
       inhibit-startup-screen t
       scroll-conservatively 101
