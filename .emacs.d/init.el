@@ -702,7 +702,8 @@
 (use-package vc-hooks
   :defer t
   :config
-  (setq vc-make-backup-files t))
+  (setq vc-make-backup-files t
+        vc-follow-symlinks t))
 
 (use-package volatile-highlights
   :config
