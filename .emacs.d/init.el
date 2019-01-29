@@ -354,6 +354,15 @@
 (use-package git-timemachine
   :defer t)
 
+(use-package gitattributes-mode
+  :defer t)
+
+(use-package gitconfig-mode
+  :defer t)
+
+(use-package gitignore-mode
+  :mode ".gitignore_global")
+
 (use-package grep
   :defer t)
 

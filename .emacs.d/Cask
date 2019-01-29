@@ -37,6 +37,7 @@
 (depends-on "forge")
 (depends-on "gist")
 (depends-on "git-timemachine")
+(depends-on "gitattributes-mode")
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
 (depends-on "helpful")
