@@ -44,7 +44,7 @@ brew "ssh-copy-id"
 brew "travis"
 brew "watch"
 brew "wget"
-brew "railwaycat/emacsmacport/emacs-mac", args: ["with-modern-icon"]
+brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
 cask "adguard"
 cask "adobe-creative-cloud"
 cask "audio-hijack"
