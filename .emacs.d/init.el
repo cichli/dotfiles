@@ -61,9 +61,7 @@
   (TeX-global-PDF-mode 1))
 
 (use-package auth-source
-  :defer t
-  :config
-  (setq auth-sources '("~/.authinfo.gpg")))
+  :defer t)
 
 (use-package autodisass-java-bytecode)
 
