@@ -535,11 +535,6 @@
   :config
   (global-page-break-lines-mode 1))
 
-(use-package pallet
-  :defer 1
-  :config
-  (pallet-mode 1))
-
 (use-package paradox
   :defer t
   :config
