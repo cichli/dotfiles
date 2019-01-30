@@ -107,21 +107,14 @@
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . enable-paredit-mode))
   :config
-  (setq cider-macroexpansion-print-metadata t
-        cider-mode-line nil
-        cider-pprint-fn 'puget
+  (setq cider-pprint-fn 'puget
         cider-prompt-for-symbol nil
         cider-repl-display-help-banner nil
         cider-repl-history-file (concat user-emacs-directory ".cider-history")
         cider-repl-history-size 1000
         cider-repl-pop-to-buffer-on-connect nil
-        cider-repl-use-pretty-printing t
         cider-repl-wrap-history t
-        nrepl-log-messages t
-        nrepl-message-buffer-max-size 100000000)
-
-  ;; TODO https://github.com/bbatsov/solarized-emacs/issues/231
-  (set-face-attribute 'cider-deprecated-face nil :background nil :underline "light goldenrod"))
+        nrepl-log-messages t))
 
 (use-package cider-scratch
   :defer t
