@@ -574,6 +574,10 @@
         projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
         projectile-use-git-grep t))
 
+(use-package rainbow-mode
+  :config
+  (rainbow-mode 1))
+
 (use-package re-builder
   :defer t
   :config

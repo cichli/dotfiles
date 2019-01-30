@@ -65,6 +65,7 @@
 (depends-on "paredit")
 (depends-on "pcre2el")
 (depends-on "projectile")
+(depends-on "rainbow-mode")
 (depends-on "rotate")
 (depends-on "solarized-theme")
 (depends-on "swiper")
