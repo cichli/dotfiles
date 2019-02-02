@@ -541,7 +541,8 @@
 
 (use-package paren
   :config
-  (setq show-paren-when-point-in-periphery t)
+  (setq show-paren-when-point-in-periphery t
+        show-paren-when-point-inside-paren t)
   (show-paren-mode 1))
 
 (use-package pcre2el
