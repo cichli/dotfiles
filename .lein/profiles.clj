@@ -14,6 +14,7 @@
                   [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.6.4"]
                   [lein-kibit "0.1.6"]
+                  [lein-nvd "0.6.0"]
                   [lein-pprint "1.2.0"]
                   [refactor-nrepl "2.4.0"]]
 
