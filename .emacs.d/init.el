@@ -241,7 +241,6 @@
          ("C-x C-u" . crux-upcase-region)
          ("C-x C-l" . crux-downcase-region)
          ("C-x M-c" . crux-capitalize-region)
-         ("C-c n" . crux-cleanup-buffer-or-region)
          ("C-c k" . bury-buffer)
          ("C-c C-k" . crux-delete-file-and-buffer)
          ("C-c r" . crux-rename-file-and-buffer)
@@ -731,7 +730,8 @@
 
 (use-package whitespace
   :init
-  :bind (("C-c w" . global-whitespace-mode)))
+  :bind (("C-c w" . global-whitespace-mode)
+         ("C-c n" . whitespace-cleanup)))
 
 (use-package whole-line-or-region
   :config
