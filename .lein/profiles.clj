@@ -35,8 +35,8 @@
  :yks [:yourkit/sampling]
  :ykt [:yourkit/tracing]
 
- :yourkit/agent {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]}
- :yourkit/api   {:resource-paths ["/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}
+ :yourkit/agent {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]}
+ :yourkit/api   {:resource-paths ["/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}
 
- :yourkit/sampling {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib=sampling"]}
- :yourkit/tracing  {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib=tracing"]}}
+ :yourkit/sampling {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib=sampling"]}
+ :yourkit/tracing  {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib=tracing"]}}
