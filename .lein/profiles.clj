@@ -24,7 +24,9 @@
  :frs [:flight-recorder :flight-recorder/sampling]
  :frt [:flight-recorder :flight-recorder/tracing]
 
- :flight-recorder {:jvm-opts ["-XX:FlightRecorderOptions=stackdepth=1024"]}
+ :flight-recorder {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions"
+                              "-XX:+DebugNonSafepoints"
+                              "-XX:FlightRecorderOptions=stackdepth=1024"]}
 
  :flight-recorder/sampling {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
  :flight-recorder/tracing  {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=profile"]}
