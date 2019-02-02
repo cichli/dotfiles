@@ -19,13 +19,22 @@
                   [refactor-nrepl "2.4.0"]]
 
         :injections [(require 'pjstadig.humane-test-output)
-                     (pjstadig.humane-test-output/activate!)]
+                     (pjstadig.humane-test-output/activate!)]}
 
-        :aliases {"fr" ["with-profiles" "+flight-recorder"]
-                  "yk" ["with-profiles" "+yourkit"]}}
+ :frs [:flight-recorder :flight-recorder/sampling]
+ :frt [:flight-recorder :flight-recorder/tracing]
 
- :flight-recorder {:jvm-opts ["-XX:FlightRecorderOptions=stackdepth=1024"
-                              "-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
+ :flight-recorder {:jvm-opts ["-XX:FlightRecorderOptions=stackdepth=1024"]}
 
- :yourkit {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]
-           :resource-paths ["/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}}
+ :flight-recorder/sampling {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
+ :flight-recorder/tracing  {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=profile"]}
+
+ :yk  [:yourkit/agent :yourkit/api]
+ :yks [:yourkit/sampling]
+ :ykt [:yourkit/tracing]
+
+ :yourkit/agent {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]}
+ :yourkit/api   {:resource-paths ["/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}
+
+ :yourkit/sampling {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib=sampling"]}
+ :yourkit/tracing  {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2018.5.app/Contents/Resources/bin/mac/libyjpagent.jnilib=tracing"]}}
