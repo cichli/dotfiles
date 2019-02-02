@@ -21,8 +21,6 @@
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
 
-        :test-refresh {:quiet true}
-
         :aliases {"fr" ["with-profiles" "+flight-recorder"]
                   "yk" ["with-profiles" "+yourkit"]}}
 
