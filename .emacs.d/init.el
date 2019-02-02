@@ -735,10 +735,6 @@
   :bind (("C-c w" . global-whitespace-mode)
          ("C-c n" . whitespace-cleanup)))
 
-(use-package whole-line-or-region
-  :config
-  (whole-line-or-region-global-mode 1))
-
 (use-package winner
   :demand t
   :bind (("C-c [" . winner-undo)
