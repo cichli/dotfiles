@@ -703,10 +703,11 @@
          ("C-c n" . whitespace-cleanup)))
 
 (use-package winner
-  :demand t
-  :bind (("C-c [" . winner-undo)
-         ("C-c ]" . winner-redo))
+  :after smartrep
   :config
+  (smartrep-define-key global-map "C-'"
+    '(("[" . winner-undo)
+      ("]" . winner-redo)))
   (winner-mode 1))
 
 (use-package with-editor
