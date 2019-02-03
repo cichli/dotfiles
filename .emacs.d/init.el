@@ -122,22 +122,8 @@
   (unbind-key "C-j" cider-clojure-interaction-mode-map)
   (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))
 
-(use-package clj-refactor
-  :defer t
-  :init
-  (defun enable-clj-refactor-mode ()
-    (interactive)
-    (clj-refactor-mode 1)
-    (cljr-add-keybindings-with-prefix "C-c r"))
-  :config
-  (setq cljr-eagerly-build-asts-on-startup nil
-        cljr-eagerly-cache-macro-occurrences-on-startup nil
-        cljr-favor-prefix-notation nil
-        cljr-magic-requires nil))
-
 (use-package clojure-mode
-  :hook ((clojure-mode . enable-clj-refactor-mode)
-         (clojure-mode . enable-paredit-mode))
+  :hook ((clojure-mode . enable-paredit-mode))
   :config
   (define-clojure-indent
     (quick-check 1)))
@@ -491,11 +477,6 @@
 (use-package magit-imerge
   :after magit)
 
-(use-package magit-todos
-  :after magit
-  :config
-  (magit-todos-mode 1))
-
 (use-package markdown-mode
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
@@ -637,16 +618,6 @@
     ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
     (set-face-attribute 'window-divider nil
                         :foreground s-line)))
-
-(use-package sql
-  :defer t
-  :config
-  (setq sql-connection-alist '(("switch"
-                                (sql-product 'postgres)
-                                (sql-server "localhost")
-                                (sql-port 5432)
-                                (sql-database "switch"))))
-  (sql-set-product 'postgres))
 
 (use-package subr-x)
 
