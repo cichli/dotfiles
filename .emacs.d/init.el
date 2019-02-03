@@ -24,9 +24,7 @@
               indicate-empty-lines t
               truncate-lines t)
 
-(dolist (x '(downcase-region
-             erase-buffer
-             narrow-to-region))
+(dolist (x '(downcase-region erase-buffer narrow-to-region))
   (put x 'disabled nil))
 
 (setq create-lockfiles nil
@@ -179,8 +177,8 @@
          ("C-\\ l" . counsel-locate)
          ("C-\\ r" . counsel-rg)
          ("C-\\ u" . counsel-unicode-char)
-         ("C-h f" . counsel-describe-function)
-         ("C-h v" . counsel-describe-variable))
+         ("C-h f"  . counsel-describe-function)
+         ("C-h v"  . counsel-describe-variable))
   :config
   (unbind-key "C-'" counsel-ag-map)
   (unbind-key "C-'" counsel-grep-map)
@@ -214,23 +212,23 @@
                                       (projectile-mode +1)))))
 
 (use-package crux
-  :bind (("C-<return>" . crux-smart-open-line-above)
-         ("S-<return>" . crux-smart-open-line)
-         ("C-^" . crux-top-join-line)
+  :bind (("C-<return>"      . crux-smart-open-line-above)
+         ("S-<return>"      . crux-smart-open-line)
+         ("C-^"             . crux-top-join-line)
          ("C-S-<backspace>" . crux-kill-whole-line)
-         ("C-c <tab>" . crux-indent-rigidly-and-copy-to-clipboard)
-         ("C-x C-u" . crux-upcase-region)
-         ("C-x C-l" . crux-downcase-region)
-         ("C-x M-c" . crux-capitalize-region)
-         ("C-c k" . bury-buffer)
-         ("C-c C-k" . crux-delete-file-and-buffer)
-         ("C-c r" . crux-rename-file-and-buffer)
-         ("C-c c" . crux-copy-file-preserve-attributes)
-         ("C-c f" . crux-recentf-find-file)
-         ("C-c I" . crux-find-user-init-file)
-         ("C-c ," . crux-find-user-custom-file)
-         ("C-c S" . crux-find-shell-init-file)
-         ("C-c C-e" . crux-eval-and-replace)))
+         ("C-c <tab>"       . crux-indent-rigidly-and-copy-to-clipboard)
+         ("C-x C-u"         . crux-upcase-region)
+         ("C-x C-l"         . crux-downcase-region)
+         ("C-x M-c"         . crux-capitalize-region)
+         ("C-c k"           . bury-buffer)
+         ("C-c C-k"         . crux-delete-file-and-buffer)
+         ("C-c r"           . crux-rename-file-and-buffer)
+         ("C-c c"           . crux-copy-file-preserve-attributes)
+         ("C-c f"           . crux-recentf-find-file)
+         ("C-c I"           . crux-find-user-init-file)
+         ("C-c ,"           . crux-find-user-custom-file)
+         ("C-c S"           . crux-find-shell-init-file)
+         ("C-c C-e"         . crux-eval-and-replace)))
 
 (use-package default-text-scale
   :config
@@ -450,10 +448,10 @@
   (mac-auto-operator-composition-mode 1))
 
 (use-package magit
-  :bind (("C-c m" . (lambda ()
-                      (interactive)
-                      (magit-status "~/.dotfiles")))
-         ("C-x m" . magit-status)
+  :bind (("C-c m"   . (lambda ()
+                        (interactive)
+                        (magit-status "~/.dotfiles")))
+         ("C-x m"   . magit-status)
          ("C-x C-m" . magit-file-popup)
          ("C-x M-m" . magit-dispatch-popup)
          :map magit-mode-map
@@ -591,7 +589,7 @@
   (smartrep-define-key global-map "C-q"
     '(("n" . (scroll-other-window 1))
       ("p" . (scroll-other-window -1))
-      ("N" . 'scroll-other-window)
+      ("N" . scroll-other-window)
       ("P" . (scroll-other-window '-))
       ("a" . (beginning-of-buffer-other-window 0))
       ("e" . (end-of-buffer-other-window 0)))))
@@ -625,7 +623,7 @@
   (global-subword-mode 1))
 
 (use-package swiper
-  :bind (("C-s" . counsel-grep-or-swiper)
+  :bind (("C-s"   . counsel-grep-or-swiper)
          ("C-S-s" . swiper-all))
   :config
   (unbind-key "C-'" swiper-map)
