@@ -139,8 +139,7 @@
   :config
   (ansi-color-for-comint-mode-on)
   (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
-  (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)
-  (unbind-key "C-c SPC" comint-mode-map))
+  (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m))
 
 (use-package company
   :bind (("C-<tab>" . company-complete)
@@ -170,13 +169,7 @@
   :config
   (setq compile-command "gmake -k "))
 
-(use-package conf-mode
-  :defer t
-  :config
-  (unbind-key "C-c SPC" conf-mode-map))
-
 (use-package counsel
-  :after subr-x
   :init
   (unbind-key "C-\\")
   :bind (("C-\\ f" . counsel-find-library)
@@ -486,9 +479,7 @@
   :after magit)
 
 (use-package markdown-mode
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode)))
+  :mode (("README\\.md\\'" . gfm-mode)))
 
 (use-package minions
   :config
@@ -626,8 +617,6 @@
     ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
     (set-face-attribute 'window-divider nil
                         :foreground s-line)))
-
-(use-package subr-x)
 
 (use-package subword
   :config
