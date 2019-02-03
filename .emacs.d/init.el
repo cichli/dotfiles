@@ -458,7 +458,10 @@
   (mac-auto-operator-composition-mode 1))
 
 (use-package magit
-  :bind (("C-x m" . magit-status)
+  :bind (("C-c m" . (lambda ()
+                      (interactive)
+                      (magit-status "~/.dotfiles")))
+         ("C-x m" . magit-status)
          ("C-x C-m" . magit-file-popup)
          ("C-x M-m" . magit-dispatch-popup)
          :map magit-mode-map
