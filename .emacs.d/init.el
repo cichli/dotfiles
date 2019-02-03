@@ -558,8 +558,11 @@
         recentf-save-file "~/.emacs.d/.recentf"))
 
 (use-package rotate
-  :bind (("C-' l" . rotate-layout)
-         ("C-' w" . rotate-window)))
+  :after smartrep
+  :config
+  (smartrep-define-key global-map "C-'"
+    '(("l" . rotate-layout)
+      ("w" . rotate-window))))
 
 (use-package ruby-mode
   :mode ".Brewfile")
