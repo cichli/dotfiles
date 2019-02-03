@@ -175,7 +175,6 @@
   :bind (("C-\\ f" . counsel-find-library)
          ("C-\\ g" . counsel-git-grep)
          ("C-\\ G" . counsel-git-log)
-         ("C-\\ i" . counsel-imenu)
          ("C-\\ j" . counsel-bookmark)
          ("C-\\ l" . counsel-locate)
          ("C-\\ r" . counsel-rg)
@@ -208,7 +207,7 @@
   (counsel-projectile-mode 1))
 
 (use-package counsel-tramp
-  :bind (("C-c s" . counsel-tramp))
+  :bind (("C-\\ s" . counsel-tramp))
   :hook ((counsel-tramp-pre-command . (lambda ()
                                         (projectile-mode -1)))
          (counsel-tramp-quit-hook . (lambda ()
@@ -370,7 +369,7 @@
   :defer t)
 
 (use-package imenu-anywhere
-  :bind (("C-c i" . imenu-anywhere)))
+  :bind (("C-\\ i" . imenu-anywhere)))
 
 (use-package isearch
   :bind (:map isearch-mode-map
@@ -670,7 +669,7 @@
   (set-face-inverse-video 'vhl/default-face t))
 
 (use-package webjump
-  :bind (("C-x j" . webjump))
+  :bind (("C-\\ w" . webjump))
   :config
   (setq webjump-sites '(("Google" .
                          [simple-query "google.com" "google.com/search?q=" ""])
