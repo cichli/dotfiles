@@ -471,7 +471,9 @@
   (setq magit-diff-refine-hunk t
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
-        magit-section-initial-visibility-alist nil
+        magit-section-initial-visibility-alist '(((issue pullreq) . hide)
+                                                 ([file * status] . hide)
+                                                 ([* status] . show))
         magit-section-visibility-indicator '("..." . true)
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
