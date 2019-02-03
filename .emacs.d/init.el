@@ -103,6 +103,9 @@
   :hook ((cask-mode . enable-paredit-mode)))
 
 (use-package cider
+  :bind (("C-c l" . (lambda ()
+                      (interactive)
+                      (find-file "~/.lein/profiles.clj"))))
   :hook ((cider-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . enable-paredit-mode))
