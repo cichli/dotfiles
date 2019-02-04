@@ -386,10 +386,10 @@
 
 (use-package ivy-hydra
   :after ivy
-  :init
-  (unbind-key "M-o" ivy-minibuffer-map)
   :bind (:map ivy-minibuffer-map
-              ("M-O" . ivy-dispatching-done-hydra)))
+              ("M-O" . ivy-dispatching-done-hydra))
+  :config
+  (unbind-key "M-o" ivy-minibuffer-map))
 
 (use-package ivy-rich
   :after ivy
