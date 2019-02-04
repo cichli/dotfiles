@@ -114,6 +114,7 @@
         cider-repl-history-file (concat user-emacs-directory ".cider-history")
         cider-repl-history-size 1000
         cider-repl-pop-to-buffer-on-connect nil
+        cider-repl-use-clojure-font-lock nil
         cider-repl-wrap-history t
         nrepl-log-messages t))
 
