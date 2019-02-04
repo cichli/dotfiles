@@ -696,3 +696,6 @@
   :bind (("C-." . xref-find-references))
   :config
   (setq xref-prompt-for-identifier nil))
+
+(use-package yaml-mode
+  :defer t)
