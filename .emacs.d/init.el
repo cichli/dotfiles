@@ -56,7 +56,7 @@
 (use-package auctex
   :mode (("\\.tex\\'" . TeX-latex-mode))
   :config
-  (TeX-global-PDF-mode 1))
+  (TeX-global-PDF-mode +1))
 
 (use-package auth-source
   :defer t)
@@ -65,7 +65,7 @@
 
 (use-package autorevert
   :config
-  (global-auto-revert-mode 1)
+  (global-auto-revert-mode +1)
   (setq auto-revert-verbose nil
         global-auto-revert-non-file-buffers t))
 
@@ -84,11 +84,11 @@
 (use-package back-button
   :defer 1
   :config
-  (back-button-mode 1))
+  (back-button-mode +1))
 
 (use-package beacon
   :config
-  (beacon-mode 1))
+  (beacon-mode +1))
 
 (use-package bind-key)
 
@@ -144,7 +144,7 @@
          :map company-active-map
          ("C-q" . company-show-doc-buffer))
   :config
-  (global-company-mode 1)
+  (global-company-mode +1)
   (setq company-idle-delay nil
         company-minimum-prefix-length 0
         company-selection-wrap-around t
@@ -160,7 +160,7 @@
 (use-package company-flx
   :after company
   :config
-  (company-flx-mode 1))
+  (company-flx-mode +1))
 
 (use-package compile
   :defer t
@@ -197,12 +197,12 @@
                                                "--smart-case"
                                                "%s .")
                                              " "))
-  (counsel-mode 1))
+  (counsel-mode +1))
 
 (use-package counsel-projectile
   :after (counsel projectile)
   :config
-  (counsel-projectile-mode 1))
+  (counsel-projectile-mode +1))
 
 (use-package counsel-tramp
   :bind (("C-\\ s" . counsel-tramp))
@@ -232,12 +232,12 @@
 
 (use-package default-text-scale
   :config
-  (default-text-scale-mode 1))
+  (default-text-scale-mode +1))
 
 (use-package diff-hl
   :hook ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config
-  (global-diff-hl-mode 1))
+  (global-diff-hl-mode +1))
 
 (use-package diff-mode
   :defer t
@@ -262,7 +262,7 @@
 (use-package eldoc
   :config
   (setq eldoc-idle-delay 0.1)
-  (global-eldoc-mode 1))
+  (global-eldoc-mode +1))
 
 (use-package elisp-slime-nav
   :defer t)
@@ -277,11 +277,11 @@
 
 (use-package eyebrowse
   :config
-  (eyebrowse-mode 1))
+  (eyebrowse-mode +1))
 
 (use-package fancy-narrow
   :config
-  (fancy-narrow-mode 1))
+  (fancy-narrow-mode +1))
 
 (use-package files
   :config
@@ -306,7 +306,7 @@
   (set-frame-font "Menlo 12" t t)
   (blink-cursor-mode -1)
   (setq window-divider-default-right-width 1)
-  (window-divider-mode 1))
+  (window-divider-mode +1))
 
 (use-package fringe
   :config
@@ -381,7 +381,7 @@
         ivy-use-virtual-buffers t
         ivy-virtual-abbreviate 'abbrev
         ivy-wrap t)
-  (ivy-mode 1))
+  (ivy-mode +1))
 
 (use-package ivy-hydra
   :after ivy
@@ -393,7 +393,7 @@
 (use-package ivy-rich
   :after ivy
   :config
-  (ivy-rich-mode 1))
+  (ivy-rich-mode +1))
 
 (use-package ivy-xref
   :after ivy
@@ -437,7 +437,7 @@
   :bind (("M-ƒ" . mac-toggle-frame-fullscreen))
   :config
   (setq mac-mouse-wheel-smooth-scroll nil)
-  (mac-auto-operator-composition-mode 1))
+  (mac-auto-operator-composition-mode +1))
 
 (use-package magit
   :bind (("C-c m"   . (lambda ()
@@ -449,7 +449,7 @@
          :map magit-mode-map
          ("C-S-<tab>" . magit-section-cycle-diffs))
   :config
-  (magit-auto-revert-mode 1)
+  (magit-auto-revert-mode +1)
   (setq magit-diff-refine-hunk t
         magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
         magit-merge-arguments '("--no-ff")
@@ -473,11 +473,11 @@
 (use-package minions
   :config
   (setq minions-mode-line-lighter "...")
-  (minions-mode 1))
+  (minions-mode +1))
 
 (use-package mode-line-bell
   :config
-  (mode-line-bell-mode 1))
+  (mode-line-bell-mode +1))
 
 (use-package moody
   :config
@@ -491,7 +491,7 @@
 
 (use-package page-break-lines
   :config
-  (global-page-break-lines-mode 1))
+  (global-page-break-lines-mode +1))
 
 (use-package paradox
   :defer t
@@ -509,11 +509,11 @@
   :config
   (setq show-paren-when-point-in-periphery t
         show-paren-when-point-inside-paren t)
-  (show-paren-mode 1))
+  (show-paren-mode +1))
 
 (use-package pcre2el
   :config
-  (rxt-global-mode 1))
+  (rxt-global-mode +1))
 
 (use-package prog-mode
   :hook ((prog-mode . (lambda ()
@@ -524,12 +524,12 @@
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map))
   :config
-  (projectile-mode 1)
+  (projectile-mode +1)
   (setq projectile-use-git-grep t))
 
 (use-package rainbow-mode
   :config
-  (rainbow-mode 1))
+  (rainbow-mode +1))
 
 (use-package re-builder
   :defer t
@@ -538,7 +538,7 @@
 
 (use-package recentf
   :config
-  (recentf-mode 1)
+  (recentf-mode +1)
   (setq recentf-max-saved-items 100
         recentf-save-file "~/.emacs.d/.recentf"))
 
@@ -567,7 +567,7 @@
   (put #'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
   (setq shift-select-mode nil)
-  (column-number-mode 1))
+  (column-number-mode +1))
 
 (use-package smartrep
   :config
@@ -606,7 +606,7 @@
 
 (use-package subword
   :config
-  (global-subword-mode 1))
+  (global-subword-mode +1))
 
 (use-package swiper
   :bind (("C-s"   . counsel-grep-or-swiper)
@@ -633,7 +633,7 @@
 
 (use-package undo-tree
   :config
-  (global-undo-tree-mode 1)
+  (global-undo-tree-mode +1)
   (setq undo-tree-visualizer-timestamps t))
 
 (use-package uniquify
@@ -651,7 +651,7 @@
 
 (use-package volatile-highlights
   :config
-  (volatile-highlights-mode 1)
+  (volatile-highlights-mode +1)
   (set-face-inverse-video 'vhl/default-face t))
 
 (use-package webjump
@@ -677,7 +677,7 @@
 
 (use-package which-key
   :config
-  (which-key-mode 1))
+  (which-key-mode +1))
 
 (use-package whitespace
   :init
@@ -690,7 +690,7 @@
   (smartrep-define-key global-map "C-'"
     '(("[" . winner-undo)
       ("]" . winner-redo)))
-  (winner-mode 1))
+  (winner-mode +1))
 
 (use-package xref
   :bind (("C-." . xref-find-references))
