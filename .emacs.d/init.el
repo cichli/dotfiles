@@ -234,10 +234,6 @@
   :config
   (default-text-scale-mode 1))
 
-(use-package delsel
-  :config
-  (delete-selection-mode 1))
-
 (use-package diff-hl
   :hook ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config
@@ -267,10 +263,6 @@
   :config
   (setq eldoc-idle-delay 0.1)
   (global-eldoc-mode 1))
-
-(use-package electric
-  :bind (("C-j" . newline-and-indent)
-         ("C-m" . electric-indent-just-newline)))
 
 (use-package elisp-slime-nav
   :defer t)
@@ -536,9 +528,7 @@
               ("C-c p" . projectile-command-map))
   :config
   (projectile-mode 1)
-  (setq projectile-cache-file (concat user-emacs-directory "projectile/cache")
-        projectile-known-projects-file (concat user-emacs-directory "projectile/bookmarks.eld")
-        projectile-use-git-grep t))
+  (setq projectile-use-git-grep t))
 
 (use-package rainbow-mode
   :config
@@ -574,7 +564,6 @@
   (server-start))
 
 (use-package simple
-  :demand t
   :bind ("M-'" . just-one-space)
   :hook ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config
@@ -646,7 +635,6 @@
   (add-to-list 'backup-directory-alist (cons tramp-file-name-regexp nil)))
 
 (use-package undo-tree
-  :demand t
   :config
   (global-undo-tree-mode 1)
   (setq undo-tree-visualizer-timestamps t))
@@ -706,9 +694,6 @@
     '(("[" . winner-undo)
       ("]" . winner-redo)))
   (winner-mode 1))
-
-(use-package with-editor
-  :defer t)
 
 (use-package xref
   :bind (("C-." . xref-find-references))

@@ -3,25 +3,17 @@
 /backups/
 /elpa/
 /eshell/
-/projectile/
-/request/
-/tutorial/
 /url/
 /var/
 
 /.cider-history
-/.DS_Store
-/.mc-lists.el
-/.org-id-locations
 /.recentf
 /amx-items
-/async-bytecomp.log
 /custom.el
 /forge-database.sqlite
 /history
 /projectile.cache
 /projectile-bookmarks.eld
-/session.*
 /tramp
 
 *~
