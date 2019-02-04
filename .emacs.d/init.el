@@ -489,9 +489,6 @@
   :config
   (setq org-enforce-todo-dependencies t))
 
-(use-package ox-reveal
-  :after org)
-
 (use-package page-break-lines
   :config
   (global-page-break-lines-mode 1))
