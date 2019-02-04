@@ -362,10 +362,6 @@
 (use-package imenu-anywhere
   :bind (("C-\\ i" . imenu-anywhere)))
 
-(use-package isearch
-  :bind (:map isearch-mode-map
-              ("C-o" . isearch-occur)))
-
 (use-package ivy
   :demand t
   :bind (("C-c C-r" . ivy-resume))
