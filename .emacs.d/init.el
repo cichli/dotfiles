@@ -54,7 +54,7 @@
   :defer t)
 
 (use-package auctex
-  :mode ("\\.tex\\'" . TeX-latex-mode)
+  :mode (("\\.tex\\'" . TeX-latex-mode))
   :config
   (TeX-global-PDF-mode 1))
 
