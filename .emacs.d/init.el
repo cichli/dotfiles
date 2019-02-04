@@ -465,7 +465,8 @@
   :after magit)
 
 (use-package markdown-mode
-  :mode (("README\\.md\\'" . gfm-mode)))
+  :mode (("CHANGELOG\\.md\\'" . gfm-mode)
+         ("README\\.md\\'" . gfm-mode)))
 
 (use-package minions
   :config
