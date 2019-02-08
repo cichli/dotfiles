@@ -235,6 +235,10 @@
   :config
   (default-text-scale-mode +1))
 
+(use-package delsel
+  :config
+  (delete-selection-mode 1))
+
 (use-package diff-hl
   :hook ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config
