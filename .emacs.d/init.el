@@ -107,7 +107,9 @@
                       (find-file "~/.lein/profiles.clj"))))
   :hook ((cider-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
-         (cider-repl-mode . enable-paredit-mode))
+         (cider-repl-mode . enable-paredit-mode)
+         (cider-repl-mode . (lambda ()
+                              (setq-local beacon-blink-when-window-scrolls nil))))
   :config
   (setq cider-pprint-fn 'puget
         cider-prompt-for-symbol nil
