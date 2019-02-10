@@ -525,7 +525,7 @@
                         (setq show-trailing-whitespace t)))))
 
 (use-package projectile
-  :defer 1
+  :demand t
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map))
   :config
