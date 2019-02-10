@@ -88,6 +88,7 @@
 
 (use-package beacon
   :config
+  (setq beacon-blink-when-focused t)
   (beacon-mode +1))
 
 (use-package bind-key)
