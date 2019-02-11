@@ -6,7 +6,7 @@ set -e
 ##############
 brew update
 brew bundle dump --global --force
-brew bundle install --global
+brew bundle install --global --verbose
 brew bundle cleanup --global --force
 
 ###########
