@@ -367,7 +367,7 @@
   :defer t)
 
 (use-package imenu-anywhere
-  :bind (("C-\\ i" . imenu-anywhere)))
+  :bind (("C-\\ i" . ivy-imenu-anywhere)))
 
 (use-package ivy
   :demand t
