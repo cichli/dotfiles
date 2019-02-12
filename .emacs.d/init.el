@@ -622,6 +622,10 @@
   (setq swiper-action-recenter t
         swiper-goto-start-of-match t))
 
+(use-package text-mode
+  :hook ((text-mode . (lambda ()
+                        (setq show-trailing-whitespace t)))))
+
 (use-package tool-bar
   :config
   (tool-bar-mode -1))
