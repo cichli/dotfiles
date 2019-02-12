@@ -157,12 +157,12 @@
         company-require-match nil))
 
 (use-package company-auctex
-  :after company
+  :after (auctex company)
   :config
   (company-auctex-init))
 
 (use-package company-flx
-  :after company
+  :after (company flx)
   :config
   (company-flx-mode +1))
 
@@ -400,7 +400,7 @@
   (ivy-rich-mode +1))
 
 (use-package ivy-xref
-  :after ivy
+  :after (ivy xref)
   :config
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
