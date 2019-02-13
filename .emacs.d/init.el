@@ -569,7 +569,7 @@
   :bind ("M-'" . just-one-space)
   :hook ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config
-  (put #'set-goal-column 'disabled nil)
+  (put 'set-goal-column 'disabled nil)
   (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
   (setq shift-select-mode nil)
   (column-number-mode +1))
