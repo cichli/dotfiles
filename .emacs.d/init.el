@@ -701,6 +701,10 @@
       ("]" . winner-redo)))
   (winner-mode +1))
 
+(use-package with-editor
+  :config
+  (shell-command-with-editor-mode +1))
+
 (use-package xref
   :bind (("C-." . xref-find-references))
   :config
