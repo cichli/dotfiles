@@ -30,7 +30,7 @@
 	algorithm = patience
 	indentHeuristic = true
 	renames = copies
-	renameLimit = 2000
+	renameLimit = 4096
 
 [rerere]
 	enabled = true
