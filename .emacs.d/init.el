@@ -113,6 +113,7 @@
         cider-repl-wrap-history t))
 
 (use-package cider-scratch
+  :after cider
   :config
   (unbind-key "C-j" cider-clojure-interaction-mode-map)
   (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))
