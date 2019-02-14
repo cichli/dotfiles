@@ -27,7 +27,7 @@
 	excludesfile = ~/.gitignore_global
 
 [diff]
-	algorithm = histogram
+	algorithm = patience
 	renames = copies
 	renameLimit = 2000
 
