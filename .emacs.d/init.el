@@ -106,7 +106,7 @@
          (cider-repl-mode . (lambda ()
                               (setq-local beacon-blink-when-window-scrolls nil))))
   :config
-  (setq cider-pprint-fn 'puget
+  (setq cider-print-fn 'fipp
         cider-prompt-for-symbol nil
         cider-repl-display-help-banner nil
         cider-repl-history-file (concat user-emacs-directory ".cider-history")
