@@ -28,6 +28,7 @@
 
 [diff]
 	algorithm = patience
+	indentHeuristic = true
 	renames = copies
 	renameLimit = 2000
 
