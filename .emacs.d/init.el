@@ -660,7 +660,6 @@
   (which-key-mode +1))
 
 (use-package whitespace
-  :init
   :bind (("C-c w" . global-whitespace-mode)
          ("C-c n" . whitespace-cleanup)))
 
