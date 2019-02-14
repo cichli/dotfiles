@@ -50,11 +50,9 @@
 (use-package ace-window
   :bind (("M-o" . ace-window)))
 
-(use-package amx
-  :defer t)
+(use-package amx)
 
-(use-package auth-source
-  :defer t)
+(use-package auth-source)
 
 (use-package autodisass-java-bytecode)
 
@@ -115,7 +113,6 @@
         cider-repl-wrap-history t))
 
 (use-package cider-scratch
-  :defer t
   :config
   (unbind-key "C-j" cider-clojure-interaction-mode-map)
   (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map))
@@ -130,7 +127,6 @@
   :mode "\\.coffee\\'")
 
 (use-package comint
-  :defer t
   :config
   (ansi-color-for-comint-mode-on)
   (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
@@ -160,7 +156,6 @@
   (company-flx-mode +1))
 
 (use-package compile
-  :defer t
   :config
   (setq compile-command "gmake -k "))
 
@@ -241,20 +236,16 @@
   (global-diff-hl-mode +1))
 
 (use-package diff-mode
-  :defer t
   :config
   (unbind-key "M-o" diff-mode-map))
 
 (use-package dired
-  :defer t
   :config
   (setq dired-recursive-deletes 'top))
 
-(use-package dockerfile-mode
-  :defer t)
+(use-package dockerfile-mode)
 
 (use-package ediff
-  :defer t
   :config
   (setq ediff-diff-options "-w"
         ediff-split-window-function 'split-window-horizontally
@@ -265,11 +256,9 @@
   (setq eldoc-idle-delay 0.1)
   (global-eldoc-mode +1))
 
-(use-package elisp-slime-nav
-  :defer t)
+(use-package elisp-slime-nav)
 
 (use-package epa
-  :defer t
   :config
   (setq epa-armor t))
 
@@ -296,8 +285,7 @@
         require-final-newline 'visit-save
         version-control t))
 
-(use-package flx
-  :defer t)
+(use-package flx)
 
 (use-package forge
   :after magit)
@@ -313,23 +301,18 @@
   :config
   (fringe-mode '(4 . nil)))
 
-(use-package git-timemachine
-  :defer t)
+(use-package git-timemachine)
 
-(use-package gitattributes-mode
-  :defer t)
+(use-package gitattributes-mode)
 
-(use-package gitconfig-mode
-  :defer t)
+(use-package gitconfig-mode)
 
 (use-package gitignore-mode
   :mode ".gitignore_global")
 
-(use-package grep
-  :defer t)
+(use-package grep)
 
-(use-package help-mode
-  :defer t)
+(use-package help-mode)
 
 (use-package helpful
   :bind (("C-h C" . helpful-command)
@@ -337,7 +320,6 @@
          ("C-h k" . helpful-key)))
 
 (use-package htmlize
-  :defer t
   :config
   (setq htmlize-html-major-mode #'html-mode))
 
@@ -356,8 +338,7 @@
   (setq iflipb-include-more-buffers t
         iflipb-wrap-around t))
 
-(use-package imenu
-  :defer t)
+(use-package imenu)
 
 (use-package imenu-anywhere
   :bind (("C-\\ i" . ivy-imenu-anywhere)))
@@ -398,7 +379,6 @@
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
 (use-package jka-compr
-  :defer t
   :config
   (add-to-list 'jka-compr-compression-info-list
                ["\\.plist$"
@@ -483,7 +463,6 @@
   (moody-replace-vc-mode))
 
 (use-package org
-  :defer t
   :config
   (setq org-enforce-todo-dependencies t))
 
@@ -492,7 +471,6 @@
   (global-page-break-lines-mode +1))
 
 (use-package paradox
-  :defer t
   :config
   (setq paradox-column-width-package 28
         paradox-column-width-version 14
@@ -500,8 +478,7 @@
         paradox-execute-asynchronously t
         paradox-github-token t))
 
-(use-package paredit
-  :defer t)
+(use-package paredit)
 
 (use-package paren
   :config
@@ -530,7 +507,6 @@
   (rainbow-mode +1))
 
 (use-package re-builder
-  :defer t
   :config
   (setq reb-re-syntax 'string))
 
@@ -633,7 +609,6 @@
   (tooltip-mode -1))
 
 (use-package tramp
-  :defer t
   :config
   (setq tramp-default-method "ssh")
   (add-to-list 'backup-directory-alist (cons tramp-file-name-regexp nil)))
@@ -647,11 +622,9 @@
   :config
   (setq uniquify-buffer-name-style 'forward))
 
-(use-package urlenc
-  :defer t)
+(use-package urlenc)
 
 (use-package vc-hooks
-  :defer t
   :config
   (setq vc-make-backup-files t
         vc-follow-symlinks t))
@@ -679,8 +652,7 @@
                         ("Stack Overflow"    . [simple-query "stackoverflow.com" "stackoverflow.com/search?q=" ""])
                         ("Wikipedia"         . [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""]))))
 
-(use-package wgrep
-  :defer t)
+(use-package wgrep)
 
 (use-package which-key
   :config
@@ -708,5 +680,4 @@
   :config
   (setq xref-prompt-for-identifier nil))
 
-(use-package yaml-mode
-  :defer t)
+(use-package yaml-mode)
