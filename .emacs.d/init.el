@@ -97,7 +97,7 @@
 (use-package cider
   :bind (("C-c l" . (lambda ()
                       (interactive)
-                      (find-file "~/.lein/profiles.clj"))))
+                      (find-file-other-window "~/.lein/profiles.clj"))))
   :hook ((cider-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . cider-company-enable-fuzzy-completion)
          (cider-repl-mode . enable-paredit-mode)
