@@ -53,11 +53,6 @@
 (use-package amx
   :defer t)
 
-(use-package auctex
-  :mode (("\\.tex\\'" . TeX-latex-mode))
-  :config
-  (TeX-global-PDF-mode +1))
-
 (use-package auth-source
   :defer t)
 
@@ -157,7 +152,7 @@
         company-require-match nil))
 
 (use-package company-auctex
-  :after (auctex company)
+  :after (company tex)
   :config
   (company-auctex-init))
 
@@ -621,6 +616,11 @@
   (bind-key "C-' '" #'swiper-avy swiper-map)
   (setq swiper-action-recenter t
         swiper-goto-start-of-match t))
+
+(use-package tex
+  :mode (("\\.tex\\'" . TeX-latex-mode))
+  :config
+  (TeX-global-PDF-mode +1))
 
 (use-package text-mode
   :hook ((text-mode . (lambda ()
