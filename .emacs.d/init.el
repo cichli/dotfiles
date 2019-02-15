@@ -595,6 +595,7 @@
 (use-package tex
   :mode (("\\.tex\\'" . TeX-latex-mode))
   :config
+  (setq font-latex-fontify-sectioning 'color)
   (TeX-global-PDF-mode +1))
 
 (use-package text-mode
