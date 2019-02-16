@@ -422,8 +422,7 @@
                         (interactive)
                         (magit-status "~/.dotfiles")))
          ("C-x m"   . magit-status)
-         ("C-x C-m" . magit-file-popup)
-         ("C-x M-m" . magit-dispatch-popup)
+         ("C-x C-m" . magit-file-dispatch)
          :map magit-mode-map
          ("C-S-<tab>" . magit-section-cycle-diffs))
   :config
@@ -437,10 +436,7 @@
         magit-section-visibility-indicator '("..." . true)
         magit-stash-arguments '("--include-untracked")
         magit-tag-arguments '("--annotate" "--sign"))
-  (global-magit-file-mode -1)
-  (magit-define-popup-switch 'magit-log-popup ?f
-    "Follow only the first parent commit of merge commits"
-    "--first-parent"))
+  (global-magit-file-mode -1))
 
 (use-package magit-imerge
   :after magit)
