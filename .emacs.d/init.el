@@ -52,8 +52,6 @@
 
 (use-package amx)
 
-(use-package auth-source)
-
 (use-package autodisass-java-bytecode)
 
 (use-package autorevert
@@ -83,8 +81,6 @@
             (setq beacon-blink-when-focused t)
             (beacon-mode +1)))
 
-(use-package bind-key)
-
 (use-package browse-kill-ring
   :bind   (("C-c C-M-k" . browse-kill-ring))
   :config (browse-kill-ring-default-keybindings))
@@ -93,14 +89,11 @@
   :hook   ((cask-mode . enable-paredit-mode)))
 
 (use-package cider
-  :bind   (("C-c l" . (lambda ()
-                        (interactive)
-                        (find-file-other-window "~/.lein/profiles.clj"))))
   :hook   ((cider-mode . cider-company-enable-fuzzy-completion)
-           (cider-repl-mode . cider-company-enable-fuzzy-completion)
-           (cider-repl-mode . enable-paredit-mode)
            (cider-repl-mode . (lambda ()
-                                (setq-local beacon-blink-when-window-scrolls nil))))
+                                (setq-local beacon-blink-when-window-scrolls nil)))
+           (cider-repl-mode . cider-company-enable-fuzzy-completion)
+           (cider-repl-mode . enable-paredit-mode))
   :config (setq cider-print-fn 'fipp
                 cider-prompt-for-symbol nil
                 cider-repl-display-help-banner nil
@@ -116,12 +109,12 @@
             (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map)))
 
 (use-package clojure-mode
+  :bind   (("C-c l" . (lambda ()
+                        (interactive)
+                        (find-file-other-window "~/.lein/profiles.clj"))))
   :hook   ((clojure-mode . enable-paredit-mode))
   :config (define-clojure-indent
             (quick-check 1)))
-
-(use-package coffee-mode
-  :mode   "\\.coffee\\'")
 
 (use-package comint
   :config (progn
@@ -292,10 +285,6 @@
 (use-package gitignore-mode
   :mode   ".gitignore_global")
 
-(use-package grep)
-
-(use-package help-mode)
-
 (use-package helpful
   :bind   (("C-h C" . helpful-command)
            ("C-h F" . helpful-function)
@@ -312,14 +301,6 @@
   :config (progn
             (setq ibuffer-default-sorting-mode 'alphabetic)
             (unbind-key "M-o" ibuffer-mode-map)))
-
-(use-package iflipb
-  :bind   (("M-[" . iflipb-previous-buffer)
-           ("M-]" . iflipb-next-buffer))
-  :config (setq iflipb-include-more-buffers t
-                iflipb-wrap-around t))
-
-(use-package imenu)
 
 (use-package imenu-anywhere
   :bind   (("C-\\ i" . ivy-imenu-anywhere)))
@@ -370,13 +351,6 @@
                           nil nil "bplist"])
             (jka-compr-update)))
 
-(use-package js
-  :bind   (:map
-           js-mode-map
-           ("{" . paredit-open-curly)
-           ("}" . paredit-close-curly))
-  :hook   ((js-mode . enable-paredit-mode)))
-
 (use-package lisp-mode
   :hook   ((emacs-lisp-mode . elisp-slime-nav-mode)
            (emacs-lisp-mode . enable-paredit-mode))
@@ -420,8 +394,7 @@
   :after  magit)
 
 (use-package markdown-mode
-  :mode   (("CHANGELOG\\.md\\'" . gfm-mode)
-           ("README\\.md\\'" . gfm-mode)))
+  :mode   (("\\.md\\'" . gfm-mode)))
 
 (use-package minions
   :config (progn
@@ -448,8 +421,6 @@
                 paradox-display-download-count t
                 paradox-execute-asynchronously t
                 paradox-github-token t))
-
-(use-package paredit)
 
 (use-package paren
   :config (progn
