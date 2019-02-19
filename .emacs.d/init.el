@@ -201,7 +201,7 @@
            ("C-x C-l"         . crux-downcase-region)
            ("C-x M-c"         . crux-capitalize-region)
            ("C-c k"           . bury-buffer)
-           ("C-c M-k"         . crux-delete-file-and-buffer)
+           ("C-c C-k"         . crux-delete-file-and-buffer)
            ("C-c r"           . crux-rename-file-and-buffer)
            ("C-c c"           . crux-copy-file-preserve-attributes)
            ("C-c f"           . crux-recentf-find-file)
