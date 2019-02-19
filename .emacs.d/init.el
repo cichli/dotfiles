@@ -246,7 +246,8 @@
 
 (use-package eyebrowse
   :config (progn
-            (setq eyebrowse-mode-line-separator " ")
+            (setq eyebrowse-mode-line-separator " "
+                  eyebrowse-wrap-around t)
             (eyebrowse-mode +1)))
 
 (use-package fancy-narrow
