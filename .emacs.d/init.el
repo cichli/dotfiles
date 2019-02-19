@@ -113,8 +113,10 @@
                         (interactive)
                         (find-file-other-window "~/.lein/profiles.clj"))))
   :hook   ((clojure-mode . enable-paredit-mode))
-  :config (define-clojure-indent
-            (quick-check 1)))
+  :config (progn
+            (setq clojure-toplevel-inside-comment-form t)
+            (define-clojure-indent
+              (quick-check 1))))
 
 (use-package comint
   :config (progn
