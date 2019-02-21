@@ -230,6 +230,7 @@
 
 (use-package ediff
   :config (setq ediff-diff-options "-w"
+                ediff-patch-program "gpatch"
                 ediff-split-window-function 'split-window-horizontally
                 ediff-window-setup-function 'ediff-setup-windows-plain))
 
