@@ -142,10 +142,6 @@
   :after  (company tex)
   :config (company-auctex-init))
 
-(use-package company-flx
-  :after  (company flx)
-  :config (company-flx-mode +1))
-
 (use-package compile
   :config (setq compile-command "gmake -k "))
 
