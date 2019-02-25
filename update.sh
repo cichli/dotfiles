@@ -21,14 +21,24 @@ curl -I http://orgmode.org/elpa/
 
 pushd ~/elisp/cider
 git fetch --prune --all
-git rebase upstream/master
-
+git rebase --autostash upstream/master
 rm -rf cider-pkg.el
 gmake elpaclean elpa autoloads
 popd
 
+pushd ~/elisp/clojure-mode
+git fetch --prune --all
+git rebase --autostash upstream/master
+gmake clean elpa
+cask exec emacs --quick --batch \
+     --eval "(progn
+               (require 'package)
+               (package-generate-autoloads 'clojure-mode default-directory))"
+popd
+
 pushd ~/.emacs.d
-rm -rf .cask/
-cask
 cask link cider ~/elisp/cider
+cask link clojure-mode ~/elisp/clojure-mode
+cask
+cask update
 popd
