@@ -14,6 +14,7 @@ brew "boot-clj"
 brew "brew-cask-completion"
 brew "cask", args: ["HEAD"]
 brew "cloc"
+brew "clojure"
 brew "coreutils"
 brew "diffutils"
 brew "findutils"
