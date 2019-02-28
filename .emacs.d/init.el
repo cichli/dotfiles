@@ -72,10 +72,6 @@
   :bind   (("M-z" . avy-zap-to-char-dwim)
            ("M-Z" . avy-zap-up-to-char-dwim)))
 
-(use-package back-button
-  :defer  1
-  :config (back-button-mode +1))
-
 (use-package beacon
   :config (progn
             (setq beacon-blink-when-focused t)
@@ -491,7 +487,9 @@
                 ("N" . scroll-other-window)
                 ("P" . (scroll-other-window '-))
                 ("a" . (beginning-of-buffer-other-window 0))
-                ("e" . (end-of-buffer-other-window 0))))))
+                ("e" . (end-of-buffer-other-window 0))))
+            (smartrep-define-key global-map "C-x"
+              '(("C-SPC" . pop-global-mark)))))
 
 (use-package solarized
   :config (progn
