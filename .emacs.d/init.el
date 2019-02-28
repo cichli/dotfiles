@@ -105,7 +105,7 @@
             (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map)))
 
 (use-package clojure-mode
-  :bind   (("C-c l" . (lambda ()
+  :bind   (("C-c L" . (lambda ()
                         (interactive)
                         (find-file-other-window "~/.lein/profiles.clj"))))
   :hook   ((clojure-mode . enable-paredit-mode))
@@ -367,7 +367,7 @@
             (mac-auto-operator-composition-mode +1)))
 
 (use-package magit
-  :bind   (("C-c m"   . (lambda ()
+  :bind   (("C-c M"   . (lambda ()
                           (interactive)
                           (magit-status "~/.dotfiles")))
            ("C-x m"   . magit-status)
