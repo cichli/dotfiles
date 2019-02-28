@@ -160,6 +160,7 @@
             (setq counsel-describe-function-function #'helpful-callable
                   counsel-describe-variable-function #'helpful-variable
                   counsel-locate-cmd #'counsel-locate-cmd-mdfind
+                  counsel-mode-override-describe-bindings t
                   counsel-grep-post-action-hook '(recenter)
                   counsel-rg-base-command (string-join '("rg"
                                                          "--color never"
