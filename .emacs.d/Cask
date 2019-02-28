@@ -23,7 +23,6 @@
 (depends-on "default-text-scale")
 (depends-on "diff-hl")
 (depends-on "dockerfile-mode")
-(depends-on "elisp-slime-nav")
 (depends-on "expand-region")
 (depends-on "eyebrowse")
 (depends-on "fancy-narrow")

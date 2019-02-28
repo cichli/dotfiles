@@ -149,9 +149,7 @@
            ("C-\\ j" . counsel-bookmark)
            ("C-\\ l" . counsel-locate)
            ("C-\\ r" . counsel-rg)
-           ("C-\\ u" . counsel-unicode-char)
-           ("C-h f"  . counsel-describe-function)
-           ("C-h v"  . counsel-describe-variable))
+           ("C-\\ u" . counsel-unicode-char))
   :config (progn
             (unbind-key "C-'" counsel-ag-map)
             (unbind-key "C-'" counsel-grep-map)
@@ -232,8 +230,6 @@
             (setq eldoc-idle-delay 0.1)
             (global-eldoc-mode +1)))
 
-(use-package elisp-slime-nav)
-
 (use-package epa
   :config (setq epa-armor t))
 
@@ -285,9 +281,11 @@
   :mode   ".gitignore_global")
 
 (use-package helpful
-  :bind   (("C-h C" . helpful-command)
-           ("C-h F" . helpful-function)
-           ("C-h k" . helpful-key)))
+  :bind   (("C-c C-d" . helpful-at-point)
+           ("C-h C"   . helpful-command)
+           ("C-h F"   . helpful-function)
+           ("C-h k"   . helpful-key)
+           ("C-h o"   . helpful-symbol)))
 
 (use-package htmlize
   :config (setq htmlize-html-major-mode #'html-mode))
@@ -351,8 +349,7 @@
             (jka-compr-update)))
 
 (use-package lisp-mode
-  :hook   ((emacs-lisp-mode . elisp-slime-nav-mode)
-           (emacs-lisp-mode . enable-paredit-mode))
+  :hook   ((emacs-lisp-mode . enable-paredit-mode))
   :config (setq initial-major-mode 'emacs-lisp-mode))
 
 (use-package mac-win
