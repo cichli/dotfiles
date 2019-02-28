@@ -384,18 +384,20 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>909 110 705 397 0 0 1680 1027 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>1972 456 735 382 1680 -390 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2655 478 770 429 1680 -390 2560 1440 </string>
+	<string>2656 403 937 514 1680 -390 2560 1440 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2533 213 570 377 1680 -390 2560 1440 </string>
+	<string>0 0 2558 1427 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1014 580 570 402 0 0 1680 1027 </string>
+	<string>1014 605 570 377 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_CAF010D2-5EA1-416F-BA3B-D31B3F98225F</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_CAF010D2-5EA1-416F-BA3B-D31B3F98225F_selection</key>
@@ -1048,7 +1050,7 @@
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
-			<string>xterm-256color</string>
+			<string>xterm-24bit</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
@@ -1149,7 +1151,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-02-01T23:57:38Z</date>
+	<date>2019-02-28T04:00:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
