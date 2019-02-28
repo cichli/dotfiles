@@ -392,6 +392,9 @@
 (use-package markdown-mode
   :mode   (("\\.md\\'" . gfm-mode)))
 
+(use-package menu-bar
+  :config (menu-bar-mode -1))
+
 (use-package minions
   :config (progn
             (setq minions-mode-line-lighter "...")
