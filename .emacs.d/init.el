@@ -478,8 +478,7 @@
 
 (use-package smartrep
   :config (progn
-            (unbind-key "C-q")
-            (smartrep-define-key global-map "C-q"
+            (smartrep-define-key global-map "C-|"
               '(("n" . (scroll-other-window 1))
                 ("p" . (scroll-other-window -1))
                 ("N" . scroll-other-window)
