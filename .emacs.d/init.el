@@ -557,9 +557,7 @@
                 vc-follow-symlinks t))
 
 (use-package volatile-highlights
-  :config (progn
-            (volatile-highlights-mode +1)
-            (set-face-inverse-video 'vhl/default-face t)))
+  :config (volatile-highlights-mode +1))
 
 (use-package webjump
   :bind   (("C-\\ w" . webjump))
