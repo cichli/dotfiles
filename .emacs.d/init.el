@@ -322,6 +322,7 @@
 
 (use-package ivy-hydra
   :after  ivy
+  :demand t
   :bind   (:map
            ivy-minibuffer-map
            ("M-O" . ivy-dispatching-done-hydra))
