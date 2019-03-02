@@ -117,8 +117,7 @@
 (use-package comint
   :config (progn
             (ansi-color-for-comint-mode-on)
-            (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
-            (add-hook 'comint-output-filter-functions #'comint-strip-ctrl-m)))
+            (add-hook 'comint-output-filter-functions #'ansi-color-process-output)))
 
 (use-package company
   :bind   (("C-<tab>" . company-complete)
@@ -256,8 +255,6 @@
                 require-final-newline 'visit-save
                 version-control t))
 
-(use-package flx)
-
 (use-package forge
   :after  magit)
 
@@ -310,11 +307,6 @@
             (bind-key "C-' '" #'ivy-avy ivy-minibuffer-map)
             (setq ivy-count-format "(%d/%d) "
                   ivy-format-function 'ivy-format-function-arrow
-                  ivy-height 20
-                  ivy-initial-inputs-alist nil
-                  ivy-re-builders-alist '((swiper . ivy--regex)
-                                          (counsel-ag . ivy--regex)
-                                          (t . ivy--regex-fuzzy))
                   ivy-use-virtual-buffers t
                   ivy-virtual-abbreviate 'abbrev
                   ivy-wrap t)
