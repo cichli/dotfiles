@@ -3,7 +3,6 @@
 /backups/
 /elpa/
 /eshell/
-/transient/
 /url/
 
 /.cider-history
@@ -15,6 +14,7 @@
 /projectile.cache
 /projectile-bookmarks.eld
 /tramp
+/transient/history.el
 
 *~
 *.elc

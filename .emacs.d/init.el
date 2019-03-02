@@ -377,13 +377,10 @@
   :config (progn
             (setq magit-diff-refine-hunk t
                   magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
-                  magit-merge-arguments '("--no-ff")
                   magit-section-initial-visibility-alist '(((issue pullreq) . hide)
                                                            ([file * status] . hide)
                                                            ([* status] . show))
-                  magit-section-visibility-indicator '("..." . true)
-                  magit-stash-arguments '("--include-untracked")
-                  magit-tag-arguments '("--annotate" "--sign"))
+                  magit-section-visibility-indicator '("..." . true))
             (global-magit-file-mode -1)
             (magit-auto-revert-mode +1)))
 
