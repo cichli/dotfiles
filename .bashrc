@@ -7,6 +7,7 @@ tic -x -o ~/.terminfo ~/.terminfo/terminfo-24bit.src
 export TERM=xterm-24bit
 
 export JAVA_HOME=$(/usr/libexec/java_home)
+export LEIN_USE_BOOTCLASSPATH=no
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
