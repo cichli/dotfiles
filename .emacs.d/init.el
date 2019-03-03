@@ -66,7 +66,7 @@
            ("C-' d" . avy-goto-char-timer)
            ("C-' f" . avy-goto-word-or-subword-1)
            ("C-' g" . avy-goto-line)
-           ("C-' r" . avy-resume)))
+           ("C-' h" . avy-resume)))
 
 (use-package avy-zap
   :bind   (("M-z" . avy-zap-to-char-dwim)
