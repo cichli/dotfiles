@@ -49,7 +49,7 @@
 ;;| packages
 ;;`-----------------------------------------------------------------------------
 (use-package ace-window
-  :bind   (("M-o" . ace-window)))
+  :bind*  (("M-o" . ace-window)))
 
 (use-package amx)
 
@@ -62,7 +62,7 @@
                   global-auto-revert-non-file-buffers t)))
 
 (use-package avy
-  :bind   (("C-' a" . avy-goto-char)
+  :bind*  (("C-' a" . avy-goto-char)
            ("C-' s" . avy-goto-char-2)
            ("C-' d" . avy-goto-char-timer)
            ("C-' f" . avy-goto-word-or-subword-1)
@@ -211,9 +211,6 @@
   :hook   ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config (global-diff-hl-mode +1))
 
-(use-package diff-mode
-  :config (unbind-key "M-o" diff-mode-map))
-
 (use-package dired
   :config (setq dired-recursive-deletes 'top))
 
@@ -295,8 +292,7 @@
            ibuffer-mode-map
            ("C-M-o" . ibuffer-visit-buffer-1-window))
   :config (progn
-            (setq ibuffer-default-sorting-mode 'alphabetic)
-            (unbind-key "M-o" ibuffer-mode-map)))
+            (setq ibuffer-default-sorting-mode 'alphabetic)))
 
 (use-package imenu-anywhere
   :bind   (("C-\\ i" . ivy-imenu-anywhere)))
@@ -319,8 +315,7 @@
   :demand t
   :bind   (:map
            ivy-minibuffer-map
-           ("M-O" . ivy-dispatching-done-hydra))
-  :config (unbind-key "M-o" ivy-minibuffer-map))
+           ("M-O" . ivy-dispatching-done-hydra)))
 
 (use-package ivy-rich
   :after  ivy
@@ -452,7 +447,7 @@
 
 (use-package rotate
   :after  smartrep
-  :config (smartrep-define-key global-map "C-' r"
+  :config (smartrep-define-key override-global-map "C-' r"
             '(("l" . rotate-layout)
               ("w" . rotate-window))))
 
@@ -476,14 +471,14 @@
 
 (use-package smartrep
   :config (progn
-            (smartrep-define-key global-map "C-|"
+            (smartrep-define-key override-global-map "C-|"
               '(("n" . (scroll-other-window 1))
                 ("p" . (scroll-other-window -1))
                 ("N" . scroll-other-window)
                 ("P" . (scroll-other-window '-))
                 ("a" . (beginning-of-buffer-other-window 0))
                 ("e" . (end-of-buffer-other-window 0))))
-            (smartrep-define-key global-map "C-x"
+            (smartrep-define-key override-global-map "C-x"
               '(("C-SPC" . pop-global-mark)))))
 
 (use-package solarized
@@ -586,7 +581,7 @@
 (use-package winner
   :after  smartrep
   :config (progn
-            (smartrep-define-key global-map "C-'"
+            (smartrep-define-key override-global-map "C-'"
               '(("[" . winner-undo)
                 ("]" . winner-redo)))
             (winner-mode +1)))
