@@ -236,6 +236,7 @@
   :bind   (("C-;" . er/expand-region)))
 
 (use-package eyebrowse
+  :init   (setq eyebrowse-keymap-prefix (kbd "C-' w"))
   :config (progn
             (setq eyebrowse-mode-line-separator " "
                   eyebrowse-wrap-around t)
