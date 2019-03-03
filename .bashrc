@@ -1,7 +1,9 @@
 shopt -s globstar promptvars
 
-export EDITOR=emacsclient
 export PATH='/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:'$PATH
+
+export EDITOR=emacsclient
+export PAGER=less
 
 tic -x -o ~/.terminfo ~/.terminfo/terminfo-24bit.src
 export TERM=xterm-24bit
