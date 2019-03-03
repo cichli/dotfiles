@@ -447,7 +447,7 @@
 
 (use-package rotate
   :after  smartrep
-  :config (smartrep-define-key global-map "C-'"
+  :config (smartrep-define-key global-map "C-' r"
             '(("l" . rotate-layout)
               ("w" . rotate-window))))
 
