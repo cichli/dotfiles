@@ -384,6 +384,9 @@
 (use-package markdown-mode
   :mode   (("\\.md\\'" . gfm-mode)))
 
+(use-package mb-depth
+  :config (minibuffer-depth-indicate-mode +1))
+
 (use-package menu-bar
   :config (menu-bar-mode -1))
 
