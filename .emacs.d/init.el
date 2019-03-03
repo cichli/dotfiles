@@ -27,6 +27,7 @@
 (setq create-lockfiles nil
       delete-by-moving-to-trash t
       echo-keystrokes 0.01
+      enable-recursive-minibuffers t
       frame-title-format '(:eval (if (buffer-file-name)
                                      (abbreviate-file-name (buffer-file-name))
                                    "%b"))
