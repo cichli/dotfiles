@@ -9,8 +9,7 @@
 (require 'cask)
 (cask-initialize)
 
-(eval-when-compile
-  (require 'use-package))
+(require 'use-package)
 
 (use-package benchmark-init
   :demand t
