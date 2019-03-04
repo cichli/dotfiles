@@ -56,9 +56,9 @@
 
 (use-package autorevert
   :config (progn
-            (global-auto-revert-mode +1)
             (setq auto-revert-verbose nil
-                  global-auto-revert-non-file-buffers t)))
+                  global-auto-revert-non-file-buffers t)
+            (global-auto-revert-mode +1)))
 
 (use-package avy
   :bind*  (("C-' a" . avy-goto-char)
@@ -116,8 +116,8 @@
 
 (use-package comint
   :config (progn
-            (ansi-color-for-comint-mode-on)
-            (add-hook 'comint-output-filter-functions #'ansi-color-process-output)))
+            (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
+            (ansi-color-for-comint-mode-on)))
 
 (use-package company
   :bind   (("C-<tab>" . company-complete))
@@ -125,10 +125,10 @@
             (global-company-mode +1)
             (setq company-idle-delay nil
                   company-minimum-prefix-length 0
+                  company-require-match nil
                   company-selection-wrap-around t
                   company-tooltip-align-annotations t
-                  company-tooltip-limit 16
-                  company-require-match nil)))
+                  company-tooltip-limit 16)))
 
 (use-package company-auctex
   :after  (company tex)
@@ -416,8 +416,8 @@
 (use-package projectile
   :config (progn
             (bind-key "C-c p" projectile-command-map projectile-mode-map)
-            (projectile-mode +1)
-            (setq projectile-use-git-grep t)))
+            (setq projectile-use-git-grep t)
+            (projectile-mode +1)))
 
 (use-package rainbow-mode
   :config (rainbow-mode +1))
@@ -427,9 +427,9 @@
 
 (use-package recentf
   :config (progn
-            (recentf-mode +1)
             (setq recentf-max-saved-items 100
-                  recentf-save-file "~/.emacs.d/.recentf")))
+                  recentf-save-file "~/.emacs.d/.recentf")
+            (recentf-mode +1)))
 
 (use-package rotate
   :after  smartrep
@@ -450,9 +450,9 @@
   :bind   ("M-'" . just-one-space)
   :hook   ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config (progn
+            (setq shift-select-mode nil)
             (put 'set-goal-column 'disabled nil)
             (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
-            (setq shift-select-mode nil)
             (column-number-mode +1)))
 
 (use-package smartrep
@@ -523,8 +523,8 @@
 
 (use-package undo-tree
   :config (progn
-            (global-undo-tree-mode +1)
-            (setq undo-tree-visualizer-timestamps t)))
+            (setq undo-tree-visualizer-timestamps t)
+            (global-undo-tree-mode +1)))
 
 (use-package uniquify
   :config (setq uniquify-buffer-name-style 'forward))
