@@ -305,10 +305,7 @@
 
 (use-package ivy-hydra
   :after  ivy
-  :demand t
-  :bind   (:map
-           ivy-minibuffer-map
-           ("M-O" . ivy-dispatching-done-hydra)))
+  :config (bind-key "M-O" #'ivy-dispatching-done-hydra ivy-minibuffer-map))
 
 (use-package ivy-rich
   :after  ivy
@@ -353,8 +350,7 @@
                           (magit-status "~/.dotfiles")))
            ("C-x m"   . magit-status)
            ("C-x C-m" . magit-file-dispatch)
-           :map
-           magit-mode-map
+           :map magit-mode-map
            ("C-S-<tab>" . magit-section-cycle-diffs))
   :config (progn
             (setq magit-diff-refine-hunk t
@@ -418,11 +414,8 @@
                           (setq show-trailing-whitespace t)))))
 
 (use-package projectile
-  :demand t
-  :bind   (:map
-           projectile-mode-map
-           ("C-c p" . projectile-command-map))
   :config (progn
+            (bind-key "C-c p" projectile-command-map projectile-mode-map)
             (projectile-mode +1)
             (setq projectile-use-git-grep t)))
 
