@@ -452,7 +452,6 @@
   :config (progn
             (setq shift-select-mode nil)
             (put 'set-goal-column 'disabled nil)
-            (plist-put minibuffer-prompt-properties 'point-entered 'minibuffer-avoid-prompt)
             (column-number-mode +1)))
 
 (use-package smartrep
