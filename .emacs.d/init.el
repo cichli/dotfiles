@@ -120,10 +120,7 @@
             (add-hook 'comint-output-filter-functions #'ansi-color-process-output)))
 
 (use-package company
-  :bind   (("C-<tab>" . company-complete)
-           :map
-           company-active-map
-           ("C-q" . company-show-doc-buffer))
+  :bind   (("C-<tab>" . company-complete))
   :config (progn
             (global-company-mode +1)
             (setq company-idle-delay nil
@@ -286,10 +283,7 @@
   :config (setq htmlize-html-major-mode #'html-mode))
 
 (use-package ibuffer
-  :bind   (("C-x C-b" . ibuffer)
-           :map
-           ibuffer-mode-map
-           ("C-M-o" . ibuffer-visit-buffer-1-window))
+  :bind   (("C-x C-b" . ibuffer))
   :config (progn
             (setq ibuffer-default-sorting-mode 'alphabetic)))
 
