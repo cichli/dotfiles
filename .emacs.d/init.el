@@ -139,7 +139,8 @@
 
 (use-package counsel
   :init   (unbind-key "C-\\")
-  :bind   (("C-\\ f" . counsel-find-library)
+  :bind   (("C-M-s"  . counsel-grep)
+           ("C-\\ f" . counsel-find-library)
            ("C-\\ g" . counsel-git-grep)
            ("C-\\ G" . counsel-git-log)
            ("C-\\ j" . counsel-bookmark)
