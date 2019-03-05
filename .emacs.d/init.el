@@ -77,6 +77,9 @@
             (setq beacon-blink-when-focused t)
             (beacon-mode +1)))
 
+(use-package bookmark
+  :config (setq bookmark-save-flag 1))
+
 (use-package browse-kill-ring
   :bind   (("C-c C-M-k" . browse-kill-ring))
   :config (browse-kill-ring-default-keybindings))
