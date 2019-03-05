@@ -139,8 +139,7 @@
 
 (use-package counsel
   :init   (unbind-key "C-\\")
-  :bind   (("C-s"    . counsel-grep-or-swiper)
-           ("C-\\ f" . counsel-find-library)
+  :bind   (("C-\\ f" . counsel-find-library)
            ("C-\\ g" . counsel-git-grep)
            ("C-\\ G" . counsel-git-log)
            ("C-\\ j" . counsel-bookmark)
@@ -492,7 +491,8 @@
   :config (global-subword-mode +1))
 
 (use-package swiper
-  :bind   (("C-S-s" . swiper-all))
+  :bind   (("C-s"   . swiper)
+           ("C-S-s" . swiper-all))
   :config (progn
             (unbind-key "C-'" swiper-map)
             (bind-key "C-' '" #'swiper-avy swiper-map)
