@@ -2,6 +2,7 @@
 (source melpa)
 (source org)
 
+(depends-on "ace-link")
 (depends-on "ace-window")
 (depends-on "amx")
 (depends-on "auctex")
