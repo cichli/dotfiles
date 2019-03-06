@@ -154,6 +154,7 @@
            ("C-\\ G" . counsel-git-log)
            ("C-\\ j" . counsel-bookmark)
            ("C-\\ l" . counsel-locate)
+           ("C-\\ m" . counsel-mark-ring)
            ("C-\\ r" . counsel-rg)
            ("C-\\ u" . counsel-unicode-char))
   :config (progn
