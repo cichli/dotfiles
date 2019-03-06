@@ -155,6 +155,7 @@
            ("C-\\ j" . counsel-bookmark)
            ("C-\\ l" . counsel-locate)
            ("C-\\ m" . counsel-mark-ring)
+           ("C-\\ p" . counsel-package)
            ("C-\\ r" . counsel-rg)
            ("C-\\ u" . counsel-unicode-char))
   :config (progn
