@@ -254,7 +254,6 @@
                 directory-free-space-program "gdf"
                 insert-directory-program "gls"
                 make-backup-files t
-                mode-require-final-newline 'visit-save
                 require-final-newline 'visit-save
                 version-control t))
 
