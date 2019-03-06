@@ -254,7 +254,7 @@
                 directory-free-space-program "gdf"
                 insert-directory-program "gls"
                 make-backup-files t
-                require-final-newline 'visit-save
+                require-final-newline t
                 version-control t))
 
 (use-package forge
