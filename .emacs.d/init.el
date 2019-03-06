@@ -70,7 +70,8 @@
            ("C-' d" . avy-goto-char-timer)
            ("C-' f" . avy-goto-word-or-subword-1)
            ("C-' g" . avy-goto-line)
-           ("C-' h" . avy-resume)))
+           ("C-' h" . avy-resume))
+  :config (setq avy-style 'de-bruijn))
 
 (use-package avy-zap
   :bind   (("M-z" . avy-zap-to-char-dwim)
