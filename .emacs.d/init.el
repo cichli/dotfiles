@@ -48,6 +48,7 @@
 ;;| packages
 ;;`-----------------------------------------------------------------------------
 (use-package ace-link
+  :bind*  (("C-' l" . ace-link))
   :config (ace-link-setup-default))
 
 (use-package ace-window
