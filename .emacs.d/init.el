@@ -56,7 +56,8 @@
   :bind*  (("M-o" . ace-window))
   :config (setq aw-scope 'frame))
 
-(use-package amx)
+(use-package amx
+  :config (amx-mode +1))
 
 (use-package autodisass-java-bytecode)
 
