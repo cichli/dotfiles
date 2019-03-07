@@ -162,6 +162,7 @@
            ("C-\\ r" . counsel-rg)
            ("C-\\ u" . counsel-unicode-char))
   :config (progn
+            (unbind-key "<remap> <pop-to-mark-command>" counsel-mode-map)
             (unbind-key "C-'" counsel-ag-map)
             (unbind-key "C-'" counsel-grep-map)
             (bind-key "C-' '" #'swiper-avy counsel-ag-map)
@@ -476,6 +477,8 @@
                 ("P" . (scroll-other-window '-))
                 ("a" . (beginning-of-buffer-other-window 0))
                 ("e" . (end-of-buffer-other-window 0))))
+            (smartrep-define-key override-global-map "C-c"
+              '(("C-SPC" . #'pop-to-mark-command)))
             (smartrep-define-key override-global-map "C-x"
               '(("C-SPC" . pop-global-mark)))))
 
