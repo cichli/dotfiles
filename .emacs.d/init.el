@@ -581,7 +581,9 @@
            ("C-c n" . whitespace-cleanup)))
 
 (use-package winner
-  :config (winner-mode +1))
+  :config (progn
+            (setq winner-dont-bind-my-keys t)
+            (winner-mode +1)))
 
 (use-package with-editor
   :config (shell-command-with-editor-mode +1))
