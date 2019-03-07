@@ -49,7 +49,6 @@
 (depends-on "page-break-lines")
 (depends-on "paradox")
 (depends-on "paredit")
-(depends-on "pcre2el")
 (depends-on "projectile")
 (depends-on "rainbow-mode")
 (depends-on "rotate")
