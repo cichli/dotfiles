@@ -523,7 +523,8 @@
 
 (use-package text-mode
   :hook   ((text-mode . (lambda ()
-                          (setq show-trailing-whitespace t)))))
+                          (setq show-trailing-whitespace t)))
+           (text-mode . auto-fill-mode)))
 
 (use-package tool-bar
   :config (tool-bar-mode -1))
