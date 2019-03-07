@@ -442,11 +442,7 @@
                   recentf-save-file "~/.emacs.d/.recentf")
             (recentf-mode +1)))
 
-(use-package rotate
-  :after  smartrep
-  :config (smartrep-define-key override-global-map "C-' r"
-            '(("l" . rotate-layout)
-              ("w" . rotate-window))))
+(use-package rotate)
 
 (use-package ruby-mode
   :mode   ".Brewfile")
@@ -466,8 +462,14 @@
             (column-number-mode +1)))
 
 (use-package smartrep
+  :after  (rotate winner)
   :config (progn
-            (smartrep-define-key override-global-map "C-|"
+            (smartrep-define-key override-global-map "C-' w"
+              '(("l"   . rotate-layout)
+                ("w"   . rotate-window)
+                ("C-_" . winner-undo)
+                ("M-_" . winner-redo)))
+            (smartrep-define-key override-global-map "C-' w o"
               '(("n" . (scroll-other-window 1))
                 ("p" . (scroll-other-window -1))
                 ("N" . scroll-other-window)
@@ -575,12 +577,7 @@
            ("C-c n" . whitespace-cleanup)))
 
 (use-package winner
-  :after  smartrep
-  :config (progn
-            (smartrep-define-key override-global-map "C-'"
-              '(("[" . winner-undo)
-                ("]" . winner-redo)))
-            (winner-mode +1)))
+  :config (winner-mode +1))
 
 (use-package with-editor
   :config (shell-command-with-editor-mode +1))
