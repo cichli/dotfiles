@@ -53,7 +53,6 @@
   :config (ace-link-setup-default))
 
 (use-package ace-window
-  :bind*  (("M-o" . ace-window))
   :config (setq aw-scope 'frame))
 
 (use-package amx
@@ -319,8 +318,7 @@
             (ivy-mode +1)))
 
 (use-package ivy-hydra
-  :after  ivy
-  :config (bind-key "M-O" #'ivy-dispatching-done-hydra ivy-minibuffer-map))
+  :after  ivy)
 
 (use-package ivy-rich
   :after  ivy
@@ -463,7 +461,7 @@
             (column-number-mode +1)))
 
 (use-package smartrep
-  :after  (rotate winner)
+  :after  (ace-window rotate winner)
   :config (progn
             (smartrep-define-key override-global-map "C-' w"
               '(("l"   . rotate-layout)
@@ -480,7 +478,8 @@
             (smartrep-define-key override-global-map "C-c"
               '(("C-SPC" . #'pop-to-mark-command)))
             (smartrep-define-key override-global-map "C-x"
-              '(("C-SPC" . pop-global-mark)))))
+              '(("o"     . other-window)
+                ("C-SPC" . pop-global-mark)))))
 
 (use-package solarized
   :config (progn
