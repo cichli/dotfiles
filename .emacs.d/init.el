@@ -464,11 +464,12 @@
   :after  (ace-window rotate winner)
   :config (progn
             (smartrep-define-key override-global-map "C-' w"
-              '(("l"   . rotate-layout)
+              '(("o"   . ace-window)
+                ("l"   . rotate-layout)
                 ("w"   . rotate-window)
                 ("C-_" . winner-undo)
                 ("M-_" . winner-redo)))
-            (smartrep-define-key override-global-map "C-' w o"
+            (smartrep-define-key override-global-map "C-' w s"
               '(("n" . (scroll-other-window 1))
                 ("p" . (scroll-other-window -1))
                 ("N" . scroll-other-window)
