@@ -26,7 +26,6 @@
 (depends-on "dockerfile-mode")
 (depends-on "expand-region")
 (depends-on "eyebrowse")
-(depends-on "fancy-narrow")
 (depends-on "forge")
 (depends-on "git-timemachine")
 (depends-on "gitattributes-mode")

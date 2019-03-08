@@ -248,9 +248,6 @@
                   eyebrowse-wrap-around t)
             (eyebrowse-mode +1)))
 
-(use-package fancy-narrow
-  :config (fancy-narrow-mode +1))
-
 (use-package files
   :config (setq backup-by-copying t
                 backup-directory-alist '(("." . "~/.emacs.d/backups/"))
