@@ -319,7 +319,8 @@
   :config (ivy-rich-mode +1))
 
 (use-package ivy-xref
-  :config (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
+  :config (setq ivy-xref-use-file-path t
+                xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
 (use-package jka-compr
   :config (progn
