@@ -109,7 +109,6 @@
                 cider-repl-wrap-history t))
 
 (use-package cider-scratch
-  :after  cider
   :config (progn
             (unbind-key "C-j" cider-clojure-interaction-mode-map)
             (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map)))
@@ -141,7 +140,6 @@
                   company-tooltip-limit 16)))
 
 (use-package company-auctex
-  :after  (company tex)
   :config (company-auctex-init))
 
 (use-package compile
@@ -183,7 +181,6 @@
             (counsel-mode +1)))
 
 (use-package counsel-projectile
-  :after  (counsel projectile)
   :config (counsel-projectile-mode +1))
 
 (use-package counsel-tramp
@@ -264,8 +261,7 @@
                 require-final-newline t
                 version-control t))
 
-(use-package forge
-  :after  magit)
+(use-package forge)
 
 (use-package frame
   :config (progn
@@ -317,15 +313,12 @@
                   ivy-wrap t)
             (ivy-mode +1)))
 
-(use-package ivy-hydra
-  :after  ivy)
+(use-package ivy-hydra)
 
 (use-package ivy-rich
-  :after  ivy
   :config (ivy-rich-mode +1))
 
 (use-package ivy-xref
-  :after  (ivy xref)
   :config (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
 (use-package jka-compr
@@ -375,8 +368,7 @@
             (global-magit-file-mode -1)
             (magit-auto-revert-mode +1)))
 
-(use-package magit-imerge
-  :after  magit)
+(use-package magit-imerge)
 
 (use-package markdown-mode
   :mode   (("\\.md\\'" . gfm-mode)))
