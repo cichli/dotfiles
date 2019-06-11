@@ -6,7 +6,9 @@ export PAGER=less
 tic -x -o ~/.terminfo ~/.terminfo/terminfo-24bit.src
 export TERM=xterm-24bit
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 export LEIN_USE_BOOTCLASSPATH=no
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
