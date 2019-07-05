@@ -45,6 +45,7 @@ brew "postgresql", restart_service: true
 brew "ripgrep"
 brew "speedtest-cli"
 brew "ssh-copy-id"
+brew "testssl"
 brew "travis"
 brew "watch"
 brew "wget"
