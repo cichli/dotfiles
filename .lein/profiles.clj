@@ -2,7 +2,7 @@
 
         :jvm-opts ["-XX:-OmitStackTraceInFastThrow"]
 
-        :dependencies [[criterium "0.4.4"]
+        :dependencies [[criterium "0.4.5"]
                        [nrepl "0.6.0"]
                        [org.clojure/tools.logging "0.4.1"]
                        [pjstadig/humane-test-output "0.9.0"]]
