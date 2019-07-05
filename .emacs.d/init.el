@@ -270,6 +270,10 @@
 (use-package fringe
   :config (fringe-mode '(4 . nil)))
 
+(use-package git-commit
+  :hook ((git-commit-mode . (lambda ()
+                              (setq-local fill-column 80)))))
+
 (use-package git-timemachine)
 
 (use-package gitattributes-mode)

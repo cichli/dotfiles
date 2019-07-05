@@ -27,6 +27,7 @@
 (depends-on "expand-region")
 (depends-on "eyebrowse")
 (depends-on "forge")
+(depends-on "git-commit")
 (depends-on "git-timemachine")
 (depends-on "gitattributes-mode")
 (depends-on "gitconfig-mode")
