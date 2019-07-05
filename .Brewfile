@@ -43,6 +43,7 @@ brew "node"
 brew "pinentry-mac"
 brew "postgresql", restart_service: true
 brew "ripgrep"
+brew "rsync"
 brew "speedtest-cli"
 brew "ssh-copy-id"
 brew "testssl"
