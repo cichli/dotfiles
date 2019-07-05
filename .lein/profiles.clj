@@ -11,7 +11,7 @@
                   [com.jakemccrary/lein-test-refresh "0.23.0"]
                   [jonase/eastwood "0.3.6"]
                   [lein-ancient "0.6.15"]
-                  [lein-bikeshed "0.5.1"]
+                  [lein-bikeshed "0.5.2"]
                   [lein-cljfmt "0.6.4"]
                   [lein-kibit "0.1.6"]
                   [lein-nvd "1.1.1"]
