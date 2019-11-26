@@ -216,6 +216,7 @@
   :config (delete-selection-mode 1))
 
 (use-package diff-hl
+  :demand t
   :hook   ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config (global-diff-hl-mode +1))
 
