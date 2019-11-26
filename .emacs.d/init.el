@@ -409,10 +409,7 @@
                 paradox-github-token t))
 
 (use-package paren
-  :config (progn
-            (setq show-paren-when-point-in-periphery t
-                  show-paren-when-point-inside-paren t)
-            (show-paren-mode +1)))
+  :config (show-paren-mode +1))
 
 (use-package prog-mode
   :hook   ((prog-mode . (lambda ()
