@@ -379,9 +379,6 @@
 (use-package mb-depth
   :config (minibuffer-depth-indicate-mode +1))
 
-(use-package menu-bar
-  :config (menu-bar-mode -1))
-
 (use-package minions
   :config (progn
             (setq minions-mode-line-lighter "...")
