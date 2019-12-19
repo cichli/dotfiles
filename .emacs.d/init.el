@@ -479,19 +479,19 @@
                   solarized-use-variable-pitch nil
                   x-underline-at-descent-line t)
             (load-theme 'solarized-dark t)
-            (solarized-with-color-variables 'dark
-              ;; https://github.com/bbatsov/solarized-emacs/issues/220
-              (set-face-attribute 'mode-line nil
-                                  :box nil
-                                  :overline s-line
-                                  :underline s-line)
-              (set-face-attribute 'mode-line-inactive nil
-                                  :box nil
-                                  :overline s-line
-                                  :underline s-line)
-              ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
-              (set-face-attribute 'window-divider nil
-                                  :foreground s-line))))
+            (solarized-with-color-variables 'dark 'solarized-dark solarized-dark-color-palette-alist
+              '(;; https://github.com/bbatsov/solarized-emacs/issues/220
+                (set-face-attribute 'mode-line nil
+                                    :box nil
+                                    :overline s-line
+                                    :underline s-line)
+                (set-face-attribute 'mode-line-inactive nil
+                                    :box nil
+                                    :overline s-line
+                                    :underline s-line)
+                ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=27830
+                (set-face-attribute 'window-divider nil
+                                    :foreground s-line)))))
 
 (use-package subword
   :config (global-subword-mode +1))
