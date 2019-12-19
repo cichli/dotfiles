@@ -14,7 +14,7 @@
                   [lein-bikeshed "0.5.2"]
                   [lein-cljfmt "0.6.6"]
                   [lein-kibit "0.1.8"]
-                  [lein-nvd "1.1.1"]
+                  [lein-nvd "1.3.1"]
                   [lein-pprint "1.2.0"]]
 
         :injections [(require 'pjstadig.humane-test-output)
