@@ -2,6 +2,7 @@ export PATH='/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:'$PATH
 
 export EDITOR=emacsclient
 export LESS='--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --status-column --window=-2'
+export LESSOPEN="| lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 export PAGER=less
 
 tic -x -o ~/.terminfo ~/.terminfo/xterm-24bit.terminfo
