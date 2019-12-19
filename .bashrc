@@ -8,6 +8,7 @@ export TERM=xterm-24bit
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+jenv macos-javahome
 
 export LEIN_USE_BOOTCLASSPATH=no
 
