@@ -17,7 +17,7 @@ brew upgrade --fetch-HEAD
 ###########
 curl -I https://elpa.gnu.org/
 curl -I https://melpa.org/
-curl -I http://orgmode.org/elpa/
+curl -I https://orgmode.org/elpa/
 
 pushd ~/elisp/cider
 git fetch --prune --all
