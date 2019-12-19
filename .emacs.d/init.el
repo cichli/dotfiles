@@ -102,6 +102,7 @@
            (cider-repl-mode . enable-paredit-mode))
   :config (setq cider-print-fn 'fipp
                 cider-prompt-for-symbol nil
+                cider-redirect-server-output-to-repl nil
                 cider-repl-display-help-banner nil
                 cider-repl-history-file (concat user-emacs-directory ".cider-history")
                 cider-repl-history-size 1000
