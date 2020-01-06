@@ -75,10 +75,6 @@
            ("C-' h" . avy-resume))
   :config (setq avy-style 'de-bruijn))
 
-(use-package avy-zap
-  :bind   (("M-z" . avy-zap-to-char-dwim)
-           ("M-Z" . avy-zap-up-to-char-dwim)))
-
 (use-package beacon
   :config (progn
             (setq beacon-blink-when-focused t)

@@ -8,7 +8,6 @@
 (depends-on "auctex")
 (depends-on "autodisass-java-bytecode")
 (depends-on "avy")
-(depends-on "avy-zap")
 (depends-on "beacon")
 (depends-on "benchmark-init")
 (depends-on "browse-kill-ring")
