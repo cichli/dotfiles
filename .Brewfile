@@ -58,6 +58,7 @@ brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
 cask "adguard"
 cask "adobe-creative-cloud"
 cask "adoptopenjdk11"
+cask "adoptopenjdk13"
 cask "audio-hijack"
 cask "contexts"
 cask "docker"
