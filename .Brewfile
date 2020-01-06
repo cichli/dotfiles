@@ -41,6 +41,7 @@ brew "maven-completion"
 brew "mosh"
 brew "mpv"
 brew "node"
+brew "parallel"
 brew "pinentry-mac"
 brew "postgresql", restart_service: true
 brew "ripgrep"
