@@ -29,6 +29,7 @@ brew "htop"
 brew "httpstat"
 brew "jenv"
 brew "jq"
+brew "kafka", restart_service: true
 brew "launchctl-completion"
 brew "leiningen"
 brew "less"
