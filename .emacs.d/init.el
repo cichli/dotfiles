@@ -4,8 +4,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-;; (package-initialize)
-
 (require 'cask)
 (cask-initialize)
 
@@ -56,7 +54,7 @@
   :config (setq aw-scope 'frame))
 
 (use-package amx
-  :config (amx-mode +1))
+  :demand t)
 
 (use-package autodisass-java-bytecode)
 
@@ -84,8 +82,7 @@
   :config (setq bookmark-save-flag 1))
 
 (use-package browse-kill-ring
-  :bind   (("C-c C-M-k" . browse-kill-ring))
-  :config (browse-kill-ring-default-keybindings))
+  :bind   (("C-c C-M-k" . browse-kill-ring)))
 
 (use-package cask
   :hook   ((cask-mode . enable-paredit-mode)))
@@ -215,9 +212,6 @@
   :hook   ((magit-post-refresh . diff-hl-magit-post-refresh))
   :config (global-diff-hl-mode +1))
 
-(use-package dired
-  :config (setq dired-recursive-deletes 'top))
-
 (use-package dockerfile-mode)
 
 (use-package ediff
@@ -291,8 +285,7 @@
 
 (use-package ibuffer
   :bind   (("C-x C-b" . ibuffer))
-  :config (progn
-            (setq ibuffer-default-sorting-mode 'alphabetic)))
+  :config (setq ibuffer-default-sorting-mode 'alphabetic))
 
 (use-package imenu-anywhere
   :bind   (("C-\\ i" . ivy-imenu-anywhere)))
