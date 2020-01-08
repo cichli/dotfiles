@@ -1,7 +1,7 @@
 ;;,-----------------------------------------------------------------------------
 ;;| init
 ;;`-----------------------------------------------------------------------------
-(setq custom-file (concat user-emacs-directory "custom.el"))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
 ;; (package-initialize)
@@ -100,15 +100,13 @@
                 cider-prompt-for-symbol nil
                 cider-redirect-server-output-to-repl nil
                 cider-repl-display-help-banner nil
-                cider-repl-history-file (concat user-emacs-directory ".cider-history")
+                cider-repl-history-file (expand-file-name ".cider-history" user-emacs-directory)
                 cider-repl-history-size 1000
                 cider-repl-pop-to-buffer-on-connect nil
                 cider-repl-wrap-history t))
 
 (use-package cider-scratch
-  :config (progn
-            (unbind-key "C-j" cider-clojure-interaction-mode-map)
-            (unbind-key "<remap> <paredit-newline>" cider-clojure-interaction-mode-map)))
+  :config (setq cider-clojure-interaction-mode-map clojure-mode-map))
 
 (use-package clojure-mode
   :bind   (("C-c L" . (lambda ()
@@ -128,13 +126,13 @@
 (use-package company
   :bind   (("C-<tab>" . company-complete))
   :config (progn
-            (global-company-mode +1)
             (setq company-idle-delay nil
                   company-minimum-prefix-length 0
                   company-require-match nil
                   company-selection-wrap-around t
                   company-tooltip-align-annotations t
-                  company-tooltip-limit 16)))
+                  company-tooltip-limit 16)
+            (global-company-mode +1)))
 
 (use-package company-auctex
   :config (company-auctex-init))
@@ -210,7 +208,7 @@
   :config (default-text-scale-mode +1))
 
 (use-package delsel
-  :config (delete-selection-mode 1))
+  :config (delete-selection-mode +1))
 
 (use-package diff-hl
   :demand t
@@ -248,7 +246,7 @@
 
 (use-package files
   :config (setq backup-by-copying t
-                backup-directory-alist '(("." . "~/.emacs.d/backups/"))
+                backup-directory-alist `(("." . ,(expand-file-name "backups/" user-emacs-directory)))
                 delete-old-versions t
                 directory-free-space-program "gdf"
                 insert-directory-program "gls"
@@ -411,7 +409,7 @@
 
 (use-package projectile
   :config (progn
-            (bind-key "C-c p" projectile-command-map projectile-mode-map)
+            (bind-key "C-c p" #'projectile-command-map projectile-mode-map)
             (setq projectile-use-git-grep t)
             (projectile-mode +1)))
 
@@ -424,7 +422,7 @@
 (use-package recentf
   :config (progn
             (setq recentf-max-saved-items 100
-                  recentf-save-file "~/.emacs.d/.recentf")
+                  recentf-save-file (expand-file-name ".recentf" user-emacs-directory))
             (recentf-mode +1)))
 
 (use-package rotate)
@@ -456,14 +454,14 @@
                 ("C-_" . winner-undo)
                 ("M-_" . winner-redo)))
             (smartrep-define-key override-global-map "C-' w s"
-              '(("n" . (scroll-other-window 1))
+              '(("n" . (scroll-other-window +1))
                 ("p" . (scroll-other-window -1))
                 ("N" . scroll-other-window)
                 ("P" . (scroll-other-window '-))
                 ("a" . (beginning-of-buffer-other-window 0))
                 ("e" . (end-of-buffer-other-window 0))))
             (smartrep-define-key override-global-map "C-c"
-              '(("C-SPC" . #'pop-to-mark-command)))
+              '(("C-SPC" . pop-to-mark-command)))
             (smartrep-define-key override-global-map "C-x"
               '(("o"     . other-window)
                 ("C-SPC" . pop-global-mark)))))
@@ -521,7 +519,7 @@
 (use-package tramp
   :config (progn
             (setq tramp-default-method "ssh")
-            (add-to-list 'backup-directory-alist (cons tramp-file-name-regexp nil))))
+            (add-to-list 'backup-directory-alist `(,tramp-file-name-regexp . nil))))
 
 (use-package undo-tree
   :config (progn
