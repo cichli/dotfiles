@@ -106,9 +106,6 @@
   :config (setq cider-clojure-interaction-mode-map clojure-mode-map))
 
 (use-package clojure-mode
-  :bind   (("C-c L" . (lambda ()
-                        (interactive)
-                        (find-file-other-window "~/.lein/profiles.clj"))))
   :hook   ((clojure-mode . enable-paredit-mode))
   :config (progn
             (setq clojure-toplevel-inside-comment-form t)
@@ -187,7 +184,6 @@
            ("S-<return>"      . crux-smart-open-line)
            ("C-^"             . crux-top-join-line)
            ("C-S-<backspace>" . crux-kill-whole-line)
-           ("C-c <tab>"       . crux-indent-rigidly-and-copy-to-clipboard)
            ("C-x C-u"         . crux-upcase-region)
            ("C-x C-l"         . crux-downcase-region)
            ("C-x M-c"         . crux-capitalize-region)
@@ -195,10 +191,6 @@
            ("C-c C-k"         . crux-delete-file-and-buffer)
            ("C-c r"           . crux-rename-file-and-buffer)
            ("C-c c"           . crux-copy-file-preserve-attributes)
-           ("C-c f"           . crux-recentf-find-file)
-           ("C-c I"           . crux-find-user-init-file)
-           ("C-c ,"           . crux-find-user-custom-file)
-           ("C-c S"           . crux-find-shell-init-file)
            ("C-c C-e"         . crux-eval-and-replace)))
 
 (use-package default-text-scale
@@ -342,10 +334,7 @@
             (mac-auto-operator-composition-mode +1)))
 
 (use-package magit
-  :bind   (("C-c M"   . (lambda ()
-                          (interactive)
-                          (magit-status "~/.dotfiles")))
-           ("C-x m"   . magit-status)
+  :bind   (("C-x m"   . magit-status)
            ("C-x C-m" . magit-file-dispatch)
            :map magit-mode-map
            ("C-S-<tab>" . magit-section-cycle-diffs))
