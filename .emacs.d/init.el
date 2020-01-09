@@ -38,7 +38,7 @@
       user-full-name "Michael Griffiths"
       user-mail-address "mikey@cich.li")
 
-(dolist (x '(downcase-region erase-buffer narrow-to-region))
+(dolist (x '(downcase-region erase-buffer narrow-to-region upcase-region))
   (put x 'disabled nil))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
