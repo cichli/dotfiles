@@ -141,6 +141,8 @@
                                                          "--smart-case"
                                                          "%s .")
                                                        " "))
+            (ivy-configure 'counsel-yank-pop :height 10)
+            (ivy-configure 'counsel-git-log :height 6)
             (counsel-mode +1)))
 
 (use-package counsel-projectile
@@ -290,6 +292,7 @@
             (bind-key "C-' '" #'ivy-avy ivy-minibuffer-map)
             (setq ivy-count-format "(%d/%d) "
                   ivy-format-function 'ivy-format-function-arrow
+                  ivy-height 20
                   ivy-use-virtual-buffers t
                   ivy-virtual-abbreviate 'abbreviate
                   ivy-wrap t)
