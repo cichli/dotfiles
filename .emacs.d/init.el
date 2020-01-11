@@ -54,7 +54,8 @@
   :config (setq bookmark-save-flag 1))
 
 (use-package browse-kill-ring
-  :bind   (("C-c C-M-k" . browse-kill-ring)))
+  :bind   (("C-c C-M-k" . browse-kill-ring))
+  :config (setq browse-kill-ring-highlight-current-entry t))
 
 (use-package cask
   :hook   ((cask-mode . enable-paredit-mode)))
