@@ -55,7 +55,8 @@
 
 (use-package browse-kill-ring
   :bind   (("C-c C-M-k" . browse-kill-ring))
-  :config (setq browse-kill-ring-highlight-current-entry t))
+  :config (setq browse-kill-ring-highlight-current-entry t
+                browse-kill-ring-highlight-inserted-item t))
 
 (use-package cask
   :hook   ((cask-mode . enable-paredit-mode)))
