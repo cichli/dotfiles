@@ -51,7 +51,7 @@
   :config (ace-link-setup-default))
 
 (use-package ace-window
-  :config (setq aw-scope 'frame))
+  :config (setq aw-scope 'visible))
 
 (use-package amx
   :demand t)
