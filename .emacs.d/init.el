@@ -40,7 +40,8 @@
            ("C-' d" . avy-goto-char-timer)
            ("C-' f" . avy-goto-word-or-subword-1)
            ("C-' g" . avy-goto-line)
-           ("C-' h" . avy-resume))
+           ("C-' h" . avy-resume)
+           ("C-' j" . avy-goto-symbol-1))
   :config (setq avy-style 'de-bruijn))
 
 (use-package beacon
