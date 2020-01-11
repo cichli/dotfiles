@@ -291,7 +291,7 @@
             (setq ivy-count-format "(%d/%d) "
                   ivy-format-function 'ivy-format-function-arrow
                   ivy-use-virtual-buffers t
-                  ivy-virtual-abbreviate 'abbrev
+                  ivy-virtual-abbreviate 'abbreviate
                   ivy-wrap t)
             (ivy-mode +1)))
 
