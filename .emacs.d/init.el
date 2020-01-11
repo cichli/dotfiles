@@ -14,36 +14,6 @@
   :hook   ((after-init . benchmark-init/deactivate)))
 
 ;;,-----------------------------------------------------------------------------
-;;| built-ins
-;;`-----------------------------------------------------------------------------
-(setq-default fill-column 80
-              indent-tabs-mode nil
-              indicate-empty-lines t
-              truncate-lines t)
-
-(setq create-lockfiles nil
-      delete-by-moving-to-trash t
-      echo-keystrokes 0.01
-      enable-recursive-minibuffers t
-      frame-title-format '(:eval (if (buffer-file-name)
-                                     (abbreviate-file-name (buffer-file-name))
-                                   "%b"))
-      inhibit-startup-echo-area-message t
-      inhibit-startup-screen t
-      mac-frame-tabbing nil
-      scroll-conservatively 101
-      sentence-end-double-space nil
-      split-height-threshold nil
-      split-width-threshold 160
-      user-full-name "Michael Griffiths"
-      user-mail-address "mikey@cich.li")
-
-(dolist (x '(downcase-region erase-buffer narrow-to-region upcase-region))
-  (put x 'disabled nil))
-
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-;;,-----------------------------------------------------------------------------
 ;;| packages
 ;;`-----------------------------------------------------------------------------
 (use-package ace-link
@@ -216,6 +186,32 @@
   :config (progn
             (setq eldoc-idle-delay 0.1)
             (global-eldoc-mode +1)))
+
+(use-package emacs
+  :config (progn
+            (setq-default fill-column 80
+                          indent-tabs-mode nil
+                          indicate-empty-lines t
+                          truncate-lines t)
+            (setq create-lockfiles nil
+                  delete-by-moving-to-trash t
+                  echo-keystrokes 0.01
+                  enable-recursive-minibuffers t
+                  frame-title-format '(:eval (if (buffer-file-name)
+                                                 (abbreviate-file-name (buffer-file-name))
+                                               "%b"))
+                  inhibit-startup-echo-area-message t
+                  inhibit-startup-screen t
+                  mac-frame-tabbing nil
+                  scroll-conservatively 101
+                  sentence-end-double-space nil
+                  split-height-threshold nil
+                  split-width-threshold 160
+                  user-full-name "Michael Griffiths"
+                  user-mail-address "mikey@cich.li")
+            (dolist (x '(downcase-region erase-buffer narrow-to-region upcase-region))
+              (put x 'disabled nil))
+            (defalias 'yes-or-no-p 'y-or-n-p)))
 
 (use-package epa
   :config (setq epa-armor t))
