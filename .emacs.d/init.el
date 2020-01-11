@@ -92,7 +92,8 @@
             (ansi-color-for-comint-mode-on)))
 
 (use-package company
-  :bind   (("C-<tab>" . company-complete))
+  :after  (counsel)
+  :bind   (("C-\\ C-\\" . counsel-company))
   :config (progn
             (setq company-idle-delay nil
                   company-minimum-prefix-length 0
