@@ -477,7 +477,8 @@
   :config (global-subword-mode +1))
 
 (use-package swiper
-  :bind   (("C-s"   . swiper)
+  :bind   (("C-s"   . swiper-isearch)
+           ("C-r"   . swiper-isearch-backward)
            ("C-S-s" . swiper-all))
   :config (progn
             (unbind-key "C-'" swiper-map)
