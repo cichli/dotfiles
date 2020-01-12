@@ -396,7 +396,8 @@
 (use-package projectile
   :config (progn
             (bind-key "C-c p" #'projectile-command-map projectile-mode-map)
-            (setq projectile-use-git-grep t)
+            (setq projectile-completion-system 'ivy
+                  projectile-use-git-grep t)
             (projectile-mode +1)))
 
 (use-package rainbow-mode
