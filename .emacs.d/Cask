@@ -54,6 +54,7 @@
 (depends-on "smartrep")
 (depends-on "solarized-theme")
 (depends-on "swiper")
+(depends-on "terraform-mode")
 (depends-on "undo-tree")
 (depends-on "urlenc")
 (depends-on "use-package")

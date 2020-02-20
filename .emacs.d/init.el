@@ -488,6 +488,8 @@
             (setq swiper-action-recenter t
                   swiper-goto-start-of-match t)))
 
+(use-package terraform-mode)
+
 (use-package tex
   :mode   (("\\.tex\\'" . TeX-latex-mode))
   :config (progn
