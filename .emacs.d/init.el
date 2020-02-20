@@ -74,7 +74,8 @@
                 cider-repl-history-file (expand-file-name ".cider-history" user-emacs-directory)
                 cider-repl-history-size 1000
                 cider-repl-pop-to-buffer-on-connect nil
-                cider-repl-wrap-history t))
+                cider-repl-wrap-history t
+                nrepl-use-ssh-fallback-for-remote-hosts t))
 
 (use-package cider-scratch
   :config (setq cider-clojure-interaction-mode-map clojure-mode-map))
