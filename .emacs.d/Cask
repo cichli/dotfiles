@@ -16,6 +16,7 @@
 (depends-on "clojure-mode")
 (depends-on "company")
 (depends-on "company-auctex")
+(depends-on "company-terraform")
 (depends-on "counsel")
 (depends-on "counsel-projectile")
 (depends-on "counsel-tramp")

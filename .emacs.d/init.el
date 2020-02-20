@@ -107,6 +107,9 @@
 (use-package company-auctex
   :config (company-auctex-init))
 
+(use-package company-terraform
+  :config (company-terraform-init))
+
 (use-package compile
   :config (setq compile-command "gmake -k "))
 
