@@ -32,6 +32,4 @@ export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-[ -f /Users/griffithsm/.travis/travis.sh ] && source /Users/griffithsm/.travis/travis.sh
-
 archey --color --offline --packager
