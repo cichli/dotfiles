@@ -31,6 +31,7 @@ brew "grip"
 brew "htop"
 brew "httpstat"
 brew "jenv"
+brew "jpegoptim"
 brew "jq"
 brew "kafka", restart_service: true
 brew "launchctl-completion"
