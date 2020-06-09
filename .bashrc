@@ -2,7 +2,7 @@ export PATH='/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:'$PATH
 
 export EDITOR=emacsclient
 export LESS='--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --status-column --window=-2'
-export LESSOPEN="| lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export LESSOPEN='| lesspipe.sh %s' LESS_ADVANCED_PREPROCESSOR=1
 export PAGER=less
 
 tic -x -o ~/.terminfo ~/.terminfo/xterm-24bit.terminfo
@@ -23,13 +23,11 @@ alias hnettop='nettop -d -P -j type,cell_bytes_in,cell_bytes_out,wifi_bytes_in,w
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias tb='nc termbin.com 9999'
 
-if [ -f /usr/local/share/liquidprompt ]; then
-    . /usr/local/share/liquidprompt
-fi
+[[ $- = *i* ]] && [[ -r /usr/local/share/liquidprompt ]] && source /usr/local/share/liquidprompt
 
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
+[[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && source /usr/local/etc/profile.d/bash_completion.sh
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[[ -r ~/.iterm2_shell_integration.bash ]] && source ~/.iterm2_shell_integration.bash
 
 archey --color --offline --packager
