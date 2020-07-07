@@ -51,6 +51,7 @@ brew "postgresql", restart_service: true
 brew "postgis"
 brew "ripgrep"
 brew "rsync"
+brew "shellcheck"
 brew "speedtest-cli"
 brew "sshfs"
 brew "terraform"
