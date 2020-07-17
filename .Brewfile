@@ -33,7 +33,6 @@ brew "httpstat"
 brew "jenv"
 brew "jpegoptim"
 brew "jq"
-brew "kafka", restart_service: true
 brew "launchctl-completion"
 brew "leiningen"
 brew "less"
