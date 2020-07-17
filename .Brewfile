@@ -60,6 +60,7 @@ brew "watch"
 brew "wget"
 brew "heroku/brew/heroku"
 brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
+cask "1password"
 cask "adoptopenjdk11"
 cask "adoptopenjdk13"
 cask "audio-hijack"
