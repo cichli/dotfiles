@@ -31,3 +31,6 @@ export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
 [[ -r ~/.iterm2_shell_integration.bash ]] && source ~/.iterm2_shell_integration.bash
 
 archey --color --offline --packager
+
+# Disable Ctrl+Cmd+D keyboard shortcut
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
