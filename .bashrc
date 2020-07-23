@@ -34,3 +34,6 @@ archey --color --offline --packager
 
 # Disable Ctrl+Cmd+D keyboard shortcut
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
+
+# Prevent creation of .DS_Store files on network shares
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
