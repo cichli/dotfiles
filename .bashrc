@@ -37,3 +37,6 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dic
 
 # Prevent creation of .DS_Store files on network shares
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# Sync keyboard repeat rate to screen refresh rate
+defaults write NSGlobalDomain KeyRepeat -int 1
