@@ -1,13 +1,34 @@
+#!/usr/bin/env emacs --script
+
 ;;,-----------------------------------------------------------------------------
-;;| init
+;;| bootstrap
 ;;`-----------------------------------------------------------------------------
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-(cask-initialize)
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(require 'use-package)
+(setq straight-find-executable "gfind"
+      straight-use-package-by-default t)
+
+(straight-use-package 'use-package)
+
+(defmacro use-feature (name &rest args)
+  (declare (indent defun))
+  `(use-package ,name
+     :straight nil
+     ,@args))
 
 (use-package benchmark-init
   :demand t
@@ -58,9 +79,6 @@
   :config (setq browse-kill-ring-highlight-current-entry t
                 browse-kill-ring-highlight-inserted-item t))
 
-(use-package cask
-  :hook   ((cask-mode . enable-paredit-mode)))
-
 (use-package cider
   :hook   ((cider-mode . cider-company-enable-fuzzy-completion)
            (cider-repl-mode . (lambda ()
@@ -77,7 +95,7 @@
                 cider-repl-wrap-history t
                 nrepl-use-ssh-fallback-for-remote-hosts t))
 
-(use-package cider-scratch
+(use-feature cider-scratch
   :config (setq cider-clojure-interaction-mode-map clojure-mode-map))
 
 (use-package clojure-mode
@@ -87,7 +105,7 @@
             (define-clojure-indent
               (quick-check 1))))
 
-(use-package comint
+(use-feature comint
   :config (progn
             (add-hook 'comint-output-filter-functions #'ansi-color-process-output)
             (ansi-color-for-comint-mode-on)))
@@ -237,7 +255,7 @@
                   eyebrowse-wrap-around t)
             (eyebrowse-mode +1)))
 
-(use-package files
+(use-feature files
   :config (setq backup-by-copying t
                 backup-directory-alist `(("." . ,(expand-file-name "backups/" user-emacs-directory)))
                 delete-old-versions t
@@ -249,19 +267,19 @@
 
 (use-package forge)
 
-(use-package frame
+(use-feature frame
   :config (progn
             (set-frame-font "Menlo 12" t t)
             (blink-cursor-mode -1)
             (setq window-divider-default-right-width 1)
             (window-divider-mode +1)))
 
-(use-package fringe
+(use-feature fringe
   :config (fringe-mode '(4 . nil)))
 
 (use-package git-commit
-  :hook ((git-commit-mode . (lambda ()
-                              (setq-local fill-column 80)))))
+  :hook   ((git-commit-mode . (lambda ()
+                                  (setq-local fill-column 80)))))
 
 (use-package git-timemachine)
 
@@ -325,11 +343,11 @@
                           nil nil "bplist"])
             (jka-compr-update)))
 
-(use-package lisp-mode
+(use-feature lisp-mode
   :hook   ((emacs-lisp-mode . enable-paredit-mode))
   :config (setq initial-major-mode 'emacs-lisp-mode))
 
-(use-package mac-win
+(use-feature mac-win
   :init   (defun mac-toggle-frame-fullscreen ()
             (interactive)
             (let* ((frame (selected-frame))
@@ -390,10 +408,12 @@
                 paradox-execute-asynchronously t
                 paradox-github-token t))
 
+(use-package paredit)
+
 (use-package paren
   :config (show-paren-mode +1))
 
-(use-package prog-mode
+(use-feature prog-mode
   :hook   ((prog-mode . (lambda ()
                           (setq show-trailing-whitespace t)))))
 
@@ -421,13 +441,13 @@
 (use-package ruby-mode
   :mode   ".Brewfile")
 
-(use-package scroll-bar
+(use-feature scroll-bar
   :config (scroll-bar-mode -1))
 
 (use-package server
   :config (server-start))
 
-(use-package simple
+(use-feature simple
   :bind   ("M-'" . just-one-space)
   :hook   ((eval-expression-minibuffer-setup . enable-paredit-mode))
   :config (progn
@@ -457,7 +477,7 @@
               '(("o"     . other-window)
                 ("C-SPC" . pop-global-mark)))))
 
-(use-package solarized
+(use-package solarized-theme
   :config (progn
             (setq solarized-distinct-doc-face t
                   solarized-scale-org-headlines nil
@@ -493,21 +513,21 @@
 
 (use-package terraform-mode)
 
-(use-package tex
+(use-feature tex
   :mode   (("\\.tex\\'" . TeX-latex-mode))
   :config (progn
             (setq font-latex-fontify-sectioning 'color)
             (TeX-global-PDF-mode +1)))
 
-(use-package text-mode
+(use-feature text-mode
   :hook   ((text-mode . (lambda ()
                           (setq show-trailing-whitespace t)))
            (text-mode . auto-fill-mode)))
 
-(use-package tool-bar
+(use-feature tool-bar
   :config (tool-bar-mode -1))
 
-(use-package tooltip
+(use-feature tooltip
   :config (tooltip-mode -1))
 
 (use-package tramp
@@ -520,12 +540,12 @@
             (setq undo-tree-visualizer-timestamps t)
             (global-undo-tree-mode +1)))
 
-(use-package uniquify
+(use-feature uniquify
   :config (setq uniquify-buffer-name-style 'forward))
 
 (use-package urlenc)
 
-(use-package vc-hooks
+(use-feature vc-hooks
   :config (setq vc-make-backup-files t
                 vc-follow-symlinks t))
 

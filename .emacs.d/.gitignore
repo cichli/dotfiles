@@ -1,8 +1,8 @@
-/.cask/
 /auto-save-list/
 /backups/
 /elpa/
 /eshell/
+/straight/
 /url/
 
 /.cider-history

@@ -11,7 +11,6 @@ brew "awscli"
 brew "bash"
 brew "bash-completion@2"
 brew "brew-cask-completion"
-brew "cask", args: ["HEAD"]
 brew "cloc"
 brew "clojure"
 brew "coreutils"
