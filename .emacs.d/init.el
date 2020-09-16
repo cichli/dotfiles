@@ -483,9 +483,9 @@
                   solarized-scale-org-headlines nil
                   solarized-use-variable-pitch nil
                   x-underline-at-descent-line t)
-            (load-theme 'solarized-dark t)
+            (load-theme 'solarized-light t)
             (require 'solarized-palettes)
-            (solarized-with-color-variables 'dark 'solarized-dark solarized-dark-color-palette-alist
+            (solarized-with-color-variables 'light 'solarized-light solarized-light-color-palette-alist
               '(;; https://github.com/bbatsov/solarized-emacs/issues/220
                 (set-face-attribute 'mode-line nil
                                     :box nil
