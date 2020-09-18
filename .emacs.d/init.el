@@ -44,8 +44,7 @@
 (use-package ace-window
   :config (setq aw-scope 'visible))
 
-(use-package amx
-  :demand t)
+(use-package amx)
 
 (use-package autodisass-java-bytecode)
 
