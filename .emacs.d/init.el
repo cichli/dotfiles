@@ -231,6 +231,7 @@
                   inhibit-startup-echo-area-message t
                   inhibit-startup-screen t
                   mac-frame-tabbing nil
+                  read-process-output-max (* 1024 1024)
                   scroll-conservatively 101
                   sentence-end-double-space nil
                   split-height-threshold nil
