@@ -40,6 +40,7 @@ brew "lesspipe"
 brew "liquidprompt"
 brew "make"
 brew "markdown"
+brew "mas"
 brew "maven"
 brew "maven-completion"
 brew "mosh"
@@ -87,3 +88,5 @@ cask "vlc"
 cask "whatsapp"
 cask "yourkit-java-profiler"
 cask "zoomus"
+mas "Amphetamine", id: 937984704
+mas "Speedtest", id: 1153157709
