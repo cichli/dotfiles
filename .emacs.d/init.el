@@ -3,8 +3,6 @@
 ;;,-----------------------------------------------------------------------------
 ;;| bootstrap
 ;;`-----------------------------------------------------------------------------
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -190,6 +188,11 @@
            ("C-c r"           . crux-rename-file-and-buffer)
            ("C-c c"           . crux-copy-file-preserve-attributes)
            ("C-c C-e"         . crux-eval-and-replace)))
+
+(use-feature cus-edit
+  :config (progn
+            (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+            (load custom-file)))
 
 (use-package default-text-scale
   :config (default-text-scale-mode +1))
