@@ -62,6 +62,7 @@ brew "heroku/brew/heroku"
 brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
 cask "1password"
 cask "adoptopenjdk11"
+cask "adoptopenjdk15"
 cask "adoptopenjdk8"
 cask "audio-hijack"
 cask "caldigit-thunderbolt-charging"
