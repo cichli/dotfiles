@@ -404,13 +404,6 @@
 (use-package page-break-lines
   :config (global-page-break-lines-mode +1))
 
-(use-package paradox
-  :config (setq paradox-column-width-package 28
-                paradox-column-width-version 14
-                paradox-display-download-count t
-                paradox-execute-asynchronously t
-                paradox-github-token t))
-
 (use-package paredit)
 
 (use-package paren
