@@ -549,23 +549,6 @@
 (use-package volatile-highlights
   :config (volatile-highlights-mode +1))
 
-(use-package webjump
-  :bind   (("C-\\ w" . webjump))
-  :config (setq webjump-sites '(("Clojars"           . [simple-query "clojars.org" "clojars.org/search?q=" ""])
-                                ("Emacs Wiki"        . [simple-query "emacswiki.org" "www.emacswiki.org/cgi-bin/wiki.pl?search=" "&dosearch=1"])
-                                ("GitHub"            . [simple-query "github.com" "github.com/search?q=" ""])
-                                ("Google"            . [simple-query "google.com" "google.com/search?q=" ""])
-                                ("Google Groups"     . [simple-query "groups.google.com" "groups.google.com/groups?q=" ""])
-                                ("Maven Central"     . [simple-query "search.maven.org" "search.maven.org/#search%7Cga%7C1%7C" ""])
-                                ("MDN"               . [simple-query "developer.mozilla.org" "developer.mozilla.org/en-US/search?q=" ""])
-                                ("NPM"               . [simple-query "npmjs.com" "npmjs.com/search?q=" ""])
-                                ("Oracle"            . [simple-query "docs.oracle.com" "docs.oracle.com/apps/search/search.jsp?q=" ""])
-                                ("Oracle JDK11"      . [simple-query "docs.oracle.com/en/java/javase/11/" "docs.oracle.com/apps/search/search.jsp?category=java&product=en/java/javase/11&q=" ""])
-                                ("Oxford Dictionary" . [simple-query "oxforddictionaries.com/definition/" "en.oxforddictionaries.com/search?utf8=✓&filter=dictionary&query=" ""])
-                                ("Oxford Thesaurus"  . [simple-query "oxforddictionaries.com/thesaurus/" "en.oxforddictionaries.com/search?utf8=✓&filter=thesaurus&query=" ""])
-                                ("Stack Overflow"    . [simple-query "stackoverflow.com" "stackoverflow.com/search?q=" ""])
-                                ("Wikipedia"         . [simple-query "wikipedia.org" "wikipedia.org/wiki/" ""]))))
-
 (use-package wgrep)
 
 (use-package which-key
