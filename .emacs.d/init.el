@@ -111,12 +111,7 @@
   :after  (counsel)
   :bind   (("C-\\ C-\\" . counsel-company))
   :config (progn
-            (setq company-idle-delay nil
-                  company-minimum-prefix-length 0
-                  company-require-match nil
-                  company-selection-wrap-around t
-                  company-tooltip-align-annotations t
-                  company-tooltip-limit 16)
+            (setq company-frontends '(company-preview-if-just-one-frontend))
             (global-company-mode +1)))
 
 (use-package company-auctex
