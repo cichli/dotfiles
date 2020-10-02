@@ -1,9 +1,5 @@
 #!/usr/bin/env emacs --script
 
-;;,-----------------------------------------------------------------------------
-;;| bootstrap
-;;`-----------------------------------------------------------------------------
-
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
@@ -32,9 +28,8 @@
   :demand t
   :hook   ((after-init . benchmark-init/deactivate)))
 
-;;,-----------------------------------------------------------------------------
-;;| packages
-;;`-----------------------------------------------------------------------------
+
+
 (use-package ace-link
   :bind*  (("C-' l" . ace-link))
   :config (ace-link-setup-default))
@@ -466,7 +461,9 @@
               '(("C-SPC" . pop-to-mark-command)))
             (smartrep-define-key override-global-map "C-x"
               '(("o"     . other-window)
-                ("C-SPC" . pop-global-mark)))))
+                ("C-SPC" . pop-global-mark)
+                ("]"     . forward-page)
+                ("["     . backward-page)))))
 
 (use-package solarized-theme
   :config (progn
