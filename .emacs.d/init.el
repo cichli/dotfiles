@@ -142,15 +142,14 @@
                   counsel-locate-cmd #'counsel-locate-cmd-mdfind
                   counsel-mode-override-describe-bindings t
                   counsel-grep-post-action-hook '(recenter)
-                  counsel-rg-base-command (string-join '("rg"
-                                                         "--color never"
-                                                         "--hidden"
-                                                         "--line-number"
-                                                         "--max-columns 160"
-                                                         "--no-heading"
-                                                         "--smart-case"
-                                                         "%s .")
-                                                       " "))
+                  counsel-rg-base-command '("rg"
+                                            "--color" "never"
+                                            "--hidden"
+                                            "--line-number"
+                                            "--max-columns" "240"
+                                            "--no-heading"
+                                            "--smart-case"
+                                            "%s"))
             (ivy-configure 'counsel-yank-pop :height 10)
             (ivy-configure 'counsel-git-log :height 6)
             (counsel-mode +1)))
@@ -228,9 +227,7 @@
                   scroll-conservatively 101
                   sentence-end-double-space nil
                   split-height-threshold nil
-                  split-width-threshold 160
-                  user-full-name "Michael Griffiths"
-                  user-mail-address "mikey@cich.li")
+                  split-width-threshold 160)
             (dolist (x '(downcase-region erase-buffer narrow-to-region upcase-region))
               (put x 'disabled nil))
             (defalias 'yes-or-no-p 'y-or-n-p)))
