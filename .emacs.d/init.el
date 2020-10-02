@@ -149,6 +149,7 @@
                                             "--max-columns" "240"
                                             "--no-heading"
                                             "--smart-case"
+                                            "--with-filename"
                                             "%s"))
             (ivy-configure 'counsel-yank-pop :height 10)
             (ivy-configure 'counsel-git-log :height 6)
