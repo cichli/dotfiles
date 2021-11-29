@@ -44,8 +44,6 @@ brew "mosh"
 brew "node"
 brew "parallel"
 brew "pinentry-mac"
-brew "postgresql", restart_service: true
-brew "postgis"
 brew "ripgrep"
 brew "rsync"
 brew "shellcheck"
