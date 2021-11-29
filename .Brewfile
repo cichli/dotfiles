@@ -1,5 +1,4 @@
 tap "adoptopenjdk/openjdk"
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -56,7 +55,6 @@ brew "testssl"
 brew "tree"
 brew "watch"
 brew "wget"
-brew "heroku/brew/heroku"
 brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
 cask "1password"
 cask "adoptopenjdk11"
