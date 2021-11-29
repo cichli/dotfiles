@@ -84,6 +84,6 @@ cask "the-unarchiver"
 cask "vlc"
 cask "whatsapp"
 cask "yourkit-java-profiler"
-cask "zoomus"
+cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Speedtest", id: 1153157709
