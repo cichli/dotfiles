@@ -272,13 +272,9 @@
   :hook   ((git-commit-mode . (lambda ()
                                   (setq-local fill-column 80)))))
 
+(use-package git-modes)
+
 (use-package git-timemachine)
-
-(use-package gitattributes-mode)
-
-(use-package gitconfig-mode)
-
-(use-package gitignore-mode)
 
 (use-package helpful
   :bind   (("C-c C-d" . helpful-at-point)
