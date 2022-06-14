@@ -357,7 +357,6 @@
                                                            ([file * status] . hide)
                                                            ([* status] . show))
                   magit-section-visibility-indicator '("..." . true))
-            (global-magit-file-mode -1)
             (magit-auto-revert-mode +1)))
 
 (use-package magit-imerge)
