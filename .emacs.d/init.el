@@ -260,7 +260,7 @@
 
 (use-feature frame
   :config (progn
-            (set-frame-font "Menlo 12" t t)
+            (set-frame-font "Menlo 14" t t)
             (blink-cursor-mode -1)
             (setq window-divider-default-right-width 1)
             (window-divider-mode +1)))
