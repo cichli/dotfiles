@@ -518,7 +518,8 @@
 
 (use-package undo-tree
   :config (progn
-            (setq undo-tree-visualizer-timestamps t)
+            (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo-tree"))
+                  undo-tree-visualizer-timestamps t)
             (global-undo-tree-mode +1)))
 
 (use-feature uniquify
