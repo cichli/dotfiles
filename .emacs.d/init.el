@@ -278,8 +278,7 @@
 
 (use-package gitconfig-mode)
 
-(use-package gitignore-mode
-  :mode   ".gitignore_global")
+(use-package gitignore-mode)
 
 (use-package helpful
   :bind   (("C-c C-d" . helpful-at-point)
