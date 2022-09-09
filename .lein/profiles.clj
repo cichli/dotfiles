@@ -20,6 +20,8 @@
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]}
 
+ :datomic {:repositories {"my.datomic.com" {:url "https://my.datomic.com/repo" :creds :gpg}}}
+
  :frs [:flight-recorder :flight-recorder/sampling]
  :frt [:flight-recorder :flight-recorder/tracing]
 
