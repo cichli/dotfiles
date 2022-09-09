@@ -380,9 +380,6 @@
             (moody-replace-mode-line-buffer-identification)
             (moody-replace-vc-mode)))
 
-(use-package org
-  :config (setq org-enforce-todo-dependencies t))
-
 (use-package page-break-lines
   :config (global-page-break-lines-mode +1))
 
@@ -460,7 +457,6 @@
 (use-package solarized-theme
   :config (progn
             (setq solarized-distinct-doc-face t
-                  solarized-scale-org-headlines nil
                   solarized-use-variable-pitch nil
                   x-underline-at-descent-line t)
             (load-theme 'solarized-light t)
