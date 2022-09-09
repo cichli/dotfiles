@@ -28,14 +28,4 @@
                               "-XX:FlightRecorderOptions=stackdepth=1024"]}
 
  :flight-recorder/sampling {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=default"]}
- :flight-recorder/tracing  {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=profile"]}
-
- :yk  [:yourkit/agent :yourkit/api]
- :yks [:yourkit/sampling]
- :ykt [:yourkit/tracing]
-
- :yourkit/agent {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib"]}
- :yourkit/api   {:resource-paths ["/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/lib/yjp-controller-api-redist.jar"]}
-
- :yourkit/sampling {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib=sampling"]}
- :yourkit/tracing  {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2019.1.app/Contents/Resources/bin/mac/libyjpagent.jnilib=tracing"]}}
+ :flight-recorder/tracing  {:jvm-opts ["-XX:StartFlightRecording=dumponexit=true,filename=.flight-recording.jfr,maxage=2h,settings=profile"]}}
