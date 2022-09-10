@@ -13,6 +13,7 @@
 /custom.el
 /forge-database.sqlite
 /history
+/projects
 /projectile.cache
 /projectile-bookmarks.eld
 /tramp
