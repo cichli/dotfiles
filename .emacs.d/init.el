@@ -350,14 +350,11 @@
            ("C-x C-m" . magit-file-dispatch)
            :map magit-mode-map
            ("C-S-<tab>" . magit-section-cycle-diffs))
-  :config (progn
-            (setq magit-diff-refine-hunk t
-                  magit-log-arguments '("--color" "--decorate" "--graph" "-n1024")
-                  magit-section-initial-visibility-alist '(((issue pullreq) . hide)
-                                                           ([file * status] . hide)
-                                                           ([* status] . show))
-                  magit-section-visibility-indicator '("..." . true))
-            (magit-auto-revert-mode +1)))
+  :config (setq magit-diff-refine-hunk t
+                magit-section-initial-visibility-alist '(((issue pullreq) . hide)
+                                                         ([file * status] . hide)
+                                                         ([* status] . show))
+                magit-section-visibility-indicator '("..." . true)))
 
 (use-package magit-imerge)
 
