@@ -44,6 +44,7 @@
 (use-package autorevert
   :config (progn
             (setq auto-revert-avoid-polling t
+                  auto-revert-interval 0.1
                   auto-revert-verbose nil
                   global-auto-revert-non-file-buffers t)
             (global-auto-revert-mode +1)))
