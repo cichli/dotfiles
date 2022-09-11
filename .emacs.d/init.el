@@ -192,7 +192,8 @@
 
 (use-package diff-hl
   :after  magit
-  :hook   ((magit-post-refresh . diff-hl-magit-post-refresh))
+  :hook   ((magit-post-refresh . diff-hl-magit-post-refresh)
+           (magit-pre-refresh . diff-hl-magit-pre-refresh))
   :config (global-diff-hl-mode +1))
 
 (use-package dockerfile-mode)
