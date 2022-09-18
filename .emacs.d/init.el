@@ -259,8 +259,6 @@
                 require-final-newline t
                 version-control t))
 
-(use-package forge)
-
 (use-feature frame
   :config (progn
             (set-frame-font "Menlo 14" t t)
@@ -354,8 +352,7 @@
            :map magit-mode-map
            ("C-S-<tab>" . magit-section-cycle-diffs))
   :config (setq magit-diff-refine-hunk t
-                magit-section-initial-visibility-alist '(((issue pullreq) . hide)
-                                                         ([file * status] . hide)
+                magit-section-initial-visibility-alist '(([file * status] . hide)
                                                          ([* status] . show))
                 magit-section-visibility-indicator '("..." . true)))
 
