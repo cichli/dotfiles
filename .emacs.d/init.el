@@ -374,6 +374,7 @@
 
 (use-package moody
   :config (progn
+            (moody-replace-eldoc-minibuffer-message-function)
             (moody-replace-mode-line-buffer-identification)
             (moody-replace-vc-mode)))
 
