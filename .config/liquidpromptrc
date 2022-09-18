@@ -1,5 +1,3 @@
 LP_PS1_FILE=~/.config/liquidprompt.ps1
 LP_ENABLE_SUDO=1
 LP_ENABLE_TIME=1
-LP_HOSTNAME_ALWAYS=1
-
