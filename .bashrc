@@ -15,6 +15,8 @@ jenv macos-javahome
 
 export LEIN_USE_BOOTCLASSPATH=no
 
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
