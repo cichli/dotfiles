@@ -61,6 +61,7 @@ brew "railwaycat/emacsmacport/emacs-mac", args: ["HEAD", "with-modern-icon"]
 brew "snyk/tap/snyk"
 brew "stripe/stripe-cli/stripe"
 cask "1password"
+cask "airfoil"
 cask "caldigit-thunderbolt-charging"
 cask "contexts"
 cask "docker"
