@@ -231,10 +231,10 @@
                   scroll-conservatively 101
                   sentence-end-double-space nil
                   split-height-threshold nil
-                  split-width-threshold 160)
+                  split-width-threshold 160
+                  use-short-answers t)
             (dolist (x '(downcase-region erase-buffer narrow-to-region upcase-region))
-              (put x 'disabled nil))
-            (defalias 'yes-or-no-p 'y-or-n-p)))
+              (put x 'disabled nil))))
 
 (use-package epa
   :config (setq epa-armor t))
