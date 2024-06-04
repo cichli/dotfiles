@@ -387,7 +387,9 @@
 (use-package paredit)
 
 (use-package paren
-  :config (show-paren-mode +1))
+  :config (progn
+            (setq show-paren-when-point-inside-paren t)
+            (show-paren-mode +1)))
 
 (use-feature prog-mode
   :hook   ((prog-mode . (lambda ()
