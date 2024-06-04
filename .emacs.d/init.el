@@ -211,6 +211,9 @@
             (setq eldoc-idle-delay 0.1)
             (global-eldoc-mode +1)))
 
+(use-package electric
+  :config (electric-indent-mode -1))
+
 (use-package emacs
   :config (progn
             (setq-default fill-column 80
